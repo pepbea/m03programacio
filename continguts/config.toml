@@ -11,10 +11,11 @@ defaultContentLanguageInSubdir= true
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
   description = "M03 Programació DAM"
-  author = "Mathieu Cornic"
-  showVisitedLinks = true
+  author = "Pep Beà"
+  showVisitedLinks = false
   disableBreadcrumb = false
   disableNextPrev = false
+  themeVariant = "blue"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
