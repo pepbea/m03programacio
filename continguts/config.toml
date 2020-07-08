@@ -1,4 +1,4 @@
-baseURL = "/m03programacio/continguts/public"
+baseURL = "https://pepbea.github.io/m03programacio/continguts/public"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
