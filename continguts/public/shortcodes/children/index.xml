@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Children on Documentation for Hugo Learn Theme</title>
-    <link>/m03programacio/public/shortcodes/children/</link>
+    <link>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/children/</link>
     <description>Recent content in Children on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="/m03programacio/public/shortcodes/children/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pepbea.github.io/m03programacio/continguts/public/shortcodes/children/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>page test</title>
-      <link>/m03programacio/public/shortcodes/children/test/</link>
+      <link>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/children/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/m03programacio/public/shortcodes/children/test/</guid>
+      <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/children/test/</guid>
       <description>This is a test demo child page</description>
     </item>
     
     <item>
       <title>page test</title>
-      <link>/m03programacio/public/shortcodes/children/test.fr/</link>
+      <link>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/children/test.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/m03programacio/public/shortcodes/children/test.fr/</guid>
+      <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/children/test.fr/</guid>
       <description>Ceci est une page de demo</description>
     </item>
     
