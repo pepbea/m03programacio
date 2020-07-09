@@ -4,191 +4,136 @@ title: Tipus de Llenguatges
 weight: 3
 ---
 
-**Hugo-theme-learn** has been built to be as configurable as possible by defining multiple [partials](https://gohugo.io/templates/partials/)
+Els llenguatges de programació es poden classificar a partir de diferents criteris
+1. Segons la proximitat al nucli.
+2. Segons el paradigma de programació.
+3. Segons la traducció a codi màquina.
+4. Segons la generació.
 
-In `themes/hugo-theme-learn/layouts/partials/`, you will find all the partials defined for this theme. If you need to overwrite something, don't change the code directly. Instead [follow this page](https://gohugo.io/themes/customizing/). You'd create a new partial in the `layouts/partials` folder of your local project. This partial will have the priority.
-
-This theme defines the following partials :
-
-- *header*: the header of the content page (contains the breadcrumbs). _Not meant to be overwritten_
-- *custom-header*: custom headers in page. Meant to be overwritten when adding CSS imports. Don't forget to include `style` HTML tag directive in your file
-- *footer*: the footer of the content page (contains the arrows). _Not meant to be overwritten_
-- *custom-footer*:  custom footer in page. Meant to be overwritten when adding Javacript. Don't forget to include `javascript` HTML tag directive in your file
-- *favicon*: the favicon
-- *logo*: the logo, on top left hand corner.
-- *meta*: HTML meta tags, if you want to change default behavior
-- *menu*: left menu. _Not meant to be overwritten_
-- *menu-footer*: footer of the the left menu
-- *search*: search box
-- *toc*: table of contents
-
-## Change the logo
-
-Create a new file in `layouts/partials/` named `logo.html`. Then write any HTML you want.
-You could use an `img` HTML tag and reference an image created under the *static* folder, or you could paste a SVG definition !
+#### 1. Segons la proximitat al nucli
 
 {{% notice note %}}
-The size of the logo will adapt automatically
+La proximitat al nucli queda determinat per saber en quin moment s'executa aquest llenguatge. Poden ser llenguatges d'alt nivell, dins el sistema de capes, molt allunyat del nucli, o llenguatges de baix nivell propers al nucli.
 {{% /notice %}}
 
-## Change the favicon
+Els llenguatges de programació es poden classificar segons la seva proximitat al llenguatge màquina:
 
-If your favicon is a png, just drop off your image in your local `static/images/` folder and name it `favicon.png`
+| Llenguatges de baix nivell |
+| --- |
+| Llenguatge de programació pròxim al nucli de la màquina i que només entén la màquina.|
+| Es composa per codi binari (símbols 0 i 1). |
+| És el llenguatge més bàsic i també més difícil d'entendre pels humans ja que totes les instruccions són tires de 0s i 1s. |
+| És un llenguatge molt lligat a l'arquitectura de la màquina. |
+| S'utilitzen adreces de memòria per fer referència a les dades. |
+| Les instruccions tenen un format rígid. |
 
-If you need to change this default behavior, create a new file in `layouts/partials/` named `favicon.html`. Then write something like this:
+| Llenguatges ensambladors |
+| --- |
+| Separen les característiques del maquinari de la tasca de programació. |
+| Es substitueixen els codis numèrics per representacions textuals equivalents a les instruccions màquina que representen. |
+| Segueixen tenint una forta relació amb els llenguatges màquina però permeten utilitzar adreces simbòliques i incloure línies de comentaris. |
 
-```html
-<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-```
+| Llenguatges  d'alt nivell |
+| --- |
+| Alliberen el programador de tasques tedioses i complexes que frenen la productivitat i l'eficiència. | 
+| Tenen un gran nivell d'abstracció que fa innecessari el coneixement de l'arquitectura de la màquina. | 
+| Les instruccions s'expressen per caràcters alfanumèrics; permeten definir variables; disposen d'instruccions molt ponents de tipus aritmètic, lògiques, tractament de caràcters, etc .; són fàcils de corregir i actualitzar i fàcils d'aprendre. | 
+| Per contra, no són tant conscients en quant a consum de recursos.| 
 
-## Change default colors {#theme-variant}
+#### 2. Segons el paradigma de programació
 
-**Hugo Learn theme** let you choose between 3 native color scheme variants, but feel free to add one yourself ! Default color scheme is based on [Grav Learn Theme](https://learn.getgrav.org/).
+{{% notice note %}}
+Un paradigma de programació és un **enfoc particular/filosofia** pel disseny i construcció de codi. Depenent de cada context resulta més idoni utilitzar-ne un o altre
+{{% /notice %}}
 
-### Red variant
+![Paradigmes](../images/paradigms.png?width=300px)
 
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "red"
-```
+A grans trets diferenciarem entre
 
-![Red variant](/en/basics/style-customization/images/red-variant.png?width=60pc)
++ **Llenguatges imperatius:** 
+        - Descriu la programació com una seqüència instruccions o ordres que canvien l'estat d'un programa. 
+        - Formen part d'aquest tipus molts llenguatges d'alt nivell i d'ús general: python, c, java, c++ etc.
+        - Es fixen en el COM es desenvolupa el codi (com s'aconsegueix un objectiu pas a pas).
+        - En aquest paradigma s'inclouen altres paradigmes com el modular, orientació a objectes, concurrent, etc.
 
-### Blue variant
++ **Llenguatges declaratius:** 
+        - Es fixen en QUÈ descriu (declara la solució), es basa en les propietats de la solució buscada.
+        - No es coneix l'algorisme usat per trobar aquesta solució. 
+        - No es coneix el rendiment i/o eficiència del codi a priori
+        - Molt útil en la resolució de problemes i situacions determinades.
+        - En aquest paradigma s'inclouen els paradigmes funcional, lògic i no procedimental.
 
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "blue"
-```
+Com a subtipus dels anteriors destaquem:
 
-![Blue variant](/en/basics/style-customization/images/blue-variant.png?width=60pc)
+{{% expand "Programació estructurada" %}}
+ Utilitza únicament seqüències, instruccions condicionals i instruccions repetitives. Es tracta en la UF1 de M03 Programació.
+{{% /expand %}}
+{{% expand "Programació modular" %}}
+ El programa es dissenya per parts(mòduls). Es tracta en la UF2 de M03 Programació.
+{{% /expand %}}
+{{% expand "Programació orientada a objectes" %}}
+ Programació basada en la comunicació i el pas de missatges entre objectes (estructures amb atributs i mètodes). Es tracta en la UF4 de M03 Programació.
+{{% /expand %}}
+{{% expand "Programació concurrent" %}}
+ Útil quan hem de realitzar diverses accions a la vegada i utilitzant recursos compartits. Es tracta en M09 Programació de serveis.
+{{% /expand %}}
+{{% expand "Programació funcional" %}}
+ Tot el codi es basa en funcions, des de l'expressió mínima a qualsevol estructura complexa. Exemple d'aquest paradigma és el llenguatge Lisp o Haskel.
+{{% /expand %}}
+{{% expand "Programació lògica" %}}
+ A partir d'una sèrie de predicats i una base de coneixement es desenvolupa aquest paradigma de relacions lògiques. Exemple d'aquest paradigma és el llenguatge de programació Prolog.
+{{% /expand %}}
 
-### Green variant
 
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "green"
-```
+#### 3. Segons la traducció a codi màquina
+{{% notice note %}}
+Els llenguatges de programació poden tenir diferents tractaments fins a ser executats, així diferenciem els llenguatges interpretats, compilats i els híbrids.
+{{% /notice %}}
 
-![Green variant](/en/basics/style-customization/images/green-variant.png?width=60pc)
+Desde que un programa és escrit i és executat per la màquina hi ha un seguit de passos que cal tenir presents:
+- Anàlisi (lèxic, sintàtic i semàntic)
+- Traducció(generació i optimització de codi)
 
-### 'Yours‘ variant
+Depenent de com es realitza aquesta traducció tenim llenguatges compilats i interpretats:
 
-First, create a new CSS file in your local `static/css` folder prefixed by `theme` (e.g. with _mine_ theme `static/css/theme-mine.css`). Copy the following content and modify colors in CSS variables.
+| Llenguatges compilats |
+| --- |
+| Una vegada el codi és analitzat es genera el codi objecte d'acord amb les característiques del compilador del llenguatge. Depenent del tipus de compilador l'objecte pot ser directament executable o necessita altres passos previs com l'acoblament, l'enllaçat i la càrrega (Com per exemple el llenguatge C).  |
+| Per tal de flexibilitzar el codi, els compiladors treballen amb biblioteques de mòduls objecte. Per incloure-les en el codi màquina final s'ha d'usar un enllaçador que retorna un únic programa executable.  |
+| Els programes objecte s'executen molt més ràpidament que els interpretats ja que estan optimitzats per uns determinats recursos HW, però no permet transportar codi objecte entre diferents plataformes d'execució.  |
+| Exemples de llenguatges els traductors són compiladors són FORTRAN, COBOL, C, PASCAL, ADA ... |
 
-```css
 
-:root{
-    
-    --MAIN-TEXT-color:#323232; /* Color of text by default */
-    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
-    --MAIN-LINK-color:#1C90F3; /* Color of links */
-    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
-    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
+| Llenguatges interpretats |
+| --- |
+| En aquest cas es duu a la vegada el procés de traducció i el d'execució. La seva forma de treball és anar analitzant instruccions de codi del programa font, generant el codi màquina corresponent i executant.  |
+| Són més lents que els compilats, per contra, són fàcilment transportables entre diferents màquines, ja que és el propi programa font el que es mou.  |
+| Exemples de llenguatge interpretat són PROLOG, i SQL, Javascript, Python, etc. |
 
-    --MENU-HEADER-BG-color:#1C90F3; /* Background color of menu header */
-    --MENU-HEADER-BORDER-color:#33a1ff; /*Color of menu header border */ 
 
-    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
-    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
-    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
+| Llenguatges híbrids |
+| --- |
+| Aprofiten el millor d'ambdós mons com Java o Visual Studio .NET. Són capaços de compilar el codi a un llenguatge intermedi denominat bytecode en JAVA i MSI en .NET, que després són interpretats per una màquina virtual (MVJ o .NET Framework), així aconsegueixen una substancial millora en el rendiment i mantenen la característica de transportabilitat entre diferents plataformes |
 
-    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
-    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
-    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
-    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
+### 4. Segons la generació
+{{% notice note %}}
+Depenent de quan es va crear el llenguatge s'emmarca en unes necessitats i usos concrets que han donat lloc a generacions. Són seqüencials en el temps.
+{{% /notice %}}
 
-    --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
-    --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
-    
-}
+{{% expand "Primera generació" %}}
+ Són els que corresponen als llenguatges ja vistos de baix nivell o llenguatges màquina.
+{{% /expand %}}
+{{% expand "Segona generació" %}}
+ Són aquells que pertanyen als llenguatges assembladors.
+{{% /expand %}}
+{{% expand "Tercera generació" %}}
+ A la tercera generació pertanyen aquells llenguatges estructurats que seguien un ordre alhora d'executar les instruccions. Llenguatges com C, pascal, cobol, etc.
+{{% /expand %}}
+{{% expand "Quarta generació" %}}
+ A partir d'una sèrie de predicats i una base de coneixement es desenvolupa aquest paradigma de relacions lògiques. Exemple d'aquest paradigma és el llenguatge de programació Prolog.
+  Els llenguatges de quarta generació, són els més propers a la sintaxi de la llengua humana, i s'acostumen a utilitzar en les creacions de bases de dades o com a llenguatges de programació dels llenguatges o sistemes d'autor. Són llenguages no procedimentals com SQL que permeten definir quins seran els resultats finals sense necessitat de preocupar-se per saber com fer-ho.
+{{% /expand %}}
+{{% expand "Cinquena generació" %}}
+ Amb la incorporació i expansió dels llenguatges orientats a objectes i amb la generalització de l'ús de les GUI, és possible abarca problemes de major abstracció. Alguns exemples són Java, C++, etc. S'ha generalitzat tant els IDEs de desenvolupament com els CLIs per cada servei/llenguatge.
+{{% /expand %}}
 
-body {
-    color: var(--MAIN-TEXT-color) !important;
-}
-
-textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
-    border-color: none;
-    box-shadow: none;
-}
-
-h2, h3, h4, h5 {
-    color: var(--MAIN-TITLES-TEXT-color) !important;
-}
-
-a {
-    color: var(--MAIN-LINK-color);
-}
-
-.anchor {
-    color: var(--MAIN-ANCHOR-color);
-}
-
-a:hover {
-    color: var(--MAIN-LINK-HOVER-color);
-}
-
-#sidebar ul li.visited > a .read-icon {
-	color: var(--MENU-VISITED-color);
-}
-
-#body a.highlight:after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 0%;
-    -webkit-transition: width 0.5s ease;
-    -moz-transition: width 0.5s ease;
-    -ms-transition: width 0.5s ease;
-    transition: width 0.5s ease;
-    background-color: var(--MAIN-LINK-HOVER-color);
-}
-#sidebar {
-	background-color: var(--MENU-SECTIONS-BG-color);
-}
-#sidebar #header-wrapper {
-    background: var(--MENU-HEADER-BG-color);
-    color: var(--MENU-SEARCH-BOX-color);
-    border-color: var(--MENU-HEADER-BORDER-color);
-}
-#sidebar .searchbox {
-	border-color: var(--MENU-SEARCH-BOX-color);
-    background: var(--MENU-SEARCH-BG-color);
-}
-#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
-}
-#sidebar .searchbox * {
-    color: var(--MENU-SEARCH-BOX-ICONS-color);
-}
-
-#sidebar a {
-    color: var(--MENU-SECTIONS-LINK-color);
-}
-
-#sidebar a:hover {
-    color: var(--MENU-SECTIONS-LINK-HOVER-color);
-}
-
-#sidebar ul li.active > a {
-    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
-    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
-}
-
-#sidebar hr {
-    border-color: var(--MENU-SECTION-HR-color);
-}
-```
-
-Then, set the `themeVariant` value with the name of your custom theme file. That's it !
-
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "mine"
-```
