@@ -23,5 +23,5 @@ Les característiques bàsiques d'un algorisme són:
 + **Finit.** L'algorisme ha d'acabar en algun moment, per tant, tindrà un nombre finit de passos.
 + Un bon disseny algorítmic contindrà tres parts: _Entrada (Input), Procés (Tractament de la informació) i Sortida (Output)_.
 
-![Algorisme](../images/algorisme.jpg)
+![Algorisme](../images/algorisme.jpg?width=300px)
 
