@@ -12,21 +12,21 @@
     <title>Tipus de Llenguatges :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1594286326" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1594286326" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1594315317" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1594315317" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1594286326" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1594315317" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1594286326"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1594315317"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1594286326"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1594286326"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1594315317"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1594315317"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1594286326"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1594315317"></script>
 
     
   </div>
@@ -1523,14 +1523,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#change-the-logo">Change the logo</a></li>
-    <li><a href="#change-the-favicon">Change the favicon</a></li>
-    <li><a href="#theme-variant">Change default colors</a>
+    <li>
       <ul>
-        <li><a href="#red-variant">Red variant</a></li>
-        <li><a href="#blue-variant">Blue variant</a></li>
-        <li><a href="#green-variant">Green variant</a></li>
-        <li><a href="#yours-variant">&lsquo;Yours‘ variant</a></li>
+        <li></li>
+        <li><a href="#4-segons-la-generació">4. Segons la generació</a></li>
       </ul>
     </li>
   </ul>
@@ -1558,160 +1554,355 @@
 
 
 
-	<p><strong>Hugo-theme-learn</strong> has been built to be as configurable as possible by defining multiple <a href="https://gohugo.io/templates/partials/">partials</a></p>
-<p>In <code>themes/hugo-theme-learn/layouts/partials/</code>, you will find all the partials defined for this theme. If you need to overwrite something, don&rsquo;t change the code directly. Instead <a href="https://gohugo.io/themes/customizing/">follow this page</a>. You&rsquo;d create a new partial in the <code>layouts/partials</code> folder of your local project. This partial will have the priority.</p>
-<p>This theme defines the following partials :</p>
-<ul>
-<li><em>header</em>: the header of the content page (contains the breadcrumbs). <em>Not meant to be overwritten</em></li>
-<li><em>custom-header</em>: custom headers in page. Meant to be overwritten when adding CSS imports. Don&rsquo;t forget to include <code>style</code> HTML tag directive in your file</li>
-<li><em>footer</em>: the footer of the content page (contains the arrows). <em>Not meant to be overwritten</em></li>
-<li><em>custom-footer</em>:  custom footer in page. Meant to be overwritten when adding Javacript. Don&rsquo;t forget to include <code>javascript</code> HTML tag directive in your file</li>
-<li><em>favicon</em>: the favicon</li>
-<li><em>logo</em>: the logo, on top left hand corner.</li>
-<li><em>meta</em>: HTML meta tags, if you want to change default behavior</li>
-<li><em>menu</em>: left menu. <em>Not meant to be overwritten</em></li>
-<li><em>menu-footer</em>: footer of the the left menu</li>
-<li><em>search</em>: search box</li>
-<li><em>toc</em>: table of contents</li>
-</ul>
-<h2 id="change-the-logo">Change the logo</h2>
-<p>Create a new file in <code>layouts/partials/</code> named <code>logo.html</code>. Then write any HTML you want.
-You could use an <code>img</code> HTML tag and reference an image created under the <em>static</em> folder, or you could paste a SVG definition !</p>
+	<p>Els llenguatges de programació es poden classificar a partir de diferents criteris</p>
+<ol>
+<li>Segons la proximitat al nucli.</li>
+<li>Segons el paradigma de programació.</li>
+<li>Segons la traducció a codi màquina.</li>
+<li>Segons la generació.</li>
+</ol>
+<h4 id="1-segons-la-proximitat-al-nucli">1. Segons la proximitat al nucli</h4>
 
-<div class="notices note" ><p>The size of the logo will adapt automatically</p>
+<div class="notices note" ><p>La proximitat al nucli queda determinat per saber en quin moment s&rsquo;executa aquest llenguatge. Poden ser llenguatges d&rsquo;alt nivell, dins el sistema de capes, molt allunyat del nucli, o llenguatges de baix nivell propers al nucli.</p>
 </div>
 
-<h2 id="change-the-favicon">Change the favicon</h2>
-<p>If your favicon is a png, just drop off your image in your local <code>static/images/</code> folder and name it <code>favicon.png</code></p>
-<p>If you need to change this default behavior, create a new file in <code>layouts/partials/</code> named <code>favicon.html</code>. Then write something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/favicon.png&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/x-icon&#34;</span> /&gt;
-</code></pre></div><h2 id="theme-variant">Change default colors</h2>
-<p><strong>Hugo Learn theme</strong> let you choose between 3 native color scheme variants, but feel free to add one yourself ! Default color scheme is based on <a href="https://learn.getgrav.org/">Grav Learn Theme</a>.</p>
-<h3 id="red-variant">Red variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;red&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/red-variant.png?width=60pc" alt="Red variant"></p>
-<h3 id="blue-variant">Blue variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;blue&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/blue-variant.png?width=60pc" alt="Blue variant"></p>
-<h3 id="green-variant">Green variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;green&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/green-variant.png?width=60pc" alt="Green variant"></p>
-<h3 id="yours-variant">&lsquo;Yours‘ variant</h3>
-<p>First, create a new CSS file in your local <code>static/css</code> folder prefixed by <code>theme</code> (e.g. with <em>mine</em> theme <code>static/css/theme-mine.css</code>). Copy the following content and modify colors in CSS variables.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
-:<span style="color:#a6e22e">root</span>{
-    
-    --MAIN-TEXT-color:<span style="color:#ae81ff">#323232</span>; <span style="color:#75715e">/* Color of text by default */</span>
-    --MAIN-TITLES-TEXT-color: <span style="color:#ae81ff">#5e5e5e</span>; <span style="color:#75715e">/* Color of titles h2-h3-h4-h5 */</span>
-    --MAIN-LINK-color:<span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* Color of links */</span>
-    --MAIN-LINK-HOVER-color:<span style="color:#ae81ff">#167ad0</span>; <span style="color:#75715e">/* Color of hovered links */</span>
-    --MAIN-ANCHOR-color: <span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* color of anchors on titles */</span>
+<p>Els llenguatges de programació es poden classificar segons la seva proximitat al llenguatge màquina:</p>
+<table>
+<thead>
+<tr>
+<th>Llenguatges de baix nivell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Llenguatge de programació pròxim al nucli de la màquina i que només entén la màquina.</td>
+</tr>
+<tr>
+<td>Es composa per codi binari (símbols 0 i 1).</td>
+</tr>
+<tr>
+<td>És el llenguatge més bàsic i també més difícil d&rsquo;entendre pels humans ja que totes les instruccions són tires de 0s i 1s.</td>
+</tr>
+<tr>
+<td>És un llenguatge molt lligat a l&rsquo;arquitectura de la màquina.</td>
+</tr>
+<tr>
+<td>S&rsquo;utilitzen adreces de memòria per fer referència a les dades.</td>
+</tr>
+<tr>
+<td>Les instruccions tenen un format rígid.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Llenguatges ensambladors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separen les característiques del maquinari de la tasca de programació.</td>
+</tr>
+<tr>
+<td>Es substitueixen els codis numèrics per representacions textuals equivalents a les instruccions màquina que representen.</td>
+</tr>
+<tr>
+<td>Segueixen tenint una forta relació amb els llenguatges màquina però permeten utilitzar adreces simbòliques i incloure línies de comentaris.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Llenguatges  d&rsquo;alt nivell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alliberen el programador de tasques tedioses i complexes que frenen la productivitat i l&rsquo;eficiència.</td>
+</tr>
+<tr>
+<td>Tenen un gran nivell d&rsquo;abstracció que fa innecessari el coneixement de l&rsquo;arquitectura de la màquina.</td>
+</tr>
+<tr>
+<td>Les instruccions s&rsquo;expressen per caràcters alfanumèrics; permeten definir variables; disposen d&rsquo;instruccions molt ponents de tipus aritmètic, lògiques, tractament de caràcters, etc .; són fàcils de corregir i actualitzar i fàcils d&rsquo;aprendre.</td>
+</tr>
+<tr>
+<td>Per contra, no són tant conscients en quant a consum de recursos.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-segons-el-paradigma-de-programació">2. Segons el paradigma de programació</h4>
 
-    --MENU-HEADER-BG-color:<span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* Background color of menu header */</span>
-    --MENU-HEADER-BORDER-color:<span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/*Color of menu header border */</span> 
+<div class="notices note" ><p>Un paradigma de programació és un <strong>enfoc particular/filosofia</strong> pel disseny i construcció de codi. Depenent de cada context resulta més idoni utilitzar-ne un o altre</p>
+</div>
 
-    --MENU-SEARCH-BG-color:<span style="color:#ae81ff">#167ad0</span>; <span style="color:#75715e">/* Search field background color (by default borders + icons) */</span>
-    --MENU-SEARCH-BOX-color: <span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/* Override search field border color */</span>
-    --MENU-SEARCH-BOX-ICONS-color: <span style="color:#ae81ff">#a1d2fd</span>; <span style="color:#75715e">/* Override search field icons color */</span>
+<p><img src="../images/paradigms.png?width=300px" alt="Paradigmes"></p>
+<p>A grans trets diferenciarem entre</p>
+<ul>
+<li>
+<p><strong>Llenguatges imperatius:</strong>
+- Descriu la programació com una seqüència instruccions o ordres que canvien l&rsquo;estat d&rsquo;un programa.
+- Formen part d&rsquo;aquest tipus molts llenguatges d&rsquo;alt nivell i d&rsquo;ús general: python, c, java, c++ etc.
+- Es fixen en el COM es desenvolupa el codi (com s&rsquo;aconsegueix un objectiu pas a pas).
+- En aquest paradigma s&rsquo;inclouen altres paradigmes com el modular, orientació a objectes, concurrent, etc.</p>
+</li>
+<li>
+<p><strong>Llenguatges declaratius:</strong>
+- Es fixen en QUÈ descriu (declara la solució), es basa en les propietats de la solució buscada.
+- No es coneix l&rsquo;algorisme usat per trobar aquesta solució.
+- No es coneix el rendiment i/o eficiència del codi a priori
+- Molt útil en la resolució de problemes i situacions determinades.
+- En aquest paradigma s&rsquo;inclouen els paradigmes funcional, lògic i no procedimental.</p>
+</li>
+</ul>
+<p>Com a subtipus dels anteriors destaquem:</p>
+<p>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Programació estructurada
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Utilitza únicament seqüències, instruccions condicionals i instruccions repetitives. Es tracta en la UF1 de M03 Programació.</p>
 
-    --MENU-SECTIONS-ACTIVE-BG-color:<span style="color:#ae81ff">#20272b</span>; <span style="color:#75715e">/* Background color of the active section and its childs */</span>
-    --MENU-SECTIONS-BG-color:<span style="color:#ae81ff">#252c31</span>; <span style="color:#75715e">/* Background color of other sections */</span>
-    --MENU-SECTIONS-LINK-color: <span style="color:#ae81ff">#ccc</span>; <span style="color:#75715e">/* Color of links in menu */</span>
-    --MENU-SECTIONS-LINK-HOVER-color: <span style="color:#ae81ff">#e6e6e6</span>;  <span style="color:#75715e">/* Color of links in menu, when hovered */</span>
-    --MENU-SECTION-ACTIVE-CATEGORY-color: <span style="color:#ae81ff">#777</span>; <span style="color:#75715e">/* Color of active category text */</span>
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: <span style="color:#ae81ff">#fff</span>; <span style="color:#75715e">/* Color of background for the active category (only) */</span>
+    </div>
+</div>
 
-    --MENU-VISITED-color: <span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/* Color of &#39;page visited&#39; icons in menu */</span>
-    --MENU-SECTION-HR-color: <span style="color:#ae81ff">#20272b</span>; <span style="color:#75715e">/* Color of &lt;hr&gt; separator in menu */</span>
-    
-}
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Programació modular
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>El programa es dissenya per parts(mòduls). Es tracta en la UF2 de M03 Programació.</p>
 
-<span style="color:#f92672">body</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>TEXT<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
-}
+    </div>
+</div>
 
-<span style="color:#f92672">textarea</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;number&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;datetime&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;datetime-local&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;time&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;week&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">select</span><span style="color:#f92672">[</span><span style="color:#f92672">multiple</span><span style="color:#f92672">=</span><span style="color:#f92672">multiple</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span> {
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#66d9ef">none</span>;
-    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">none</span>;
-}
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Programació orientada a objectes
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Programació basada en la comunicació i el pas de missatges entre objectes (estructures amb atributs i mètodes). Es tracta en la UF4 de M03 Programació.</p>
 
-<span style="color:#f92672">h2</span><span style="color:#f92672">,</span> <span style="color:#f92672">h3</span><span style="color:#f92672">,</span> <span style="color:#f92672">h4</span><span style="color:#f92672">,</span> <span style="color:#f92672">h5</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>TITLES<span style="color:#f92672">-</span>TEXT<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
-}
+    </div>
+</div>
 
-<span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Programació concurrent
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Útil quan hem de realitzar diverses accions a la vegada i utilitzant recursos compartits. Es tracta en M09 Programació de serveis.</p>
 
-.<span style="color:#a6e22e">anchor</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>ANCHOR<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+    </div>
+</div>
 
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Programació funcional
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Tot el codi es basa en funcions, des de l&rsquo;expressió mínima a qualsevol estructura complexa. Exemple d&rsquo;aquest paradigma és el llenguatge Lisp o Haskel.</p>
 
-#sidebar <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">visited</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">a</span> .<span style="color:#a6e22e">read-icon</span> {
-	<span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>VISITED<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+    </div>
+</div>
 
-#body <span style="color:#f92672">a</span>.<span style="color:#a6e22e">highlight</span>:<span style="color:#a6e22e">after</span> {
-    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
-    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;&#34;</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar {
-	<span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar #header-wrapper {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>HEADER<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>HEADER<span style="color:#f92672">-</span>BORDER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar .<span style="color:#a6e22e">searchbox</span> {
-	<span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar <span style="color:#f92672">ul</span>.<span style="color:#a6e22e">topics</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">parent</span><span style="color:#f92672">,</span> #sidebar <span style="color:#f92672">ul</span>.<span style="color:#a6e22e">topics</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-#sidebar .<span style="color:#a6e22e">searchbox</span> <span style="color:#f92672">*</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span>ICONS<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Programació lògica
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>A partir d&rsquo;una sèrie de predicats i una base de coneixement es desenvolupa aquest paradigma de relacions lògiques. Exemple d&rsquo;aquest paradigma és el llenguatge de programació Prolog.</p>
 
-#sidebar <span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+    </div>
+</div></p>
+<h4 id="3-segons-la-traducció-a-codi-màquina">3. Segons la traducció a codi màquina</h4>
 
-#sidebar <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
+<div class="notices note" ><p>Els llenguatges de programació poden tenir diferents tractaments fins a ser executats, així diferenciem els llenguatges interpretats, compilats i els híbrids.</p>
+</div>
 
-#sidebar <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>CATEGORY<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>CATEGORY<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
-}
+<p>Desde que un programa és escrit i és executat per la màquina hi ha un seguit de passos que cal tenir presents:</p>
+<ul>
+<li>Anàlisi (lèxic, sintàtic i semàntic)</li>
+<li>Traducció(generació i optimització de codi)</li>
+</ul>
+<p>Depenent de com es realitza aquesta traducció tenim llenguatges compilats i interpretats:</p>
+<table>
+<thead>
+<tr>
+<th>Llenguatges compilats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Una vegada el codi és analitzat es genera el codi objecte d&rsquo;acord amb les característiques del compilador del llenguatge. Depenent del tipus de compilador l&rsquo;objecte pot ser directament executable o necessita altres passos previs com l&rsquo;acoblament, l&rsquo;enllaçat i la càrrega (Com per exemple el llenguatge C).</td>
+</tr>
+<tr>
+<td>Per tal de flexibilitzar el codi, els compiladors treballen amb biblioteques de mòduls objecte. Per incloure-les en el codi màquina final s&rsquo;ha d&rsquo;usar un enllaçador que retorna un únic programa executable.</td>
+</tr>
+<tr>
+<td>Els programes objecte s&rsquo;executen molt més ràpidament que els interpretats ja que estan optimitzats per uns determinats recursos HW, però no permet transportar codi objecte entre diferents plataformes d&rsquo;execució.</td>
+</tr>
+<tr>
+<td>Exemples de llenguatges els traductors són compiladors són FORTRAN, COBOL, C, PASCAL, ADA &hellip;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Llenguatges interpretats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>En aquest cas es duu a la vegada el procés de traducció i el d&rsquo;execució. La seva forma de treball és anar analitzant instruccions de codi del programa font, generant el codi màquina corresponent i executant.</td>
+</tr>
+<tr>
+<td>Són més lents que els compilats, per contra, són fàcilment transportables entre diferents màquines, ja que és el propi programa font el que es mou.</td>
+</tr>
+<tr>
+<td>Exemples de llenguatge interpretat són PROLOG, i SQL, Javascript, Python, etc.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Llenguatges híbrids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aprofiten el millor d&rsquo;ambdós mons com Java o Visual Studio .NET. Són capaços de compilar el codi a un llenguatge intermedi denominat bytecode en JAVA i MSI en .NET, que després són interpretats per una màquina virtual (MVJ o .NET Framework), així aconsegueixen una substancial millora en el rendiment i mantenen la característica de transportabilitat entre diferents plataformes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-segons-la-generació">4. Segons la generació</h3>
 
-#sidebar <span style="color:#f92672">hr</span> {
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>HR<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-</code></pre></div><p>Then, set the <code>themeVariant</code> value with the name of your custom theme file. That&rsquo;s it !</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;mine&#34;</span>
-</code></pre></div>
+<div class="notices note" ><p>Depenent de quan es va crear el llenguatge s&rsquo;emmarca en unes necessitats i usos concrets que han donat lloc a generacions. Són seqüencials en el temps.</p>
+</div>
+
+<p>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Primera generació
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Són els que corresponen als llenguatges ja vistos de baix nivell o llenguatges màquina.</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Segona generació
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Són aquells que pertanyen als llenguatges assembladors.</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Tercera generació
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>A la tercera generació pertanyen aquells llenguatges estructurats que seguien un ordre alhora d&rsquo;executar les instruccions. Llenguatges com C, pascal, cobol, etc.</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Quarta generació
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>A partir d&rsquo;una sèrie de predicats i una base de coneixement es desenvolupa aquest paradigma de relacions lògiques. Exemple d&rsquo;aquest paradigma és el llenguatge de programació Prolog.
+Els llenguatges de quarta generació, són els més propers a la sintaxi de la llengua humana, i s&rsquo;acostumen a utilitzar en les creacions de bases de dades o com a llenguatges de programació dels llenguatges o sistemes d&rsquo;autor. Són llenguages no procedimentals com SQL que permeten definir quins seran els resultats finals sense necessitat de preocupar-se per saber com fer-ho.</p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Cinquena generació
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Amb la incorporació i expansió dels llenguatges orientats a objectes i amb la generalització de l&rsquo;ús de les GUI, és possible abarca problemes de major abstracció. Alguns exemples són Java, C++, etc. S&rsquo;ha generalitzat tant els IDEs de desenvolupament com els CLIs per cada servei/llenguatge.</p>
+
+    </div>
+</div></p>
+
 
 
 
@@ -2633,19 +2824,19 @@ You could use an <code>img</code> HTML tag and reference an image created under 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1594286326"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1594315317"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1594286326"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1594286326"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1594315317"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1594315317"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1594286326" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1594286326"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1594315317" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1594315317"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
