@@ -1,7 +1,7 @@
 ---
-title: Programació dades compostes
-weight: 4
-pre: "<b>4. </b>"
+title: Estructures compostes
+weight: 5
+pre: "<b>5. </b>"
 chapter: true
 ---
 

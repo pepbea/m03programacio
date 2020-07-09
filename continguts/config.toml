@@ -20,6 +20,8 @@ defaultContentLanguageInSubdir= true
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+
+
 [Languages]
 [Languages.en]
 title = "Documentation for Hugo Learn Theme"

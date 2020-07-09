@@ -1,6 +1,6 @@
 ---
 date: 2016-04-09T16:50:16+02:00
-title: Propòsit i Blocs d'un programa informàtic
+title: Propòsit i Blocs d'un programa
 weight: 1
 ---
 

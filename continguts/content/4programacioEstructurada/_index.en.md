@@ -1,7 +1,7 @@
 ---
-title: Algorísmia i Programació estructuada
-weight: 3
-pre: "<b>3. </b>"
+title: Programació estructuada
+weight: 4
+pre: "<b>4. </b>"
 chapter: true
 ---
 

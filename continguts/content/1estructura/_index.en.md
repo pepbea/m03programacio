@@ -1,5 +1,5 @@
 ---
-title: Estructura d’un programa informàtic
+title: Estructura d’un programa
 weight: 1
 pre: "1. "
 chapter: true

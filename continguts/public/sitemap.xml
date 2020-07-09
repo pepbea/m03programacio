@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programaciodadescompostes/arrayunidimensional/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arrayunidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -18,17 +18,12 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/3algorismiaprogramacioestructurada/algorismia/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arraybidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programaciodadescompostes/arraybidimensional/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/3algorismiaprogramacioestructurada/sequencial/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/sequencial/</loc>
   </url>
   
   <url>
@@ -40,12 +35,7 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/3algorismiaprogramacioestructurada/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/3algorismiaprogramacioestructurada/condicional/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/condicional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -55,15 +45,24 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/3algorismiaprogramacioestructurada/iteratiu/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/3algor%C3%ADsmia/</loc>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programaciodadescompostes/cadenescaracters/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/iteratiu/</loc>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programaciodadescompostes/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/cadenescaracters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
