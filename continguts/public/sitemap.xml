@@ -178,14 +178,6 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/credits/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/credits.fr/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/expand/</loc>
   </url>
   
@@ -258,19 +250,11 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/showcase/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/siteparam/</loc>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/siteparam.fr/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/vitrine/</loc>
   </url>
   
 </urlset>

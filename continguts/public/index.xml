@@ -170,28 +170,6 @@ Chaque tag est un lien vers une page Taxonomy, qui affiche tous les article avec
     </item>
     
     <item>
-      <title>Credits</title>
-      <link>https://pepbea.github.io/m03programacio/continguts/public/credits/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pepbea.github.io/m03programacio/continguts/public/credits/</guid>
-      <description>Contributors Thanks to them for making Open Source Software a better place !
-And a special thanks to @vjeantet for his work on docdock, a fork of hugo-theme-learn. v2.0.0 of this theme is inspired by his work.
-Packages and libraries  mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; horsey - Progressive and customizable autocomplete component clipboard.</description>
-    </item>
-    
-    <item>
-      <title>Crédits</title>
-      <link>https://pepbea.github.io/m03programacio/continguts/public/credits.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pepbea.github.io/m03programacio/continguts/public/credits.fr/</guid>
-      <description>Contributeurs Merci à eux de rendre le monde Open Source meilleur !
-Et un grand merci à @vjeantet pour son travail sur docdock, un fork de hugo-theme-learn. La v2.0.0 du thème est en grande partie inspirée de son travail.
-Packages et librairies  mermaid - géneration de diagrames et graphiques à partir de texte similaire à Markdown font awesome - Le framework de polices iconiques jQuery - La plus connue des librairies Javascript lunr - Lunr fournit des fonctions de recherche sans service externe horsey - Autocomplétion de composants (utiliser pour les suggestions de recherche) clipboard.</description>
-    </item>
-    
-    <item>
       <title>Expand</title>
       <link>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/expand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -302,15 +280,6 @@ Une notice de type info
     </item>
     
     <item>
-      <title>Showcase</title>
-      <link>https://pepbea.github.io/m03programacio/continguts/public/showcase/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pepbea.github.io/m03programacio/continguts/public/showcase/</guid>
-      <description>TAT by OVH Tshark.dev by Ross Jacobs inteliver by Amir Lavasani </description>
-    </item>
-    
-    <item>
       <title>Site param</title>
       <link>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/siteparam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -334,15 +303,6 @@ Par exemple, dans ce site, le paramètre editURL est utilisé dans le fichier co
 [params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Utilisez le shortcode siteparam pour affichier sa valeur.
 Valeur de `editURL` : {{% siteparam &amp;quot;editURL&amp;quot; %}} s&amp;rsquo;affiche comme
 Valeur de editURL : https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/</description>
-    </item>
-    
-    <item>
-      <title>Vitrine</title>
-      <link>https://pepbea.github.io/m03programacio/continguts/public/vitrine/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pepbea.github.io/m03programacio/continguts/public/vitrine/</guid>
-      <description>TAT par OVH Tshark.dev par Ross Jacobs inteliver by Amir Lavasani </description>
     </item>
     
   </channel>
