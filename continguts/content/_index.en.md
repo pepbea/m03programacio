@@ -4,38 +4,38 @@ title: "M03 Programació DAM"
 
 # **M03 Programació DAM**
 
-[Hugo-theme-learn](http://github.com/matcornic/hugo-theme-learn) is a theme for [Hugo](https://gohugo.io/), a fast and modern static website engine written in Go. Where Hugo is often used for blogs, this multilingual-ready theme is **fully designed for documentation**.
+En aquesta pàgina web trobareu els apunts del **M03. Programació DAM**. La web està realitzada utilitzant un Framework Web(Hugo), hostatjada a Github i es fa ús de Github Pages.
 
-This theme is a partial porting of the [Learn theme](http://learn.getgrav.org/) of [Grav](https://getgrav.org/), a modern flat-file CMS written in PHP.
+Tot seguit es mostra la calendarització i les hores de les UFs que s'imparteixen en aquest mòdul de 1r de DAM. Fixeu-vos que l'ordre de realització de les UFs és: UF1, UF2, UF4 i UF3. La UF4 segueix a la UF2, ja que pedagògicament té més sentit realitzar-la després d'aquesta UF.
 
-{{% notice tip %}}Learn theme works with a _page tree structure_ to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "cont/pages/_index.md"%}}) 
-{{% /notice %}}
+|UF|dates|hores|
+|---|---|---|
+|UF1: Programació estructurada|15/09/20 - 11/12/20|85h|
+|UF2: Disseny modular|14/12/20 - 05/02/21|50h|
+|UF4: Programació orientada a objectes (POO)|06/02/21 - 23/04/21|68h|
+|UF3: Fonaments de fitxers|24/04/21 - 25/05/21|30h|
 
-## Main features
+L'índex de continguts que veurem és:
 
-* [Automatic Search]({{%relref "basics/configuration/_index.md#activate-search" %}})
-* [Multilingual mode]({{%relref "cont/i18n/_index.md" %}})
-* **Unlimited menu levels**
-* **Automatic next/prev buttons to navigate through menu entries**
-* [Image resizing, shadow...]({{%relref "cont/markdown.en.md#images" %}})
-* [Attachments files]({{%relref "shortcodes/attachments.en.md" %}})
-* [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-* [Mermaid diagram]({{%relref "shortcodes/mermaid.en.md" %}}) (flowchart, sequence, gantt)
-* [Customizable look and feel and themes variants]({{%relref "basics/style-customization/_index.md"%}})
-* [Buttons]({{%relref "shortcodes/button.en.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice.en.md" %}}), [Expand]({{%relref "shortcodes/expand.en.md" %}})
+* **UF1: Programació estructurada**
+  + [Estructura d'un programa]({{%relref "1estructura/_index.en.md" %}})
+    - [Propòsit i Blocs d'un programa]({{%relref "1estructura/1propositiblocs/_index.en.md" %}})
+    - [Metodologies de Software]({{%relref "1estructura/2metodologiesSoftware/_index.en.md" %}})
+    - [Tipus de Llenguatges]({{%relref "1estructura/3tipusllenguatges/_index.en.md" %}})
+  + [Tipus de dades]({{%relref "2tipusDades/_index.en.md" %}})
+  + [Algorísmia]({{%relref "3Algorísmia/_index.en.md" %}})
+  + [Programació estructurada]({{%relref "4programacioEstructurada/_index.en.md" %}})
+    - [Estructura sequencial]({{%relref "4programacioEstructurada/sequencial/_index.en.md" %}})
+    - [Estructura condicional]({{%relref "4programacioEstructurada/condicional/_index.en.md" %}})
+    - [Estructura iterativa]({{%relref "4programacioEstructurada/iteratiu/_index.en.md" %}})
+  + [Estructures compostes]({{%relref "5dadesCompostes/_index.en.md" %}})
+    - [Arrays Unidimensionals]({{%relref "5dadesCompostes/arrayUnidimensional/_index.en.md" %}})
+    - [Arrays Bidimensionals]({{%relref "5dadesCompostes/arrayBidimensional/_index.en.md" %}})
+    - [Tractament cadena de caràcters]({{%relref "5dadesCompostes/CadenesCaracters/_index.en.md" %}})
 
-![Screenshot](https://github.com/matcornic/hugo-theme-learn/raw/master/images/screenshot.png?width=40pc&classes=shadow)
+**UF2: Disseny modular**
 
-## Contribute to this documentation
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
+**UF4: Programació orientada a objectes (POO)**
 
-{{% notice info %}}
-Your modification will be deployed automatically when merged.
-{{% /notice %}}
+**UF3: Fonaments de fitxers**
 
-## Documentation website
-This current documentation has been statically generated with Hugo with a simple command : `hugo -t hugo-theme-learn` -- source code is [available here at GitHub](https://github.com/matcornic/hugo-theme-learn)
-
-{{% notice note %}}
-Automatically published and hosted thanks to [Netlify](https://www.netlify.com/). Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
-{{% /notice %}}
