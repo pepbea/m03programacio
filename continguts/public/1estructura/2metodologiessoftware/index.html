@@ -12,21 +12,21 @@
     <title>Metodologies de Software :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1594465230" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1594465230" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1594483922" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1594483922" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1594465230" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1594483922" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1594465230"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1594483922"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1594465230"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1594465230"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1594483922"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1594483922"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1594465230"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1594483922"></script>
 
     
   </div>
@@ -1510,13 +1510,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#create-your-project">Create your project</a></li>
-    <li><a href="#install-the-theme">Install the theme</a></li>
-    <li><a href="#basic-configuration">Basic configuration</a></li>
-    <li><a href="#create-your-first-chapter-page">Create your first chapter page</a></li>
-    <li><a href="#create-your-first-content-pages">Create your first content pages</a></li>
-    <li><a href="#launching-the-website-locally">Launching the website locally</a></li>
-    <li><a href="#build-the-website">Build the website</a></li>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1542,58 +1540,93 @@
 
 
 
-	<p>The following steps are here to help you initialize your new website. If you don&rsquo;t know Hugo at all, we strongly suggest you learn more about it by following this <a href="https://gohugo.io/overview/quickstart/">great documentation for beginners</a>.</p>
-<h2 id="create-your-project">Create your project</h2>
-<p>Hugo provides a <code>new</code> command to create a new website.</p>
-<pre><code>hugo new site &lt;new_project&gt;
-</code></pre><h2 id="install-the-theme">Install the theme</h2>
-<p>Install the <strong>Hugo-theme-learn</strong> theme by following <a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">this documentation</a></p>
-<p>This theme&rsquo;s repository is: <a href="https://github.com/matcornic/hugo-theme-learn.git">https://github.com/matcornic/hugo-theme-learn.git</a></p>
-<p>Alternatively, you can <a href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip">download the theme as .zip</a> file and extract it in the <code>themes</code> directory</p>
-<h2 id="basic-configuration">Basic configuration</h2>
-<p>When building the website, you can set a theme by using <code>--theme</code> option. However, we suggest you modify the configuration file (<code>config.toml</code>) and set the theme as the default. You can also add the <code>[outputs]</code> section to enable the search functionality.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># Change the default theme to be use when building the site with Hugo</span>
-<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-learn&#34;</span>
+	<p>El <strong>programari</strong> no es fabrica com qualsevol altre producte clàssic, sinó que es desenvolupa seguint una sèrie d&rsquo;etapes. D&rsquo;aquí sorgeix el concepte d&rsquo;enginyeria de programari, que consisteix en l&rsquo;aplicació de l&rsquo;enginyeria per obtenir desenvolupaments
+que optimitzin l&rsquo;efectivitat i els costos.</p>
+<p>Els processos d&rsquo;enginyeria de programari comprenen per tant, diverses etapes, que constitueixen el que s&rsquo;anomena el <strong>cicle de vida</strong> del programari. Per dur a terme aquestes fases és necessari partir d&rsquo;un enfocament amb el qual iniciar el procés de
+enginyeria. Un cop iniciat, s&rsquo;ha d&rsquo;utilitzar una metodologia amb unes eines que permetin completar les diferents etapes de l&rsquo;cicle.</p>
+<p>En l&rsquo;actualitat, l&rsquo;enfocament més estandaritzat és <strong>l&rsquo;orientació a objectes</strong>. la creació el 1998 de l&rsquo;estàndard UML (Unified Modeling Language) per a la definició de problemes i el desenvolupament de llenguatges de programació com Java o C ++ pel desenvolupament i integració de solucions, són els principals causants que aquest enfocament s&rsquo;estigui consolidant.</p>
+<h4 id="què-és-lenginyeria-del-software">Què és l&rsquo;enginyeria del software?</h4>
 
-<span style="color:#75715e"># For search functionality</span>
-[<span style="color:#a6e22e">outputs</span>]
-<span style="color:#a6e22e">home</span> = [ <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
-</code></pre></div><h2 id="create-your-first-chapter-page">Create your first chapter page</h2>
-<p>Chapters are pages that contain other child pages. It has a special layout style and usually just contains a <em>chapter name</em>, the <em>title</em> and a <em>brief abstract</em> of the section.</p>
-<pre><code>### Chapter 1
-
-# Basics
-
-Discover what this Hugo theme is all about and the core concepts behind it.
-</code></pre><p>renders as</p>
-<p><img src="/en/basics/installation/images/chapter.png?classes=shadow&amp;width=60pc" alt="A Chapter"></p>
-<p><strong>Hugo-theme-learn</strong> provides archetypes to create skeletons for your website. Begin by creating your first chapter page with the following command</p>
-<pre><code>hugo new --kind chapter basics/_index.md
-</code></pre><p>By opening the given file, you should see the property <code>chapter=true</code> on top, meaning this page is a <em>chapter</em>.</p>
-<p>By default all chapters and pages are created as a draft. If you want to render these pages, remove the property <code>draft: true</code> from the metadata.</p>
-<h2 id="create-your-first-content-pages">Create your first content pages</h2>
-<p>Then, create content pages inside the previously created chapter. Here are two ways to create content in the chapter:</p>
-<pre><code>hugo new basics/first-content.md
-hugo new basics/second-content/_index.md
-</code></pre><p>Feel free to edit thoses files by adding some sample content and replacing the <code>title</code> value in the beginning of the files.</p>
-<h2 id="launching-the-website-locally">Launching the website locally</h2>
-<p>Launch by using the following command:</p>
-<pre><code>hugo serve
-</code></pre><p>Go to <code>http://localhost:1313</code></p>
-<p>You should notice three things:</p>
-<ol>
-<li>You have a left-side <strong>Basics</strong> menu, containing two submenus with names equal to the <code>title</code> properties in the previously created files.</li>
-<li>The home page explains how to customize it by following the instructions.</li>
-<li>When you run <code>hugo serve</code>, when the contents of the files change, the page automatically refreshes with the changes. Neat!</li>
-</ol>
-<h2 id="build-the-website">Build the website</h2>
-<p>When your site is ready to deploy, run the following command:</p>
-<pre><code>hugo
-</code></pre><p>A <code>public</code> folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.</p>
-
-<div class="notices note" ><p>This website can be automatically published and hosted with <a href="https://www.netlify.com/">Netlify</a> (Read more about <a href="https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/">Automated HUGO deployments with Netlify</a>). Alternatively, you can use <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Github pages</a></p>
+<div class="notices note" ><p>De l&rsquo;aplicació de l&rsquo;enginyeria a l&rsquo;programari sorgeixen els processos de desenvolupament de programari. Aquest procés es defineix com <strong>&ldquo;aquell en què les necessitats de l&rsquo;usuari són traduïdes en requisits de programari, aquests requisits transformats en disseny, i el disseny implementat en codi, que és provat, documentat i
+certificat pel seu ús operatiu&rdquo;</strong> [Jacobson, 1998].</p>
 </div>
 
+<h4 id="aracterístiques-del-software">aracterístiques del software</h4>
+<ul>
+<li>S&rsquo;ha invertit la demanda i el preu respecte al HW.</li>
+<li>El Software es un producte lògic que es desenvolupa, no es construeix com la resta de productes.</li>
+<li>La gestió de costos es centra en l&rsquo;enginyeria, amb la qual difereix d&rsquo;altres projectes d&rsquo;enginyeria.</li>
+<li>El Software no es deteriora amb el temps, però sí és necessari un manteniment.</li>
+<li>La reutilització de productes software creixent.</li>
+<li>Existeixen restriccions de recursos en el desenvolupament de software, de forma que és necessari assegurar-ne la qualitat per obtenir un software: documentat, fiable, eficient i amb una bona interfície gràfica.</li>
+</ul>
+<h4 id="cicles-de-desenvolupament-del-software-tipus-de-cicles">Cicles de desenvolupament del software. Tipus de cicles</h4>
+<p>Anomenem cicle de vida del software al temps necessari per la producció d&rsquo;un projecte software desde la recopilació de requisits fins a l&rsquo;entrega final del producte. El cicle de vida inclou una sèrie d&rsquo;etapes que pot canviar en funció del model, la metodologia i l&rsquo;autor. Existeixen varis tipus de cicles de vida que passem a
+comentar.</p>
+<h4 id="model-en-cascada-o-lineal">Model en cascada o lineal</h4>
+<p>Es tracta d&rsquo;un model molt genèric i que estableix una sèrie de fases o etapes, que han de ser seguides en un ordre seqüencial, ja que cada fase genera entrades i documentació per a la següent fase. Les fases d&rsquo;un cicle de vida en cascada segueixen el següent esquema:</p>
+<p><img src="../images/waterfall.png?width=500px" alt="Waterfall"></p>
+<p>Les <strong>característiques</strong> del model són:</p>
+<ul>
+<li>Cada etapa s&rsquo;inicia un cop acabada l&rsquo;anterior.</li>
+<li>Ajuda a la planificació temporal i el càlcul de costos, a causa de la seqüencialitat i estructura lògica de les etapes.</li>
+<li>Hi ha una realimentació en el manteniment.</li>
+</ul>
+<p>Quant als <strong>inconvenients</strong> que s&rsquo;han detectat, aquests són:</p>
+<ul>
+<li>Es tracta d&rsquo;un model rígid, sense robustesa ni adaptabilitat als problemes a resoldre.</li>
+<li>Hi ha dificultats a l&rsquo;hora d&rsquo;establir els requisits inicials, ja que aquests solen venir donats per persones alienes al coneixement del cicle de desenvolupament de programari.</li>
+<li>Els errors solen detectar-se molt tard, el que implica que el cost per solucionar l&rsquo;error sigui molt més gran.</li>
+<li>El manteniment es realitza mitjançant petites actualitzacions o &ldquo;pegats&rdquo;. Torna a aplicar cadascuna de les fases del cicle al programari ja existent, sense crear un de nou.</li>
+</ul>
+<p><strong>Fases:</strong></p>
+<ul>
+<li><strong>Anàlisi de sistema:</strong> el sistema de programari forma part sobre un sistema major amb el qual es relaciona. S&rsquo;analitza el sistema en el seu conjunt per treure objectius que han de ser abordables pel programari.</li>
+<li><strong>Anàlisi de requisits:</strong> definint funcions a realitzar, dades, comportament, i interacció entre elements funcionals.</li>
+<li><strong>Disseny:</strong> a partir de requisits dissenyem els components de programari, estructures de dades, mòduls, procediments, algoritmes i interfícies&hellip;</li>
+<li><strong>Codificació:</strong> a partir d&rsquo;informació generada implementem sistema, codifiquem procediments en un llenguatge de programació.</li>
+<li><strong>Prova:</strong> validem i verifiquem que els requisits establerts pel client es realitzen correctament.</li>
+<li><strong>Manteniment:</strong> la producció de programari no finalitza amb el lliurament, ha de ser revisat i reajustat quan això sigui necessari.</li>
+</ul>
+<h4 id="cicle-de-vida-prototipat">Cicle de vida prototipat</h4>
+<p>Aquest model tracta de solucionar problemes del model en cascada, en concret les dificultats a l&rsquo;hora d&rsquo;establir els requisits inicials. El client sol definir els objectius generals del programari, però no acostuma a tenir en compte tots els requisits reals que ha de tenir una aplicació. Al mateix temps, el desenvolupador pot no arribar a entendre què vol el client. Per tal de solucionar això, un cicle basat en prototips pot ser un millor enfocament.</p>
+<p>Les <strong>característiques</strong> d&rsquo;aquest model són:</p>
+<ul>
+<li>Client i desenvolupador defineixen una sèrie d&rsquo;objectius globals, dels quals s&rsquo;identifiquen els requisits, amb els quals es realitza un disseny ràpid, i amb aquest, la creació d&rsquo;un prototip.</li>
+<li>El prototip és avaluat per l&rsquo;usuari, qui pot veure les deficiències del prototip, a partir de les quals es redefineixen els requisits.</li>
+<li>Es van construint nous prototips, amb els quals el client pot anar polint els requisits de programari, al mateix temps que el desenvolupador pot comprendre millor el que ha de fer. Aquestes interaccions finalitzen quan el prototip satisfà les necessitats del client.</li>
+</ul>
+<p><strong>Inconvenients</strong> d&rsquo;aquest tipus de cicle de vida:</p>
+<ul>
+<li>És un procés molt lent. Si es desitja generar un programari de qualitat no n&rsquo;hi ha prou que un prototip sigui com l&rsquo;anterior amb uns petits ajustos, sinó que es requereix crear el producte de nou. això succeeix fonamentalment amb els primers prototips de cada desenvolupament.</li>
+<li>El client veu cada prototip com una versió de programari final, sense prendre consciència que cada prototip únicament ajuda a aclarir els requisits, i per tant, és generat des del principi, per aconseguir una robustesa en el desenvolupament.</li>
+<li>Els primers prototips que es rebutgen suposen un cost addicional, ja que amb prou feines poden emprar-se per al mateix desenvolupament ni poden ser reutilitzats per a altres.</li>
+</ul>
+<h4 id="cicles-de-vida-evolutius">Cicles de vida evolutius</h4>
+<p>El programari és un producte que va evolucionant per això els desenvolupadors necessiten un nou model de cicle de vida, que permeti que les funcionalitats del programari puguin anar canviant amb el temps. El model en cascada assumeix que es lliura un producte una vegada acabades totes les fases del procés, sense considerar possibles evolucions. Tampoc es té en compte l&rsquo;evolució en el
+model de prototips, en que aquests es dissenyen per ajudar al client a comprendre els requisits, però no per disposar de versions a millorar.</p>
+<p>La solució la presenten els cicles de vida evolutius, que amb una estructura iterativa, permeten als enginyers desenvolupar versions cada vegada més completes del programari.</p>
+<h4 id="cicle-de-vida-incremental">Cicle de vida incremental</h4>
+<p>Aquest model combina el model lineal seqüencial amb la filosofia de creació de prototips. Per a això, va generant seqüències lineals de desenvolupament al mateix temps que cada seqüència lineal produeix un &ldquo;increment&rdquo; en el programari, el qual va
+progressant.</p>
+<p>El primer increment sol ser un desenvolupament que tan sols incorpora els requisits i funcionalitats més bàsiques. Les versions successives consisteixen en modificacions de cada versió anterior, a la qual s&rsquo;afegeixen noves funcionalitats i
+modificacions, es van lliurant les diferents versions o increments d&rsquo;acord es van acabant. A diferència del prototipat, cada increment aprofita la versió anterior, i és una versió del producte final a falta d&rsquo;algunes
+funcionalitats. L&rsquo;esquema que segueix aquest tipus de cicle de vida és el següent:</p>
+<p><img src="../images/incremental.png?width=700px" alt="Incremental"></p>
+<p>Aquest tipus de cicle de vida és molt avantatjós des del punt de vista de costos temporals i flexibilitat en la planificació del projecte. Els primers increments no requereixen molt personal, mentre que per als següents es poden anar afegint més o menys funcionalitats segons la quantitat de personal de què es disposi o bé segons que es disposi o no de determinats recursos.</p>
+<h4 id="cicle-de-vida-en-espiral">Cicle de vida en espiral</h4>
+<p>És un procés evolutiu que combina la interactivitat del prototipat amb els aspectes sistemàtics del model en cascada. Cada volta de l&rsquo;espiral consta de les mateixes fases que el cicle en cascada:</p>
+<ul>
+<li><strong>Planificació:</strong> determina objectius, requisits i restriccions de el projecte.</li>
+<li><strong>Anàlisi de risc:</strong> analitza alternatives, identifica i resol riscos</li>
+<li><strong>Enginyeria:</strong> desenvolupament del producte.</li>
+<li><strong>Avaluació de client:</strong> es valoren els resultats obtinguts.</li>
+</ul>
+<p>Segueix les directrius del model PDCA (Plan Develop Check Act) de Demming, i segueix la filosofia del moviment Agile resumit en el <a href="https://agilemanifesto.org/">Manifiesto Agile</a>, una de les seves implementacions més conegudes és <a href="https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)">SCRUM</a>.</p>
+<p><img src="../images/espiral.png?width=700px" alt="Incremental"></p>
+<p>El principal <strong>avantatge</strong> del model en espiral és que és el més adequat per projectes amb <strong>riscs</strong>. Com el programari va evolucionant, el desenvolupador i client poden anar comprenent cada vegada millor els riscos conforme es va passant per diferents nivells d&rsquo;evolució. El mecanisme utilitzat per minimitzar
+riscos es basa en poder incorporar el prototipat en qualsevol etapa d&rsquo;evolució del producte.</p>
+<p>Davant d&rsquo;aquest avantatge, es troba l&rsquo;inconvenient de requerir una alta habilitat en els enginyers per avaluar riscos. L&rsquo;èxit depèn molt d&rsquo;ella, ja que un risc no descobert pot donar lloc a problemes.</p>
 
 
 
@@ -2516,19 +2549,19 @@ hugo new basics/second-content/_index.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1594465230"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1594483922"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1594465230"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1594465230"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1594483922"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1594483922"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1594465230" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1594465230"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1594483922" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1594483922"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

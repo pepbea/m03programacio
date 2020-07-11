@@ -23,5 +23,14 @@ Les característiques bàsiques d'un algorisme són:
 + **Finit.** L'algorisme ha d'acabar en algun moment, per tant, tindrà un nombre finit de passos.
 + Un bon disseny algorítmic contindrà tres parts: _Entrada (Input), Procés (Tractament de la informació) i Sortida (Output)_.
 
-![Algorisme](../images/algorisme2.jpg?width=500px)
+![Algorisme](images/algorisme.jpg?width=500px)
 
+**Pseudocodi**
+{{% notice note %}}
+El **pseudocodi** és un llenguatge informal d’alt nivell que usa les convencions i l’estructura d’un llenguatge de programació, però que està orientat a ser entès pels humans.
+{{% /notice %}}
+
+**Diagrama de flux**
+{{% notice note %}}
+Un **diagrama de flux** de control consisteix en una subdivisió de passes seqüencials, d’acord amb les sentències i estructures de control d’un programa, que mostra els diferents camins que pot seguir un programa a l’hora d’executar les seves instruccions. Cada passa s’associa a una figura geomètrica específica.
+{{% /notice %}}
