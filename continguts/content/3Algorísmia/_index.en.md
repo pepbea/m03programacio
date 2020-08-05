@@ -34,3 +34,8 @@ El **pseudocodi** és un llenguatge informal d’alt nivell que usa les convenci
 {{% notice note %}}
 Un **diagrama de flux** de control consisteix en una subdivisió de passes seqüencials, d’acord amb les sentències i estructures de control d’un programa, que mostra els diferents camins que pot seguir un programa a l’hora d’executar les seves instruccions. Cada passa s’associa a una figura geomètrica específica.
 {{% /notice %}}
+
+**Complexitat ciclomàtica**
+{{% notice note %}}
+La **Complexitat ciclomàtica** (en anglès, Cyclomatic Complexity) és una mètrica de programari en enginyeria de programari que proporciona una mesura quantitativa de la complexitat lògica d'un programa. Consisteix en __comptar el nombre de camins necessaris per tal d'anar de la primera a la última instrucció passant per tots els camins possibles i cobrint tots els casos__.
+{{% /notice %}}

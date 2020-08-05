@@ -1,10 +1,25 @@
 ---
-date: 2016-04-09T16:50:16+02:00
 title: Propòsit i Blocs d'un programa
 weight: 1
 ---
 
-## Global site parameters
+
+
+
+#### Què és l'enginyeria del software?
+
+{{% notice note %}}
+De l'aplicació de l'enginyeria a l'programari sorgeixen els processos de desenvolupament de programari. Aquest procés es defineix com __"aquell en què les necessitats de l'usuari són traduïdes en requisits de programari, aquests requisits transformats en disseny, i el disseny implementat en codi, que és provat, documentat i
+certificat pel seu ús operatiu"__ [Jacobson, 1998].
+{{% /notice %}}
+
+#### aracterístiques del software
++ S'ha invertit la demanda i el preu respecte al HW.
++ El Software es un producte lògic que es desenvolupa, no es construeix com la resta de productes.
++ La gestió de costos es centra en l'enginyeria, amb la qual difereix d'altres projectes d'enginyeria.
++ El Software no es deteriora amb el temps, però sí és necessari un manteniment.
++ La reutilització de productes software creixent.
++ Existeixen restriccions de recursos en el desenvolupament de software, de forma que és necessari assegurar-ne la qualitat per obtenir un software: documentat, fiable, eficient i amb una bona interfície gràfica.
 
 On top of [Hugo global configuration](https://gohugo.io/overview/configuration/), **Hugo-theme-learn** lets you define the following parameters in your `config.toml` (here, values are default).
 
