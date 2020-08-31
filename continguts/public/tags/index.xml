@@ -6,28 +6,9 @@
     <description>Recent content in Tags on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 29 Nov 2018 08:41:44 +0100</lastBuildDate>
     
 	<atom:link href="https://pepbea.github.io/m03programacio/continguts/public/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>documentation</title>
-      <link>https://pepbea.github.io/m03programacio/continguts/public/tags/documentation/</link>
-      <pubDate>Thu, 29 Nov 2018 08:41:44 +0100</pubDate>
-      
-      <guid>https://pepbea.github.io/m03programacio/continguts/public/tags/documentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://pepbea.github.io/m03programacio/continguts/public/tags/tutorial/</link>
-      <pubDate>Thu, 29 Nov 2018 08:41:44 +0100</pubDate>
-      
-      <guid>https://pepbea.github.io/m03programacio/continguts/public/tags/tutorial/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
