@@ -13,7 +13,7 @@ En **l'estructura seqüencial** permet descomposar un problema en instruccions q
 L' **assignació** consisteix en donar un valor a una variable. "Guardar" una informació en una variable, que segurament serà tractada i/o consultada més endavant. 
 {{% /notice %}}
 
-![seq](images/seq.png?width=500px)
+![seq](../images/seq.png?width=500px)
 
 
 #### Exemples
