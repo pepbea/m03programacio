@@ -12,21 +12,21 @@
     <title>Estructura condicional :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1598887227" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1598887227" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1598887227"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1596557577"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1598887227"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1598887227"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1598887227"></script>
 
     
   </div>
@@ -194,13 +194,13 @@
  
   
     
-    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades" class="dd-item 
+    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades i operadors" class="dd-item 
         
         
         
         ">
       <a href="/m03programacio/continguts/public/2tipusdades/">
-          <b>2. </b>Tipus de dades
+          <b>2. </b>Tipus de dades i operadors
           
       </a>
       
@@ -1571,134 +1571,140 @@ You could use an <code>img</code> HTML tag and reference an image created under 
 <h2 id="change-the-favicon">Change the favicon</h2>
 <p>If your favicon is a png, just drop off your image in your local <code>static/images/</code> folder and name it <code>favicon.png</code></p>
 <p>If you need to change this default behavior, create a new file in <code>layouts/partials/</code> named <code>favicon.html</code>. Then write something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/favicon.png&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/x-icon&#34;</span> /&gt;
-</code></pre></div><h2 id="theme-variant">Change default colors</h2>
+<pre><code class="language-html">&lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.png&quot; type=&quot;image/x-icon&quot; /&gt;
+</code></pre>
+<h2 id="theme-variant">Change default colors</h2>
 <p><strong>Hugo Learn theme</strong> let you choose between 3 native color scheme variants, but feel free to add one yourself ! Default color scheme is based on <a href="https://learn.getgrav.org/">Grav Learn Theme</a>.</p>
 <h3 id="red-variant">Red variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;red&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/red-variant.png?width=60pc" alt="Red variant"></p>
+<pre><code class="language-toml">[params]
+  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;red&quot;
+</code></pre>
+<p><img src="/en/basics/style-customization/images/red-variant.png?width=60pc" alt="Red variant"></p>
 <h3 id="blue-variant">Blue variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;blue&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/blue-variant.png?width=60pc" alt="Blue variant"></p>
+<pre><code class="language-toml">[params]
+  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;blue&quot;
+</code></pre>
+<p><img src="/en/basics/style-customization/images/blue-variant.png?width=60pc" alt="Blue variant"></p>
 <h3 id="green-variant">Green variant</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;green&#34;</span>
-</code></pre></div><p><img src="/en/basics/style-customization/images/green-variant.png?width=60pc" alt="Green variant"></p>
+<pre><code class="language-toml">[params]
+  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;green&quot;
+</code></pre>
+<p><img src="/en/basics/style-customization/images/green-variant.png?width=60pc" alt="Green variant"></p>
 <h3 id="yours-variant">&lsquo;Yours‘ variant</h3>
 <p>First, create a new CSS file in your local <code>static/css</code> folder prefixed by <code>theme</code> (e.g. with <em>mine</em> theme <code>static/css/theme-mine.css</code>). Copy the following content and modify colors in CSS variables.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
-:<span style="color:#a6e22e">root</span>{
+<pre><code class="language-css">
+:root{
     
-    --MAIN-TEXT-color:<span style="color:#ae81ff">#323232</span>; <span style="color:#75715e">/* Color of text by default */</span>
-    --MAIN-TITLES-TEXT-color: <span style="color:#ae81ff">#5e5e5e</span>; <span style="color:#75715e">/* Color of titles h2-h3-h4-h5 */</span>
-    --MAIN-LINK-color:<span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* Color of links */</span>
-    --MAIN-LINK-HOVER-color:<span style="color:#ae81ff">#167ad0</span>; <span style="color:#75715e">/* Color of hovered links */</span>
-    --MAIN-ANCHOR-color: <span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* color of anchors on titles */</span>
+    --MAIN-TEXT-color:#323232; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-LINK-color:#1C90F3; /* Color of links */
+    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
+    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
 
-    --MENU-HEADER-BG-color:<span style="color:#ae81ff">#1C90F3</span>; <span style="color:#75715e">/* Background color of menu header */</span>
-    --MENU-HEADER-BORDER-color:<span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/*Color of menu header border */</span> 
+    --MENU-HEADER-BG-color:#1C90F3; /* Background color of menu header */
+    --MENU-HEADER-BORDER-color:#33a1ff; /*Color of menu header border */ 
 
-    --MENU-SEARCH-BG-color:<span style="color:#ae81ff">#167ad0</span>; <span style="color:#75715e">/* Search field background color (by default borders + icons) */</span>
-    --MENU-SEARCH-BOX-color: <span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/* Override search field border color */</span>
-    --MENU-SEARCH-BOX-ICONS-color: <span style="color:#ae81ff">#a1d2fd</span>; <span style="color:#75715e">/* Override search field icons color */</span>
+    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
 
-    --MENU-SECTIONS-ACTIVE-BG-color:<span style="color:#ae81ff">#20272b</span>; <span style="color:#75715e">/* Background color of the active section and its childs */</span>
-    --MENU-SECTIONS-BG-color:<span style="color:#ae81ff">#252c31</span>; <span style="color:#75715e">/* Background color of other sections */</span>
-    --MENU-SECTIONS-LINK-color: <span style="color:#ae81ff">#ccc</span>; <span style="color:#75715e">/* Color of links in menu */</span>
-    --MENU-SECTIONS-LINK-HOVER-color: <span style="color:#ae81ff">#e6e6e6</span>;  <span style="color:#75715e">/* Color of links in menu, when hovered */</span>
-    --MENU-SECTION-ACTIVE-CATEGORY-color: <span style="color:#ae81ff">#777</span>; <span style="color:#75715e">/* Color of active category text */</span>
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: <span style="color:#ae81ff">#fff</span>; <span style="color:#75715e">/* Color of background for the active category (only) */</span>
+    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
+    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
 
-    --MENU-VISITED-color: <span style="color:#ae81ff">#33a1ff</span>; <span style="color:#75715e">/* Color of &#39;page visited&#39; icons in menu */</span>
-    --MENU-SECTION-HR-color: <span style="color:#ae81ff">#20272b</span>; <span style="color:#75715e">/* Color of &lt;hr&gt; separator in menu */</span>
+    --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: #20272b; /* Color of &lt;hr&gt; separator in menu */
     
 }
 
-<span style="color:#f92672">body</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>TEXT<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
+body {
+    color: var(--MAIN-TEXT-color) !important;
 }
 
-<span style="color:#f92672">textarea</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;number&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;datetime&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;datetime-local&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;time&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;week&#34;</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span><span style="color:#f92672">,</span> <span style="color:#f92672">select</span><span style="color:#f92672">[</span><span style="color:#f92672">multiple</span><span style="color:#f92672">=</span><span style="color:#f92672">multiple</span><span style="color:#f92672">]</span>:<span style="color:#a6e22e">focus</span> {
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#66d9ef">none</span>;
-    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">none</span>;
+textarea:focus, input[type=&quot;email&quot;]:focus, input[type=&quot;number&quot;]:focus, input[type=&quot;password&quot;]:focus, input[type=&quot;search&quot;]:focus, input[type=&quot;tel&quot;]:focus, input[type=&quot;text&quot;]:focus, input[type=&quot;url&quot;]:focus, input[type=&quot;color&quot;]:focus, input[type=&quot;date&quot;]:focus, input[type=&quot;datetime&quot;]:focus, input[type=&quot;datetime-local&quot;]:focus, input[type=&quot;month&quot;]:focus, input[type=&quot;time&quot;]:focus, input[type=&quot;week&quot;]:focus, select[multiple=multiple]:focus {
+    border-color: none;
+    box-shadow: none;
 }
 
-<span style="color:#f92672">h2</span><span style="color:#f92672">,</span> <span style="color:#f92672">h3</span><span style="color:#f92672">,</span> <span style="color:#f92672">h4</span><span style="color:#f92672">,</span> <span style="color:#f92672">h5</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>TITLES<span style="color:#f92672">-</span>TEXT<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
+h2, h3, h4, h5 {
+    color: var(--MAIN-TITLES-TEXT-color) !important;
 }
 
-<span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+a {
+    color: var(--MAIN-LINK-color);
 }
 
-.<span style="color:#a6e22e">anchor</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>ANCHOR<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+.anchor {
+    color: var(--MAIN-ANCHOR-color);
 }
 
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+a:hover {
+    color: var(--MAIN-LINK-HOVER-color);
 }
 
-#sidebar <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">visited</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">a</span> .<span style="color:#a6e22e">read-icon</span> {
-	<span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>VISITED<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#sidebar ul li.visited &gt; a .read-icon {
+	color: var(--MENU-VISITED-color);
 }
 
-#body <span style="color:#f92672">a</span>.<span style="color:#a6e22e">highlight</span>:<span style="color:#a6e22e">after</span> {
-    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
-    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;&#34;</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">-moz-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">-ms-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">width</span> <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-    <span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MAIN<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#body a.highlight:after {
+    display: block;
+    content: &quot;&quot;;
+    height: 1px;
+    width: 0%;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    background-color: var(--MAIN-LINK-HOVER-color);
 }
 #sidebar {
-	<span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+	background-color: var(--MENU-SECTIONS-BG-color);
 }
 #sidebar #header-wrapper {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>HEADER<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>HEADER<span style="color:#f92672">-</span>BORDER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+    background: var(--MENU-HEADER-BG-color);
+    color: var(--MENU-SEARCH-BOX-color);
+    border-color: var(--MENU-HEADER-BORDER-color);
 }
-#sidebar .<span style="color:#a6e22e">searchbox</span> {
-	<span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#sidebar .searchbox {
+	border-color: var(--MENU-SEARCH-BOX-color);
+    background: var(--MENU-SEARCH-BG-color);
 }
-#sidebar <span style="color:#f92672">ul</span>.<span style="color:#a6e22e">topics</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">parent</span><span style="color:#f92672">,</span> #sidebar <span style="color:#f92672">ul</span>.<span style="color:#a6e22e">topics</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#sidebar ul.topics &gt; li.parent, #sidebar ul.topics &gt; li.active {
+    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
 }
-#sidebar .<span style="color:#a6e22e">searchbox</span> <span style="color:#f92672">*</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SEARCH<span style="color:#f92672">-</span>BOX<span style="color:#f92672">-</span>ICONS<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-}
-
-#sidebar <span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#sidebar .searchbox * {
+    color: var(--MENU-SEARCH-BOX-ICONS-color);
 }
 
-#sidebar <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTIONS<span style="color:#f92672">-</span>LINK<span style="color:#f92672">-</span>HOVER<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#sidebar a {
+    color: var(--MENU-SECTIONS-LINK-color);
 }
 
-#sidebar <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">a</span> {
-    <span style="color:#66d9ef">background</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>CATEGORY<span style="color:#f92672">-</span>BG<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
-    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>ACTIVE<span style="color:#f92672">-</span>CATEGORY<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>) <span style="color:#75715e">!important</span>;
+#sidebar a:hover {
+    color: var(--MENU-SECTIONS-LINK-HOVER-color);
 }
 
-#sidebar <span style="color:#f92672">hr</span> {
-    <span style="color:#66d9ef">border-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>MENU<span style="color:#f92672">-</span>SECTION<span style="color:#f92672">-</span>HR<span style="color:#f92672">-</span><span style="color:#66d9ef">color</span>);
+#sidebar ul li.active &gt; a {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
 }
-</code></pre></div><p>Then, set the <code>themeVariant</code> value with the name of your custom theme file. That&rsquo;s it !</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;mine&#34;</span>
-</code></pre></div>
+
+#sidebar hr {
+    border-color: var(--MENU-SECTION-HR-color);
+}
+</code></pre>
+<p>Then, set the <code>themeVariant</code> value with the name of your custom theme file. That&rsquo;s it !</p>
+<pre><code class="language-toml">[params]
+  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;mine&quot;
+</code></pre>
+
 
 
 
@@ -2623,19 +2629,19 @@ You could use an <code>img</code> HTML tag and reference an image created under 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1598887227"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1598887227"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1596557577" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1596557577"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1598887227" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1598887227"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

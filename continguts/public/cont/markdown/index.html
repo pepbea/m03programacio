@@ -12,21 +12,21 @@
     <title>Markdown syntax :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1598887227" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1598887227" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1598887227"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1596557577"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1598887227"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1598887227"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1598887227"></script>
 
     
   </div>
@@ -194,13 +194,13 @@
  
   
     
-    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades" class="dd-item 
+    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades i operadors" class="dd-item 
         
         
         
         ">
       <a href="/m03programacio/continguts/public/2tipusdades/">
-          <b>2. </b>Tipus de dades
+          <b>2. </b>Tipus de dades i operadors
           
       </a>
       
@@ -1613,41 +1613,45 @@ Only difference is information about image customization (<a href="#resizing-ima
 <p>Grav ships with built-in support for <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and <a href="https://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>. You must enable <strong>Markdown Extra</strong> in your <code>system.yaml</code> configuration file</p>
 <p>Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like:</p>
 
-<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Bookmark this page for easy future reference!</p>
+<div class="notices info" ><p><i class="fas fa-bookmark"></i> Bookmark this page for easy future reference!</p>
 </div>
 
 <h2 id="headings">Headings</h2>
 <p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># h1 Heading
-<span style="color:#75715e">## h2 Heading
-</span><span style="color:#75715e">### h3 Heading
-</span><span style="color:#75715e">#### h4 Heading
-</span><span style="color:#75715e">##### h5 Heading
-</span><span style="color:#75715e">###### h6 Heading
-</span></code></pre></div><p>Renders to:</p>
-<!-- raw HTML omitted -->
+<pre><code class="language-markdown"># h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+</code></pre>
+<p>Renders to:</p>
+<!-- markdownlint-disable MD025 -->
 <h1 id="h1-heading">h1 Heading</h1>
-<!-- raw HTML omitted -->
+<!-- markdownlint-enable MD025 -->
 <h2 id="h2-heading">h2 Heading</h2>
 <h3 id="h3-heading">h3 Heading</h3>
 <h4 id="h4-heading">h4 Heading</h4>
 <h5 id="h5-heading">h5 Heading</h5>
 <h6 id="h6-heading">h6 Heading</h6>
 <p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;h1 Heading&lt;/<span style="color:#f92672">h1</span>&gt;
-&lt;<span style="color:#f92672">h2</span>&gt;h2 Heading&lt;/<span style="color:#f92672">h2</span>&gt;
-&lt;<span style="color:#f92672">h3</span>&gt;h3 Heading&lt;/<span style="color:#f92672">h3</span>&gt;
-&lt;<span style="color:#f92672">h4</span>&gt;h4 Heading&lt;/<span style="color:#f92672">h4</span>&gt;
-&lt;<span style="color:#f92672">h5</span>&gt;h5 Heading&lt;/<span style="color:#f92672">h5</span>&gt;
-&lt;<span style="color:#f92672">h6</span>&gt;h6 Heading&lt;/<span style="color:#f92672">h6</span>&gt;
-</code></pre></div><h2 id="comments">Comments</h2>
+<pre><code class="language-html">&lt;h1&gt;h1 Heading&lt;/h1&gt;
+&lt;h2&gt;h2 Heading&lt;/h2&gt;
+&lt;h3&gt;h3 Heading&lt;/h3&gt;
+&lt;h4&gt;h4 Heading&lt;/h4&gt;
+&lt;h5&gt;h5 Heading&lt;/h5&gt;
+&lt;h6&gt;h6 Heading&lt;/h6&gt;
+</code></pre>
+<h2 id="comments">Comments</h2>
 <p>Comments should be HTML compatible</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!--
-</span><span style="color:#75715e">This is a comment
-</span><span style="color:#75715e">--&gt;</span>
-</code></pre></div><p>Comment below should <strong>NOT</strong> be seen:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre><code class="language-html">&lt;!--
+This is a comment
+--&gt;
+</code></pre>
+<p>Comment below should <strong>NOT</strong> be seen:</p>
+<!--
+This is a comment
+-->
 <h2 id="horizontal-rules">Horizontal Rules</h2>
 <p>The HTML <code>&lt;hr&gt;</code> element is for creating a &ldquo;thematic break&rdquo; between paragraph-level elements. In markdown, you can create a <code>&lt;hr&gt;</code> with any of the following:</p>
 <ul>
@@ -1660,56 +1664,67 @@ Only difference is information about image customization (<a href="#resizing-ima
 <h2 id="body-copy">Body Copy</h2>
 <p>Body copy written as normal, plain text will be wrapped with <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
 <p>So this body copy:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
-</code></pre></div><p>renders to this HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><h2 id="emphasis">Emphasis</h2>
+<pre><code class="language-markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
+</code></pre>
+<p>renders to this HTML:</p>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/p&gt;
+</code></pre>
+<h2 id="emphasis">Emphasis</h2>
 <h3 id="bold">Bold</h3>
 <p>For emphasizing a snippet of text with a heavier font-weight.</p>
 <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">**rendered as bold text**
-</code></pre></div><p>renders to:</p>
-<!-- raw HTML omitted -->
+<pre><code class="language-markdown">**rendered as bold text**
+</code></pre>
+<p>renders to:</p>
+<!-- markdownlint-disable MD036 -->
 <p><strong>rendered as bold text</strong></p>
-<!-- raw HTML omitted -->
+<!-- markdownlint-enable MD036 -->
 <p>and this HTML</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">strong</span>&gt;rendered as bold text&lt;/<span style="color:#f92672">strong</span>&gt;
-</code></pre></div><h3 id="italics">Italics</h3>
+<pre><code class="language-html">&lt;strong&gt;rendered as bold text&lt;/strong&gt;
+</code></pre>
+<h3 id="italics">Italics</h3>
 <p>For emphasizing a snippet of text with italics.</p>
 <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">_rendered as italicized text_
-</code></pre></div><p>renders to:</p>
-<!-- raw HTML omitted -->
+<pre><code class="language-markdown">_rendered as italicized text_
+</code></pre>
+<p>renders to:</p>
+<!-- markdownlint-disable MD036 -->
 <p><em>rendered as italicized text</em></p>
-<!-- raw HTML omitted -->
+<!-- markdownlint-enable MD036 -->
 <p>and this HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">em</span>&gt;rendered as italicized text&lt;/<span style="color:#f92672">em</span>&gt;
-</code></pre></div><h3 id="strikethrough">Strikethrough</h3>
+<pre><code class="language-html">&lt;em&gt;rendered as italicized text&lt;/em&gt;
+</code></pre>
+<h3 id="strikethrough">Strikethrough</h3>
 <p>In GFM (GitHub flavored Markdown) you can do strikethroughs.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~Strike through this text.~~
-</code></pre></div><p>Which renders to:</p>
+<pre><code class="language-markdown">~~Strike through this text.~~
+</code></pre>
+<p>Which renders to:</p>
 <p><del>Strike through this text.</del></p>
 <p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">del</span>&gt;Strike through this text.&lt;/<span style="color:#f92672">del</span>&gt;
-</code></pre></div><h2 id="blockquotes">Blockquotes</h2>
+<pre><code class="language-html">&lt;del&gt;Strike through this text.&lt;/del&gt;
+</code></pre>
+<h2 id="blockquotes">Blockquotes</h2>
 <p>For quoting blocks of content from another source within your document.</p>
 <p>Add <code>&gt;</code> before any text you want to quote.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">**Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
-</span></code></pre></div><p>Renders to:</p>
+<pre><code class="language-markdown">&gt; **Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
+</code></pre>
+<p>Renders to:</p>
 <blockquote>
 <p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</p>
 </blockquote>
 <p>and this HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
-  &lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">strong</span>&gt;Fusion Drive&lt;/<span style="color:#f92672">strong</span>&gt; combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;/<span style="color:#f92672">blockquote</span>&gt;
-</code></pre></div><p>Blockquotes can also be nested:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
-</span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt;
-</span><span style="color:#66d9ef"></span><span style="font-style:italic">&gt; &gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
-</span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt;
-</span><span style="color:#66d9ef"></span><span style="font-style:italic">&gt; Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.
-</span></code></pre></div><p>Renders to:</p>
+<pre><code class="language-html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Fusion Drive&lt;/strong&gt; combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<p>Blockquotes can also be nested:</p>
+<pre><code class="language-markdown">&gt; Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+&gt;
+&gt; &gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
+&gt;
+&gt; Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.
+</code></pre>
+<p>Renders to:</p>
 <blockquote>
 <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
 <blockquote>
@@ -1726,24 +1741,26 @@ Only difference is information about image customization (<a href="#resizing-ima
 <h3 id="unordered">Unordered</h3>
 <p>A list of items in which the order of the items does not explicitly matter.</p>
 <p>You may use any of the following symbols to denote bullets for each list item:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">*</span> valid bullet
-<span style="color:#66d9ef">-</span> valid bullet
+<pre><code class="language-markdown">* valid bullet
+- valid bullet
 + valid bullet
-</code></pre></div><p>For example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">+ Lorem ipsum dolor sit amet
+</code></pre>
+<p>For example</p>
+<pre><code class="language-markdown">+ Lorem ipsum dolor sit amet
 + Consectetur adipiscing elit
 + Integer molestie lorem at massa
 + Facilisis in pretium nisl aliquet
 + Nulla volutpat aliquam velit
-  <span style="color:#66d9ef">-</span> Phasellus iaculis neque
-  <span style="color:#66d9ef">-</span> Purus sodales ultricies
-  <span style="color:#66d9ef">-</span> Vestibulum laoreet porttitor sem
-  <span style="color:#66d9ef">-</span> Ac tristique libero volutpat at
+  - Phasellus iaculis neque
+  - Purus sodales ultricies
+  - Vestibulum laoreet porttitor sem
+  - Ac tristique libero volutpat at
 + Faucibus porta lacus fringilla vel
 + Aenean sit amet erat nunc
 + Eget porttitor lorem
-</code></pre></div><p>Renders to:</p>
-<!-- raw HTML omitted -->
+</code></pre>
+<p>Renders to:</p>
+<!-- markdownlint-disable MD004 -->
 <ul>
 <li>Lorem ipsum dolor sit amet</li>
 <li>Consectetur adipiscing elit</li>
@@ -1761,36 +1778,38 @@ Only difference is information about image customization (<a href="#resizing-ima
 <li>Aenean sit amet erat nunc</li>
 <li>Eget porttitor lorem</li>
 </ul>
-<!-- raw HTML omitted -->
+<!-- markdownlint-enable MD004 -->
 <p>And this HTML</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Lorem ipsum dolor sit amet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Consectetur adipiscing elit&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Integer molestie lorem at massa&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Facilisis in pretium nisl aliquet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Nulla volutpat aliquam velit
-    &lt;<span style="color:#f92672">ul</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Phasellus iaculis neque&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Purus sodales ultricies&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Vestibulum laoreet porttitor sem&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Ac tristique libero volutpat at&lt;/<span style="color:#f92672">li</span>&gt;
-    &lt;/<span style="color:#f92672">ul</span>&gt;
-  &lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Faucibus porta lacus fringilla vel&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Aenean sit amet erat nunc&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Eget porttitor lorem&lt;/<span style="color:#f92672">li</span>&gt;
-&lt;/<span style="color:#f92672">ul</span>&gt;
-</code></pre></div><h3 id="ordered">Ordered</h3>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+  &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+  &lt;li&gt;Nulla volutpat aliquam velit
+    &lt;ul&gt;
+      &lt;li&gt;Phasellus iaculis neque&lt;/li&gt;
+      &lt;li&gt;Purus sodales ultricies&lt;/li&gt;
+      &lt;li&gt;Vestibulum laoreet porttitor sem&lt;/li&gt;
+      &lt;li&gt;Ac tristique libero volutpat at&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Faucibus porta lacus fringilla vel&lt;/li&gt;
+  &lt;li&gt;Aenean sit amet erat nunc&lt;/li&gt;
+  &lt;li&gt;Eget porttitor lorem&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h3 id="ordered">Ordered</h3>
 <p>A list of items in which the order of items does explicitly matter.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">1.</span> Lorem ipsum dolor sit amet
-<span style="color:#66d9ef">4.</span> Consectetur adipiscing elit
-<span style="color:#66d9ef">2.</span> Integer molestie lorem at massa
-<span style="color:#66d9ef">8.</span> Facilisis in pretium nisl aliquet
-<span style="color:#66d9ef">4.</span> Nulla volutpat aliquam velit
-<span style="color:#66d9ef">99.</span> Faucibus porta lacus fringilla vel
-<span style="color:#66d9ef">21.</span> Aenean sit amet erat nunc
-<span style="color:#66d9ef">6.</span> Eget porttitor lorem
-</code></pre></div><p>Renders to:</p>
+<pre><code class="language-markdown">1. Lorem ipsum dolor sit amet
+4. Consectetur adipiscing elit
+2. Integer molestie lorem at massa
+8. Facilisis in pretium nisl aliquet
+4. Nulla volutpat aliquam velit
+99. Faucibus porta lacus fringilla vel
+21. Aenean sit amet erat nunc
+6. Eget porttitor lorem
+</code></pre>
+<p>Renders to:</p>
 <ol>
 <li>Lorem ipsum dolor sit amet</li>
 <li>Consectetur adipiscing elit</li>
@@ -1802,26 +1821,28 @@ Only difference is information about image customization (<a href="#resizing-ima
 <li>Eget porttitor lorem</li>
 </ol>
 <p>And this HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Lorem ipsum dolor sit amet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Consectetur adipiscing elit&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Integer molestie lorem at massa&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Facilisis in pretium nisl aliquet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Nulla volutpat aliquam velit&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Faucibus porta lacus fringilla vel&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Aenean sit amet erat nunc&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Eget porttitor lorem&lt;/<span style="color:#f92672">li</span>&gt;
-&lt;/<span style="color:#f92672">ol</span>&gt;
-</code></pre></div><p><strong>TIP</strong>: If you just use <code>1.</code> for each number, Markdown will automatically number each item. For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">1.</span> Lorem ipsum dolor sit amet
-<span style="color:#66d9ef">1.</span> Consectetur adipiscing elit
-<span style="color:#66d9ef">1.</span> Integer molestie lorem at massa
-<span style="color:#66d9ef">1.</span> Facilisis in pretium nisl aliquet
-<span style="color:#66d9ef">1.</span> Nulla volutpat aliquam velit
-<span style="color:#66d9ef">1.</span> Faucibus porta lacus fringilla vel
-<span style="color:#66d9ef">1.</span> Aenean sit amet erat nunc
-<span style="color:#66d9ef">1.</span> Eget porttitor lorem
-</code></pre></div><p>Renders to:</p>
+<pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;Integer molestie lorem at massa&lt;/li&gt;
+  &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+  &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+  &lt;li&gt;Faucibus porta lacus fringilla vel&lt;/li&gt;
+  &lt;li&gt;Aenean sit amet erat nunc&lt;/li&gt;
+  &lt;li&gt;Eget porttitor lorem&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p><strong>TIP</strong>: If you just use <code>1.</code> for each number, Markdown will automatically number each item. For example:</p>
+<pre><code class="language-markdown">1. Lorem ipsum dolor sit amet
+1. Consectetur adipiscing elit
+1. Integer molestie lorem at massa
+1. Facilisis in pretium nisl aliquet
+1. Nulla volutpat aliquam velit
+1. Faucibus porta lacus fringilla vel
+1. Aenean sit amet erat nunc
+1. Eget porttitor lorem
+</code></pre>
+<p>Renders to:</p>
 <ol>
 <li>Lorem ipsum dolor sit amet</li>
 <li>Consectetur adipiscing elit</li>
@@ -1835,92 +1856,101 @@ Only difference is information about image customization (<a href="#resizing-ima
 <h2 id="code">Code</h2>
 <h3 id="inline-code">Inline code</h3>
 <p>Wrap inline snippets of code with <code>`</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">In this example, <span style="color:#e6db74">`&lt;section&gt;&lt;/section&gt;`</span> should be wrapped as <span style="font-weight:bold">**code**</span>.
-</code></pre></div><p>Renders to:</p>
+<pre><code class="language-markdown">In this example, `&lt;section&gt;&lt;/section&gt;` should be wrapped as **code**.
+</code></pre>
+<p>Renders to:</p>
 <p>In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as <strong>code</strong>.</p>
 <p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;In this example, &lt;<span style="color:#f92672">code</span>&gt;&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;&lt;/<span style="color:#f92672">code</span>&gt; should be wrapped as &lt;<span style="color:#f92672">strong</span>&gt;code&lt;/<span style="color:#f92672">strong</span>&gt;.&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><h3 id="indented-code">Indented code</h3>
+<pre><code class="language-html">&lt;p&gt;In this example, &lt;code&gt;&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;&lt;/code&gt; should be wrapped as &lt;strong&gt;code&lt;/strong&gt;.&lt;/p&gt;
+</code></pre>
+<h3 id="indented-code">Indented code</h3>
 <p>Or indent several lines of code by at least two spaces, as in:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">    // Some comments
+<pre><code class="language-markdown">    // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
-</code></pre></div><p>Renders to:</p>
-<!-- raw HTML omitted -->
+</code></pre>
+<p>Renders to:</p>
+<!-- markdownlint-disable MD046 -->
 <pre><code>// Some comments
 line 1 of code
 line 2 of code
 line 3 of code
 </code></pre>
-<!-- raw HTML omitted -->
+<!-- markdownlint-enable MD046 -->
 <p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">pre</span>&gt;
-  &lt;<span style="color:#f92672">code</span>&gt;
+<pre><code class="language-html">&lt;pre&gt;
+  &lt;code&gt;
     // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
-  &lt;/<span style="color:#f92672">code</span>&gt;
-&lt;/<span style="color:#f92672">pre</span>&gt;
-</code></pre></div><h3 id="block-code-fences">Block code &ldquo;fences&rdquo;</h3>
+  &lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
+<h3 id="block-code-fences">Block code &ldquo;fences&rdquo;</h3>
 <p>Use &ldquo;fences&rdquo;  <code>```</code> to block in multiple lines of code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">Sample text here...
-</code></pre></div><p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">pre</span>&gt;
-  &lt;<span style="color:#f92672">code</span>&gt;Sample text here...&lt;/<span style="color:#f92672">code</span>&gt;
-&lt;/<span style="color:#f92672">pre</span>&gt;
-</code></pre></div><h3 id="syntax-highlighting">Syntax highlighting</h3>
+<pre><code class="language-markdown">Sample text here...
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;pre&gt;
+  &lt;code&gt;Sample text here...&lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
+<h3 id="syntax-highlighting">Syntax highlighting</h3>
 <p>GFM, or &ldquo;GitHub Flavored Markdown&rdquo; also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code &ldquo;fence&rdquo;, <code>```js</code>, and syntax highlighting will automatically be applied in the rendered HTML.</p>
 <p>See <a href="/m03programacio/continguts/public/cont/syntaxhighlight/">Code Highlighting</a> for additional documentation.</p>
 <p>For example, to apply syntax highlighting to JavaScript code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">    ```js
+<pre><code class="language-plaintext">    ```js
     grunt.initConfig({
       assemble: {
         options: {
-          assets: &#39;docs/assets&#39;,
-          data: &#39;src/data/*.{json,yml}&#39;,
-          helpers: &#39;src/custom-helpers.js&#39;,
-          partials: [&#39;src/partials/**/*.{hbs,md}&#39;]
+          assets: 'docs/assets',
+          data: 'src/data/*.{json,yml}',
+          helpers: 'src/custom-helpers.js',
+          partials: ['src/partials/**/*.{hbs,md}']
         },
         pages: {
           options: {
-            layout: &#39;default.hbs&#39;
+            layout: 'default.hbs'
           },
           files: {
-            &#39;./&#39;: [&#39;src/templates/pages/index.hbs&#39;]
+            './': ['src/templates/pages/index.hbs']
           }
         }
       }
     };
     ```
-</code></pre></div><p>Renders to:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">initConfig</span>({
-  <span style="color:#a6e22e">assemble</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">assets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;docs/assets&#39;</span>,
-      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/data/*.{json,yml}&#39;</span>,
-      <span style="color:#a6e22e">helpers</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/custom-helpers.js&#39;</span>,
-      <span style="color:#a6e22e">partials</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/partials/**/*.{hbs,md}&#39;</span>]
+</code></pre>
+<p>Renders to:</p>
+<pre><code class="language-js">grunt.initConfig({
+  assemble: {
+    options: {
+      assets: 'docs/assets',
+      data: 'src/data/*.{json,yml}',
+      helpers: 'src/custom-helpers.js',
+      partials: ['src/partials/**/*.{hbs,md}']
     },
-    <span style="color:#a6e22e">pages</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">layout</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;default.hbs&#39;</span>
+    pages: {
+      options: {
+        layout: 'default.hbs'
       },
-      <span style="color:#a6e22e">files</span><span style="color:#f92672">:</span> {
-        <span style="color:#e6db74">&#39;./&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/templates/pages/index.hbs&#39;</span>]
+      files: {
+        './': ['src/templates/pages/index.hbs']
       }
     }
   }
 };
-</code></pre></div><h2 id="tables">Tables</h2>
+</code></pre>
+<h2 id="tables">Tables</h2>
 <p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">| Option | Description |
+<pre><code class="language-markdown">| Option | Description |
 | ------ | ----------- |
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
-</code></pre></div><p>Renders to:</p>
+</code></pre>
+<p>Renders to:</p>
 <table>
 <thead>
 <tr>
@@ -1944,32 +1974,34 @@ line 3 of code
 </tbody>
 </table>
 <p>And this HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">th</span>&gt;Option&lt;/<span style="color:#f92672">th</span>&gt;
-    &lt;<span style="color:#f92672">th</span>&gt;Description&lt;/<span style="color:#f92672">th</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;data&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;path to data files to supply the data that will be passed into templates.&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;engine&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;engine to be used for processing templates. Handlebars is the default.&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;ext&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;extension to be used for dest files.&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-&lt;/<span style="color:#f92672">table</span>&gt;
-</code></pre></div><h3 id="right-aligned-text">Right aligned text</h3>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Option&lt;/th&gt;
+    &lt;th&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;data&lt;/td&gt;
+    &lt;td&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;engine&lt;/td&gt;
+    &lt;td&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ext&lt;/td&gt;
+    &lt;td&gt;extension to be used for dest files.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<h3 id="right-aligned-text">Right aligned text</h3>
 <p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">| Option | Description |
+<pre><code class="language-markdown">| Option | Description |
 | ------:| -----------:|
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
-</code></pre></div><table>
+</code></pre>
+<table>
 <thead>
 <tr>
 <th align="right">Option</th>
@@ -1993,67 +2025,83 @@ line 3 of code
 </table>
 <h2 id="links">Links</h2>
 <h3 id="basic-link">Basic link</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[<span style="color:#f92672">Assemble</span>](<span style="color:#a6e22e">http://assemble.io</span>)
-</code></pre></div><p>Renders to (hover over the link, there is no tooltip):</p>
+<pre><code class="language-markdown">[Assemble](http://assemble.io)
+</code></pre>
+<p>Renders to (hover over the link, there is no tooltip):</p>
 <p><a href="http://assemble.io">Assemble</a></p>
 <p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://assemble.io&#34;</span>&gt;Assemble&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><h3 id="add-a-tooltip">Add a tooltip</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[<span style="color:#f92672">Upstage</span>](<span style="color:#a6e22e">https://github.com/upstage/ &#34;Visit Upstage!&#34;</span>)
-</code></pre></div><p>Renders to (hover over the link, there should be a tooltip):</p>
+<pre><code class="language-html">&lt;a href=&quot;http://assemble.io&quot;&gt;Assemble&lt;/a&gt;
+</code></pre>
+<h3 id="add-a-tooltip">Add a tooltip</h3>
+<pre><code class="language-markdown">[Upstage](https://github.com/upstage/ &quot;Visit Upstage!&quot;)
+</code></pre>
+<p>Renders to (hover over the link, there should be a tooltip):</p>
 <p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a></p>
 <p>HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/upstage/&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Visit Upstage!&#34;</span>&gt;Upstage&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><h3 id="named-anchors">Named Anchors</h3>
+<pre><code class="language-html">&lt;a href=&quot;https://github.com/upstage/&quot; title=&quot;Visit Upstage!&quot;&gt;Upstage&lt;/a&gt;
+</code></pre>
+<h3 id="named-anchors">Named Anchors</h3>
 <p>Named anchors enable you to jump to the specified anchor point on the same page. For example, each of these chapters:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># Table of Contents
-  <span style="color:#66d9ef">*</span> [<span style="color:#f92672">Chapter 1</span>](<span style="color:#a6e22e">#chapter-1</span>)
-  <span style="color:#66d9ef">*</span> [<span style="color:#f92672">Chapter 2</span>](<span style="color:#a6e22e">#chapter-2</span>)
-  <span style="color:#66d9ef">*</span> [<span style="color:#f92672">Chapter 3</span>](<span style="color:#a6e22e">#chapter-3</span>)
-</code></pre></div><p>will jump to these sections:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## Chapter 1 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;
-</span><span style="color:#75715e"></span>Content for chapter one.
+<pre><code class="language-markdown"># Table of Contents
+  * [Chapter 1](#chapter-1)
+  * [Chapter 2](#chapter-2)
+  * [Chapter 3](#chapter-3)
+</code></pre>
+<p>will jump to these sections:</p>
+<pre><code class="language-markdown">## Chapter 1 &lt;a id=&quot;chapter-1&quot;&gt;&lt;/a&gt;
+Content for chapter one.
 
-<span style="color:#75715e">## Chapter 2 &lt;a id=&#34;chapter-2&#34;&gt;&lt;/a&gt;
-</span><span style="color:#75715e"></span>Content for chapter one.
+## Chapter 2 &lt;a id=&quot;chapter-2&quot;&gt;&lt;/a&gt;
+Content for chapter one.
 
-<span style="color:#75715e">## Chapter 3 &lt;a id=&#34;chapter-3&#34;&gt;&lt;/a&gt;
-</span><span style="color:#75715e"></span>Content for chapter one.
-</code></pre></div><p><strong>NOTE</strong> that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.</p>
+## Chapter 3 &lt;a id=&quot;chapter-3&quot;&gt;&lt;/a&gt;
+Content for chapter one.
+</code></pre>
+<p><strong>NOTE</strong> that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.</p>
 <h2 id="images">Images</h2>
 <p>Images have a similar syntax to links but include a preceding exclamation point.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">Minion</span>](<span style="color:#a6e22e">https://octodex.github.com/images/minion.png</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/minion.png" alt="Minion"></p>
+<pre><code class="language-markdown">![Minion](https://octodex.github.com/images/minion.png)
+</code></pre>
+<p><img src="https://octodex.github.com/images/minion.png" alt="Minion"></p>
 <p>or</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">Alt text</span>](<span style="color:#a6e22e">https://octodex.github.com/images/stormtroopocat.jpg &#34;The Stormtroopocat&#34;</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" title="The Stormtroopocat"></p>
+<pre><code class="language-markdown">![Alt text](https://octodex.github.com/images/stormtroopocat.jpg &quot;The Stormtroopocat&quot;)
+</code></pre>
+<p><img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" title="The Stormtroopocat"></p>
 <p>Like links, Images also have a footnote style syntax</p>
 <h3 id="alternative-usage--note-images">Alternative usage : note images</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![Alt text][id]
-</code></pre></div><p><img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat"></p>
+<pre><code class="language-markdown">![Alt text][id]
+</code></pre>
+<p><img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat"></p>
 <p>With a reference later in the document defining the URL location:</p>
 <pre><code>[id]: https://octodex.github.com/images/dojocat.jpg  &quot;The Dojocat&quot;
 </code></pre>
 <h3 id="resizing-image">Resizing image</h3>
 <p>Add HTTP parameters <code>width</code> and/or <code>height</code> to the link image to resize the image. Values are CSS values (default is <code>auto</code>).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">Minion</span>](<span style="color:#a6e22e">https://octodex.github.com/images/minion.png?width=20pc</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/minion.png?width=20pc" alt="Minion"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">Minion</span>](<span style="color:#a6e22e">https://octodex.github.com/images/minion.png?height=50px</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">Minion</span>](<span style="color:#a6e22e">https://octodex.github.com/images/minion.png?height=50px&amp;width=300px</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=300px" alt="Minion"></p>
+<pre><code class="language-markdown">![Minion](https://octodex.github.com/images/minion.png?width=20pc)
+</code></pre>
+<p><img src="https://octodex.github.com/images/minion.png?width=20pc" alt="Minion"></p>
+<pre><code class="language-markdown">![Minion](https://octodex.github.com/images/minion.png?height=50px)
+</code></pre>
+<p><img src="https://octodex.github.com/images/minion.png?height=50px" alt="Minion"></p>
+<pre><code class="language-markdown">![Minion](https://octodex.github.com/images/minion.png?height=50px&amp;width=300px)
+</code></pre>
+<p><img src="https://octodex.github.com/images/minion.png?height=50px&amp;width=300px" alt="Minion"></p>
 <h3 id="add-css-classes">Add CSS classes</h3>
 <p>Add a HTTP <code>classes</code> parameter to the link image to add CSS classes. <code>shadow</code>and <code>border</code> are available but you could define other ones.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">stormtroopocat</span>](<span style="color:#a6e22e">https://octodex.github.com/images/stormtroopocat.jpg?classes=shadow</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=shadow" alt="stormtroopocat"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">stormtroopocat</span>](<span style="color:#a6e22e">https://octodex.github.com/images/stormtroopocat.jpg?classes=border</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=border" alt="stormtroopocat"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">stormtroopocat</span>](<span style="color:#a6e22e">https://octodex.github.com/images/stormtroopocat.jpg?classes=border,shadow</span>)
-</code></pre></div><p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=border,shadow" alt="stormtroopocat"></p>
+<pre><code class="language-markdown">![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=shadow)
+</code></pre>
+<p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=shadow" alt="stormtroopocat"></p>
+<pre><code class="language-markdown">![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=border)
+</code></pre>
+<p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=border" alt="stormtroopocat"></p>
+<pre><code class="language-markdown">![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=border,shadow)
+</code></pre>
+<p><img src="https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&amp;classes=border,shadow" alt="stormtroopocat"></p>
 <h3 id="lightbox">Lightbox</h3>
 <p>Add a HTTP <code>featherlight</code> parameter to the link image to disable lightbox. By default lightbox is enabled using the featherlight.js plugin. You can disable this by defining <code>featherlight</code> to <code>false</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">![<span style="color:#f92672">Minion</span>](<span style="color:#a6e22e">https://octodex.github.com/images/minion.png?featherlight=false</span>)
-</code></pre></div>
+<pre><code class="language-markdown">![Minion](https://octodex.github.com/images/minion.png?featherlight=false)
+</code></pre>
+
 
 <footer class="footline">
 	
@@ -2975,19 +3023,19 @@ line 3 of code
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1598887227"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1598887227"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1596557577" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1596557577"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1598887227" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1598887227"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

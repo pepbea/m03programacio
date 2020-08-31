@@ -12,21 +12,21 @@
     <title>Mermaid :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1598887227" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1598887227" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1598887227"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1596557577"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1598887227"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1598887227"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1598887227"></script>
 
     
   </div>
@@ -194,13 +194,13 @@
  
   
     
-    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades" class="dd-item 
+    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades i operadors" class="dd-item 
         
         
         
         ">
       <a href="/m03programacio/continguts/public/2tipusdades/">
-          <b>2. </b>Tipus de dades
+          <b>2. </b>Tipus de dades i operadors
           
       </a>
       
@@ -1564,15 +1564,23 @@ graph LR;
 </div>
 
 <p>or you can use this alternative syntax:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+```mermaid
+graph LR;
+	A[Bords droits] -->|Lien texte| B(Bords arondis)
+	B --> C{Décision}
+	C -->|Un| D[Résultat un]
+	C -->|Deux| E[Résultat deux]
+```
+</pre>
 <p>renders as</p>
-<pre><code class="language-mermaid" data-lang="mermaid">graph LR;
+<pre><code class="language-mermaid">graph LR;
 	A[Bords droits] --&gt;|Lien texte| B(Bords arondis)
 	B --&gt; C{Décision}
 	C --&gt;|Un| D[Résultat un]
 	C --&gt;|Deux| E[Résultat deux]
-</code></pre><h2 id="sequence-example">Sequence example</h2>
+</code></pre>
+<h2 id="sequence-example">Sequence example</h2>
 <pre><code>{{&lt;mermaid&gt;}}
 sequenceDiagram
     participant Alice
@@ -1604,10 +1612,23 @@ sequenceDiagram
 </div>
 
 <p>or you can use this alternative syntax:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+```mermaid
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice->>John: Salut John, comment vas-tu?
+	loop Vérification
+		John->John: Se bat contre l'hyponcodrie.
+	end
+	Note right of John: Les pensées rationnelles<br/>prédominent...
+	John-->Alice: Super!
+	John->Bob: Et toi?
+	Bob-->John: Au top!
+```
+</pre>
 <p>renders as</p>
-<pre><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+<pre><code class="language-mermaid">sequenceDiagram
 	participant Alice
 	participant Bob
 	Alice-&gt;&gt;John: Salut John, comment vas-tu?
@@ -1618,7 +1639,8 @@ sequenceDiagram
 	John--&gt;Alice: Super!
 	John-&gt;Bob: Et toi?
 	Bob--&gt;John: Au top!
-</code></pre><h2 id="gantt-example">GANTT Example</h2>
+</code></pre>
+<h2 id="gantt-example">GANTT Example</h2>
 <pre><code>{{&lt;mermaid&gt;}}
 gantt
         dateFormat  YYYY-MM-DD
@@ -1658,10 +1680,9 @@ gantt
 </div>
 
 <p>or you can use this alternative syntax:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>renders as</p>
-<pre><code class="language-mermaid" data-lang="mermaid">gantt
+<pre>
+```mermaid
+gantt
 		dateFormat  YYYY-MM-DD
 		title Ajout de la fonctionnalité de GANTT à Mermaid
 		section Une section
@@ -1676,11 +1697,46 @@ gantt
 		Future tâche dans le chemin critique        :crit, 5d
 		Créer des tests pour le renderer           :2d
 		Ajout à Mermaid                      :1d
-</code></pre><h3 id="class-example">Class example</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+```
+</pre>
 <p>renders as</p>
-<pre><code class="language-mermaid" data-lang="mermaid">classDiagram
+<pre><code class="language-mermaid">gantt
+		dateFormat  YYYY-MM-DD
+		title Ajout de la fonctionnalité de GANTT à Mermaid
+		section Une section
+		Tâche complétée            :done,    des1, 2014-01-06,2014-01-08
+		Tâche en cours             :active,  des2, 2014-01-09, 3d
+		Future tâche               :         des3, after des2, 5d
+		Future tâche 2             :         des4, after des3, 5d
+		section Tâches critiques
+		Tâche complétée dans le chemin critique :crit, done, 2014-01-06,24h
+		Implémenter le parser et jison          :crit, done, after des1, 2d
+		Créer des tests pour le parser             :crit, active, 3d
+		Future tâche dans le chemin critique        :crit, 5d
+		Créer des tests pour le renderer           :2d
+		Ajout à Mermaid                      :1d
+</code></pre>
+<h3 id="class-example">Class example</h3>
+<pre>
+```mermaid
+classDiagram
+  Class01 <|-- AveryLongClass : Cool
+  Class03 *-- Class04
+  Class05 o-- Class06
+  Class07 .. Class08
+  Class09 --> C2 : Where am i?
+  Class09 --* C3
+  Class09 --|> Class07
+  Class07 : equals()
+  Class07 : Object[] elementData
+  Class01 : size()
+  Class01 : int chimp
+  Class01 : int gorilla
+  Class08 <--> C2: Cool label
+```
+</pre>
+<p>renders as</p>
+<pre><code class="language-mermaid">classDiagram
   Class01 &lt;|-- AveryLongClass : Cool
   Class03 *-- Class04
   Class05 o-- Class06
@@ -1694,11 +1750,30 @@ gantt
   Class01 : int chimp
   Class01 : int gorilla
   Class08 &lt;--&gt; C2: Cool label
-</code></pre><h3 id="git-example">Git example</h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</code></pre>
+<h3 id="git-example">Git example</h3>
+<pre>
+```mermaid
+gitGraph:
+options
+{
+  "nodeSpacing": 150,
+  "nodeRadius": 10
+}
+end
+  commit
+  branch newbranch
+  checkout newbranch
+  commit
+  commit
+  checkout master
+  commit
+  commit
+  merge newbranch
+```
+</pre>
 <p>renders as</p>
-<pre><code class="language-mermaid" data-lang="mermaid">gitGraph:
+<pre><code class="language-mermaid">gitGraph:
 options
 {
   &quot;nodeSpacing&quot;: 150,
@@ -1715,6 +1790,7 @@ end
   commit
   merge newbranch
 </code></pre>
+
 
 <footer class="footline">
 	
@@ -2636,19 +2712,19 @@ end
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1598887227"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1598887227"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1596557577" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1596557577"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1598887227" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1598887227"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

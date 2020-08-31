@@ -19,7 +19,7 @@
       <guid>https://pepbea.github.io/m03programacio/continguts/public/cont/tags/</guid>
       <description>Learn theme support one default taxonomy of gohugo: the tag feature.
 Configuration Just add tags to any page:
---- date: 2018-11-29T08:41:44+01:00 title: Theme tutorial weight: 15 tags: [&amp;#34;tutorial&amp;#34;, &amp;#34;theme&amp;#34;] --- Behavior The tags are displayed at the top of the page, in their insertion order.
+--- date: 2018-11-29T08:41:44+01:00 title: Theme tutorial weight: 15 tags: [&amp;quot;tutorial&amp;quot;, &amp;quot;theme&amp;quot;] ---  Behavior The tags are displayed at the top of the page, in their insertion order.
 Each tag is a link to a Taxonomy page displaying all the articles with the given tag.
 List all the tags In the config.toml file you can add a shortcut to display all the tags</description>
     </item>
@@ -32,7 +32,7 @@ List all the tags In the config.toml file you can add a shortcut to display all 
       <guid>https://pepbea.github.io/m03programacio/continguts/public/cont/tags.fr/</guid>
       <description>Le thème Learn supporte une des taxonomy par défaut de GoHugo : les tags.
 Configuration Il suffit d&amp;rsquo;ajouter un tableau de tags sur la page :
---- date: 2018-11-29T08:41:44+01:00 title: Tutoriel pour le thème weight: 15 tags: [&amp;#34;tutoriel&amp;#34;, &amp;#34;theme&amp;#34;] --- Comportement Les tags sont affichés en haut de la page, dans l&amp;rsquo;ordre dans lequel ils ont été saisis.
+--- date: 2018-11-29T08:41:44+01:00 title: Tutoriel pour le thème weight: 15 tags: [&amp;quot;tutoriel&amp;quot;, &amp;quot;theme&amp;quot;] ---  Comportement Les tags sont affichés en haut de la page, dans l&amp;rsquo;ordre dans lequel ils ont été saisis.
 Chaque tag est un lien vers une page Taxonomy, qui affiche tous les article avec ce tag.</description>
     </item>
     

@@ -12,21 +12,21 @@
     <title>Arrays Unidimensionals :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1596557577" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1598887227" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1598887227" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1596557577" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1598887227" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1598887227"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1596557577"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1598887227"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1598887227"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1596557577"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1598887227"></script>
 
     
   </div>
@@ -194,13 +194,13 @@
  
   
     
-    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades" class="dd-item 
+    <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades i operadors" class="dd-item 
         
         
         
         ">
       <a href="/m03programacio/continguts/public/2tipusdades/">
-          <b>2. </b>Tipus de dades
+          <b>2. </b>Tipus de dades i operadors
           
       </a>
       
@@ -1540,43 +1540,45 @@
 	<h2 id="global-site-parameters">Global site parameters</h2>
 <p>On top of <a href="https://gohugo.io/overview/configuration/">Hugo global configuration</a>, <strong>Hugo-theme-learn</strong> lets you define the following parameters in your <code>config.toml</code> (here, values are default).</p>
 <p>Note that some of these parameters are explained in details in other sections of this documentation.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
-  <span style="color:#75715e"># Prefix URL to edit current page. Will display an &#34;Edit this page&#34; button on top right hand corner of every page.</span>
-  <span style="color:#75715e"># Useful to give opportunity to people to create merge request for your doc.</span>
-  <span style="color:#75715e"># See the config.toml file from this documentation site to have an example.</span>
-  <span style="color:#a6e22e">editURL</span> = <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#75715e"># Author of the site, will be used in meta information</span>
-  <span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#75715e"># Description of the site, will be used in meta information</span>
-  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#75715e"># Shows a checkmark for visited pages on the menu</span>
-  <span style="color:#a6e22e">showVisitedLinks</span> = <span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># Disable search function. It will hide search bar</span>
-  <span style="color:#a6e22e">disableSearch</span> = <span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># Javascript and CSS cache are automatically busted when new version of site is generated.</span>
-  <span style="color:#75715e"># Set this to true to disable this behavior (some proxies don&#39;t handle well this optimization)</span>
-  <span style="color:#a6e22e">disableAssetsBusting</span> = <span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># Set this to true to disable copy-to-clipboard button for inline code.</span>
-  <span style="color:#a6e22e">disableInlineCopyToClipBoard</span> = <span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># A title for shortcuts in menu is set by default. Set this to true to disable it.</span>
-  <span style="color:#a6e22e">disableShortcutsTitle</span> = <span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># When using mulitlingual website, disable the switch language button.</span>
-  <span style="color:#a6e22e">disableLanguageSwitchingButton</span> = <span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># Hide breadcrumbs in the header and only show the current page title</span>
-  <span style="color:#a6e22e">disableBreadcrumb</span> = <span style="color:#66d9ef">true</span>
-  <span style="color:#75715e"># Hide Next and Previous page buttons normally displayed full height beside content</span>
-  <span style="color:#a6e22e">disableNextPrev</span> = <span style="color:#66d9ef">true</span>
-  <span style="color:#75715e"># Order sections in menu by &#34;weight&#34; or &#34;title&#34;. Default to &#34;weight&#34;</span>
-  <span style="color:#a6e22e">ordersectionsby</span> = <span style="color:#e6db74">&#34;weight&#34;</span>
-  <span style="color:#75715e"># Change default color scheme with a variant one. Can be &#34;red&#34;, &#34;blue&#34;, &#34;green&#34;.</span>
-  <span style="color:#a6e22e">themeVariant</span> = <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#75715e"># Provide a list of custom css files to load relative from the `static/` folder in the site root.</span>
-  <span style="color:#a6e22e">custom_css</span> = [<span style="color:#e6db74">&#34;css/foo.css&#34;</span>, <span style="color:#e6db74">&#34;css/bar.css&#34;</span>]
-</code></pre></div><h2 id="activate-search">Activate search</h2>
+<pre><code class="language-toml">[params]
+  # Prefix URL to edit current page. Will display an &quot;Edit this page&quot; button on top right hand corner of every page.
+  # Useful to give opportunity to people to create merge request for your doc.
+  # See the config.toml file from this documentation site to have an example.
+  editURL = &quot;&quot;
+  # Author of the site, will be used in meta information
+  author = &quot;&quot;
+  # Description of the site, will be used in meta information
+  description = &quot;&quot;
+  # Shows a checkmark for visited pages on the menu
+  showVisitedLinks = false
+  # Disable search function. It will hide search bar
+  disableSearch = false
+  # Javascript and CSS cache are automatically busted when new version of site is generated.
+  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
+  disableAssetsBusting = false
+  # Set this to true to disable copy-to-clipboard button for inline code.
+  disableInlineCopyToClipBoard = false
+  # A title for shortcuts in menu is set by default. Set this to true to disable it.
+  disableShortcutsTitle = false
+  # When using mulitlingual website, disable the switch language button.
+  disableLanguageSwitchingButton = false
+  # Hide breadcrumbs in the header and only show the current page title
+  disableBreadcrumb = true
+  # Hide Next and Previous page buttons normally displayed full height beside content
+  disableNextPrev = true
+  # Order sections in menu by &quot;weight&quot; or &quot;title&quot;. Default to &quot;weight&quot;
+  ordersectionsby = &quot;weight&quot;
+  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;&quot;
+  # Provide a list of custom css files to load relative from the `static/` folder in the site root.
+  custom_css = [&quot;css/foo.css&quot;, &quot;css/bar.css&quot;]
+</code></pre>
+<h2 id="activate-search">Activate search</h2>
 <p>If not already present, add the follow lines in the same <code>config.toml</code> file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">outputs</span>]
-<span style="color:#a6e22e">home</span> = [ <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
-</code></pre></div><p>Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.</p>
+<pre><code class="language-toml">[outputs]
+home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
+</code></pre>
+<p>Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.</p>
 <blockquote>
 <p>Hugo generate lunrjs index.json at the root of public folder.
 When you build the site with <code>hugo server</code>, hugo generates it internally and of course it doesn’t show up in the filesystem</p>
@@ -2503,19 +2505,19 @@ When you build the site with <code>hugo server</code>, hugo generates it interna
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1598887227"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1596557577"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1596557577"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1598887227"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1598887227"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1596557577" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1596557577"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1598887227" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1598887227"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

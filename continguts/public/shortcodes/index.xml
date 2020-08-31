@@ -40,7 +40,7 @@
       
       <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/button/</guid>
       <description>A button is a just a clickable button with optional icon.
-{{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Get Grav{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Get Grav with icon{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Get Grav with icon right{{% /button %}}  Get Grav   Get Grav with icon  Get Grav with icon right   </description>
+{{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Get Grav{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Get Grav with icon{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Get Grav with icon right{{% /button %}}   Get Grav   Get Grav with icon  Get Grav with icon right   </description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@
       
       <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/button.fr/</guid>
       <description>Le shortcode button est simplement un bouton cliquable avec une icône optionnelle.
-{{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Téléchargez Grav{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Téléchargez Grav avec icône{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Téléchargez Grav avec icône à droite{{% /button %}}  Téléchargez Grav   Téléchargez Grav avec icône  Téléchargez Grav avec icône à droite   </description>
+{{% button href=&amp;quot;https://getgrav.org/&amp;quot; %}}Téléchargez Grav{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; %}}Téléchargez Grav avec icône{{% /button %}} {{% button href=&amp;quot;https://getgrav.org/&amp;quot; icon=&amp;quot;fas fa-download&amp;quot; icon-position=&amp;quot;right&amp;quot; %}}Téléchargez Grav avec icône à droite{{% /button %}}   Téléchargez Grav   Téléchargez Grav avec icône  Téléchargez Grav avec icône à droite   </description>
     </item>
     
     <item>
@@ -104,13 +104,13 @@ graph LR; A[Bords droits] --|Lien texte| B(Bords arondis) B -- C{Décision} C --
       
       <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/notice/</guid>
       <description>The notice shortcode shows 4 types of disclaimers to help you structure your page.
-Note {{% notice note %}} A notice disclaimer {{% /notice %}} renders as
+Note {{% notice note %}} A notice disclaimer {{% /notice %}}  renders as
 A notice disclaimer
- Info {{% notice info %}} An information disclaimer {{% /notice %}} renders as
+ Info {{% notice info %}} An information disclaimer {{% /notice %}}  renders as
 An information disclaimer
- Tip {{% notice tip %}} A tip disclaimer {{% /notice %}} renders as
+ Tip {{% notice tip %}} A tip disclaimer {{% /notice %}}  renders as
 A tip disclaimer
- Warning {{% notice warning %}} A warning disclaimer {{% /notice %}} renders as</description>
+ Warning {{% notice warning %}} A warning disclaimer {{% /notice %}}  renders as</description>
     </item>
     
     <item>
@@ -120,11 +120,11 @@ A tip disclaimer
       
       <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/notice.fr/</guid>
       <description>Le shortcode Notice permet d&amp;rsquo;afficher 4 types de message pour vous aider à structurer votre contenu.
-Note {{% notice note %}} Une notice de type *note* {{% /notice %}} s&amp;rsquo;affiche comme
+Note {{% notice note %}} Une notice de type *note* {{% /notice %}}  s&amp;rsquo;affiche comme
 Une notice de type note
- Info {{% notice info %}} Une notice de type *info* {{% /notice %}} s&amp;rsquo;affiche comme
+ Info {{% notice info %}} Une notice de type *info* {{% /notice %}}  s&amp;rsquo;affiche comme
 Une notice de type info
- Tip {{% notice tip %}} Une notice de type *tip* {{% /notice %}} s&amp;rsquo;affiche comme</description>
+ Tip {{% notice tip %}} Une notice de type *tip* {{% /notice %}}  s&amp;rsquo;affiche comme</description>
     </item>
     
     <item>
@@ -135,8 +135,8 @@ Une notice de type info
       <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/siteparam/</guid>
       <description>siteparam shortcode is used to help you print values of site params.
 For instance, in this current site, the editURL variable is used in config.toml
-[params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Use the siteparam shortcode to display its value.
-`editURL` Value : {{% siteparam &amp;quot;editURL&amp;quot; %}} is displayed as
+[params] editURL = &amp;quot;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;quot;  Use the siteparam shortcode to display its value.
+`editURL` Value : {{% siteparam &amp;quot;editURL&amp;quot; %}}  is displayed as
 editURL Value : https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/</description>
     </item>
     
@@ -148,8 +148,8 @@ editURL Value : https://github.com/matcornic/hugo-theme-learn/edit/master/exampl
       <guid>https://pepbea.github.io/m03programacio/continguts/public/shortcodes/siteparam.fr/</guid>
       <description>Les shortcode siteparam est utilisé pour vous aider à afficher des valeurs provenant des paramètres globaux du site.
 Par exemple, dans ce site, le paramètre editURL est utilisé dans le fichier config.toml
-[params] editURL = &amp;#34;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;#34; Utilisez le shortcode siteparam pour affichier sa valeur.
-Valeur de `editURL` : {{% siteparam &amp;quot;editURL&amp;quot; %}} s&amp;rsquo;affiche comme
+[params] editURL = &amp;quot;https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/&amp;quot;  Utilisez le shortcode siteparam pour affichier sa valeur.
+Valeur de `editURL` : {{% siteparam &amp;quot;editURL&amp;quot; %}}  s&amp;rsquo;affiche comme
 Valeur de editURL : https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/</description>
     </item>
     
