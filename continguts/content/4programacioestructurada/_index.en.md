@@ -1,5 +1,5 @@
 ---
-title: 4. Programació estructuada
+title: Programació estructuada
 weight: 4
 pre: "<b>4. </b>"
 ---

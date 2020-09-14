@@ -1,5 +1,5 @@
 ---
-title: 2. Tipus de dades i operadors
+title: Tipus de dades i operadors
 weight: 2
 pre: "<b>2. </b>"
 chapter: false

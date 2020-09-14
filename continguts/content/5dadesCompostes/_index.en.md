@@ -1,5 +1,5 @@
 ---
-title: 5. Estructures compostes
+title: Estructures compostes
 weight: 5
 pre: "<b>5. </b>"
 chapter: true

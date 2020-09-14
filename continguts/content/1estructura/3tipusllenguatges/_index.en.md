@@ -46,7 +46,7 @@ Els llenguatges de programació es poden classificar segons la seva proximitat a
 Un paradigma de programació és un **enfoc particular/filosofia** pel disseny i construcció de codi. Depenent de cada context resulta més idoni utilitzar-ne un o altre
 {{% /notice %}}
 
-![Paradigmes](images/paradigms.png?width=500px)
+![Paradigmes](../images/paradigms.png?width=500px)
 
 A grans trets diferenciarem entre
 

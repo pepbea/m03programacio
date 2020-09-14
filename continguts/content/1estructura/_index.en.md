@@ -1,5 +1,5 @@
 ---
-title: 1. Estructura d’un programa
+title: Estructura d’un programa
 weight: 1
 pre: "1. "
 chapter: false
