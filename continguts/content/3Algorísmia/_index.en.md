@@ -1,6 +1,6 @@
 
 ---
-title: Algorísmia
+title: 3. Algorísmia
 weight: 3
 pre: "<b>3. </b>"
 chapter: false

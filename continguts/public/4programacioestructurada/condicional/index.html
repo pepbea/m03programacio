@@ -12,21 +12,21 @@
     <title>Estructura condicional :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1598890423" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1598890423" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1598893342" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1598893342" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1598890423" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1598893342" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1598890423"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1598893342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1598890423"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1598890423"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1598893342"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1598893342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1598890423"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1598893342"></script>
 
     
   </div>
@@ -555,14 +555,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#change-the-logo">Change the logo</a></li>
-    <li><a href="#change-the-favicon">Change the favicon</a></li>
-    <li><a href="#theme-variant">Change default colors</a>
+    <li>
       <ul>
-        <li><a href="#red-variant">Red variant</a></li>
-        <li><a href="#blue-variant">Blue variant</a></li>
-        <li><a href="#green-variant">Green variant</a></li>
-        <li><a href="#yours-variant">&lsquo;Yours‘ variant</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -590,164 +585,82 @@
 
 
 
-	<p><strong>Hugo-theme-learn</strong> has been built to be as configurable as possible by defining multiple <a href="https://gohugo.io/templates/partials/">partials</a></p>
-<p>In <code>themes/hugo-theme-learn/layouts/partials/</code>, you will find all the partials defined for this theme. If you need to overwrite something, don&rsquo;t change the code directly. Instead <a href="https://gohugo.io/themes/customizing/">follow this page</a>. You&rsquo;d create a new partial in the <code>layouts/partials</code> folder of your local project. This partial will have the priority.</p>
-<p>This theme defines the following partials :</p>
-<ul>
-<li><em>header</em>: the header of the content page (contains the breadcrumbs). <em>Not meant to be overwritten</em></li>
-<li><em>custom-header</em>: custom headers in page. Meant to be overwritten when adding CSS imports. Don&rsquo;t forget to include <code>style</code> HTML tag directive in your file</li>
-<li><em>footer</em>: the footer of the content page (contains the arrows). <em>Not meant to be overwritten</em></li>
-<li><em>custom-footer</em>:  custom footer in page. Meant to be overwritten when adding Javacript. Don&rsquo;t forget to include <code>javascript</code> HTML tag directive in your file</li>
-<li><em>favicon</em>: the favicon</li>
-<li><em>logo</em>: the logo, on top left hand corner.</li>
-<li><em>meta</em>: HTML meta tags, if you want to change default behavior</li>
-<li><em>menu</em>: left menu. <em>Not meant to be overwritten</em></li>
-<li><em>menu-footer</em>: footer of the the left menu</li>
-<li><em>search</em>: search box</li>
-<li><em>toc</em>: table of contents</li>
-</ul>
-<h2 id="change-the-logo">Change the logo</h2>
-<p>Create a new file in <code>layouts/partials/</code> named <code>logo.html</code>. Then write any HTML you want.
-You could use an <code>img</code> HTML tag and reference an image created under the <em>static</em> folder, or you could paste a SVG definition !</p>
+	<h4 id="estructura-condicional">Estructura condicional</h4>
 
-<div class="notices note" ><p>The size of the logo will adapt automatically</p>
+<div class="notices note" ><p>L&rsquo;estructura de control <strong>condicional o alternativa</strong> permet prendre una decisió en un moment determinat sobre quines instruccions s&rsquo;han d&rsquo;executar. Donada una expressió booleana (una expressió lògica que s&rsquo;avalua a veritat &ldquo;true&rdquo; o fals &ldquo;false&rdquo;) permet decidir entre un o varis camins d&rsquo;execució.</p>
 </div>
 
-<h2 id="change-the-favicon">Change the favicon</h2>
-<p>If your favicon is a png, just drop off your image in your local <code>static/images/</code> folder and name it <code>favicon.png</code></p>
-<p>If you need to change this default behavior, create a new file in <code>layouts/partials/</code> named <code>favicon.html</code>. Then write something like this:</p>
-<pre><code class="language-html">&lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.png&quot; type=&quot;image/x-icon&quot; /&gt;
+<p>Existeixen diferents tipus d&rsquo;estructura condicional.</p>
+<ol>
+<li>Estructura simple (if)</li>
+<li>Estructura composta (if/else)</li>
+<li>Estructura encadenada (if/else if/else)</li>
+<li>Sentència switch (switch)</li>
+<li>Combinació d&rsquo;estructures</li>
+</ol>
+<h5 id="estructura-simple-if">Estructura simple (if)</h5>
+<p>Aquesta és la forma bàsica. Consisteix en una estructura en la qual si l&rsquo; avaluació lògica és certa s&rsquo;executen una sèrie d&rsquo;instruccions, en cas contrari s&rsquo;ometen aquestes instruccions. Consideracions:</p>
+<ul>
+<li>L&rsquo;expressió lògica ha d&rsquo;anar seguida de la paraula if i entre parèntesi ().</li>
+<li>Les instruccions que s&rsquo;han d&rsquo;executar es situen a continuació dins de les claus {}.</li>
+</ul>
+<p><img src="images/seq.png?width=150px" alt="seq"></p>
+<h4 id="exemples">Exemples</h4>
+<ol>
+<li>Llegeix dos nombres reals i escriu la seva suma, resta, producte i quocient.</li>
+</ol>
+<pre><code class="language-java">    float operand1 = sc.nextFloat();
+    float operand2 = sc.nextFloat();
+
+    float suma = operand1 + operand2;
+    float resta = operand1 - operand2;
+    float multiplicacio = operand1 * operand2;
+    float divisio = operand1 / operand2;
+    float modul = operand1 % operand2;
 </code></pre>
-<h2 id="theme-variant">Change default colors</h2>
-<p><strong>Hugo Learn theme</strong> let you choose between 3 native color scheme variants, but feel free to add one yourself ! Default color scheme is based on <a href="https://learn.getgrav.org/">Grav Learn Theme</a>.</p>
-<h3 id="red-variant">Red variant</h3>
-<pre><code class="language-toml">[params]
-  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
-  themeVariant = &quot;red&quot;
+<ol start="2">
+<li>Llegeix el preu d&rsquo;un producte, l&rsquo;IVA (en %) i el descompte (en %) a aplicar. Escriu el preu final del producte.</li>
+</ol>
+<pre><code class="language-java">    float preu = sc.nextFloat();
+    int iva = sc.nextInt();
+    int descompte = sc.nextInt();
+
+    float preuAmbIva = preu + preu * iva / 100;
+    float preuAmbIvaIDescompte = preuAmbIva - preuAmbIva * descompte / 100;
+
+    System.out.println(&quot;Preu final:&quot; + preuAmbIvaIDescompte);
 </code></pre>
-<p><img src="/en/basics/style-customization/images/red-variant.png?width=60pc" alt="Red variant"></p>
-<h3 id="blue-variant">Blue variant</h3>
-<pre><code class="language-toml">[params]
-  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
-  themeVariant = &quot;blue&quot;
+<ol start="3">
+<li>Calcula l&rsquo;àrea lateral i el volum d&rsquo;un cilindre recte, introduint per teclat els valors del radi i l&rsquo;altura. V =pi⋅r2⋅h    AL=2⋅pi⋅r⋅h</li>
+</ol>
+<pre><code class="language-java">    float radi = sc.nextFloat();
+    float altura = sc.nextFloat();
+
+    double areaLateral = 2 * Math.PI * radi * altura;
+    double volum = Math.PI * Math.pow(radi,2) * altura;
+
+    System.out.println(&quot;Area lateral:&quot; + areaLateral + &quot; Volum:&quot; + volum);
 </code></pre>
-<p><img src="/en/basics/style-customization/images/blue-variant.png?width=60pc" alt="Blue variant"></p>
-<h3 id="green-variant">Green variant</h3>
-<pre><code class="language-toml">[params]
-  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
-  themeVariant = &quot;green&quot;
+<ol start="4">
+<li>Llegeix un nombre enter no negatiu i un altre nombre enter no negatiu que indica la posició de les seves xifres i escriu la xifra que ocupa aquesta posició. Les unitats estan a la posició 1, les desenes a la posició 2, etc.</li>
+</ol>
+<pre><code class="language-java">    int nombre = sc.nextInt();
+    int posicio = sc.nextInt();
+    double potencia = Math.pow(10,posicio-1);
+    double nombreRetallat = nombre / potencia;
+    int nombreBuscat = (int)nombreRetallat % 10;
+    System.out.println(&quot;el dígit &quot; +posicio+ &quot; del nombre &quot; + nombre + &quot; és: &quot;+ nombreBuscat);
 </code></pre>
-<p><img src="/en/basics/style-customization/images/green-variant.png?width=60pc" alt="Green variant"></p>
-<h3 id="yours-variant">&lsquo;Yours‘ variant</h3>
-<p>First, create a new CSS file in your local <code>static/css</code> folder prefixed by <code>theme</code> (e.g. with <em>mine</em> theme <code>static/css/theme-mine.css</code>). Copy the following content and modify colors in CSS variables.</p>
-<pre><code class="language-css">
-:root{
-    
-    --MAIN-TEXT-color:#323232; /* Color of text by default */
-    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
-    --MAIN-LINK-color:#1C90F3; /* Color of links */
-    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
-    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
+<ol start="5">
+<li>Llegeix un nombre enter de segons i escriu el nombre d’hores, minuts i segons equivalents en format h:m:s.</li>
+</ol>
+<pre><code class="language-java">    int segonsTotals = sc.nextInt();
+    int hores = segonsTotals / 3600;
+    int segonsRestants = segonsTotals % 3600;
+    int minuts = segonsRestants / 60;
+    int segons = segonsRestants % 60;
 
-    --MENU-HEADER-BG-color:#1C90F3; /* Background color of menu header */
-    --MENU-HEADER-BORDER-color:#33a1ff; /*Color of menu header border */ 
-
-    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
-    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
-    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
-
-    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
-    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
-    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
-    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
-
-    --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
-    --MENU-SECTION-HR-color: #20272b; /* Color of &lt;hr&gt; separator in menu */
-    
-}
-
-body {
-    color: var(--MAIN-TEXT-color) !important;
-}
-
-textarea:focus, input[type=&quot;email&quot;]:focus, input[type=&quot;number&quot;]:focus, input[type=&quot;password&quot;]:focus, input[type=&quot;search&quot;]:focus, input[type=&quot;tel&quot;]:focus, input[type=&quot;text&quot;]:focus, input[type=&quot;url&quot;]:focus, input[type=&quot;color&quot;]:focus, input[type=&quot;date&quot;]:focus, input[type=&quot;datetime&quot;]:focus, input[type=&quot;datetime-local&quot;]:focus, input[type=&quot;month&quot;]:focus, input[type=&quot;time&quot;]:focus, input[type=&quot;week&quot;]:focus, select[multiple=multiple]:focus {
-    border-color: none;
-    box-shadow: none;
-}
-
-h2, h3, h4, h5 {
-    color: var(--MAIN-TITLES-TEXT-color) !important;
-}
-
-a {
-    color: var(--MAIN-LINK-color);
-}
-
-.anchor {
-    color: var(--MAIN-ANCHOR-color);
-}
-
-a:hover {
-    color: var(--MAIN-LINK-HOVER-color);
-}
-
-#sidebar ul li.visited &gt; a .read-icon {
-	color: var(--MENU-VISITED-color);
-}
-
-#body a.highlight:after {
-    display: block;
-    content: &quot;&quot;;
-    height: 1px;
-    width: 0%;
-    -webkit-transition: width 0.5s ease;
-    -moz-transition: width 0.5s ease;
-    -ms-transition: width 0.5s ease;
-    transition: width 0.5s ease;
-    background-color: var(--MAIN-LINK-HOVER-color);
-}
-#sidebar {
-	background-color: var(--MENU-SECTIONS-BG-color);
-}
-#sidebar #header-wrapper {
-    background: var(--MENU-HEADER-BG-color);
-    color: var(--MENU-SEARCH-BOX-color);
-    border-color: var(--MENU-HEADER-BORDER-color);
-}
-#sidebar .searchbox {
-	border-color: var(--MENU-SEARCH-BOX-color);
-    background: var(--MENU-SEARCH-BG-color);
-}
-#sidebar ul.topics &gt; li.parent, #sidebar ul.topics &gt; li.active {
-    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
-}
-#sidebar .searchbox * {
-    color: var(--MENU-SEARCH-BOX-ICONS-color);
-}
-
-#sidebar a {
-    color: var(--MENU-SECTIONS-LINK-color);
-}
-
-#sidebar a:hover {
-    color: var(--MENU-SECTIONS-LINK-HOVER-color);
-}
-
-#sidebar ul li.active &gt; a {
-    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
-    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
-}
-
-#sidebar hr {
-    border-color: var(--MENU-SECTION-HR-color);
-}
-</code></pre>
-<p>Then, set the <code>themeVariant</code> value with the name of your custom theme file. That&rsquo;s it !</p>
-<pre><code class="language-toml">[params]
-  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
-  themeVariant = &quot;mine&quot;
+    System.out.println(hores + &quot;:&quot; + minuts + &quot;:&quot; + segons);
 </code></pre>
 
 
@@ -1047,19 +960,19 @@ a:hover {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1598890423"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1598893342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1598890423"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1598890423"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1598893342"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1598893342"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1598890423" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1598890423"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1598893342" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1598893342"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

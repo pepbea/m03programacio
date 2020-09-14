@@ -1,194 +1,264 @@
 ---
-date: 2016-04-09T16:50:16+02:00
 title: Estructura condicional
 weight: 3
 ---
 
-**Hugo-theme-learn** has been built to be as configurable as possible by defining multiple [partials](https://gohugo.io/templates/partials/)
-
-In `themes/hugo-theme-learn/layouts/partials/`, you will find all the partials defined for this theme. If you need to overwrite something, don't change the code directly. Instead [follow this page](https://gohugo.io/themes/customizing/). You'd create a new partial in the `layouts/partials` folder of your local project. This partial will have the priority.
-
-This theme defines the following partials :
-
-- *header*: the header of the content page (contains the breadcrumbs). _Not meant to be overwritten_
-- *custom-header*: custom headers in page. Meant to be overwritten when adding CSS imports. Don't forget to include `style` HTML tag directive in your file
-- *footer*: the footer of the content page (contains the arrows). _Not meant to be overwritten_
-- *custom-footer*:  custom footer in page. Meant to be overwritten when adding Javacript. Don't forget to include `javascript` HTML tag directive in your file
-- *favicon*: the favicon
-- *logo*: the logo, on top left hand corner.
-- *meta*: HTML meta tags, if you want to change default behavior
-- *menu*: left menu. _Not meant to be overwritten_
-- *menu-footer*: footer of the the left menu
-- *search*: search box
-- *toc*: table of contents
-
-## Change the logo
-
-Create a new file in `layouts/partials/` named `logo.html`. Then write any HTML you want.
-You could use an `img` HTML tag and reference an image created under the *static* folder, or you could paste a SVG definition !
+#### Estructura condicional
 
 {{% notice note %}}
-The size of the logo will adapt automatically
+ L'estructura de control **condicional o alternativa** permet prendre una decisió en un moment determinat sobre quines instruccions s'han d'executar. Donada una expressió booleana (una expressió lògica que s'avalua a veritat "true" o fals "false") permet decidir entre un o varis camins d'execució. 
 {{% /notice %}}
 
-## Change the favicon
+Existeixen diferents tipus d'estructura condicional. 
+1. Estructura simple (if)
+2. Estructura composta (if/else)
+3. Estructura encadenada (if/else if/else)
+4. Sentència switch (switch)
+5. Combinació d'estructures
 
-If your favicon is a png, just drop off your image in your local `static/images/` folder and name it `favicon.png`
+#### 1. Estructura simple (if)
+Aquesta és la forma bàsica. Consisteix en una estructura en la qual si l' avaluació lògica és certa s'executen una sèrie d'instruccions, en cas contrari s'ometen aquestes instruccions. Consideracions:
+- L'expressió lògica ha d'anar precedida de la paraula if i entre parèntesi ().
+- Les instruccions que s'han d'executar es situen a continuació dins de les claus {}.
+- Només s'executarà el bloc d'instruccions contingut entre {} quan l'expressió booleana s'avaluï a cert.
 
-If you need to change this default behavior, create a new file in `layouts/partials/` named `favicon.html`. Then write something like this:
+|Codi| Diagrama de flux|
+|---|---|
+|Acció1;<br>if ( cond ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>}<br>Acció3;|![if1](images/if1.png)| 
 
-```html
-<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+#### 2. Estructura composta (if/else)
+La diferència respecte el cas anterior és que ara quan l'expressió booleana s'avaluï a fals també s'executarà un bloc d'instruccions. 
+- Aquestes instruccions aniran contingudes dins de parèntesis {} i precedides de la paraula else.
+
+|Codi| Diagrama de flux|
+|---|---|
+|Acció1;<br>if ( cond ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció3;<br>}<br>Acció4;|![if2](images/if2.png)| 
+
+#### 3. Estructura encadenada o múltiple (if/else if/ else)
+A vegades es dóna la situació que no volem decidir només entre dos camins d'execució, sinó que el problema ens requereix escollir entre diferents camins, així serà necessari introduir la figura del else if(). Comportament:
+- En aquest cas el programa avalua la primera expressió booleana que es troba, si és certa executa el bloc d'instruccions que hi pertany. Però si l'avaluació és falsa anirà a la següent expressió booleana que es trobarà en un bloc else if(). I així consecutivament fins a la última. 
+- S'ha de tenir en compte que és important la prioritat en l'avaluació de les diferents expressions booleanes. Si s'avalua a cert en alguna expressió booleana **JA NO** avalua els següents casos, entra dins el bloc d'instruccions, s'executen les instruccions pertinents, i surt de l'estructura de control sense avaluar la resta de casos (podrien avaluar-se també a cert, per això és important la prioritat alhora d'establir els casos). 
+- Si s'introdueix un bloc else i cap expressió booleana s'avalua a cert, s'executarà el bloc d'instruccions corresponents a l'else.
+
+|Codi| Diagrama de flux|
+|---|---|
+|Acció0;<br>if ( cond1 ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció1;<br>} else if (cond2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>}else if (cond3) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció3;<br>}else if (cond4) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció4;<br>}else {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció5;<br>}<br>Acció6;|![if3](images/if3.png)| 
+
+#### 4. Sentència switch (switch)
+
+Aquesta estructura és útil quan en funció del valor d'una variable es poden executar camins d'instruccions diferents. Per exemple podríem pensar en un menú d'una app on tenim diferents opcions o un comandament a distància de la tele. Consideracions:
+- En aquest cas s'avalua  a == **EL VALOR** de la variable en qüestió i definirem les instruccions pertinents en cada cas.
+- A l'inici d'aquesta estructura comença amb un __switch__ seguida de la variable que volem avaluar entre parèntesi: switch (variable).
+- Tot seguit, i entre claus {}, definim tots els casos que es volen tractar d'aquesta variable. Per a cada cas existeix un bloc __case valor:__ amb tots els casos possibles.
+- Si volem executar un bloc d'instruccions en cas que no es trobi cap dels valors desitjats per la variable sempre tenim el bloc __default:__ que ens permet fer la mateixa funció que "l'else" en les estructures anteriors.
+- En cada bloc case és necessari acabar-lo amb un **break;** necessari per a que ens surti de l'estructura switch.
+- És una estructura que podríem simular amb una estructura encadenada o múltiple, la única diferència respecte a l'anterior és que en aquest cas, si no posem el break, sí que permetria executar més d'un case diferent.
+
+|Codi| Diagrama de flux|
+|---|---|
+|Acció0;<br>switch ( expressio ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor1:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor3:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció3;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor4:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;default:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció5;<br>} <br>Acció6;|![if4](images/if4.png)| 
+
+#### 5. Combinació d'estructures
+Moltes vegades els problemes que ens trobem a la vida real requereix de la composició de diferents estructures de control, així doncs es podria donar el cas que tinguéssim diferents estructures de control unes dins d'altres de forma jerarquitzada. 
+
+Exemple: En l'època actual de Coronavirus, donat els cribatges de PCRs per detectar casos positius ens interessaria detectar quins són els assimptomàtics. Així doncs m'invento un algorisme que permeti filtrar aquelles persones que ens interessa per realitzar les proves. És necessari que donades unes quantes dades ens digui si cal que faci alguna de les proves o no. 
+- Volem analitzar les persones entre 18 i 40 anys, d'aquestes es farà la prova bàsica de PCR, però les noies embarassades no realitzaran aquesta bàsica sinó que faran una prova més avançada. Pel que fa a les persones majors de 40 anys els hi realitzarem una prova avançada de PCR i un test d'esforç físic.
+
+#### Exemples
+
+1. Crea un programa on es mostri el resultat de sumar dos nombres sempre que la suma de tots dos sigui inferior o igual a 15. (exemple estructura simple)
+
+```java  
+    int num1 = sc.nextInt();
+    int num2 = sc.nextInt();
+    int suma = num1 + num2;
+    if( suma <= 15) {
+        System.out.println(num1+num2);
+    }
 ```
 
-## Change default colors {#theme-variant}
+2. Crea un programa que permeti a dir, donats dos nombres per l'usuari, si són múltiples l'un a l'altre. (exemple estructura composta)
 
-**Hugo Learn theme** let you choose between 3 native color scheme variants, but feel free to add one yourself ! Default color scheme is based on [Grav Learn Theme](https://learn.getgrav.org/).
+```java  
+    System.out.println("Entra el 1r nombre");
+    int num1 = sc.nextInt();
+    System.out.println("Entra el 2n nombre");
+    int num2 = sc.nextInt();
 
-### Red variant
-
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "red"
+    if(num1%num2 == 0 || num2%num1 == 0){
+        System.out.println("Són divisors");
+    } else {
+        System.out.println("No són divisors");
+    }
 ```
 
-![Red variant](/en/basics/style-customization/images/red-variant.png?width=60pc)
+3. Creeu un programa que permeti introduir dos nombres i realitzar una operació sobre la base de l'nombre de codi, 1, 2 o 3 permeti restar, multiplicar o dividir els dos nombres i mostrar el resultat per pantalla.
 
-### Blue variant
-
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "blue"
+```java 
+    System.out.println("Introdueix el primer operand");
+    int num1 = sc.nextInt();
+    System.out.println("Introdueix el segon operand");
+    int num2 = sc.nextInt();
+    System.out.println("Introdueix el codi: 1.restar, 2.multiplicar, 3.dividir");
+    int opcio = sc.nextInt();
+    if(opcio==1)System.out.println(num1 - num2);
+    else if(opcio == 2) System.out.println(num1 * num2);
+    else if(opcio == 3) System.out.println(num1 / num2);
+    else System.out.println("Opcio no correcta.");
 ```
 
-![Blue variant](/en/basics/style-customization/images/blue-variant.png?width=60pc)
+```java
+    System.out.println("Introdueix el primer operand");
+    int operand1 = sc.nextInt();
+    System.out.println("Introdueix el segon operand");
+    int operand2 = sc.nextInt();
+    System.out.println("Introdueix el codi: 1.restar, 2.multiplicar, 3.dividir");
+    int codi = sc.nextInt();
+    int resultat=0;     
+    if(codi==1) {
+        resultat = operand1 - operand2;
+    }else if(codi==2){
+        resultat = operand1 * operand2;
+    }else if(codi==3){
+        resultat = operand1 / operand2;
+    }else{
+        System.out.println("Codi erroni");
+    }
 
-### Green variant
-
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "green"
+    if(codi == 1 || codi == 2 || codi == 3)
+        System.out.println("El resultat de l'operacio és: "+ resultat);
 ```
 
-![Green variant](/en/basics/style-customization/images/green-variant.png?width=60pc)
+4. El mateix exemple anterior però ara amb un switch.
 
-### 'Yours‘ variant
+```java  
+    System.out.println("Introdueix el primer operand");
+    int operand1 = sc.nextInt();
+    System.out.println("Introdueix el segon operand");
+    int operand2 = sc.nextInt();
+    System.out.println("Introdueix el codi: 1.restar, 2.multiplicar, 3.dividir");
+    int codi = sc.nextInt();   
+    int resultat=0;     
+    switch(codi) {
+        case 1:
+            resultat = operand1 - operand2;
+            break;
+        case 2:
+            resultat = operand1 * operand2;
+            break;
+        case 3:
+            resultat = operand1 / operand2;
+            break;
+        default:
+            System.out.println("Codi erroni");
+    }
 
-First, create a new CSS file in your local `static/css` folder prefixed by `theme` (e.g. with _mine_ theme `static/css/theme-mine.css`). Copy the following content and modify colors in CSS variables.
+    if(codi == 1 || codi == 2 || codi == 3)
+        System.out.println("El resultat de l'operacio és: "+ resultat);
 
-```css
-
-:root{
-    
-    --MAIN-TEXT-color:#323232; /* Color of text by default */
-    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
-    --MAIN-LINK-color:#1C90F3; /* Color of links */
-    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
-    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
-
-    --MENU-HEADER-BG-color:#1C90F3; /* Background color of menu header */
-    --MENU-HEADER-BORDER-color:#33a1ff; /*Color of menu header border */ 
-
-    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
-    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
-    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
-
-    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
-    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
-    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
-    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
-
-    --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
-    --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
-    
-}
-
-body {
-    color: var(--MAIN-TEXT-color) !important;
-}
-
-textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
-    border-color: none;
-    box-shadow: none;
-}
-
-h2, h3, h4, h5 {
-    color: var(--MAIN-TITLES-TEXT-color) !important;
-}
-
-a {
-    color: var(--MAIN-LINK-color);
-}
-
-.anchor {
-    color: var(--MAIN-ANCHOR-color);
-}
-
-a:hover {
-    color: var(--MAIN-LINK-HOVER-color);
-}
-
-#sidebar ul li.visited > a .read-icon {
-	color: var(--MENU-VISITED-color);
-}
-
-#body a.highlight:after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 0%;
-    -webkit-transition: width 0.5s ease;
-    -moz-transition: width 0.5s ease;
-    -ms-transition: width 0.5s ease;
-    transition: width 0.5s ease;
-    background-color: var(--MAIN-LINK-HOVER-color);
-}
-#sidebar {
-	background-color: var(--MENU-SECTIONS-BG-color);
-}
-#sidebar #header-wrapper {
-    background: var(--MENU-HEADER-BG-color);
-    color: var(--MENU-SEARCH-BOX-color);
-    border-color: var(--MENU-HEADER-BORDER-color);
-}
-#sidebar .searchbox {
-	border-color: var(--MENU-SEARCH-BOX-color);
-    background: var(--MENU-SEARCH-BG-color);
-}
-#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
-}
-#sidebar .searchbox * {
-    color: var(--MENU-SEARCH-BOX-ICONS-color);
-}
-
-#sidebar a {
-    color: var(--MENU-SECTIONS-LINK-color);
-}
-
-#sidebar a:hover {
-    color: var(--MENU-SECTIONS-LINK-HOVER-color);
-}
-
-#sidebar ul li.active > a {
-    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
-    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
-}
-
-#sidebar hr {
-    border-color: var(--MENU-SECTION-HR-color);
-}
+    switch(codi) {
+        case 1:
+        case 2:
+        case 3:
+            System.out.println("El resultat de l'operacio és: " + resultat);
+    }
 ```
 
-Then, set the `themeVariant` value with the name of your custom theme file. That's it !
+5. Crea un programa que donats 4 números indiqui si els números són iguals i quin d'ells és el menor i major nombre de tots ells. El programa a més haurà de mostrar per pantalla el resultat de restar el major pel menor d'ells i el resultat de multiplicar els altres dos.
 
-```toml
-[params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "mine"
+```java     
+    int num1 = sc.nextInt();
+    int num2 = sc.nextInt();
+    int num3 = sc.nextInt();
+    int num4 = sc.nextInt();
+
+    int max = num1;
+    int min = num1;
+    int mult;
+
+    /**
+    *
+    * Són iguals??
+    */
+    if(num1 == num2 && num1 == num3 && num1 == num4) System.out.println("Són iguals");
+    else System.out.println("No són iguals");
+
+
+    /**
+    * PROBLEMA DEL MAJOR MENOR 5 OPCIONS
+    *
+    */
+
+    //OPCIO 1 força bruta
+    if(num2>num1 && num2>num3 && num2>num4)max = num2;
+    else if(num3>num1 && num3>num2 && num3>num4) max = num3;
+    else if(num4>num1 && num4>num2 && num4>num3) max = num4;
+
+    if(num2<num1 && num2<num3 && num2<num4)min = num2;
+    else if(num3<num1 && num3<num2 && num3<num4) min = num3;
+    else if(num4<num1 && num4<num2 && num4<num3) min = num4;
+
+
+    //OPCIO 2 comparem el max amb tots i el min amb tots individualment
+    max = num1;
+    if(num2>max) max = num2;
+    if(num3>max) max = num3;
+    if(num4>max) max = num4;
+
+    min = num1;
+    if(num2<min) min = num2;
+    if(num3<min) min = num3;
+    if(num4<min) min = num4;
+
+
+    //OPCIO 3 a Semifinals comparant!
+    int max1,max2, min1,min2;
+
+    if(num1> num2)max1 = num1;
+    else max1 = num2;
+
+    if(num3 > num4) max2 = num3;
+    else max2=num4;
+
+    if(max1 > max2) max = max1;
+    else max=max2;
+
+
+    if(num1 < num2)min1 = num1;
+    else min1 = num2;
+
+    if(num3 < num4) min2 = num3;
+    else min2=num4;
+
+    if(min1 > min2) min = min1;
+    else min=min2;
+
+    //OPCIO 4 semifinals math.max math.min
+    max1 = Math.max(num1,num2);
+    max2 = Math.max(num3,num4);
+    max = Math.max(max1,max2);
+
+    min1 = Math.min(num1,num2);
+    min2 = Math.min(num3,num4);
+    min = Math.min(min1,min2);
+
+    //OPCIO 5 math.max i math.min
+    max = Math.max (Math.max(num1,num2), Math.max(num3,num4));
+    min = Math.min (Math.min(num1,num2), Math.min(num3,num4));
+    System.out.println(max-min);
+
+
+
+    //Segona part de l'activitat on es realitza la multiplicacio amb els que no són major i menor
+    if( (max==num1 && min==num2) || (max==num2 && min==num1))mult=num3 * num4;
+    else if( (max==num1 && min==num3) || (max==num3 && min==num1))mult=num2 * num4;
+    else if( (max==num1 && min==num4) || (max==num4 && min==num1))mult=num2 * num3;
+    else if( (max==num2 && min==num3) || (max==num3 && min==num2))mult=num1 * num4;
+    else if( (max==num2 && min==num4) || (max==num4 && min==num2))mult=num1 * num3;
+    else if( (max==num3 && min==num4) || (max==num4 && min==num3))mult=num1 * num2;
+
+    //Solució utilitzant Math.mix i Math.max per extreure valors que no siguin ni màxim ni mínim.
+    int min3 = Math.min (Math.max(num1,num2), Math.max(num3,num4));
+    int max3 = Math.max (Math.min(num1,num2), Math.min(num3,num4));
+    int mult2 = min3 * max3;
 ```

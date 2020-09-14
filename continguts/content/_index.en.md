@@ -19,7 +19,7 @@ L'índex de continguts que veurem és:
 
 * **UF1: Programació estructurada**
   + [Estructura d'un programa]({{%relref "1estructura/_index.en.md" %}})
-    - [Propòsit i Blocs d'un programa]({{%relref "1estructura/1propositiblocs/_index.en.md" %}})
+    - [Introducció]({{%relref "1estructura/1propositiblocs/_index.en.md" %}})
     - [Metodologies de Software]({{%relref "1estructura/2metodologiesSoftware/_index.en.md" %}})
     - [Tipus de Llenguatges]({{%relref "1estructura/3tipusllenguatges/_index.en.md" %}})
   + [Tipus de dades]({{%relref "2tipusDades/_index.en.md" %}})

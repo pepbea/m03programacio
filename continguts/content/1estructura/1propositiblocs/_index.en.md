@@ -1,75 +1,68 @@
 ---
-title: Propòsit i Blocs d'un programa
+title: Introducció 
 weight: 1
 ---
 
+#### Breus definicions inicials
 
-
-
-#### Què és l'enginyeria del software?
 
 {{% notice note %}}
-De l'aplicació de l'enginyeria a l'programari sorgeixen els processos de desenvolupament de programari. Aquest procés es defineix com __"aquell en què les necessitats de l'usuari són traduïdes en requisits de programari, aquests requisits transformats en disseny, i el disseny implementat en codi, que és provat, documentat i
-certificat pel seu ús operatiu"__ [Jacobson, 1998].
+**Programació informàtica**: És el procés d'escriure, provar, depurar/solucionar problemes, i mantenir el codi font de programes.   
 {{% /notice %}}
 
-#### aracterístiques del software
-+ S'ha invertit la demanda i el preu respecte al HW.
-+ El Software es un producte lògic que es desenvolupa, no es construeix com la resta de productes.
-+ La gestió de costos es centra en l'enginyeria, amb la qual difereix d'altres projectes d'enginyeria.
-+ El Software no es deteriora amb el temps, però sí és necessari un manteniment.
-+ La reutilització de productes software creixent.
-+ Existeixen restriccions de recursos en el desenvolupament de software, de forma que és necessari assegurar-ne la qualitat per obtenir un software: documentat, fiable, eficient i amb una bona interfície gràfica.
 
-On top of [Hugo global configuration](https://gohugo.io/overview/configuration/), **Hugo-theme-learn** lets you define the following parameters in your `config.toml` (here, values are default).
+{{% notice note %}}
+**Programa**: Conjunt d'instruccions d’un llenguatge de programació, ordenades d'una manera determinada, que l’ordinador és capaç d’entendre i executar per resoldre un problema. L'ordinador és capaç d'entendre unes normes sintàctiques i semàntiques que permeten realitzar multitud de funcions diferents.  
+{{% /notice %}}
 
-Note that some of these parameters are explained in details in other sections of this documentation.
+{{% notice note %}}
+**Instrucció**: És una cadena de símbols d'un alfabet, formada d'acord amb certes regles sintàctiques que el processador (o el compilador) entén, i que finalment seran interpretades i executades pel processador.  
+{{% /notice %}}
 
-```toml
-[params]
-  # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
-  # Useful to give opportunity to people to create merge request for your doc.
-  # See the config.toml file from this documentation site to have an example.
-  editURL = ""
-  # Author of the site, will be used in meta information
-  author = ""
-  # Description of the site, will be used in meta information
-  description = ""
-  # Shows a checkmark for visited pages on the menu
-  showVisitedLinks = false
-  # Disable search function. It will hide search bar
-  disableSearch = false
-  # Javascript and CSS cache are automatically busted when new version of site is generated.
-  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
-  disableAssetsBusting = false
-  # Set this to true to disable copy-to-clipboard button for inline code.
-  disableInlineCopyToClipBoard = false
-  # A title for shortcuts in menu is set by default. Set this to true to disable it.
-  disableShortcutsTitle = false
-  # When using mulitlingual website, disable the switch language button.
-  disableLanguageSwitchingButton = false
-  # Hide breadcrumbs in the header and only show the current page title
-  disableBreadcrumb = true
-  # Hide Next and Previous page buttons normally displayed full height beside content
-  disableNextPrev = true
-  # Order sections in menu by "weight" or "title". Default to "weight"
-  ordersectionsby = "weight"
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = ""
-  # Provide a list of custom css files to load relative from the `static/` folder in the site root.
-  custom_css = ["css/foo.css", "css/bar.css"]
-```
+{{% notice note %}}
+**Llenguatge informàtic**: Conjunt d'instruccions que ordenades d'una determinada manera generen un codi que l'ordinador és capaç d'entendre per realitzar una determinada tasca.  
+{{% /notice %}}
 
-## Activate search
+{{% notice note %}}
+**Dada**: Unitat d'informació que utilitzen els programes informàtics per ser tractada (llegir, modificar, eliminar, crear, transformar...).
+{{% /notice %}}
 
-If not already present, add the follow lines in the same `config.toml` file.
+{{% notice note %}}
+**Codi font**: Codi que els humans poden entendre i manipular per tal de crear i modificar els diferents programes informàtics. En Java els fitxers que contenen codi font són fitxers amb extensió .java  
+{{% /notice %}}
 
-```toml
-[outputs]
-home = [ "HTML", "RSS", "JSON"]
-```
+{{% notice note %}}
+**Codi màquina**: Una vegada el codi font és escrit pels humans es transforma en un altre fitxer (compilació) que genera un altre fitxer/codi que està a més baix nivell i que enten la màquina. En Java els fitxers convertits a codi màquina són els fitxers executables, són diferents per cada plataforma, per això diem que java és un llenguatge multiplataforma, perquè el mateix codi font el podem executar en plataformes diferents.
+{{% /notice %}}
 
-Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.
+#### Procés d'execució d'un programa
 
-> Hugo generate lunrjs index.json at the root of public folder.
-> When you build the site with `hugo server`, hugo generates it internally and of course it doesn’t show up in the filesystem
+Els programes informàtics donen solució a una determinada necessitat o problemàtica. A partir d'un problema determinat dissenyem un conjunt de passos determinats, ordenats i finits que ens aporta la solució (algorisme). La implementació d'aquests passos amb un llenguatge de programació genera un codi que dóna lloc al programa informàtic final. 
+
+![1](../images/1.png?width=500px)
+
+Així doncs el programa té un iniciador, executa una sèrie d'instruccions que solucionen un problema determinat i existeix un punt de finalització quan es troba l'estat que soluciona el problema. 
+
+En aquest procés es possible que tinguem dades d'entrada (input: dades necessàries per executar un codi determinat), i també és possible que tinguem dades de sortida (output: dades que desitgem retornar o mostrar quan s'acaba l'execució del codi).
+
+Tot el codi que hem escrit i que posem a executar l'anomenarem procés (codi en execució).
+
+![2](../images/2.png?width=500px)
+
+#### Cas particular de Java
+
+Tot seguit veiem què passa amb el programa HolaMon.java escrit en Java. És el primer programa que s'acostuma a mostrar de qualsevol llenguatge de programació. L'únic que fa aquest programa és escriure per pantalla "Hola Mundo". 
+
+Si us fixeu en la següent il·lustració es mostra tot el procés de compilació. Inicialment tenim el codi font del fitxer HolaMundo.java escrit pel programador. El següent pas és transformar aquest fitxer en un codi intermig que és el bytecode que permetrà ser transportat a qualsevol plataforma. Aquest codi intermig és un fitxer .class que ens assegura que el procés de compilació del fitxer .java s'ha executat correctament, en java s'utilitza la comanda javac per poder obtenir-lo.
+`javac HolaMundo.java` Amb aquesta instrucció "es compila" el programa i genera un HolaMundo.class.
+
+Un cop tenim el fitxer .class, executant la comanda `java HolaMundo` obtenim l'execucio del nostre programa sobre la plataforma on estiguem, per això en la imatge següent el codi màquina que s'executa amb Win32 serà diferent que el que interpreta MacOS ja que són SO's diferents i obeeixen a instruccions diferents.
+
+![45](../images/4.gif?width=500px)
+
+En el següent exemple es pot veure com seria un fitxer .java que es llegeix i s'enten amb llenguatge humà. A continuació, en el procés de compilació, es genera el fitxer .class, aquí ja els humans no entenem el contingut del fitxer ja que està en hexadecimal, i finalment quan executem el programa es genera un fitxer en codi màquina amb una tira de 0s i 1s que són les instruccions que necessita la CPU en cada plataforma per ser executat. Aquest últim fitxer serà diferent en cada plataforma d'execució (Linux, Windows, MacOS...)
+
+![5](../images/5.png?width=500px)
+
+
+

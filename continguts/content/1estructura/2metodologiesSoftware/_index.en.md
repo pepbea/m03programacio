@@ -19,7 +19,7 @@ De l'aplicació de l'enginyeria a l'programari sorgeixen els processos de desenv
 certificat pel seu ús operatiu"__ [Jacobson, 1998].
 {{% /notice %}}
 
-#### aracterístiques del software
+#### Característiques del software
 + S'ha invertit la demanda i el preu respecte al HW.
 + El Software es un producte lògic que es desenvolupa, no es construeix com la resta de productes.
 + La gestió de costos es centra en l'enginyeria, amb la qual difereix d'altres projectes d'enginyeria.
