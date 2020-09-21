@@ -10,7 +10,7 @@ weight: 2
 
 En aquest cas al tenir dues dimensions en forma de taula, la primera dimensió ens indica les files i la segona les columnes. 
 
-##### Declaració
+#### Declaració
 
 A l'igual que amb els arrays unidimensionals existeix la part de **declarar una referència** a la matriu i tot seguit quan cridem el ``new`` reservem en memòria l'espai on allotjar la informació. 
 
