@@ -12,21 +12,21 @@
     <title>Tractament cadena de caràcters :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1600715068" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1600715068" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1600716490" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1600716490" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1600715068" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1600716490" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1600715068"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1600716490"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1600715068"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1600715068"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1600716490"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1600716490"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1600715068"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1600716490"></script>
 
     
   </div>
@@ -553,7 +553,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -577,9 +585,151 @@
 
 
 
-	<p>Thanks to the simplicity of Hugo, this page is as empty as this theme needs requirements.</p>
-<p>Just download latest version of <a href="https://gohugo.io/getting-started/installing/">Hugo binary (&gt; 0.25)</a> for your OS (Windows, Linux, Mac) : it&rsquo;s that simple.</p>
-<p><img src="/en/basics/requirements/images/magic.gif?classes=shadow" alt="Magic"></p>
+	
+<div class="notices note" ><p>Un <strong>String</strong> és una classe que permet treballar amb cadenes de caràcters. La classe String de Java ens dóna moltes funcionalitats que ens permeten realitzar moltes tasques d&rsquo;una forma senzilla.</p>
+</div>
+
+<p>La funció sobre la classe String la trobareu a:
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">Java Oracle Classe String</a></p>
+<h5 id="inicialització">Inicialització</h5>
+<p>La manera de declarar i inicialitzar aquest objecte és com en els tipus primitius. Amb la variable String diem que la variable str i strBuit emmagatzemen un String i a continuació s&rsquo;hi assigna un valor. En el cas del valor <code>&quot;&quot;</code> assignem un String buit.</p>
+<pre><code class="language-java">String str = &quot;El primer string&quot;;
+String strBuit = &quot;&quot;;
+</code></pre>
+<h5 id="funcionalitats-interessants">Funcionalitats interessants</h5>
+<pre><code class="language-java">/*
+longitud del string
+STR.LENGTH()
+*/
+System.out.println(&quot;longitud &quot; + str.length());
+
+/*
+Caràcter en la posició pos de str.
+STR.CHARAT(int)
+*/
+str = &quot;El primer programa&quot;;
+System.out.println(&quot;En la posició 4 hi ha: &quot; + str.charAt(4));
+System.out.println(&quot;En la posició 11 hi ha: &quot; + str.charAt(11));
+
+/*
+Comença o acaba l'string en...
+STARTSWITH OR ENDSWITH
+*/
+str = &quot;El primer programa&quot;;
+System.out.println(&quot;comienza por El      &quot; + str.startsWith(&quot;El&quot;));
+System.out.println(&quot;termina por programa &quot; + str.endsWith(&quot;programa&quot;));
+
+/*
+Posició d'un caràcter dins un string
+STR.INDEXOF('x')
+
+Ocurrència a partir d'un cert caràcter
+STR.INDEXOF('x', pos)
+*/
+int pos = str.indexOf('p');
+System.out.println(&quot;posición de la letra p &quot; + pos);
+
+//segona ocurrencia de p
+pos = str.indexOf('p', pos + 1);
+
+
+/*
+Comparació entre dos strings
+STR.COMPARETO(STRING2)
+*/
+str = &quot;Pep&quot;;
+
+System.out.println(&quot;Orden alfabético &quot; + str.compareTo(&quot;Xavi&quot;));
+System.out.println(&quot;Orden alfabético &quot; + str.compareTo(&quot;Gines&quot;));
+System.out.println(&quot;Orden alfabético &quot; + str.compareTo(&quot;Pep&quot;));
+
+/*
+Substring amb UNA variable posicioInicial indica a a partir de quin caràcter volem recollir el substring fins al final.
+STR.SUBSTRING(posicioInicial)
+
+Substring amb Dues variables determinen quin substring obtindrem entre les dues posicions
+STR.SUBSTRING(posicioInicial, posicioFinal)
+*/
+str = &quot;El lenguaje Java&quot;;
+System.out.println(&quot;Substring &quot; + str.substring(12)); //Java
+System.out.println(&quot;Substring &quot; + str.substring(3, 11));  //lenguaje
+
+/*
+Eliminar espais en blanc
+STR.TRIM()
+*/
+str = &quot;                12             &quot;;
+System.out.println(&quot;string original               :&quot; + str);
+System.out.println(&quot;string sin espacios en blanco :&quot; + str.trim());
+
+/*
+Convertir array a String
+ARRAYS.TOSTRING(array)
+*/
+int[] arrayNumeric = {24, 2, 4, -12};
+System.out.println(&quot;número --&gt; string &quot; + Arrays.toString(arrayNumeric));
+
+/*
+Convertir strings a enters i decimals
+INTEGER.PARSEINT(str.TRIM());
+DOUBLE.VALUEOF(str).DOUBLEVALUE();
+*/
+str = &quot;12&quot;;
+int numeroInt = Integer.parseInt(str.trim());
+System.out.println(&quot;string --&gt; número &quot; + numeroInt);
+str = &quot;12.35 &quot;;
+double numeroDouble = Double.valueOf(str).doubleValue();
+System.out.println(&quot;string --&gt; número &quot; + numeroDouble);
+
+/*
+Separar String en diferents cadenes
+str.SPLIT(&quot; &quot;); --&gt; Separa les diferents paraules per espais
+*/
+String cadena = &quot;Hola que tal com estas&quot;;
+String[] vectorSeparat = cadena.split(&quot; &quot;);
+for (String a : vectorSeparat) System.out.println(a);
+
+/*
+EXEMPLE D'ÚS: De cada alumne volem obtenir el nom amb el format correcte i el dni.
+*/
+String alumnes = &quot;&quot; +
+        &quot;Nom; Cognoms; DNI\n&quot; +
+        &quot;xavi; sanChO; 111111a\n&quot; +
+        &quot;pep; beÀ; 222222b\n&quot;;
+
+String[] rows = alumnes.split(&quot;\n&quot;);
+
+for (int i = 1; i &lt; rows.length; i++) {
+    String[] dades = rows[i].split(&quot;;&quot;);
+
+    String nom = dades[0];
+    String cognoms = dades[1];
+
+    String nomComplet = nom + &quot; &quot; + cognoms;
+
+    String[] partsNom = nomComplet.split(&quot; &quot;);
+
+    String capitalitzat = &quot;&quot;;
+
+    for (String part : partsNom) {
+        String senseEspais = part.trim();
+
+        if (!senseEspais.equals(&quot;&quot;)) {
+            String inicial = part.substring(0, 1).toUpperCase();
+
+            String resta = part.substring(1).toLowerCase();
+
+            capitalitzat += inicial + resta + &quot; &quot;;
+        }
+
+    }
+
+    System.out.println(capitalitzat);
+    String dni = dades[2].trim();
+
+    System.out.println(dni);
+}
+</code></pre>
 
 
 
@@ -875,19 +1025,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1600715068"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1600716490"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1600715068"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1600715068"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1600716490"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1600716490"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1600715068" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1600715068"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1600716490" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1600716490"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
