@@ -2,11 +2,15 @@
 title: Estructures compostes
 weight: 5
 pre: "<b>5. </b>"
-chapter: true
 ---
 
-### Chapter 1
+Fins ara hem treballat amb estructures de dades simples. A mesura que tractem problemes més complexos es fa necessari agrupar i tractar les dades com un únic conjunt, això són el que s'anomenen els objectes, l'encapsulament de dades en una mateixa estructura. Així doncs en el següent capítol analitzarem:
 
-# Basics
+{{% notice note %}}
 
-Discover what this Hugo theme is all about and the core-concepts behind it.
+- **Arrays unidimensional**: conjunt de dades del mateix tipus dins una dimensió. 
+- **Arrays bidimensionals**: conjunt de dades del mateix tipus dins de dues dimensions. (Taula)
+- **Cadena de caràcters**: conjunt de caràcters que s'agrupen en una estructura que s'anomena String.
+
+{{% /notice %}}
+

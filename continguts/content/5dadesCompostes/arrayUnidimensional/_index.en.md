@@ -4,57 +4,58 @@ title: Arrays Unidimensionals
 weight: 1
 ---
 
-## Global site parameters
+{{% notice note %}}
+**Arrays unidimensional**: és una estructura de dades que permet agrupar dades del mateix tipus dins un mateix bloc. 
+{{% /notice %}}
 
-On top of [Hugo global configuration](https://gohugo.io/overview/configuration/), **Hugo-theme-learn** lets you define the following parameters in your `config.toml` (here, values are default).
+### Exemple
 
-Note that some of these parameters are explained in details in other sections of this documentation.
+Per exemple podríem necessitar les edats d'una classe per efectuar-ne un tractament especial. Fins ara el que podíem fer és declarar tantes variables enteres com alumnes hi hagi per tal de guardar-ne l'edat:
 
-```toml
-[params]
-  # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
-  # Useful to give opportunity to people to create merge request for your doc.
-  # See the config.toml file from this documentation site to have an example.
-  editURL = ""
-  # Author of the site, will be used in meta information
-  author = ""
-  # Description of the site, will be used in meta information
-  description = ""
-  # Shows a checkmark for visited pages on the menu
-  showVisitedLinks = false
-  # Disable search function. It will hide search bar
-  disableSearch = false
-  # Javascript and CSS cache are automatically busted when new version of site is generated.
-  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
-  disableAssetsBusting = false
-  # Set this to true to disable copy-to-clipboard button for inline code.
-  disableInlineCopyToClipBoard = false
-  # A title for shortcuts in menu is set by default. Set this to true to disable it.
-  disableShortcutsTitle = false
-  # When using mulitlingual website, disable the switch language button.
-  disableLanguageSwitchingButton = false
-  # Hide breadcrumbs in the header and only show the current page title
-  disableBreadcrumb = true
-  # Hide Next and Previous page buttons normally displayed full height beside content
-  disableNextPrev = true
-  # Order sections in menu by "weight" or "title". Default to "weight"
-  ordersectionsby = "weight"
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = ""
-  # Provide a list of custom css files to load relative from the `static/` folder in the site root.
-  custom_css = ["css/foo.css", "css/bar.css"]
+```java
+int edatAlumne1 = 29;
+int edatAlumne2 = 26;
+int edatAlumne3 = 18;
+...
+int edatAlumne30 = 28;
+
 ```
 
-## Activate search
+Com podeu observar, si escaléssim el problema anterior i enlloc de 30 necessitéssim les edats dels 700 estudiants de l'institut, la declaració de variables seria una feina feixuga i amb un alt índex d'equivocar-nos, a més no permetria mantenir i modificar el programa de forma àgil. Per això hi ha les estructures de dades d'un mateix tipus. Una manera de guardar 700 edats dins una mateixa estructura seria aquesta:
 
-If not already present, add the follow lines in the same `config.toml` file.
+```java
+//Declarem una posició de memòria on comença un array
+int[] edatsAlumnes;
 
-```toml
-[outputs]
-home = [ "HTML", "RSS", "JSON"]
+//Aquest array és estàtic, per això abans d'usar-lo ens reservem en memòria el nombre d'enters que necessitem
+edatsAlumnes = new int[700];
+
+//Omplim les edats dels alumnes
+for(int i = 0; i < edatsAlumnes.length; i++)
+  edatsAlumnes[i] = sc.nextInt();
 ```
 
-Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.
+#### Declaració array
 
-> Hugo generate lunrjs index.json at the root of public folder.
-> When you build the site with `hugo server`, hugo generates it internally and of course it doesn’t show up in the filesystem
+En les línies anteriors hem observat que per crear un objecte array, és necessari fer servir la paraula reservada ``new``, amb això el que fem és reservar en memòria l'espai necessari per allotjar la informació. En el següent exemple creem un array estàtic que l'anomeno ``arrayEstatic`` de 12 posicions.
+
+```java
+int[] arrayEstatic = new int[12];
+
+//També es podria fer de la següent manera:
+int arrayEstatic[] = new int[12];
+```
+
+Fixeu-vos que en el primer exemple he fet la declaració i la reserva d'espais dels enters en instruccions separades, en canvi en aquest últim exemple ho he fet tot junt en una única línia.
+
+Per accedir a la posició enèssima de l'array ho puc fer de la següent manera ``arrayEstatic[n]``.
+
+{{% notice note %}}
+Els **Indexs** d'un array comencen en la **posició 0**, no en la 1. L'últim element de l'array es troba a la posició **llargària de l'array - 1**.
+Així doncs en l'exemple anterior el primer enter de l'arrayEstatic es troba en la posició ``arrayEstatic[0]`` mentre que l'últim en la posició ``arrayEstatic[11]``. Hem de tenir en compte que l'**índex** no pot ser un valor negatiu, i que per exemple podria ser un càlcul numèric o fent ús de variables ``arrayEstatic[i + 1]``
+{{% /notice %}}
+
+![array](../images/array.gif?width=500px)
+
+És important entendre que un cop declaro un arrayEstatic, es reserva en memòria espai per guardar el ``tipus de dades * Tamany de l'array``. En l'exemple anterior es demana al programa que ens reservi espai per a 12 enters consecutius. Aquests enters no tenen un valor definit (al ser enters Java els hi posa un 0), per tant cal que els inicialitzem un valor per utilitzar-los.
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.75.0" />
+    <meta name="generator" content="Hugo 0.75.1" />
     <meta name="description" content="M03 Programació DAM">
 <meta name="author" content="Pep Beà">
 
@@ -12,21 +12,21 @@
     <title>Arrays Unidimensionals :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1600105691" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1600105691" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1600679521" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1600105691" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1600679521" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1600105691"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1600679521"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1600105691"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1600105691"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1600679521"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1600679521"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1600105691"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1600679521"></script>
 
     
   </div>
@@ -555,8 +555,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#global-site-parameters">Global site parameters</a></li>
-    <li><a href="#activate-search">Activate search</a></li>
+    <li>
+      <ul>
+        <li><a href="#exemple">Exemple</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -582,52 +585,46 @@
 
 
 
-	<h2 id="global-site-parameters">Global site parameters</h2>
-<p>On top of <a href="https://gohugo.io/overview/configuration/">Hugo global configuration</a>, <strong>Hugo-theme-learn</strong> lets you define the following parameters in your <code>config.toml</code> (here, values are default).</p>
-<p>Note that some of these parameters are explained in details in other sections of this documentation.</p>
-<pre><code class="language-toml">[params]
-  # Prefix URL to edit current page. Will display an &quot;Edit this page&quot; button on top right hand corner of every page.
-  # Useful to give opportunity to people to create merge request for your doc.
-  # See the config.toml file from this documentation site to have an example.
-  editURL = &quot;&quot;
-  # Author of the site, will be used in meta information
-  author = &quot;&quot;
-  # Description of the site, will be used in meta information
-  description = &quot;&quot;
-  # Shows a checkmark for visited pages on the menu
-  showVisitedLinks = false
-  # Disable search function. It will hide search bar
-  disableSearch = false
-  # Javascript and CSS cache are automatically busted when new version of site is generated.
-  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
-  disableAssetsBusting = false
-  # Set this to true to disable copy-to-clipboard button for inline code.
-  disableInlineCopyToClipBoard = false
-  # A title for shortcuts in menu is set by default. Set this to true to disable it.
-  disableShortcutsTitle = false
-  # When using mulitlingual website, disable the switch language button.
-  disableLanguageSwitchingButton = false
-  # Hide breadcrumbs in the header and only show the current page title
-  disableBreadcrumb = true
-  # Hide Next and Previous page buttons normally displayed full height beside content
-  disableNextPrev = true
-  # Order sections in menu by &quot;weight&quot; or &quot;title&quot;. Default to &quot;weight&quot;
-  ordersectionsby = &quot;weight&quot;
-  # Change default color scheme with a variant one. Can be &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
-  themeVariant = &quot;&quot;
-  # Provide a list of custom css files to load relative from the `static/` folder in the site root.
-  custom_css = [&quot;css/foo.css&quot;, &quot;css/bar.css&quot;]
+	
+<div class="notices note" ><p><strong>Arrays unidimensional</strong>: és una estructura de dades que permet agrupar dades del mateix tipus dins un mateix bloc.</p>
+</div>
+
+<h3 id="exemple">Exemple</h3>
+<p>Per exemple podríem necessitar les edats d&rsquo;una classe per efectuar-ne un tractament especial. Fins ara el que podíem fer és declarar tantes variables enteres com alumnes hi hagi per tal de guardar-ne l&rsquo;edat:</p>
+<pre><code class="language-java">int edatAlumne1 = 29;
+int edatAlumne2 = 26;
+int edatAlumne3 = 18;
+...
+int edatAlumne30 = 28;
+
 </code></pre>
-<h2 id="activate-search">Activate search</h2>
-<p>If not already present, add the follow lines in the same <code>config.toml</code> file.</p>
-<pre><code class="language-toml">[outputs]
-home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
+<p>Com podeu observar, si escaléssim el problema anterior i enlloc de 30 necessitéssim les edats dels 700 estudiants de l&rsquo;institut, la declaració de variables seria una feina feixuga i amb un alt índex d&rsquo;equivocar-nos, a més no permetria mantenir i modificar el programa de forma àgil. Per això hi ha les estructures de dades d&rsquo;un mateix tipus. Una manera de guardar 700 edats dins una mateixa estructura seria aquesta:</p>
+<pre><code class="language-java">//Declarem una posició de memòria on comença un array
+int[] edatsAlumnes;
+
+//Aquest array és estàtic, per això abans d'usar-lo ens reservem en memòria el nombre d'enters que necessitem
+edatsAlumnes = new int[700];
+
+//Omplim les edats dels alumnes
+for(int i = 0; i &lt; edatsAlumnes.length; i++)
+  edatsAlumnes[i] = sc.nextInt();
 </code></pre>
-<p>Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.</p>
-<blockquote>
-<p>Hugo generate lunrjs index.json at the root of public folder.
-When you build the site with <code>hugo server</code>, hugo generates it internally and of course it doesn’t show up in the filesystem</p>
-</blockquote>
+<h4 id="declaració-array">Declaració array</h4>
+<p>En les línies anteriors hem observat que per crear un objecte array, és necessari fer servir la paraula reservada <code>new</code>, amb això el que fem és reservar en memòria l&rsquo;espai necessari per allotjar la informació. En el següent exemple creem un array estàtic que l&rsquo;anomeno <code>arrayEstatic</code> de 12 posicions.</p>
+<pre><code class="language-java">int[] arrayEstatic = new int[12];
+
+//També es podria fer de la següent manera:
+int arrayEstatic[] = new int[12];
+</code></pre>
+<p>Fixeu-vos que en el primer exemple he fet la declaració i la reserva d&rsquo;espais dels enters en instruccions separades, en canvi en aquest últim exemple ho he fet tot junt en una única línia.</p>
+<p>Per accedir a la posició enèssima de l&rsquo;array ho puc fer de la següent manera <code>arrayEstatic[n]</code>.</p>
+
+<div class="notices note" ><p>Els <strong>Indexs</strong> d&rsquo;un array comencen en la <strong>posició 0</strong>, no en la 1. L&rsquo;últim element de l&rsquo;array es troba a la posició <strong>llargària de l&rsquo;array - 1</strong>.
+Així doncs en l&rsquo;exemple anterior el primer enter de l&rsquo;arrayEstatic es troba en la posició <code>arrayEstatic[0]</code> mentre que l&rsquo;últim en la posició <code>arrayEstatic[11]</code>. Hem de tenir en compte que l'<strong>índex</strong> no pot ser un valor negatiu, i que per exemple podria ser un càlcul numèric o fent ús de variables <code>arrayEstatic[i + 1]</code></p>
+</div>
+
+<p><img src="../images/array.gif" alt="array"></p>
+<p>És important entendre que un cop declaro un arrayEstatic, es reserva en memòria espai per guardar el <code>tipus de dades * Tamany de l'array</code>. En l&rsquo;exemple anterior es demana al programa que ens reservi espai per a 12 enters consecutius. Aquests enters no tenen un valor definit (al ser enters Java els hi posa un 0), per tant cal que els inicialitzem un valor per utilitzar-los.</p>
 
 
 
@@ -923,19 +920,19 @@ When you build the site with <code>hugo server</code>, hugo generates it interna
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1600105691"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1600679521"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1600105691"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1600105691"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1600679521"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1600105691" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1600105691"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1600679521" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1600679521"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
