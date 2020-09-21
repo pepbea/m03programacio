@@ -195,6 +195,17 @@ for(int valor: array) {
 
 La versió adaptada del bucle for es pot fer servir amb qualsevol tipus d'array (String, int, boolean, etc.).
 
+#### Mètodes més usats de la classe java.util.Arrays
+
+```java
+Arrays.sort(array); // Ordena els elements
+Arrays.equals(array1, array2); // Comprova si els dos arrays són iguals
+Arrays.fill(array, val) //Omple el vector v amb el valor "val"
+Arrays.toString(array)  // Retorna una cadena que representa el contingut del vector
+Arrays.binarySearch(array, k) // Busca el valor k dins del vector array (que prèviament ha estat ordenat) 
+```
+
+
 
 #### Exemples
 1. Exemple de diferents maneres per omplir de valors un array i imprimir-lo per línia de comandes:

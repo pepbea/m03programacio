@@ -12,21 +12,21 @@
     <title>Arrays Unidimensionals :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1600679521" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1600712355" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1600712355" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1600679521" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1600712355" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1600712355"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1600679521"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1600679521"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1600712355"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1600712355"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1600679521"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1600712355"></script>
 
     
   </div>
@@ -586,9 +586,18 @@
 
 
 	
-<div class="notices note" ><p><strong>Arrays unidimensional</strong>: és una estructura de dades que permet agrupar dades del mateix tipus dins un mateix bloc.</p>
+<div class="notices note" ><p><strong>Arrays unidimensional</strong>: és una estructura de dades que conté una col·lecció de dades del mateix tipus.</p>
 </div>
 
+<p>La biblioteca de classes de Java inclou una classe auxiliar que s&rsquo;anomena <strong>java.util.Arrays</strong> i conté funcions molt útils per utilitzar amb arrays:
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html">Java Oracle Classe Arrays</a></p>
+<p><strong>Propietats</strong></p>
+<ul>
+<li>Els arrays s&rsquo;utilitzen com a contenedors per guardar dades relacionades (enlloc de declarar variables per separat per cada un dels elements de l&rsquo;array).</li>
+<li>Totes les dades incluïdes a l&rsquo;array són del mateix tipus. Es poden crear arrays d&rsquo;enters (int, long), de reals(float, double), però en un mateix array no es poden mesclar dades de tipus diferents.</li>
+<li>En els arrays estàtics el tamany s&rsquo;estableix quan es crea l&rsquo;array (amb l&rsquo;operador new, igual que qualsevol altre objecte).</li>
+<li>Als elements de l&rsquo;array si accedirà a través de la posició que ocupa dins el conjunt d&rsquo;elements de l&rsquo;array.</li>
+</ul>
 <h3 id="exemple">Exemple</h3>
 <p>Per exemple podríem necessitar les edats d&rsquo;una classe per efectuar-ne un tractament especial. Fins ara el que podíem fer és declarar tantes variables enteres com alumnes hi hagi per tal de guardar-ne l&rsquo;edat:</p>
 <pre><code class="language-java">int edatAlumne1 = 29;
@@ -599,7 +608,7 @@ int edatAlumne30 = 28;
 
 </code></pre>
 <p>Com podeu observar, si escaléssim el problema anterior i enlloc de 30 necessitéssim les edats dels 700 estudiants de l&rsquo;institut, la declaració de variables seria una feina feixuga i amb un alt índex d&rsquo;equivocar-nos, a més no permetria mantenir i modificar el programa de forma àgil. Per això hi ha les estructures de dades d&rsquo;un mateix tipus. Una manera de guardar 700 edats dins una mateixa estructura seria aquesta:</p>
-<pre><code class="language-java">//Declarem una posició de memòria on comença un array
+<pre><code class="language-java">//Declarem una posició de memòria on hi ha una referència a un array
 int[] edatsAlumnes;
 
 //Aquest array és estàtic, per això abans d'usar-lo ens reservem en memòria el nombre d'enters que necessitem
@@ -623,8 +632,302 @@ int arrayEstatic[] = new int[12];
 Així doncs en l&rsquo;exemple anterior el primer enter de l&rsquo;arrayEstatic es troba en la posició <code>arrayEstatic[0]</code> mentre que l&rsquo;últim en la posició <code>arrayEstatic[11]</code>. Hem de tenir en compte que l'<strong>índex</strong> no pot ser un valor negatiu, i que per exemple podria ser un càlcul numèric o fent ús de variables <code>arrayEstatic[i + 1]</code></p>
 </div>
 
-<p><img src="../images/array.gif" alt="array"></p>
-<p>És important entendre que un cop declaro un arrayEstatic, es reserva en memòria espai per guardar el <code>tipus de dades * Tamany de l'array</code>. En l&rsquo;exemple anterior es demana al programa que ens reservi espai per a 12 enters consecutius. Aquests enters no tenen un valor definit (al ser enters Java els hi posa un 0), per tant cal que els inicialitzem un valor per utilitzar-los.</p>
+<p><img src="../images/array.gif?width=500px" alt="array"></p>
+<p>És important entendre que un cop declaro un arrayEstatic, es reserva en memòria espai per guardar el <code>tipus de dades * Tamany de l'array</code>. En l&rsquo;exemple anterior es demana al programa que ens reservi espai per a 12 enters consecutius. Aquests enters no tenen un valor definit (al ser enters Java els hi posa un 0, si fossin booleans el valor per defecte seria false), per tant cal que els inicialitzem un valor per utilitzar-los.</p>
+<pre><code class="language-java">int index = 4;
+int array[index + 1]++;
+</code></pre>
+<p>En aquest exemple s&rsquo;observa com inicialitzem un índex a 4, s&rsquo;accedeix a l&rsquo;element amb índex 5 de l&rsquo;array, és la posició 6 (recordeu que el 0 és la primera posició de l&rsquo;array) i en l&rsquo;enter de la posició 6 n&rsquo;augmentem el valor en una unitat.</p>
+<h4 id="longitud">Longitud</h4>
+<p>Al ser una estructura estàtica la <strong>longitud</strong> de l&rsquo;array no es pot variar i es defineix quan es crea (amb el new). Per tal d&rsquo;obtenir el seu valor en Java utilitzarem la funció <code>length</code>:</p>
+<pre><code class="language-java">System.out.println(&quot;La longitud de l'array és &quot; + array.length);
+</code></pre>
+<h4 id="una-altra-inicialització">Una altra inicialització</h4>
+<p>Una altra manera d&rsquo;inicialitzar un array és directament definint els seus elements:</p>
+<pre><code class="language-java">int[] array2 = {10, 20, 54, -2, 76 };
+</code></pre>
+<p>Si a aquest array2 imprimissim el seu valor de array2.length el resultat seria 5. De forma que s&rsquo;hauria declarat i reservat la memòria directament.</p>
+<h4 id="recorregut-i-manipulació-darrays">Recorregut i manipulació d&rsquo;arrays</h4>
+<p>Normalment ens trobarem amb problemes on cal accedir a arrays i efectuar-ne un tractament determinat. Per exemple, ens podríem trobar el següent problema:</p>
+<blockquote>
+<p>Com ho faríem per guardar en un array els 10 primers números parells?</p>
+</blockquote>
+<pre><code class="language-java">//declaració i creació de l'array					
+int[] llista = new int[10];
+
+//modificació el valor dels elements de l'array
+for(int i=0; i&lt;llista.length; i++) {
+    llista[i] = i*2;
+}	
+
+//Imprimim els valors 0 2 4 6 8 10 12 14 16 18
+for(int i=0; i&lt;llista.length; i++) { System.out.print(llista[i] + &quot; &quot;); }
+</code></pre>
+<p>Es pot observar com mitjançant l&rsquo;índex <code>i</code> s&rsquo;accedeix a tots els elements de l&rsquo;array i se&rsquo;n va modificant el seu valor.</p>
+<h4 id="ordenació-arrays">Ordenació arrays</h4>
+<p>Una altra funcionalitat corrent és l&rsquo;ordenació de arrays. En Java existeix una funció que ordena els elements d&rsquo;un array, més endavant l&rsquo;estudiarem amb deteniment.</p>
+<pre><code class="language-java">Arrays.sort(vector);
+</code></pre>
+<p>Existeixen molts algorismes diferents capaços d&rsquo;ordenar els elements d&rsquo;un array, tots ells tenen la seva lògica i obeeixen a casuïstiques diferents, i per tant també tenen costos de còmput diferent. En la següent web podrem observar simulacions de diferents algorismes en un llenguatge de pseudocodi i com evoluciona cada array fins a la seva ordenació:
+<a href="https://visualgo.net/es/sorting?slide=1">Visualgo</a></p>
+<h4 id="cerca-dun-element-dins-larray">Cerca d&rsquo;un element dins l&rsquo;array</h4>
+<p>La cerca d&rsquo;un element dins un array és un problema típic. No és el mateix tenir l&rsquo;array ordenat que l&rsquo;array desordenat:</p>
+<ol>
+<li>Si l&rsquo;array està desordenat farem un recorregut buscant l&rsquo;element, si no el troba s&rsquo;arriba al final de l&rsquo;array, si el troba sortim de l&rsquo;array abans de la seva finalització.</li>
+<li>Si l&rsquo;array està ordenat, a diferència de l&rsquo;anterior, no cal que busquem fins al final de l&rsquo;array, un cop &ldquo;em passi&rdquo; de l&rsquo;element que estic buscant ja no cal que continuï, és una manera d&rsquo;optimitzar la cerca.</li>
+</ol>
+<p>Cerca en array desordenat:</p>
+<pre><code class="language-java">double[] array = {2, 5.5, 9.1, 1, 2.9, 8, 5.5, 55.4, 2.6, 5.45, 7};
+
+//Definim variable booleana per saber si s'ha trobat el valor
+boolean trobat = false;
+
+//Índex
+int i = 0;
+
+//Realitzem el recorregut, mentre no s’arriba al final i no es trobi un 1
+while ((i &lt; array.length) &amp;&amp; (!trobat)) {
+  if (array[i] == 8) {
+    trobat = true;
+  }
+  i = i + 1;
+}
+
+//S’ha trobat?
+String resposta = (trobat)? &quot;S'ha trobat l'element&quot; : &quot;NO s'ha trobat l'element&quot;;
+System.out.println(resposta);  
+</code></pre>
+<p>Cerca en array ordenat:</p>
+<pre><code class="language-java">double[] array = {2, 5.5, 8, 9.1, 10.4, 12.9, 18, 25.5, 55.4};
+
+//Definim variable booleana per saber si s'ha trobat el valor
+boolean trobat = false;
+
+//Definim variable booleana per saber si ens hem passat ja de l'element
+boolean passat=false;
+
+//Índex
+int i = 0;
+
+//Realitzem el recorregut, mentre no s’arriba al final i no es trobi un 1
+while ((i &lt; array.length) &amp;&amp; (!trobat) &amp;&amp; (!passat)) {
+  if (array[i] == 8) {
+    trobat = true;
+  }
+
+  if (array[i] &gt; 8) {
+    passat = true;
+  }
+  i = i + 1;
+}
+
+//S’ha trobat?
+String resposta = (trobat)? &quot;S'ha trobat l'element&quot; : &quot;NO s'ha trobat l'element&quot;;
+System.out.println(resposta);  
+</code></pre>
+<h4 id="bucle-for-millorat-per-arrays">Bucle for millorat per arrays</h4>
+<p>Per tal d&rsquo;efectuar el recorregut en un array java ens permet aquesta expressió reduïda de bucles for. Per exemple, els bucles següents són equivalents:</p>
+<pre><code class="language-java">for(int i=0; i&lt;array.length; i++) {
+    int valor = array[i];
+    System.out.println(valor);
+}
+for(int valor: array) {
+    System.out.println(valor);
+}
+</code></pre>
+<p>La versió adaptada del bucle for es pot fer servir amb qualsevol tipus d&rsquo;array (String, int, boolean, etc.).</p>
+<h4 id="mètodes-més-usats-de-la-classe-javautilarrays">Mètodes més usats de la classe java.util.Arrays</h4>
+<pre><code class="language-java">Arrays.sort(array); // Ordena els elements
+Arrays.equals(array1, array2); // Comprova si els dos arrays són iguals
+Arrays.fill(array, val) //Omple el vector v amb el valor &quot;val&quot;
+Arrays.toString(array)  // Retorna una cadena que representa el contingut del vector
+Arrays.binarySearch(array, k) // Busca el valor k dins del vector array (que prèviament ha estat ordenat) 
+</code></pre>
+<h4 id="exemples">Exemples</h4>
+<ol>
+<li>Exemple de diferents maneres per omplir de valors un array i imprimir-lo per línia de comandes:</li>
+</ol>
+<pre><code class="language-java"> //Crear Array
+int primerArray[] = new int[7];
+
+//Omplir de valors amb for i després amb while
+for(int i=0; i &lt; primerArray.length; i++){
+    primerArray[i] = sc.nextInt();
+}
+
+int i=0;
+while(i &lt; primerArray.length){
+    primerArray[i] = sc.nextInt();
+    i++;
+}
+
+//Mostrar valors amb toString amb bucle for i bucle for millorat
+Arrays.toString(primerArray);
+
+for( i=0; i &lt; primerArray.length; i++){
+    System.out.println(primerArray[i]);
+}
+
+for( int valor : primerArray){
+    System.out.println(valor);
+}
+
+//Ús de la funció fill de la classe Arrays que consisteix en omplir totes les posicions d'un array amb el mateix valor
+Arrays.fill(primerArray,7);
+
+for(i=0; i &lt; primerArray.length; i++){
+    primerArray[i] = 7;
+}
+</code></pre>
+<ol start="2">
+<li>Còpia d&rsquo;arrays</li>
+</ol>
+<pre><code class="language-java">int[] llista = {1,2,3,4};
+//llita i llistaCopia apunten al mateix array ja que són referències
+int[] llistaCopia = llista; 
+
+//Fent ús de clone. En aquest cas llista i llistaCopia SON DOS ARRAYS IGUALS I INDEPENDENTS
+llistaCopia = llista.clone(); 
+
+//còpia manual dels elements		
+for(i=0; i &lt; llista.length; i++){
+    llistaCopia[i] = llista[i];
+}
+
+System.out.println(&quot;Contingut de l'array 'llista'&quot;);
+for(int valor : llista) System.out.println(valor);
+
+System.out.println(&quot;Contingut de l'array 'llistaCopia'&quot;);
+for(int valor : llistaCopia) System.out.println(valor);
+</code></pre>
+<ol start="3">
+<li>Cerca d&rsquo;un element dins un array (exemple del màxim)</li>
+</ol>
+<pre><code class="language-java">primerArray = new int[]{-1, -2, -3, -4};
+int max = 0;
+for(i=0; i &lt; primerArray.length; i++){
+
+    if(max&lt;primerArray[i]) max = primerArray[i];
+}
+</code></pre>
+<ol start="4">
+<li>Sumar els elements d&rsquo;un array valor a valor i guardar-lo en un altre array</li>
+</ol>
+<pre><code class="language-java">int vector1[] = new int[10];
+int vector2[] = new int[10];
+
+//falta introduir els valors en vector1 i vector2
+
+int suma[] = new int[10];
+for( i=0; i&lt;suma.length;i++){
+    suma[i] = vector1[i] + vector2[i];
+}
+</code></pre>
+<ol start="5">
+<li>Cerca dicotòmica</li>
+</ol>
+<pre><code class="language-java">//Tamany vector
+System.out.println(&quot;De quants elements vols el vector?&quot;);
+int llargada = sc.nextInt();
+
+//Creem i posem elements aleatoris entre 0 i 100 dins el vector i l'ordenem
+int [] vector = new int[llargada];
+
+for(int i=0; i&lt;llargada;i++) 
+  vector[i] = (int)(Math.random()*100);
+
+Arrays.sort(vector);
+
+//Imprimim vector
+System.out.println(Arrays.toString(vector));
+
+//Quin element vols buscar?
+System.out.println(&quot;Quin element vols buscar?&quot;);
+int nombreBuscat = sc.nextInt();
+
+//inicialitzem index inferior i superior i declarem element central
+int elementCentral;
+int inferior=0;
+int superior=llargada-1;
+
+//inicialment no s'ha trobat l'element
+boolean trobat = false;
+int iteracions = 0;
+
+//mentre element inferior no rebassi el superior continuem explorant
+while(inferior&lt;=superior &amp;&amp; !trobat){
+
+    //Augmentem nombre iteracions
+    iteracions++;
+
+    //busquem quin és l'element central
+    elementCentral=(superior+inferior)/2;
+
+    //Imprimim l'estat actual
+    System.out.println(&quot;Iteracio: &quot; + iteracions + &quot;  Inferior:&quot; + inferior + &quot;  Superior:&quot; + superior + &quot;  Element Central:&quot; + vector[elementCentral] + &quot;  A buscar:&quot; + nombreBuscat);
+    for(int i=inferior; i &lt;= superior; i++) 
+      System.out.print(vector[i]+&quot; &quot;);
+    
+    System.out.println(&quot;&quot;);
+    System.out.println(&quot;&quot;);
+     
+    //Si el trobem posem trobat a true per sortir del bucle i anunciem que l'hem trobat
+    if(vector[elementCentral]==nombreBuscat){
+        trobat=true;
+        System.out.println(&quot;L'element &quot;+nombreBuscat+&quot; està dins l'array&quot;);
+    }
+    //Sinó actualitzem index, caldrà actualitzar o bé el superior en cas que el nombre buscat sigui inferior a l'actual, o bé l'inferior en cas contrari.
+    else if(nombreBuscat &lt; vector[elementCentral] ){
+        superior=elementCentral-1;
+    }
+    else {
+        inferior=elementCentral+1;
+    }
+}
+
+//Si no el trobem ho anunciem
+if(!trobat)System.out.println(&quot;L'element no es troba en el vector&quot;);
+
+
+
+/**
+*  Comparem amb...
+*  CERCA LINEAL
+*
+**/
+inferior=0;
+superior=llargada-1;
+
+//inicialment no s'ha trobat l'element
+trobat = false;
+iteracions = 0;
+
+//mentre element inferior no rebassi el superior continuem explorant
+while(inferior&lt;=superior &amp;&amp; !trobat) {
+
+  //Augmentem nombre iteracions
+  iteracions++;
+
+  //Imprimim l'estat actual
+  System.out.println(&quot;Iteracio: &quot; + iteracions + &quot;  Inferior:&quot; + inferior + &quot;  Superior:&quot; + superior + &quot;  Element Actual:&quot; + vector[inferior] + &quot;  A buscar:&quot; + nombreBuscat);
+  for (int i = inferior; i &lt;= superior; i++) System.out.print(vector[i] + &quot; &quot;);
+  System.out.println(&quot;&quot;);
+  System.out.println(&quot;&quot;);
+
+  //Si el trobem posem trobat a true per sortir del bucle i anunciem que l'hem trobat
+  if (vector[inferior] == nombreBuscat) {
+      trobat = true;
+      System.out.println(&quot;L'element &quot; + nombreBuscat + &quot; està dins l'array&quot;);
+  }
+
+  //Miro el següent element
+  inferior++;
+
+}
+
+//Si no el trobem ho anunciem
+if(!trobat)System.out.println(&quot;L'element no es troba en el vector&quot;);
+</code></pre>
 
 
 
@@ -920,19 +1223,19 @@ Així doncs en l&rsquo;exemple anterior el primer enter de l&rsquo;arrayEstatic 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1600712355"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1600679521"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1600679521"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1600712355"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1600712355"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1600679521" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1600679521"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1600712355" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1600712355"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
