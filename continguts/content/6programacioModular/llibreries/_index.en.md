@@ -87,7 +87,7 @@ sistema.
 
 Si tenim un projecte amb el següent arbre de fitxers:
 
-![array](../images/projecte.png?width=500px)
+![array](../images/projecte.png?width=300px)
 
 L'estructura que necessitem en cada fitxer per poder veure la resta de fitxers és la següent:
 
