@@ -113,4 +113,5 @@ package classes.classes2;
 <br>
 Aquí teniu l'enllaç al projecte:
 
-[projecte](../images/Llibreries.zip)
+[Projecte imports/package](../images/Llibreries.zip)
+
