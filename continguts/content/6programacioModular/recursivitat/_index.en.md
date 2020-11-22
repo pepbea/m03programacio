@@ -96,7 +96,7 @@ public int factorial (n){
 
 ![array](../images/factorialRecursiu.png?width=500px)
 
-![array](../images/factorialRecursiu2.png?width=500px)
+![array](../images/factorialRecursiu2.png?width=700px)
 
 #### Exemples
 <br>

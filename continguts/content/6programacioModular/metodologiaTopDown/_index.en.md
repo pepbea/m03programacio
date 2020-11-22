@@ -11,7 +11,7 @@ weight: 2
 2. *Disseny Bottom-Up*: consisteix en partir de blocs (funions) elementals i anar unint-los per aconseguir resoldre un problema. Normalment s'aplica a la fase d'implementació.
 
 
-![topdown](../images/topdown.png?width=500px)
+![topdown](../images/topdown.png?width=700px)
 
 Entre els múltiples avantatges de la programació funcional, es poden citar:
 * Afavoreix la reutilització del codi.
