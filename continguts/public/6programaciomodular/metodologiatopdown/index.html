@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
 
-    <title>Categories :: Documentation for Hugo Learn Theme</title>
+    <title>Metodologia Top Down :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/m03programacio/continguts/public/css/nucleus.css?1606044122" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/m03programacio/continguts/public/categories/">
+  <body class="" data-url="/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/">
     <nav id="sidebar" class="">
 
 
@@ -471,7 +471,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/6programaciomodular/" title="Programació Modular" class="dd-item 
-        
+        parent
         
         
         ">
@@ -526,8 +526,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/" title="Metodologia Top Down" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/">
@@ -645,6 +645,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/6programacioModular/metodologiaTopDown/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -665,7 +676,13 @@
             
           
           
-            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > Categories
+            
+            
+          
+          
+            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/6programaciomodular/'>Programació Modular</a> > Metodologia Top Down
+          
+        
           
         
           
@@ -676,7 +693,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -692,9 +709,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              Metodologia Top Down
             </h1>
           
 
@@ -702,11 +717,186 @@
 
 
 
-
-
+	<p><strong>Metodologia Top Down</strong>: L&rsquo;aplicació de la programació funcional en el desenvolupament d&rsquo;un programa, dóna lloc a
+2 tipus de fluxos de disseny oposats:</p>
+<ol>
+<li>
+<p><em>Disseny Top-Down</em>: consisteix a resoldre un problema complex dividint successivament en parts cada vegada més elementals fins que siguin fàcilment abordables per separat. Normalment s&rsquo;aplica a la fase de disseny.</p>
+</li>
+<li>
+<p><em>Disseny Bottom-Up</em>: consisteix en partir de blocs (funions) elementals i anar unint-los per aconseguir resoldre un problema. Normalment s&rsquo;aplica a la fase d&rsquo;implementació.</p>
+</li>
+</ol>
+<p><img src="../images/topdown.png?width=500px" alt="topdown"></p>
+<p>Entre els múltiples avantatges de la programació funcional, es poden citar:</p>
 <ul>
-	
+<li>Afavoreix la reutilització del codi.</li>
+<li>Permet una completa divisió de tasques entre els programadors.</li>
+<li>Facilita el manteniment i l&rsquo;escalabilitat dels programes.</li>
+<li>Facilita la depuració i la verificació.</li>
+<li>Es complementa perfectament amb la programació estructurada. de fet normalment s&rsquo;utilitzen juntes.</li>
+<li>Facilita el disseny descendent (top-down) i la filosofia divideix i guanyaràs, disminuint la complexitat dels programes.</li>
+<li>Millora la productivitat.</li>
 </ul>
+<br>
+<p><strong>Exemple3: Programa amb diferents funcionalitats</strong></p>
+<pre><code class="language-java">import java.util.Arrays;
+import java.util.Scanner;
+
+public class Activitats {
+
+	
+	//Métode que retorna el màxim de 2 nombres. Retorna num1 si són iguals
+	public static int maxim (int num1, int num2){
+		if(num1&gt;=num2) return num1;
+		else return num2;
+	}
+	
+	//Métode que retorna el mínim de 2 nombres. Retorna num2 si són iguals
+	public static int min (int num1, int num2){
+		if(num1&gt;=num2)return num2;
+		else return num1;
+	}
+
+	//Métode que donats 3 nombres, retorna una llista ordenada ascendent
+	public static int[] ordena (int num1, int num2, int num3){
+		int[] llista = {num1,num2,num3};
+		Arrays.sort(llista);
+		return llista;			
+	}
+	
+	//Métode que retorna el màxim de 3 nombres.
+	public static int maxim3 (int num1, int num2, int num3){
+		int [] llista = ordena(num1, num2, num3);
+		return llista[2];
+	}
+	
+	//Métode que retorna el mínim de 3 nombres.
+	public static int min3 (int num1, int num2,int num3){
+		int [] llista = ordena(num1, num2, num3);
+		return llista[0];
+	}
+	
+	//Métode que retorna el valor màxim d'una matriu.
+	public static int minimMatriu (int[][] mat){
+		int files = mat.length;
+		int columnes = mat[0].length;
+		int maxim = 0;
+		for(int i=0; i&lt;files;i++){
+			for(int j=0; j&lt;columnes;j++){
+				if(mat[i][j] &gt; maxim)maxim = mat[i][j];
+				//maxim = maxim(maxim, mat[i][j]);
+			}
+		}
+		return maxim;
+	}
+	
+	//Métode que permet crear una matriu amb nombres aleatoris
+	public static int[][] creaMatriu (){
+		int files = 3;
+		int columnes = 3;
+		int[][] matriu = new int[files][columnes];
+
+		for (int i = 0; i &lt;files ; i++) {
+		    System.out.println(&quot;&quot;);
+		    for (int j = 0; j &lt; columnes; j++) {
+		        matriu[i][j] = (int)(Math.random()*100);
+		        System.out.print(matriu[i][j] + &quot; &quot;);
+		    }
+		}
+        
+        	System.out.println(&quot;\n&quot;);
+		return matriu;
+	}
+	
+	public static void main (String[] args){
+		
+		Scanner sc = new Scanner(System.in);
+		int opcio = 9;
+		int num1, num2, num3;
+		while(opcio!=0){
+			System.out.println(&quot;\n\n\n---Tria una opció---\n&quot;);
+			System.out.println(&quot;1. Màxim de dos nombres&quot;);
+			System.out.println(&quot;2. Mínim de dos nombres&quot;);
+			System.out.println(&quot;3. Màxim de tres nombres&quot;);
+			System.out.println(&quot;4. Mínim de tres nombres&quot;);
+			System.out.println(&quot;5. Ordena de forma ascendent tres nombres&quot;);
+			System.out.println(&quot;6. Màxim valor d'una matriu&quot;);
+			System.out.println(&quot;0. Sortir\n&quot;);
+			System.out.println(&quot;---Tria una opció---\n&quot;);
+			
+			opcio = sc.nextInt();
+			
+			switch(opcio){
+				case 1: 
+					System.out.println(&quot;Introdueix primer valor&quot;);
+					num1 = sc.nextInt();
+					System.out.println(&quot;Introdueix segon valor&quot;);
+					num2 = sc.nextInt();
+					System.out.println(&quot;El màxim és: &quot;+ maxim(num1,num2));
+				break;
+				
+				case 2: 
+					System.out.println(&quot;Introdueix primer valor&quot;);
+					num1 = sc.nextInt();
+					System.out.println(&quot;Introdueix segon valor&quot;);
+					num2 = sc.nextInt();
+					System.out.println(&quot;El mínim és: &quot;+ min(num1,num2));
+				break;
+				
+				case 3: 
+					System.out.println(&quot;Introdueix primer valor&quot;);
+					num1 = sc.nextInt();
+					System.out.println(&quot;Introdueix segon valor&quot;);
+					num2 = sc.nextInt();
+					System.out.println(&quot;Introdueix tercer valor&quot;);
+					num3 = sc.nextInt();
+					System.out.println(&quot;El màxim és: &quot;+ maxim3(num1,num2, num3));
+				break;
+				
+				case 4: 
+					System.out.println(&quot;Introdueix primer valor&quot;);
+					num1 = sc.nextInt();
+					System.out.println(&quot;Introdueix segon valor&quot;);
+					num2 = sc.nextInt();
+					System.out.println(&quot;Introdueix tercer valor&quot;);
+					num3 = sc.nextInt();
+					System.out.println(&quot;El mínim és: &quot;+ min3(num1,num2, num3));
+				break;
+				
+				case 5: 
+					System.out.println(&quot;Introdueix primer valor&quot;);
+					num1 = sc.nextInt();
+					System.out.println(&quot;Introdueix segon valor&quot;);
+					num2 = sc.nextInt();
+					System.out.println(&quot;Introdueix tercer valor&quot;);
+					num3 = sc.nextInt();
+					int[] llista = ordena(num1,num2,num3);
+					System.out.print(&quot;L'ordre ascendent dels tres valors és:&quot;);
+					for(int i=0; i&lt;llista.length; i++){
+						System.out.print(llista[i]+&quot; &quot;);				
+					}
+				break;
+				
+				case 6: 
+					System.out.println(&quot;Aquesta és la matriu:&quot;);
+					int maxim = minimMatriu(creaMatriu());
+					System.out.println(&quot;El màxim valor de la matriu és: &quot;+ maxim);
+				break;
+				
+				case 0:
+					System.out.println(&quot;Programa finalitzat&quot;);
+				break;
+			}
+		}
+		sc.close();
+	}
+}
+</code></pre>
+<br>
+
+
+
 
 
 <footer class=" footline" >
@@ -977,6 +1167,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -991,6 +1182,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1008,6 +1202,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1023,6 +1218,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1063,8 +1261,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/" title="Introducció Disseny Modular"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/m03programacio/continguts/public/1estructura/" title="Estructura d’un programa" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/m03programacio/continguts/public/6programaciomodular/llibreries/" title="Llibreries" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
 
-    <title>Categories :: Documentation for Hugo Learn Theme</title>
+    <title>Introducció Disseny Modular :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/m03programacio/continguts/public/css/nucleus.css?1606044122" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/m03programacio/continguts/public/categories/">
+  <body class="" data-url="/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/">
     <nav id="sidebar" class="">
 
 
@@ -471,7 +471,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/6programaciomodular/" title="Programació Modular" class="dd-item 
-        
+        parent
         
         
         ">
@@ -500,8 +500,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/" title="Introducció Disseny Modular" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/">
@@ -645,6 +645,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/6programacioModular/introduccioDissenyModular/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -665,7 +676,13 @@
             
           
           
-            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > Categories
+            
+            
+          
+          
+            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/6programaciomodular/'>Programació Modular</a> > Introducció Disseny Modular
+          
+        
           
         
           
@@ -676,7 +693,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-subprogrames-i-mòduls">1. Subprogrames i mòduls</a></li>
+        <li><a href="#2-accions-funcions-i-mètodes">2. Accions, funcions i mètodes</a></li>
+        <li><a href="#3-accessibilitat-de-les-variables">3. Accessibilitat de les variables</a></li>
+        <li><a href="#4-pas-per-valor-o-per-referència">4. Pas per valor o per referència</a></li>
+        <li><a href="#5-mètodes-estàtics-o-no-estàtics">5. Mètodes Estàtics o no estàtics</a></li>
+        <li><a href="#exemples">Exemples</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -692,9 +722,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              Introducció Disseny Modular
             </h1>
           
 
@@ -702,11 +730,297 @@
 
 
 
+	<p>El paradigma de programació utilitzat fins ara ha estat el de la programació estructurada, consistent en tractar de desenvolupar programes més fiables i fàcils de mantenir mitjançant la utilització exclusiva de 3 estructures de control: la seqüencial, l&rsquo;alternativa i la iterativa.</p>
+<p>Quan els programes comencen a créixer i es tornen difícils de resoldre en conjunt per la seva gran envergadura, la programació estructurada <strong>afavoreix la divisió del problema en parts més petites</strong> que poden ser abordades més fàcilment per separat. Es tracta del principi de <strong>&ldquo;divideix i guanyaràs&rdquo;</strong>.</p>
+<p>La programació funcional, en el marc conceptual què estem tractant, consisteix justament en aplicar aquesta tècnica de divideix i venceràs per separar un programa en parts més senzilles, anomenades <strong>funcions</strong>.</p>
 
+<div class="notices note" ><p><strong>Programació funcional:</strong> dividir un programa en funcions específiques dins del mateix arxiu. <br> <strong>Programació modular:</strong> consisteix a agrupar en arxius separats un conjunt de funcions més genèriques i que guardin alguna relació entre elles amb la finalitat que puguin ser reutilitzades entre programes.</p>
+</div>
 
+<h3 id="1-subprogrames-i-mòduls">1. Subprogrames i mòduls</h3>
+<p>El concepte de <strong>subprograma</strong> s’utilitza normalment per identificar un conjunt d’instruccions que conjuntament desenvolupen una tasca concreta i que pot ser (o no) necessària en diferents llocs del programa.
+El concepte de <strong>mòdul</strong> es destina normalment a identificar grans apartats d’una aplicació</p>
+<h3 id="2-accions-funcions-i-mètodes">2. Accions, funcions i mètodes</h3>
+<p>Els subprogrames es classifiquen en:</p>
+<ol>
+<li>
+<p><strong>Acció</strong> és un conjunt d’instruccions amb un objectiu comú, que pot necessitar o no dades externes per a la seva execució i que <strong>NO retorna</strong> cap resultat a qui l&rsquo;ha cridat.</p>
+</li>
+<li>
+<p><strong>Funció</strong> és un conjunt d’instruccions amb un objectiu comú, que pot necessitar o no dades externes per a la seva execució i que <strong>Retorna</strong> un resultat a qui l’ha cridat.</p>
+</li>
+</ol>
+<p>El llenguatge Java és orientat a objectes, i per tant tot s&rsquo;encapsula dins de classes. En aquest context les accions i funcions s&rsquo;implementen amb una estructura definida dins d&rsquo;una classe i anomenada <strong>mètode</strong>.</p>
+<p>Quan codifiquem un mètode tindrem els següents elements:</p>
 <ul>
-	
+<li>
+<p><em>Signatura</em> o capçalera del mètode: Està composta per:</p>
+<ul>
+<li>El <em>nom</em> del mètode.</li>
+<li>Els <em>arguments</em> del mètode: ens informen de quins paràmetres obtenim per tal de poder usar dins el mètode. Si el llenguatge de programació usa tipus de dades, com Java, també ens especificarà de quin tipus de dades és cadascun d&rsquo;aquests arguments.</li>
+<li><em>Tipus</em> de dada que retorna el mètode: només s&rsquo;especificarà si el llenguatge de programació usa tipus de dades, com Java.</li>
 </ul>
+</li>
+<li>
+<p><em>Cos del mètode</em>: Defineix l&rsquo;algoritme que executarà el mètode. Dins del cos del mètode hi haurà el retorn del mètode on es posarà quina dada es retorna (si és que es retorna alguna dada).</p>
+</li>
+</ul>
+<p>Quan parlem de <strong>la crida</strong> a un mètode, ens referim a fer ús d&rsquo;aquesta mètode des d&rsquo;un altre mètode (ja sigui des de la mateixa classe o no).</p>
+<h4 id="exemple-de-funció-i-acció">Exemple de funció i acció</h4>
+<p>Si per exemple tenim la següent funció:</p>
+<pre><code class="language-java">public static int sumaFuncio(int a, int b){
+    int resultat;
+    resultat = a + b;
+    return resultat;
+}
+
+</code></pre>
+<ul>
+<li>La <em>signatura</em> és: <code>public static int sumaFuncio(int a, int b)</code></li>
+<li>El <em>nom</em> <code>suma</code></li>
+<li>Els <em>arguments</em>: <code>(int a, int b)</code></li>
+<li><em>Tipus</em> de dades que retorna <code>int</code></li>
+<li>El <em>cos</em> són les tres instruccions de dins la funció.</li>
+</ul>
+<p>Com podem comprovar l&rsquo;anterior mètode es una funció ja que retorna un enter. Si volguéssim canviar aquesta funció per una acció (subprograma que no retorna cap valor) ho faríem de la següent manera:</p>
+<pre><code class="language-java">public static void sumaAccio(int a, int b){
+    int resultat;
+    resultat = a + b;
+    System.out.println(resultat);
+}
+</code></pre>
+<p>Fixeu-vos que hem canviat int -&gt; void i ara ja no retornem res, sinó que ho escrivim per pantalla.</p>
+<p>Si volem efectuar la <em>crida</em> dins el main del nostre programa faríem el següent per una funció i per una acció:</p>
+<pre><code class="language-java">public static void main(String args[]){
+    int res = sumaFuncio(2,3);
+    System.out.println(res);
+
+    sumaAccio(2,3);
+}
+</code></pre>
+<h3 id="3-accessibilitat-de-les-variables">3. Accessibilitat de les variables</h3>
+<p>Les <strong>variables globals</strong> són les variables tals que el seu àmbit de validesa i disponibilitat és total, és a dir, es poden utilitzar, actualitzant-les o no, des del programa principal i des de tots els subprogrames. No és aconsellable l&rsquo;ús de variables globals. Les definim just després de la declaració de la classe, per ex:</p>
+<pre><code class="language-java">public class Main{
+public static int variableGlobal;
+...
+</code></pre>
+<p>Una <strong>variable local</strong> és aquella que està declarada dins d’un subprograma. L’àmbit d’ús de les variables locals és el subprograma en què s’han definit. L’àmbit d’existència d’una variable és la part de la classe en què la variable pot ser
+referenciada o s’hi pot accedir pel seu nom.</p>
+<p>En Java, quan declarem una variable, aquesta és accessible només dins l&rsquo;estructura on es declarada. En el cas dels arguments, només són visibles en el mètode en el qual s&rsquo;usen. Posem un exemple:</p>
+<pre><code class="language-java">public double m2km (double m)
+{
+    double km;
+    km = m / 1000;
+    return km;
+}
+</code></pre>
+<p>En aquest cas les variables m i km només són accessibles dins del mètode m2km.</p>
+<p>Un altre exemple:</p>
+<pre><code class="language-java">public int sumElements (int[] array)
+{
+    int sum = 0;
+
+    for(int i = 0; i &lt; array.length; i++)
+        sum = sum + array[i];
+ 
+    return sum;
+}
+</code></pre>
+<p>Les variables sum i array només són accessibles dins del mètode sumElements, però
+la variable i només és visible dins del for.</p>
+<h3 id="4-pas-per-valor-o-per-referència">4. Pas per valor o per referència</h3>
+<p>Arguments o paràmetres
+Els <strong>arguments o paràmetres formals</strong> són les dades que apareixen a la signatura de la funció.</p>
+<p>Els <strong>paràmetres o paràmetres actuals</strong> són les dades transferides en la crida d&rsquo;una funció.</p>
+<p>Transferència per valor o per referència:</p>
+<ol>
+<li>
+<p>En la <strong>transferència per valor</strong>, el valor del paràmetre actual es <strong>copia</strong> en una altra posició de memòria, a la qual es pot accedir pel nom del paràmetre formal. Aquesta NO ÉS la variable inicial, n&rsquo;és una còpia del seu valor en una altra posició de memòria.</p>
+</li>
+<li>
+<p>En la <strong>transferència per referència</strong>, el subprograma rep *<em>l’adreça de memòria</em> en què es troba el paràmetre actual, a la qual es pot accedir llavors pel nom del paràmetre formal. Per això en manipular una variable passada per referència es modifica l&rsquo;original ja que actua sobre la MATEIXA posició de memòria.</p>
+</li>
+</ol>
+
+<div class="notices note" ><p><strong>A Java, les dades simples es passen per valor i les compostes (com els arrays o els Strings) es passen per referència.</strong></p>
+</div>
+
+<h4 id="exemple-pas-per-valor-o-per-referència">Exemple: Pas per valor o per referència</h4>
+<p>Pas de paràmetres per valor o per referència. En aquest exemple es veu la diferència de passar un valor o de passar la referència on es troba aquest valor.</p>
+<pre><code class="language-java">public class Parametres {
+
+	// Paràmetres passats per valor perquè són de tipus simple
+	public static void intercanvi(int a, int b)
+	{
+		System.out.println(&quot;Dins del mètode intercanvi:&quot;);
+		System.out.println(&quot;a = &quot; + a);
+		System.out.println(&quot;b = &quot; + b);
+
+		int temp = a;
+		a = b;
+		b = temp;
+
+		System.out.println(&quot;a = &quot; + a);
+		System.out.println(&quot;b = &quot; + b);
+	}
+	
+	// Paràmetres passats per referència perquè és de tipus compost (un objecte)
+	public static void intercanviArray(int[] v)
+	{
+		System.out.println(&quot;Dins del mètode intercanviArray:&quot;);
+		System.out.println(&quot;v[0] = &quot; + v[0]);
+		System.out.println(&quot;v[1] = &quot; + v[1]);
+
+		int temp = v[0];
+		v[0] = v[1];
+		v[1] = temp;
+
+		System.out.println(&quot;v[0] = &quot; + v[0]);
+		System.out.println(&quot;v[1] = &quot; + v[1]);
+	}
+	
+	// Main()
+	public static void main(String[] args) {
+		//
+		// Exemple de pas de paràmetres per valor
+		//
+		System.out.println(&quot;PER VALOR&quot;);
+		int x = 5;
+		int y = 10;
+		
+		System.out.println(&quot;x = &quot; + x);
+		System.out.println(&quot;y = &quot; + y);
+		System.out.println(&quot;Cridem intercanvi(x, y)&quot;);
+		
+		intercanvi(x, y);
+
+		System.out.println(&quot;Tornem del mètode intercanvi(x, y)&quot;);
+		System.out.println(&quot;x = &quot; + x);
+		System.out.println(&quot;y = &quot; + y);
+		System.out.println();
+
+		
+		//
+		// Exemple de pas de paràmetres per referència
+		//
+		System.out.println(&quot;PER REFERÈNCIA&quot;);
+		int[] array = {25, 50};
+
+		System.out.println(&quot;array[0] = &quot; + array[0]);
+		System.out.println(&quot;array[1] = &quot; + array[1]);
+		System.out.println(&quot;Cridem intercanviArray(array)&quot;);
+		
+		intercanviArray(array);
+
+		System.out.println(&quot;Tornem del mètode intercanviArray(array)&quot;);
+		System.out.println(&quot;array[0] = &quot; + array[0]);
+		System.out.println(&quot;array[1] = &quot; + array[1]);
+		System.out.println();
+
+		
+		//
+		//Un altre exemple de pas per valor
+		//
+		System.out.println(&quot;PER VALOR&quot;);
+		System.out.println(&quot;array[0] = &quot; + array[0]);
+		System.out.println(&quot;array[1] = &quot; + array[1]);
+		System.out.println(&quot;Cridem intercanvi(array[0], array[1])&quot;);
+		
+		intercanvi(array[0], array[1]);
+
+		System.out.println(&quot;Tornem del mètode intercanvi(array[0], array[1])&quot;);
+		System.out.println(&quot;array[0] = &quot; + array[0]);
+		System.out.println(&quot;array[1] = &quot; + array[1]);
+	}
+
+}
+</code></pre>
+<p><em>Observació:</em> les cadenes (tipus String) són objectes, però són immutbales, per tant <strong>no</strong>
+poden canviar el seu valor</p>
+<h3 id="5-mètodes-estàtics-o-no-estàtics">5. Mètodes Estàtics o no estàtics</h3>
+
+<div class="notices note" ><p>Els <strong>mètodes no estàtics</strong> (o mètodes) són aquells que depenen d&rsquo;un objecte i que per tant s&rsquo;invoquen a partir de la instanciació d&rsquo;un objecte.</p>
+</div>
+
+<p>Posem un exemple, imaginem aquest mètode de la classe Conversor:</p>
+<pre><code class="language-java">public double m2km (double m)
+{
+ double km;
+ km = m / 1000;
+ return km;
+}
+</code></pre>
+<p>Per cridar aquesta mètode des d&rsquo;un altre mètode faríem:</p>
+<pre><code class="language-java">Conversor conv = new Conversor();
+double kilometers;
+kilometers = conv.m2km(325012);
+</code></pre>
+
+<div class="notices note" ><p>Els <strong>mètodes estàtics</strong> són aquells que no depenen d&rsquo;un objecte i que per tant s&rsquo;invoquen a partir de la classe.</p>
+</div>
+
+<p>Posem un exemple, imaginem aquest mètode de la classe Arithmetic:</p>
+<pre><code class="language-java">public static int sum (int a, int b)
+{
+    int s;
+    s = a + b;
+    return s;
+}
+</code></pre>
+<p>Per cridar aquesta mètode des d&rsquo;un altre mètode:</p>
+<pre><code class="language-java">int res;
+res = Arithmetic.suma(2,3);
+</code></pre>
+<h3 id="exemples">Exemples</h3>
+<p><strong>Exemple1: Funció suma senzilla</strong>
+Realitzem la suma de dos nombres dins una funció i en retornem el resultat al programa principal:</p>
+<pre><code class="language-java">public class Suma
+{
+	public static void main(String[] args)
+	{
+		int res;
+		int num = 25;
+		
+		// Exemples d'ús d'un mètode
+		res = suma(2, 3);
+		System.out.println(&quot;suma = &quot; + res);
+
+		res = suma(num, 10);
+		System.out.println(&quot;suma = &quot; + res);
+
+		res = suma(res, num);
+		System.out.println(&quot;suma = &quot; + res);
+	}
+	
+	// Mètode que fa la suma de dos nombres enters
+	public static int suma (int a, int b)
+	{
+		int s;
+		s = a + b;
+		return s;
+	}
+}
+</code></pre>
+<br>
+<p><strong>Exemple2: Paràmetres del programa</strong></p>
+<pre><code class="language-java">public class ProvaArgs
+{
+	/**
+	 * Imprimeix per pantalla tots els paràmetres passats en l'execució del programa
+	 * @param args Paràmetres al executar el programa
+	 */
+	public static void main(String[] args)
+	{
+		for (int i=0; i&lt;args.length; i++)
+		{
+			System.out.println(&quot;Paràmetre &quot; + i + &quot; = &quot; + args[i]);
+		}
+	}
+}
+</code></pre>
+
+
+
 
 
 <footer class=" footline" >
@@ -977,6 +1291,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -991,6 +1306,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1007,6 +1323,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1063,8 +1382,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/6programaciomodular/" title="Programació Modular"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/m03programacio/continguts/public/1estructura/" title="Estructura d’un programa" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/" title="Metodologia Top Down" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

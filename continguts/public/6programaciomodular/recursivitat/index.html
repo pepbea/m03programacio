@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
 
-    <title>Categories :: Documentation for Hugo Learn Theme</title>
+    <title>Recursivitat :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/m03programacio/continguts/public/css/nucleus.css?1606044122" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/m03programacio/continguts/public/categories/">
+  <body class="" data-url="/m03programacio/continguts/public/6programaciomodular/recursivitat/">
     <nav id="sidebar" class="">
 
 
@@ -471,7 +471,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/6programaciomodular/" title="Programació Modular" class="dd-item 
-        
+        parent
         
         
         ">
@@ -578,8 +578,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/6programaciomodular/recursivitat/" title="Recursivitat" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/m03programacio/continguts/public/6programaciomodular/recursivitat/">
@@ -645,6 +645,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/6programacioModular/recursivitat/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -665,7 +676,13 @@
             
           
           
-            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > Categories
+            
+            
+          
+          
+            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/6programaciomodular/'>Programació Modular</a> > Recursivitat
+          
+        
           
         
           
@@ -676,7 +693,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -692,9 +717,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              Recursivitat
             </h1>
           
 
@@ -702,11 +725,183 @@
 
 
 
-
-
-<ul>
 	
+<div class="notices note" ><p><strong>Definició</strong>
+Un subprograma és recursiu quan al llarg de la seva execució s’efectua alguna crida <strong>a si mateix</strong>.<br><br>
+Des d’un punt de vista tècnic s’efectua una crida d’un programa a un altre programa, amb la particularitat de que aquest programa és el mateix.</p>
+</div>
+
+<br>
+<h4 id="parts-de-la-crida-recursiva">PARTS de la crida recursiva</h4>
+<p>En una situació recursiva s’ha de pensar en:</p>
+<ol>
+<li><strong>Quan acaba? Cas Base:</strong></li>
+</ol>
+<ul>
+<li>Solució senzilla</li>
+<li>No s’activa més recursió.</li>
+<li>En tot algorisme recursiu hi ha d’haver almenys un cas base</li>
 </ul>
+<ol start="2">
+<li><strong>Com continua? Cas recurrent:</strong></li>
+</ol>
+<ul>
+<li>Efectuarem una crida a la mateixa funció per acostar-nos al cas base.</li>
+<li>Poden incloure’s passos addicionals a més de la crida recursiva</li>
+</ul>
+<br>
+<h4 id="avantatges">Avantatges</h4>
+<blockquote>
+<p><strong>Què ofereix la recursivitat?</strong></p>
+<blockquote>
+<ul>
+<li>Codi elegant i senzill</li>
+<li>Solucions òptimes a problemes iteratius que computacionalment són complexos</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Què NO ofereix la recursivitat?</strong></p>
+<blockquote>
+<ul>
+<li>Creació de moltes variables</li>
+<li>Guardem molta informació de crides a funció en memòria.</li>
+</ul>
+</blockquote>
+</blockquote>
+<br>
+<h4 id="com-funciona">Com funciona?</h4>
+<p>El procés d’execució recursiu consisteix en una cadena de generació de crides a la mateixa funció.
+En cada crida:</p>
+<ul>
+<li>Es reserva l’espai en memòria necessari per emmagatzemar els paràmetres i els objectes locals usats en el subprograma.</li>
+<li>Es reben els paràmetres i es cedeix l’execució d’instruccions al subprograma que comença a executar-se.</li>
+<li>A l’acabar la seva feina, allibera l’espai reservat, els identificadors locals deixen de tenir vigència i passa l’execució de la instrucció següent a la crida.</li>
+</ul>
+<br>
+<h4 id="comparativa-iteratiu-vs-recursiu">Comparativa Iteratiu vs Recursiu</h4>
+<table>
+<thead>
+<tr>
+<th>Iteratiu</th>
+<th>Recursiu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Realitza una petició</td>
+<td>Realitza una petició</td>
+</tr>
+<tr>
+<td>Repeteix el cos del bucle</td>
+<td>Repeteix les crides a mètodes recursius</td>
+</tr>
+<tr>
+<td>Té una condició d’acabament</td>
+<td>Té una condició d’acabament</td>
+</tr>
+<tr>
+<td>S’acaba quan es compleix la condició  de continuació del bucle</td>
+<td>S’acaba quan la crida arriba al cas base, desencadenant una sequència de crides enrera</td>
+</tr>
+<tr>
+<td>S’ha de complir la condició d’acabament</td>
+<td>S’ha de complir que s’arriba al cas base</td>
+</tr>
+</tbody>
+</table>
+
+<div class="notices note" ><p><strong>TOT algorisme iteratiu es pot representar recursiu i tot algorisme recursiu es pot representar iteratiu</strong></p>
+</div>
+
+<br>
+<h4 id="exemple-factorial">Exemple factorial</h4>
+<p><strong>Iteratiu</strong></p>
+<pre><code class="language-java">int factorial;
+int nombre = sc.nextInt();
+for(int i=0; i &lt; nombre; i++){
+    factorial = factorial * i;
+}
+</code></pre>
+<p><strong>Recursiu</strong></p>
+<pre><code class="language-java">int nombre = 5;
+5 * factorial(4)
+    4 * factorial(3)
+        3 * factorial(2)
+            2 * factorial(1)
+                1;
+
+
+public int factorial (n){
+    if(n==1) return 1;
+    else return n * factorial (n-1);
+}                
+</code></pre>
+<p><img src="../images/factorialRecursiu.png?width=500px" alt="array"></p>
+<p><img src="../images/factorialRecursiu2.png?width=500px" alt="array"></p>
+<h4 id="exemples">Exemples</h4>
+<br>
+Suma de dos nombres: 
+<pre><code class="language-java">public static int suma(int a, int b) {
+    if (b == 0) return a;
+    else if (a == 0) return b;
+    else  return 1 + suma(a, b - 1);
+}
+</code></pre>
+<br>
+Suma elements d'un vector: 
+<pre><code class="language-java">public static int sumaVector(int t[], int n){
+        if(n==0)return t[0];
+        else return t[n] + sumaVector(t,n-1);
+    }
+</code></pre>
+<br>
+Cerca dicotòmica: 
+<pre><code class="language-java">public class CercaDicotomica {
+ 
+public static void main(String[] args) {
+    CercaDicotomica programa = new CercaDicotomica();
+    programa.inici();
+}
+ 
+public void inici() {
+    int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+    int cercaDivuit = cercaDicotomica(array, 0, array.length-1, 18);
+    int cercaCinc = cercaDicotomica(array, 0, array.length-1, 5);
+    System.out.println(&quot;Cerca del 18: &quot; + cercaDivuit);
+    System.out.println(&quot;Cerca del 5: &quot; + cercaCinc);
+}
+ 
+/** Cerca dicotòmica recursiva sobre un array d'enters.
+  *
+  * @param array On es fa la cerca
+  * @param inici Posició inicial de la cerca
+  * @param fi Posició final
+  * @param valor Valor a cercar
+  * @return Índex on és el valor, o -1 si no existeix
+  */
+public int cercaDicotomica(int[] array, int inici, int fi, int valor) {
+    //CAS BASE: No s'ha trobat el valor
+    if (inici &gt; fi) return -1;
+
+    //Es calcula la posició central entre els dos índexs de cerca
+    int pos = inici + (fi - inici) / 2;
+
+    //CAS RECURSIU: Si el valor es menor que la posició que s'ha mirat
+    //llavors cal seguir cercant per la part &quot;dreta&quot; de l'array
+    if (array[pos] &gt; valor) return cercaDicotomica(array, inici, pos - 1, valor);
+    
+    //CAS RECURSIU: Si el valor és més gran que la posició que s'ha mirat
+    //llavors cal seguir cercant per la part &quot;esquerra&quot; de l'array
+    else if (array[pos] &lt; valor) return cercaDicotomica(array, pos + 1, fi, valor);
+     
+    //CAS BASE: És igual, per tant, s'ha trobat
+    else return pos;
+}
+</code></pre>
+
+
+
 
 
 <footer class=" footline" >
@@ -977,6 +1172,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -991,6 +1187,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1039,6 +1238,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1063,8 +1263,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/6programaciomodular/llibreries/" title="Llibreries"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/m03programacio/continguts/public/1estructura/" title="Estructura d’un programa" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/" title="Introducció Disseny Modular" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
