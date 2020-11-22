@@ -111,4 +111,6 @@ package classes.classes2;
 ```
 
 <br>
-Aquí teniu l'enllaç al [projecte](../images/Llibreries.zip).
+Aquí teniu l'enllaç al projecte:
+
+[projecte](../images/Llibreries.zip)
