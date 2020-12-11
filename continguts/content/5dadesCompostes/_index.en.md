@@ -1,7 +1,7 @@
 ---
 title: Dades Compostes
-weight: 6
-pre: "<b>6. </b>"
+weight: 5
+pre: "<b>5. </b>"
 ---
 
 Fins ara hem treballat amb estructures de dades simples. A mesura que tractem problemes més complexos es fa necessari agrupar i tractar les dades com un únic conjunt, això són el que s'anomenen els objectes, l'encapsulament de dades en una mateixa estructura. Així doncs en el següent capítol analitzarem:
