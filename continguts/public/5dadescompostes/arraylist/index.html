@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
 
-    <title>Tipus de dades i operadors :: Documentation for Hugo Learn Theme</title>
+    <title>ArrayList :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/m03programacio/continguts/public/css/nucleus.css?1607710425" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/m03programacio/continguts/public/2tipusdades/">
+  <body class="" data-url="/m03programacio/continguts/public/5dadescompostes/arraylist/">
     <nav id="sidebar" class="">
 
 
@@ -195,8 +195,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/2tipusdades/" title="Tipus de dades i operadors" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/m03programacio/continguts/public/2tipusdades/">
@@ -357,7 +357,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/5dadescompostes/" title="ArrayList" class="dd-item 
-        
+        parent
         
         
         ">
@@ -386,8 +386,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/5dadescompostes/arraylist/" title="ArrayList" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/m03programacio/continguts/public/5dadescompostes/arraylist/">
@@ -675,7 +675,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/2tipusDades/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/5dadesCompostes/arrayList/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -702,7 +702,13 @@
             
           
           
-            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > Tipus de dades i operadors
+            
+            
+          
+          
+            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/5dadescompostes/'>ArrayList</a> > ArrayList
+          
+        
           
         
           
@@ -713,17 +719,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-        <li><a href="#operadors-aritmètics">Operadors aritmètics</a></li>
-        <li><a href="#operadors-lògics-i-relacionals">Operadors lògics i relacionals</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -739,7 +735,7 @@
           
             <h1>
               
-              Tipus de dades i operadors
+              ArrayList
             </h1>
           
 
@@ -747,282 +743,53 @@
 
 
 
-	<h4 id="tipus-de-dades">Tipus de dades</h4>
-<p>En el llenguatge Java incorpora tipus de dades diferents d&rsquo;acord amb la seva naturalesa: no és el mateix un nombre, que un text o un valor verdader/fals per exemple. Aquests tipus de dades els classifiquem en tipus de dades primitius i tipus de dades de classe:</p>
+	
+<div class="notices note" ><p><strong>Arrays unidimensional</strong>: és una estructura de dades que conté una col·lecció de dades del mateix tipus i és dinàmica.</p>
+</div>
+
+<p>La definició de la classe ArrayList <strong>java.util.ArrayList</strong> i de totes les seves funcionalitats la trobareu a:
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">Java Oracle Classe ArrayList</a></p>
+<p><strong>Propietats</strong></p>
 <ul>
-<li><strong>Primitius</strong>: són les dades simples que coneixem com a nombres, text, etc. i que ens defineix de forma primitiva el llenguatge.</li>
-<li><strong>Classe</strong>: són tipus de dades més complexos que es creen a partir dels mateixos tipus de classe o de tipus primitius.</li>
+<li>Un arrayList funciona de forma similar a un array estàtic, conté elements del mateix tipus, poden ser repetits i aquests elements estan ordenats.</li>
+<li>A diferència d&rsquo;un array estàtic, en els ArrayList no és necessari definir el tamany de l&rsquo;array en la seva creació.</li>
+<li>Es tracta d&rsquo;una llista d&rsquo;elements en els que podrem iterar-los, afegir-ne, modificar-los o eliminar-los.</li>
 </ul>
-<h4 id="tipus-primitius">Tipus Primitius</h4>
-<p>En Java podem diferenciar els següents tipus de dades primitius:</p>
-<ul>
-<li>Numèrics:
-<ul>
-<li>Enters: byte, short, int i long</li>
-<li>Reals: float, double</li>
-</ul>
-</li>
-<li>Textuals:
-<ul>
-<li>chars</li>
-</ul>
-</li>
-<li>Lògics:
-<ul>
-<li>boolean</li>
-</ul>
-</li>
-</ul>
-<p>La diferència entre els nombres enters i reals és que els nombres enters no contenen decimals (ex: 2 | 3 | 25) i els nombres reals reserven espai pels decimals (ex: 4,45 | 6,82 | 3,141592). Tot seguit us mostro una taula de rangs:</p>
-<table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Longitud</th>
-<th>Rangs de valors</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>byte</td>
-<td>8 bits</td>
-<td>De -2<sup>7</sup> a 2<sup>7</sup> -1</td>
-</tr>
-<tr>
-<td>short</td>
-<td>16 bits</td>
-<td>De -2<sup>15</sup> a 2<sup>15</sup> -1</td>
-</tr>
-<tr>
-<td>int</td>
-<td>32 bits</td>
-<td>De -2<sup>31</sup> a 2<sup>31</sup> -1</td>
-</tr>
-<tr>
-<td>long</td>
-<td>64 bits</td>
-<td>De -2<sup>63</sup> a 2<sup>63</sup> -1</td>
-</tr>
-<tr>
-<td>float</td>
-<td>32 bits</td>
-<td></td>
-</tr>
-<tr>
-<td>double</td>
-<td>64 bits</td>
-<td></td>
-</tr>
-<tr>
-<td>char</td>
-<td>16 bits</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Els valors que admet una variable de tipus booleà és: true o false. Un valor booleà és molt comú en el camp informàtic on moltes vegades cal prendre una decisió que es pot avaluar en &ldquo;veritat&rdquo; o &ldquo;fals&rdquo;.</p>
-<h5 id="exemple-dassignació-de-valors">Exemple d&rsquo;assignació de valors</h5>
-<p>Declarem i assignem un valor a les variables:</p>
-<pre><code class="language-java">boolean valorBoolea = true;
-int valorEnter = 50;
-float valorDecimal = 50.3;
-char lletra =’v’;
+<p><strong>Declaració</strong>
+En la declaració indicarem de quin tipus és entre &lt;&gt;. Per exemple per declarar un ArrayList d&rsquo;enters:</p>
+<pre><code class="language-java">  ArrayList&lt;Integer&gt; arrayListEnters = new ArrayList();
 </code></pre>
-<p>En aquest cas primer declarem les variables i després li assignem un valor:</p>
-<pre><code class="language-java">boolean valorBoolea; 
-valorBoolea = true;
+<p><strong>Funcionalitats principals</strong></p>
+<p>En el següent exemple es veuen diferents mètodes (tots ells en la declaració de Java Oracle) que permeten actuar a un ArrayList de la mateixa manera que un Array (.add(), .size(), .get()),en ell es genera un arrayList d&rsquo;enters, s&rsquo;entren valors i es fa un recorregut per l&rsquo;estructura:</p>
+<pre><code class="language-java">Scanner teclat = new Scanner(System.in);
+ArrayList&lt;Integer&gt; arrayDinamic = new ArrayList&lt;Integer&gt;();
+int valor = 1;
 
-int valorEnter;
-valorEnter = 50;
+while (valor != 0)
+{
+    System.out.println(&quot;Introdueix valor&quot;);
+    valor = teclat.nextInt();
+    if (valor != 0)
+        //Amb add() s'assignen nous valors a l'arrayList
+        arrayDinamic.add(valor);
+}
 
-float valorDecimal;
-valorDecimal = 50.3;
+//.size() fa la mateixa funció que .length en els arrays estàtics
+for (int i = 0; i&lt;arrayDinamic.size(); i++)
+    //Per tal d'accedir als elements usarem .get(int pos), recordem que la primera posició és 0.
+    System.out.println(&quot;arrayDinamic.get(&quot;+i+&quot;) = &quot;+arrayDinamic.get(i));
 
-char lletra;
-lletra =’v’;
+
+
+//altres funcions interessants són isEmpty o remove
+if(arrayDinamic.isEmpty()) System.out.println(&quot;No existeix cap element dins l'arrayList, està buit&quot;);
+
+//Eliminar un element per posició
+arrayDinamic.remove(i);
+
+teclat.close();
 </code></pre>
-<h4 id="operadors">Operadors</h4>
-<h3 id="operadors-aritmètics">Operadors aritmètics</h3>
-<p>Són les operacions que avaluen una operació i retornen un resultat numèric.</p>
-<table>
-<thead>
-<tr>
-<th>Operació</th>
-<th>Operador</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Suma</td>
-<td>+</td>
-</tr>
-<tr>
-<td>Resta</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Multiplicació</td>
-<td>*</td>
-</tr>
-<tr>
-<td>Divisió</td>
-<td>/</td>
-</tr>
-<tr>
-<td>Mòdul</td>
-<td>%</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Altres operadors</strong></p>
-<p>Existeixen altres formes que simplifiquen l&rsquo;escriptura alhora de fer operacions senzilles. Seria el cas dels comptadors. D&rsquo;aquesta manera existeixen expressions com:</p>
-<pre><code class="language-java">int comptador = 0;
-comptador = comptador + 1;
-
-//es pot fer de forma més simple
-int comptador = 0;
-comtpador++;
-
-//Les dues expressions següents també són equivalents i s'aplica a tots els operadors aritmètics:
-int comptador = 0;
-
-comptador = comptador + 10; 
-comptador =+ 10; 
-
-comptador = comptador - 10; 
-comptador =- 10; 
-
-comptador = comptador * 10; 
-comptador =* 10; 
-
-comptador = comptador / 10; 
-comptador =/ 10; 
-</code></pre>
-<p>Recordem l&rsquo;ordre de prioritat en les operacions aritmètiques:</p>
-<ul>
-<li>1r Parèntesi ()</li>
-<li>2n Multiplicacions, divisioons i mòdul  * / %</li>
-<li>3r Sumes i restes + -</li>
-</ul>
-<h3 id="operadors-lògics-i-relacionals">Operadors lògics i relacionals</h3>
-<p>Són les operacions que avaluen una expressió i retornen un resultat booleà (true o false).</p>
-<p><strong>Operadors lògics</strong></p>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>B</th>
-<th>!A</th>
-<th>A &amp;&amp; B</th>
-<th>A || B</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>true</td>
-<td>true</td>
-<td>false</td>
-<td>true</td>
-<td>true</td>
-</tr>
-<tr>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-<td>true</td>
-</tr>
-<tr>
-<td>false</td>
-<td>true</td>
-<td>true</td>
-<td>false</td>
-<td>true</td>
-</tr>
-<tr>
-<td>false</td>
-<td>false</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Operadors relacionals</strong></p>
-<p>Aquests operadors els podem aplicar a diferents tipus de dades i s&rsquo;avalua l&rsquo;expressió a un booleà (true o false).</p>
-<table>
-<thead>
-<tr>
-<th>Operació</th>
-<th>Signe</th>
-<th>Exemple1</th>
-<th>Resultat1</th>
-<th>Exemple2</th>
-<th>Resultat2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Major</td>
-<td>&gt;</td>
-<td>5 &gt; 3</td>
-<td>true</td>
-<td>3 &gt; 5</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Major o igual</td>
-<td>&gt;=</td>
-<td>5 &gt;= 5</td>
-<td>true</td>
-<td>5 &gt;= 3</td>
-<td>true</td>
-</tr>
-<tr>
-<td>Menor</td>
-<td>&lt;</td>
-<td>5 &lt; 5</td>
-<td>false</td>
-<td>3 &lt; 2</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Menor o igual</td>
-<td>&lt;=</td>
-<td>6 &lt;= 5</td>
-<td>false</td>
-<td>4 &lt;= 5</td>
-<td>true</td>
-</tr>
-<tr>
-<td>Igual</td>
-<td>==</td>
-<td>&lsquo;c&rsquo; == &rsquo;d'</td>
-<td>false</td>
-<td>5 == 3</td>
-<td>false</td>
-</tr>
-<tr>
-<td>No igual</td>
-<td>!=</td>
-<td>&lsquo;c&rsquo; != &rsquo;d'</td>
-<td>true</td>
-<td>5 != 5</td>
-<td>false</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Prioritat</strong></p>
-<p>La prioritat alhora d&rsquo;avaluar expressions que contenen operadors aritmètics, relacionals i lògics és:</p>
-<ul>
-<li>1r. Es realitzen els càlculs aritmètics.</li>
-<li>2n. S&rsquo;avaluen les operacions relacionals de &lt; &gt; &lt;= &gt;=</li>
-<li>3r. S&rsquo;avaluen les operacions relacionals de == !=</li>
-<li>4rt. S&rsquo;avaluen les negacions lògiques !</li>
-<li>5è. S&rsquo;avaluen les operacions de conjunció &amp;&amp;</li>
-<li>6è. S&rsquo;avaluen les operacions de disjunció ||</li>
-</ul>
-<p>Les operacions anteriors <strong>s&rsquo;avaluen sempre d&rsquo;esquerra a dreta.</strong></p>
+<p>En aquesta pàgina trobareu uns quants exemples més d&rsquo;ús d&rsquo;ArrayList: <a href="https://jarroba.com/arraylist-en-java-ejemplos/">ArrayList con ejemplos</a></p>
 
 
 
@@ -1132,7 +899,6 @@ comptador =/ 10;
             
                 
                     
-                    
                 
                 
 
@@ -1148,9 +914,6 @@ comptador =/ 10;
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1234,6 +997,7 @@ comptador =/ 10;
             
                 
                     
+                    
                 
                 
 
@@ -1248,6 +1012,7 @@ comptador =/ 10;
             
             
                 
+                    
                     
                 
                 
@@ -1264,6 +1029,9 @@ comptador =/ 10;
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1402,10 +1170,10 @@ comptador =/ 10;
 	 
 	 
 		
-			<a class="nav nav-prev" href="/m03programacio/continguts/public/1estructura/3tipusllenguatges/" title="Tipus de Llenguatges"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/5dadescompostes/" title="ArrayList"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/m03programacio/continguts/public/3algor%C3%ADsmia/" title="Algorísmia" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/m03programacio/continguts/public/5dadescompostes/arrayunidimensional/" title="Arrays Unidimensionals" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
