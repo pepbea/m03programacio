@@ -22,6 +22,10 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/introducciopoo/</loc>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arraybidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -33,6 +37,10 @@
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/sequencial/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/implementaci%C3%B3-en-poo/</loc>
   </url>
   
   <url>
@@ -50,6 +58,10 @@
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3algor%C3%ADsmia/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/desenvolupamentpoo/</loc>
   </url>
   
   <url>
@@ -77,6 +89,10 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/dissenypoo/</loc>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arraylist/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -87,7 +103,17 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
