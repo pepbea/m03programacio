@@ -52,7 +52,7 @@ La POO consisteix en fer servir aquesta manera natural de pensar en objectes com
 Es tracta de centrar-se en **“el què fa”** més que no en el **“com ho fa”**.
 {{% /notice %}}
 
-Com hem vist en l'exemple anterior, sabem que dos objectes diferents com el Joan i la Maria tenen unes característiques i un comportament comú, d'aquí hem deduït per abstracció que formen part del mateix conjunt de persones. Així doncs l'abstracció ens permet aïllar aquella part que ens interessa del conjunt. Ex:
+Com hem vist en l'exemple anterior, sabem que dos objectes diferents com el Joan i la Maria tenen unes característiques i un comportament comú, d'aquí hem deduït per abstracció que formen part del mateix conjunt Persones. Així doncs l'abstracció ens permet aïllar aquella part que ens interessa del conjunt. Ex:
 - No és necessari saber de mecànica de bicicletes per aprendre a anar en bicicleta.
 - No és necessari conèixer què fan exactament les funcions del kernel de linux per usar-les.
 - No ens cal conèixer en profunditat com funciona el rentaplats per usar-lo.
