@@ -25,7 +25,7 @@
 	"title": "Herència",
 	"tags": [],
 	"description": "",
-	"content": "  "
+	"content": " L\u0026rsquo;herència permet a una classe nova crear-se a partir d\u0026rsquo;una classe existent. La nova classe (subclasse) \u0026ldquo;hereta\u0026rdquo; els atributs i mètodes de la classe primària, i a més a més, té la possibilitat d\u0026rsquo;incorporar nous atributs i mètodes específics a la subclasse.\n Aquesta particularitat permet crear una estructura jeràrquica de classes cada vegada més especialitzada. L\u0026rsquo;herència es basa en la reutilització de classes on es crea una classe nova incorporant atributs i mètodes de la classe pare. Els mètodes heretats poden ser sobreescrits i adoptar un comportament nou o amplicant-ne la seva funcionalitat. Aquesta reutilització permet estalviar molt de temps i adoptar components creats i ja testats.\nConceptes:\n Superclasse: Classe primària o existent en l\u0026rsquo;herència. Subclasse: classe nova i resultant d\u0026rsquo;aplicar herència a una altra classe. Especialització: Procés que permet estendre d\u0026rsquo;una classe pare a una classe filla, ampliant atributs i mètodes. Generalització: Procés de navegar de les classes filles a la classe pare. En la classe pare trobarem els atributs i mètodes comuns a totes les subclasses.  java.lang.Object\nUna subclasse pot ser a la vegada superclasse d\u0026rsquo;altres classes i crear així un àrbre jeràrquic de classes. Com ja sabem, en Java totes les classes hereten d\u0026rsquo;una classe mare, la classe arrel de totes és java.lang.Object. Hi ha un conjunt de mètodes que tenen TOTES les classes de Java, inclús les que programeu vosaltres, aquí teniu la descripció de Java Oracle referent a la classe Object.\nHerència simple\nJava permet l\u0026rsquo;herència simple: qualsevol classe només té una classe pare, no permet l\u0026rsquo;herència múltiple com sí permeten altres llenguatges de programació com el C++. Això ens planteja el problema que a vegades pels requisits de la nostra aplicació és necessari simular l\u0026rsquo;herència múltiple fent ús d\u0026rsquo;interfícies. Per a més informació: problema del diamant\nRelació \u0026ldquo;és un\u0026rdquo; vs \u0026ldquo;conté un\u0026rdquo;\nL\u0026rsquo;herència és una relació d\u0026rsquo;extensió d\u0026rsquo;una classe més específica respecte una classe genèrica, això ens porta a que la classe filla ÉS UNA classe pare, però amb les funcionalitats ampliades/exteses/modificades. A vegades quan es programa existeix el dubte de confondre aquesta relació amb una relació de composició CONTÉ UN, que erròniament entenguem com a subclasse \u0026ldquo;una part\u0026rdquo; de la classe principal.\n"
 },
 {
 	"uri": "https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/",
@@ -172,7 +172,7 @@
 	"title": "Programació avançada de POO",
 	"tags": [],
 	"description": "",
-	"content": "En aquesta segona part de la UF tractarem les característiques principals que dónen sentit a la utilització de la POO:\n  Herència\n  Polimorfisme i classes abstractes\n  Interfícies\n  "
+	"content": "En aquesta segona part de la UF coneixerem i implementarem característiques de la POO que dónen sentit al desenvolupament d\u0026rsquo;aplicacions:\n  Herència\n  Polimorfisme i classes abstractes\n  Interfícies\n  "
 },
 {
 	"uri": "https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/",

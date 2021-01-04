@@ -4,7 +4,7 @@ title: Programació avançada de POO
 weight: 4
 ---
 
-En aquesta segona part de la UF tractarem les característiques principals que dónen sentit a la utilització de la POO:
+En aquesta segona part de la UF coneixerem i implementarem característiques de la POO que dónen sentit al desenvolupament d'aplicacions:
 
 - [Herència]({{%relref "7POO/programacioAvancadaPOO/1herència/_index.en.md" %}})
 
