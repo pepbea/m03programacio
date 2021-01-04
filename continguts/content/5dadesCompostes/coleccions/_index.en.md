@@ -26,7 +26,7 @@ Aquests mètodes generals són:
 |int **size()**|Retorna la quantitat d'elements que té la col·lecció|
 |Object[] **toArray()**|Retorna els conjunt d'elements dins un array|
 
-![arbre](../images/collection.jpg?width=500px)
+![arbre](../images/collection.jpg?width=700px)
 
 
 |Classe|Elements repetits|Elements ordenats| Comentaris|
