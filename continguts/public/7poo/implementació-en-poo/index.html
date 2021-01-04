@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.79.1" />
+    <meta name="generator" content="Hugo 0.80.0" />
     <meta name="description" content="M03 Programació DAM">
 <meta name="author" content="Pep Beà">
 
@@ -12,21 +12,21 @@
     <title>Implementació bàsica de POO :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1609664428" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609664428" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609751406" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609664428" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609751406" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609664428"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609751406"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609664428"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609664428"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609751406"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609751406"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609664428"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609751406"></script>
 
     
   </div>
@@ -1058,7 +1058,7 @@ public class Persona {
   }
 
   public void saluda() { 
-    System.out.println(&quot;Hola, sóc &quot; + nom + &quot; i tinc &quot; + anys + &quot;anys&quot;);
+        System.out.println(&quot;Hola, sóc &quot; + nom + &quot; i tinc &quot; + edat + &quot; anys&quot;);
   }   
 }
 </code></pre>
@@ -1074,18 +1074,18 @@ public class PersonaTest {
     System.out.println(&quot;Demana el nom de la persona1: &quot;);
     String nomPersona1 = sc.nextLine();
     System.out.println(&quot;Demana el nom de la persona1: &quot;);
-    String edat1 = sc.nextInt();
+    int edat1 = sc.nextInt();sc.nextLine();
 
-    System.out.println(&quot;Demana el nom de la persona1: &quot;);
+    System.out.println(&quot;Demana el nom de la persona2: &quot;);
     String nomPersona2 = sc.nextLine();
-    System.out.println(&quot;Demana el nom de la persona1: &quot;);
-    String edat2 = sc.nextInt();
+    System.out.println(&quot;Demana el nom de la persona2: &quot;);
+    int edat2 = sc.nextInt();
 
     sc.close();
 
     Persona persona1 = new Persona();
     Persona persona2 = new Persona();
-    
+
     persona1.setNom(nomPersona1);
     persona1.setEdat(edat1);
     persona2.setNom(nomPersona2);
@@ -1106,6 +1106,230 @@ public class PersonaTest {
 <li>Fixem-nos que saluda() ja no té com a paràmetre d&rsquo;entrada el nom ja que l&rsquo;agafa de la pròpia classe. L&rsquo;atribut de classe és privat i per tant no és accessible des de fora la classe (s&rsquo;accedeix mitjançant el getNom) però sí que ho és desde dins la pròpia classe, en saluda().</li>
 </ul>
 <h4 id="constructors">Constructors</h4>
+
+<div class="notices note" ><p>Totes les classes han de tenir un constructor que es fa servir per a instanciar objectes d&rsquo;aquesta classe. En el constructor s&rsquo;acostuma a donar valor als atributs de classe.</p>
+<p>El constructor ha de tenir el mateix nom que la classe i no s&rsquo;ha de posar tipus de retorn (ni void ni res!)</p>
+</div>
+
+<p>Si en una classe no s&rsquo;especifica cap constructor, el compilador proporciona un constructor per defecte sense paràmetres. Per exemple:</p>
+<pre><code class="language-java">public class ClasseProva {
+
+    /* És el mateix posar aquest constructor que no posar-lo.
+     * ClasseProva (){
+     *
+     * }
+     */
+}
+
+public class ClasseProvaTest {
+
+  public static void main(String[] args){
+      ClasseProva cp = new ClasseProva();
+  }
+
+}
+</code></pre>
+<p>Encara que no l&rsquo;haguem definit en ClasseProva, per tal de crear objectes de tipus ClasseProva, <strong>SI NO EXISTEIX CAP MÉS CONSTRUCTOR</strong>, Java ens proporciona el constructor per defecte (aquell constructor que no conté cap paràmetre ni cap operació dins el constructor). Ara bé, quan ClasseProva tingui definit almenys un constructor, desapareix ClasseProva per defecte, a no sé que també estigui explícitament definit en la classe ClasseProva.</p>
+<p>Els constructors són mètodes especials que sobretot <strong>NO retornen</strong> cap valor. Serveixen per indicar a Java que estem creant un objecte d&rsquo;aquella classe. Sí que es pot proporcionar paràmetres d&rsquo;entrada que ens ajudin a instanciar els atributs de classe d&rsquo;aquell objecte. Si ens fixem en l&rsquo;exemple anterior de Persona, podríem redefinir-lo de la següent manera:</p>
+<pre><code class="language-java">public class Persona {
+
+  private String nom;
+  private int edat;
+
+  Persona (String nom, int edat){
+      this.nom = nom;
+      this.edat = edat;
+  }
+
+  public String getNom(){
+      return nom;
+  }
+
+  public int getEdat(){
+      return edat;
+  }
+
+  public void setNom(String nom){
+      this.nom = nom;
+  }
+
+  public void setEdat(int edatNova){
+      edat = edatNova;
+  }
+
+  public void saluda() { 
+        System.out.println(&quot;Hola, sóc &quot; + nom + &quot; i tinc &quot; + edat + &quot; anys&quot;);
+  }   
+}
+</code></pre>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class PersonaTest {
+
+  public static void main(String[] args) { 
+    
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println(&quot;Demana el nom de la persona1: &quot;);
+    String nomPersona1 = sc.nextLine();
+    System.out.println(&quot;Demana el nom de la persona1: &quot;);
+    int edat1 = sc.nextInt();sc.nextLine();
+
+    System.out.println(&quot;Demana el nom de la persona2: &quot;);
+    String nomPersona2 = sc.nextLine();
+    System.out.println(&quot;Demana el nom de la persona2: &quot;);
+    int edat2 = sc.nextInt();
+
+    sc.close();
+
+    Persona persona1 = new Persona(nomPersona1, edat1);
+    Persona persona2 = new Persona(nomPersona2, edat2);
+
+    System.out.println(&quot;El nom de la persona1 es: &quot;+persona1.getNom()+&quot; i l'edat es: &quot;+persona1.getEdat());
+    System.out.println(&quot;El nom de la persona2 es: &quot;+persona2.getNom()+&quot; i l'edat es: &quot;+persona2.getEdat());
+
+    persona1.saluda();
+    persona2.saluda();
+  }   
+}
+</code></pre>
+<p>Observacions:</p>
+<ul>
+<li>La constructora de Persona té dos paràmetres d&rsquo;entrada que corresponen amb els dos atributs de la classe.</li>
+<li>Per diferenciar dues variables que es diuen igual (atribut de classe i paràmetre d&rsquo;entrada) utilitzem el this. El this ens ajuda a diferenciar qualsevol atribut/mètode de dins la pròpia classe.</li>
+<li>En la classe test observem que ara no fem ús dels setters dels atributs, ja que a l&rsquo;instanciar l&rsquo;objecte amb la constructora ja els inicialitzem els atributs.</li>
+</ul>
+<p><strong>Més d&rsquo;un constructor</strong></p>
+<p>Es podria donar el cas que fos necessari la implementació de més d&rsquo;un constructor en una classe, això és possible sempre que els tipus dels paràmetres d&rsquo;entrada no coincideixin del tot, el compilador de Java diferencia els constructors dins la mateixa classe amb el llistat dels paràmetres d&rsquo;entrada. Per exemple continuant amb l&rsquo;exemple anterior redefinim la classe Persona amb 3 constructors:</p>
+<pre><code class="language-java">
+//Constructor per crear una persona amb nom
+public Persona(String nomPersona) {
+  nom = nomPersona;
+  edat = 0; //li poso un valor per defecte
+}
+
+//Constructor per crear una persona sense res
+public Persona() {
+}
+
+//Constructor per crear un persona amb nom i edat
+public Persona(String nomPersona, int edatPersona) {
+  nom = nomPersona;
+  edat = edatPersona;
+}
+</code></pre>
+<p>En el programa principal podríem crear ara objectes Persona de tres maneres diferents:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Persona persona1 = new Persona(&quot;Jordi&quot;);
+    persona1.setEdat(45);
+    persona1.saluda();
+    Persona alumne2 = new Persona(&quot;Maria&quot;, 18);
+    persona2.saluda();
+    Persona persona3 = new Persona();
+    persona3.saluda();
+}
+</code></pre>
+<h4 id="this">This</h4>
+
+<div class="notices note" ><p>Quan som dins d&rsquo;un constructor o un mètode, this és una referència a l&rsquo;objecte actual. Amb this pots fer referència a qualsevol atribut o mètode de l&rsquo;objecte actual. Sobretot és necessari quan podria prestar confusió quan dos atributs o dos mètodes s&rsquo;anomenen igual.</p>
+</div>
+
+<pre><code class="language-java">  public String getNom(){
+      return this.nom;
+  }
+
+  public String setEdat(){
+      return this.edat;
+  }
+
+  public void setNom(String nom){
+      this.nom = nom;
+  }
+
+  public void setEdat(int edatNova){
+      edat = edatNova;
+  }
+   
+}
+</code></pre>
+<p>Observacions:</p>
+<ul>
+<li>En el mètode setNom és necessari l&rsquo;ús del this ja que ens diferencia l&rsquo;atribut de classe del paràmetre de la funció.</li>
+<li>En el mètode setEdat, no l&rsquo;hem posat ja que no presta a confusió les dues variables, tot hi així es podria haver posat a <code>this.edat</code> per remarcar que estem parlant de l&rsquo;atribut de classe.</li>
+<li>En els getters l&rsquo;hem deixat com a bona praxis, però si no hi hagués el this tampoc hi hauria confusió i java ho interpretaria correctament.</li>
+</ul>
+<p>En l&rsquo;exemple següent utilitzem el this com a crida a un constructor dins la mateixa classe:</p>
+<pre><code class="language-java">public Persona(String nom) {
+  this(nom, 18); //crido al 3r constructor
+}
+
+public Persona() {
+  this(&quot;Anonymous&quot;); //crido al 1r constructor
+}
+
+public Persona(String nom, int edat) {
+  this.setNom(nom);
+  this.setEdat(edat);
+}
+</code></pre>
+<h4 id="mètodes-i-variables-estàtics-i-no-estàtics">Mètodes i variables Estàtics i No Estàtics</h4>
+<p><strong>Mètodes estàtics</strong></p>
+<p>Ja hem vist a la UF2 la diferència entre una variable o mètode estàtic i no estàtic. Fins al moment amb l&rsquo;exemple Persona hem treballat la definició d&rsquo;una classe que per ser utilitzada és necessari instanciar-ne un objecte, és així ja que és necessari guardar en memòria la informació d&rsquo;aquesta persona, d&rsquo;aquesta manera, els mètodes de la classe interactuen amb aquests atributs, és un clar exemple d&rsquo;una classe no estàtica. És necessari la creació d&rsquo;un objecte Persona per utilitzar els seus mètodes getters &amp; setters o saluda. Això no treu que podria haver-hi hagut algun mètode que sí fos estàtic, o sigui, el seu comportament no varia tant si intanciem com si no instanciem una Persona, un exemple seria:</p>
+<pre><code class="language-java">public static String informa(){
+    System.out.println(&quot;Soc un metode de la classe Persona i el meu objectiu es nomes informar d'aixo&quot;);
+}
+</code></pre>
+<p>Per fer ús d&rsquo;aquest mètode <code>informa()</code> no és necessari crear un objecte Persona.</p>
+<p>Així doncs no podrem declarar un mètode com estàtic si aquest:</p>
+<ul>
+<li>Accedeix a atributs de la classe.</li>
+<li>Modifica el contingut d&rsquo;atributs de la classe.</li>
+<li>En ell hi intervenen mètodes privats de la pròpia classe.</li>
+</ul>
+<p>Si el mètode ha de realitzar una tasca independent al contingut de l&rsquo;objecte i no hi té incidència es pot declarar com <code>static</code>.</p>
+<p>L&rsquo;exemple anterior ens podria servir per persona. Normalment s&rsquo;usen els mètodes estàtics per realitzar càlculs o recorre llistats predeterminats. Un exemple és la classe <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">Math de Java</a>. Si li feu un cop d&rsquo;ull observareu que tots els seus mètodes són statics, és així ja que el propòsit de tots ells és efectuar càlculs independents. En l&rsquo;exemple següent usarem el mètode anterior <code>informa()</code> i el mètode max de la classe Math:</p>
+<pre><code class="language-java">public static void main((String[] args) {
+  int numero1 = 20;
+  int numero2 = 10;
+  int numeroMaxim = Math.max(numero1, numero2);
+  Persona.informa();
+}
+</code></pre>
+<p>Observacions:</p>
+<ul>
+<li>La notació per tal d&rsquo;usar els mètodes estàtics és NomClasse.nomMetode().</li>
+<li>Els mètodes estàtics també poden ser privats. Si per exemple hagués declarat informa() voldria dir que només el podria usar des de dins la pròpia classe Persona, no tindria visibilitat fora d&rsquo;aquesta.</li>
+</ul>
+<p>Es poden referenciar mètodes estàtics desde dins de mètodes no estàtics, un exemple en són els mètodes de la classe Math que els podem usar allà on siguin requerits, però no al revés. No podria declarar el mètode saluda() de la classe Persona com a estàtic ja que ESTIC USANT ATRIBUTS de la classe. Si el declaro com a estàtic podria passar que utilitzés el mètode saluda() abans de crear un objecte Persona, el mètode va a buscar les variables nom i edat que no reconeix i el compilador de Java donaria error.</p>
+<pre><code class="language-java">  public void saluda() { 
+        System.out.println(&quot;Hola, sóc &quot; + nom + &quot; i tinc &quot; + edat + &quot; anys&quot;);
+  } 
+</code></pre>
+<p><strong>Atributs estàtics</strong></p>
+<p>Fins al moment hem treballat amb atributs d&rsquo;instància, són aquells que poden canviar de valor en cada objecte i que per tant el determinen. Però també tenim atributs estàtics, són aquells que no se&rsquo;n modifica el valor i que, per tant, tenen el mateix valor per tots els objectes. Els atributs estàtics estan sempre en memòria, per això és necessari declarar només aquells que siguin imprescindibles.</p>
+<p>Per a utilitzar-los posarem la paraula <code>static</code> abans del tipus de la variable. Per exemple MAJOR_EDAT:</p>
+<pre><code class="language-java">public class Persona {
+ 
+  public static int MAJOR_EDAT = 18;  
+  private String nom;
+  private int edat;
+
+  Persona (String nom, int edat){
+      this.nom = nom;
+      this.edat = edat;
+  }
+
+  public String getNom(){
+      return nom;
+  }
+  
+  ...
+
+</code></pre>
+<p>Igual que amb els mètodes, si la variable estàtica és pública i es vol accedir a ella des d&rsquo;una altra classe cal que siguem la nomenclatura NomClasse.NomAtribut. Per exemple per accedir a l&rsquo;anteior atribut estàtic fora de Persona hauríem de posar <code>Persona.MAJOR_EDAT</code>.</p>
+<p>Un dels usos més habituals de les variables estàtiques són per declarar constants, per exemple en la classe Math anterior tenim <code>Math.PI</code>. En aquests casos cal que vagin acompanyats de la paraula <code>final</code>, en Java quan declarem una variable com a final vol dir que un cop inicialitzada no li podem canviar el valor (com passa amb les constants). Si es vol canviar el valor a un atribut declarat com a final el compilador de Java contestarà amb un error.</p>
+<pre><code class="language-java">  public static final int MAJOR_EDAT = 18;  
+</code></pre>
 
 
 
@@ -1600,19 +1824,19 @@ public class PersonaTest {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609664428"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609751406"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1609664428"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609664428"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609751406"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609664428" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609664428"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609751406" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609751406"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
