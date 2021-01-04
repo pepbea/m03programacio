@@ -12,21 +12,21 @@
     <title>Implementació bàsica de POO :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1609751406" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1609751738" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609751738" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609751406" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609751738" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609751738"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609751406"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609751406"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609751738"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609751738"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609751406"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609751738"></script>
 
     
   </div>
@@ -1330,6 +1330,60 @@ public Persona(String nom, int edat) {
 <p>Un dels usos més habituals de les variables estàtiques són per declarar constants, per exemple en la classe Math anterior tenim <code>Math.PI</code>. En aquests casos cal que vagin acompanyats de la paraula <code>final</code>, en Java quan declarem una variable com a final vol dir que un cop inicialitzada no li podem canviar el valor (com passa amb les constants). Si es vol canviar el valor a un atribut declarat com a final el compilador de Java contestarà amb un error.</p>
 <pre><code class="language-java">  public static final int MAJOR_EDAT = 18;  
 </code></pre>
+<h4 id="variables-referenciades">Variables referenciades</h4>
+<p>Totes les variables que no són primitives en Java passen a estar referenciades, igual com ja hem vist que passa amb els arrays o els Strings. En el cas que declarem les nostres pròpies classes i les instanciem passa el mateix. Retornant a l&rsquo;exemple de Persona de l&rsquo;activitat anterior, quan declarem una <code>Persona p</code>, estem declarant una referència a un objecte de tipus Persona, però fins que no la construïm amb el <code>new Persona()</code> aquesta referència p apunta a un valor null. La màquina virtual de Java té un procés anomenat garbage collector que periòdicament analitza quines són les variables desreferenciades (que apunten a null) i les elimina de la memòria. Així doncs un cop passa el garbage collector pel següent codi troba una variable p a null i l&rsquo;elimina:</p>
+<pre><code class="language-java">//Creem la referència a un objecte de tipus Persona, de moment no està creat encara
+Persona p;
+
+//Creem i reservem en memòria espai suficient per guardar els atributs d'aquest objecte
+p = new Persona();
+
+//Efectuem modificacions a l'objecte
+p.setEdat(5);
+p.setNom(&quot;Joaquim&quot;);
+
+//Fem que p es desreferenciï de l'objecte instanciat. Quan passi garbage collector eliminarà tots els punters desreferenciats com aquest.
+p = null;
+</code></pre>
+<p>En la UF2 anterior hem observat el pas per valor i el pas per referència. Com ja hem vist quan passem com a paràmetre a una funció una variable de tipus primitiu s&rsquo;efectua una còpia d&rsquo;aquesta variable i no s&rsquo;actua en l' original, mentre que <strong>quan el paràmetre no es primitiu es passa com a referència, i per tant SÍ que estem enviant la posició de memòria on es troba la variable</strong>, ho hem vist amb els arrays i ara veurem que passa el mateix quan passem una referència d&rsquo;un objecte d&rsquo;una classe que hem creat nosaltres (NO és de tipus primitiu). Anem a observar l&rsquo;exemple següent:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Persona p = new Persona(&quot;Leo&quot;, 5);
+    System.out.println(&quot;Abans d'entrar al canvi sense modificació:&quot; + p);
+    canviSenseModificarObjecte(p);
+    System.out.println(&quot;Després de sortir de la funció del canvi sense modificacio:&quot; +p);
+    canviModificantObjecte(p);
+    System.out.println(&quot;Després de sortir de la funció del canvi amb modificacio:&quot; +p);
+
+}
+
+private static void canviSenseModificarObjecte(Persona p) {
+    System.out.println(&quot;'p' dins de canviSenseModificarObjecte abans de canviar l'objecte de Persona p: &quot; + p);
+    p = new Persona();
+    p.setNom(&quot;Victor&quot;);
+    p.setEdat(33);
+    System.out.println(&quot;'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: &quot; + p);
+}
+private static void canviModificantObjecte(Persona p) {
+    System.out.println(&quot;'p' dins de canviModificantObjecte abans de modificar-lo: &quot; + p);
+    p.setNom(&quot;Pere&quot;);
+    p.setEdat(47);
+    System.out.println(&quot;'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: &quot; + p);
+}
+</code></pre>
+<p>Resultat</p>
+<pre><code>Abans d'entrar al canvi sense modificació:Persona{nom='Leo', edat=5}
+'p' dins de canviSenseModificarObjecte abans de canviar l'objecte de Persona p: Persona{nom='Leo', edat=5}
+'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: Persona{nom='Victor', edat=33}
+Després de sortir de la funció del canvi sense modificacio:Persona{nom='Leo', edat=5}
+'p' dins de canviModificantObjecte abans de modificar-lo: Persona{nom='Leo', edat=5}
+'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: Persona{nom='Pere', edat=47}
+Després de sortir de la funció del canvi amb modificacio:Persona{nom='Pere', edat=47}
+</code></pre>
+<p>Observacions:</p>
+<ul>
+<li>Veiem que imprimim directament p i se n&rsquo;observen els valors dels atributs. Per defecte totes les classes tenen una funció <code>public String toString()</code> que quan es crida la referència de l&rsquo;objecte n&rsquo;imprimeix els seus valors. Més endavant veurem com modificar-ho.</li>
+<li>Com s&rsquo;observa en l&rsquo;exemple quan es surt del primer mètode com que els canvis d&rsquo;objecte es produeixen a l&rsquo;interior del mètode, al sortir del mètode la referència p apunta on originàriament apuntava (es passa per referència) de forma que perdem els canvis que s&rsquo;hagin pogut produir dins. En el segon mètode com que s&rsquo;efectuen els canvis justament en la direcció p original, al sortir del mètode observem com els canvis s&rsquo;han mantingut en l&rsquo;objecte p Persona.</li>
+</ul>
 
 
 
@@ -1824,19 +1878,19 @@ public Persona(String nom, int edat) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609751738"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1609751406"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609751406"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1609751738"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609751738"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609751406" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609751406"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609751738" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609751738"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
