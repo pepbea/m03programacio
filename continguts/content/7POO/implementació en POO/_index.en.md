@@ -466,3 +466,64 @@ Un dels usos més habituals de les variables estàtiques són per declarar const
   public static final int MAJOR_EDAT = 18;  
 ```
 
+#### Variables referenciades
+
+Totes les variables que no són primitives en Java passen a estar referenciades, igual com ja hem vist que passa amb els arrays o els Strings. En el cas que declarem les nostres pròpies classes i les instanciem passa el mateix. Retornant a l'exemple de Persona de l'activitat anterior, quan declarem una `Persona p`, estem declarant una referència a un objecte de tipus Persona, però fins que no la construïm amb el `new Persona()` aquesta referència p apunta a un valor null. La màquina virtual de Java té un procés anomenat garbage collector que periòdicament analitza quines són les variables desreferenciades (que apunten a null) i les elimina de la memòria. Així doncs un cop passa el garbage collector pel següent codi troba una variable p a null i l'elimina:
+
+```java
+//Creem la referència a un objecte de tipus Persona, de moment no està creat encara
+Persona p;
+
+//Creem i reservem en memòria espai suficient per guardar els atributs d'aquest objecte
+p = new Persona();
+
+//Efectuem modificacions a l'objecte
+p.setEdat(5);
+p.setNom("Joaquim");
+
+//Fem que p es desreferenciï de l'objecte instanciat. Quan passi garbage collector eliminarà tots els punters desreferenciats com aquest.
+p = null;
+```
+
+En la UF2 anterior hem observat el pas per valor i el pas per referència. Com ja hem vist quan passem com a paràmetre a una funció una variable de tipus primitiu s'efectua una còpia d'aquesta variable i no s'actua en l' original, mentre que **quan el paràmetre no es primitiu es passa com a referència, i per tant SÍ que estem enviant la posició de memòria on es troba la variable**, ho hem vist amb els arrays i ara veurem que passa el mateix quan passem una referència d'un objecte d'una classe que hem creat nosaltres (NO és de tipus primitiu). Anem a observar l'exemple següent:
+
+```java
+public static void main(String[] args) {
+    Persona p = new Persona("Leo", 5);
+    System.out.println("Abans d'entrar al canvi sense modificació:" + p);
+    canviSenseModificarObjecte(p);
+    System.out.println("Després de sortir de la funció del canvi sense modificacio:" +p);
+    canviModificantObjecte(p);
+    System.out.println("Després de sortir de la funció del canvi amb modificacio:" +p);
+
+}
+
+private static void canviSenseModificarObjecte(Persona p) {
+    System.out.println("'p' dins de canviSenseModificarObjecte abans de canviar l'objecte de Persona p: " + p);
+    p = new Persona();
+    p.setNom("Victor");
+    p.setEdat(33);
+    System.out.println("'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: " + p);
+}
+private static void canviModificantObjecte(Persona p) {
+    System.out.println("'p' dins de canviModificantObjecte abans de modificar-lo: " + p);
+    p.setNom("Pere");
+    p.setEdat(47);
+    System.out.println("'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: " + p);
+}
+```
+
+Resultat
+```
+Abans d'entrar al canvi sense modificació:Persona{nom='Leo', edat=5}
+'p' dins de canviSenseModificarObjecte abans de canviar l'objecte de Persona p: Persona{nom='Leo', edat=5}
+'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: Persona{nom='Victor', edat=33}
+Després de sortir de la funció del canvi sense modificacio:Persona{nom='Leo', edat=5}
+'p' dins de canviModificantObjecte abans de modificar-lo: Persona{nom='Leo', edat=5}
+'p' dins de canviSenseModificarObjecte després de canvia l'objecte de Persona p: Persona{nom='Pere', edat=47}
+Després de sortir de la funció del canvi amb modificacio:Persona{nom='Pere', edat=47}
+```
+
+Observacions:
+- Veiem que imprimim directament p i se n'observen els valors dels atributs. Per defecte totes les classes tenen una funció `public String toString()` que quan es crida la referència de l'objecte n'imprimeix els seus valors. Més endavant veurem com modificar-ho.
+- Com s'observa en l'exemple quan es surt del primer mètode com que els canvis d'objecte es produeixen a l'interior del mètode, al sortir del mètode la referència p apunta on originàriament apuntava (es passa per referència) de forma que perdem els canvis que s'hagin pogut produir dins. En el segon mètode com que s'efectuen els canvis justament en la direcció p original, al sortir del mètode observem com els canvis s'han mantingut en l'objecte p Persona.
