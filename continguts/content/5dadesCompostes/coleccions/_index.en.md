@@ -37,7 +37,7 @@ Aquests mètodes generals són:
 
 *Nota: Tot hi que HashMap no hereta de Collections (ho fa de Maps), el tractarem com un element més d'anàlisi ja que les seves propietats són molt idònies per determinats tipus de problema.*
 
-*Quan utilitzar-los en Java?*
+*Quan utilitzar aquestes estructures en Java?*
 1. Si no voleu tenir valors duplicats a la base de dades, *HashSet* hauria de ser la vostra primera opció, ja que totes les seves classes no permeten duplicats.
 2. Si es necessiten operacions de cerca freqüents basades en els valors de l'índex, Llista (*ArrayList*) és una opció millor.
 3. Si cal mantenir l’ordre d’inserció, també la *llista* és la interfície de col·lecció preferida.
