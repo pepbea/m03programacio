@@ -11,6 +11,6 @@ Fins el moment hem vist les avantatges d'usar la programació modular en els nos
 - [Implementació bàsica de POO]({{%relref "7POO/desenvolupamentPOO/_index.en.md" %}})  : coneixem i implementem en Java les parts bàsiques de les que es composa una classe i les provem. 
 - [Desenvolupament de POO]({{%relref "7POO/desenvolupamentPOO/_index.en.md" %}})  : aprendrem a combinar diferents classes que ens portin a la resolució de petits aplicatius. 
 - [Programació Avançada de POO]({{%relref "7POO/programacioAvancadaPOO/_index.en.md" %}}) : aprendrem a usar característiques avançades sobre la programació orientada a objectes (polimorfisme, herència, classes abstractes, interfícies).
-- [Disseny de POO]({{%relref "7POO/dissenyPOO/_index.en.md" %}}) : usarem UML juntament amb el M5. Entorns, per tal de plasmar en diagrames aquell codi que definim en classes.
+
 
 

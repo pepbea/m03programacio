@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/1arraylist/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arrayunidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/1her%C3%A8ncia/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -31,7 +41,17 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/2hashset/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/2polimorfismeclassesabstractes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -49,6 +69,16 @@
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/2tipusdades/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/3hashmap/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/3interficies/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
@@ -94,17 +124,13 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arraylist/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/dissenypoo/</loc>
   </url>
   
   <url>
