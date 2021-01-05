@@ -33,7 +33,7 @@ Com podeu veure en l'herència es parteix d'un BaseVehicle, que a la vegada s'es
 
 Una vegada es conceptualitza el problema a resoldre pots crear el teu arbre jeràrquic. Un exemple amb animals seria:
 
-![herencia](../images/composiciovsherencia.png)
+![herencia](../images/herenciaExemple.png)
 
 #### Implementació
 
