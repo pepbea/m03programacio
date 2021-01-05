@@ -17,7 +17,7 @@ Conceptes:
 - *Especialització:* Procés que permet estendre d'una classe pare a una classe filla, ampliant atributs i mètodes.
 - *Generalització:* Procés de navegar de les classes filles a la classe pare. En la classe pare trobarem els atributs i mètodes comuns a totes les subclasses.
 
-![herencia](../images/herencia.jpg)
+![herencia](../../images/herencia.jpg)
 
 **Herència simple**
 
@@ -27,13 +27,13 @@ Java permet l'herència simple: **qualsevol classe només té una classe pare**,
 
 L'herència és una relació d'extensió d'una classe més específica respecte una classe genèrica, això ens porta a que la classe filla **ÉS UNA** classe pare, però amb les funcionalitats ampliades/exteses/modificades. A vegades quan es programa existeix el dubte de confondre aquesta relació amb una relació de composició **CONTÉ UN**, que erròniament entenguem com a subclasse "una part"  de la classe principal. Un exemple seria el següent:
 
-![herencia](../images/composiciovsherencia.png)
+![herencia](../../images/composiciovsherencia.png)
 
 Com podeu veure en l'herència es parteix d'un BaseVehicle, que a la vegada s'especialitza en un Truck, i a la vegada s'especialitza en un TacoTruck. TacoTruck "ÉS UN" BaseVehicle, TacoTruck és una extensió de BaseVehicle.  En canvi Truck "CONTÉ UN" engine, engine és una part de Truck, no podria substituir l'engine per un truck i que es comporti de la mateixa manera.
 
 Una vegada es conceptualitza el problema a resoldre pots crear el teu arbre jeràrquic. Un exemple amb animals seria:
 
-![herencia](../images/composiciovsherencia.png)
+![herencia](../../images/composiciovsherencia.png)
 
 #### Implementació
 
@@ -140,7 +140,7 @@ Amb l'herència apareix la visibilitat `protected`, que permet tenir visibilitat
 * les seves subclasses
 * altres classes del mateix package
 
-![visibilitat](../images/visibilitat.png)
+![visibilitat](../../images/visibilitat.png)
 
 Com s'observa existeix l'opció `default` quan no indiquem cap atribut de visibilitat, les classes declarades com a default tenen accés a totes les classes del propi package.
 
