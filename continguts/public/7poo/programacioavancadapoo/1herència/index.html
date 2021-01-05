@@ -12,21 +12,21 @@
     <title>Herència :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1609868960" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609868960" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1609869175" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609869175" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609868960" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609869175" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609868960"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609869175"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609868960"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609868960"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609869175"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609869175"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609868960"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609869175"></script>
 
     
   </div>
@@ -1089,15 +1089,15 @@
 <li><em>Especialització:</em> Procés que permet estendre d&rsquo;una classe pare a una classe filla, ampliant atributs i mètodes.</li>
 <li><em>Generalització:</em> Procés de navegar de les classes filles a la classe pare. En la classe pare trobarem els atributs i mètodes comuns a totes les subclasses.</li>
 </ul>
-<p><img src="../../images/herencia.jpg" alt="herencia"></p>
+<p><img src="../images/herencia.jpg" alt="herencia"></p>
 <p><strong>Herència simple</strong></p>
 <p>Java permet l&rsquo;herència simple: <strong>qualsevol classe només té una classe pare</strong>, no permet l&rsquo;herència múltiple com sí permeten altres llenguatges de programació com el C++. Això ens planteja el problema que a vegades pels requisits de la nostra aplicació és necessari <strong>simular l&rsquo;herència múltiple fent ús d&rsquo;interfícies</strong>. Per a més informació: <a href="https://www.geeksforgeeks.org/java-and-multiple-inheritance/">problema del diamant</a></p>
 <p><strong>Relació &ldquo;és un&rdquo; vs &ldquo;conté un&rdquo;</strong></p>
 <p>L&rsquo;herència és una relació d&rsquo;extensió d&rsquo;una classe més específica respecte una classe genèrica, això ens porta a que la classe filla <strong>ÉS UNA</strong> classe pare, però amb les funcionalitats ampliades/exteses/modificades. A vegades quan es programa existeix el dubte de confondre aquesta relació amb una relació de composició <strong>CONTÉ UN</strong>, que erròniament entenguem com a subclasse &ldquo;una part&rdquo;  de la classe principal. Un exemple seria el següent:</p>
-<p><img src="../../images/composiciovsherencia.png" alt="herencia"></p>
+<p><img src="../images/composiciovsherencia.png" alt="herencia"></p>
 <p>Com podeu veure en l&rsquo;herència es parteix d&rsquo;un BaseVehicle, que a la vegada s&rsquo;especialitza en un Truck, i a la vegada s&rsquo;especialitza en un TacoTruck. TacoTruck &ldquo;ÉS UN&rdquo; BaseVehicle, TacoTruck és una extensió de BaseVehicle.  En canvi Truck &ldquo;CONTÉ UN&rdquo; engine, engine és una part de Truck, no podria substituir l&rsquo;engine per un truck i que es comporti de la mateixa manera.</p>
 <p>Una vegada es conceptualitza el problema a resoldre pots crear el teu arbre jeràrquic. Un exemple amb animals seria:</p>
-<p><img src="../../images/composiciovsherencia.png" alt="herencia"></p>
+<p><img src="../images/composiciovsherencia.png" alt="herencia"></p>
 <h4 id="implementació">Implementació</h4>
 <p>Per tal d&rsquo;indicar que una classe és una herència utilitzarem la paraula <code>extends</code> en la definició de la classe. Per exemple si tenim una classe pare Persona i dos classes filles Alumne i Professor, ho faríem de la següent manera:</p>
 <pre><code class="language-java">public class Persona{
@@ -1186,7 +1186,7 @@ public class CanviVariable2 {
 <li>les seves subclasses</li>
 <li>altres classes del mateix package</li>
 </ul>
-<p><img src="../../images/visibilitat.png" alt="visibilitat"></p>
+<p><img src="../images/visibilitat.png" alt="visibilitat"></p>
 <p>Com s&rsquo;observa existeix l&rsquo;opció <code>default</code> quan no indiquem cap atribut de visibilitat, les classes declarades com a default tenen accés a totes les classes del propi package.</p>
 <p><strong>Sobreescriptura</strong></p>
 <p>Més amunt hem comentat el concepte de sobreescriptura, aquesta és una de les característiques polimòrfiques que tenim amb els llenguatges POO.</p>
@@ -1881,19 +1881,19 @@ public class Programa {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609868960"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609869175"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1609868960"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609868960"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1609869175"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609869175"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609868960" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609868960"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609869175" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609869175"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
