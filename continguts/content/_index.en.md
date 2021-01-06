@@ -34,8 +34,27 @@ L'índex de continguts que veurem és:
     - [Tractament cadena de caràcters]({{%relref "5dadesCompostes/CadenesCaracters/_index.en.md" %}})
 
 **UF2: Disseny modular**
+  + [Programació Modular]({{%relref "6programacioModular/_index.en.md" %}})
+    - [Introducció al Disseny Modular]({{%relref "6programacioModular/introduccioDissenyModular/_index.en.md" %}})
+    - [Metodologia Top-Down]({{%relref "6programacioModular/metodologiaTopDown/_index.en.md" %}})
+    - [Llibreries]({{%relref "6programacioModular/llibreries/_index.en.md" %}})
+    - [Recursivitat]({{%relref "6programacioModular/recursivitat/_index.en.md" %}})
 
 **UF4: Programació orientada a objectes (POO)**
+  + [Programació Orientada a Objectes]({{%relref "7POO/_index.en.md" %}})
+      - [Introducció a la POO]({{%relref "7POO/introduccioPOO/_index.en.md" %}})
+      - [Implementació bàsica en POO]({{%relref "7POO/implementacioPOO/_index.en.md" %}})
+      - [Desenvolupament de POO]({{%relref "7POO/desenvolupamentPOO/_index.en.md" %}})
+      - [Programació Avançada en POO]({{%relref "7POO/programacioAvancadaPOO/_index.en.md" %}})
+        * [Herència]({{%relref "7POO/programacioAvancadaPOO/1herencia/_index.en.md" %}})
+        * [Polimorfisme i Classes Abstractes]({{%relref "7POO/programacioAvancadaPOO/2polimorfismeClassesAbstractes/_index.en.md" %}})
+        * [Interfícies]({{%relref "7POO/programacioAvancadaPOO/3interficies/_index.en.md" %}})
+
+  + [Estructures compostes]({{%relref "5dadesCompostes/_index.en.md" %}})
+      - [Col·leccions]({{%relref "5dadesCompostes/coleccions/_index.en.md" %}})
+        * [ArrayList]({{%relref "5dadesCompostes/coleccions/1arrayList/_index.en.md" %}})
+        * [HashSet]({{%relref "5dadesCompostes/coleccions/2hashset/_index.en.md" %}})
+        * [HashMap]({{%relref "5dadesCompostes/coleccions/3hashmap/_index.en.md" %}})
 
 **UF3: Fonaments de fitxers**
 
