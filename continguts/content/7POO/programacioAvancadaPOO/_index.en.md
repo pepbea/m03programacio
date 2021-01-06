@@ -6,7 +6,7 @@ weight: 4
 
 En aquesta segona part de la UF coneixerem i implementarem característiques de la POO que dónen sentit al desenvolupament d'aplicacions:
 
-- [Herència]({{%relref "7POO/programacioAvancadaPOO/1herència/_index.en.md" %}})
+- [Herència]({{%relref "7POO/programacioAvancadaPOO/1herencia/_index.en.md" %}})
 
 - [Polimorfisme i classes abstractes]({{%relref "7POO/programacioAvancadaPOO/2polimorfismeClassesAbstractes/_index.en.md" %}})
 

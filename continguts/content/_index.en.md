@@ -17,7 +17,7 @@ Tot seguit es mostra la calendarització i les hores de les UFs que s'imparteixe
 
 L'índex de continguts que veurem és:
 
-* **UF1: Programació estructurada**
+**UF1: Programació estructurada**
   + [Estructura d'un programa]({{%relref "1estructura/_index.en.md" %}})
     - [Introducció]({{%relref "1estructura/1propositiblocs/_index.en.md" %}})
     - [Metodologies de Software]({{%relref "1estructura/2metodologiesSoftware/_index.en.md" %}})
