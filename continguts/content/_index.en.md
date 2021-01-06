@@ -50,11 +50,10 @@ L'índex de continguts que veurem és:
         * [Polimorfisme i Classes Abstractes]({{%relref "7POO/programacioAvancadaPOO/2polimorfismeClassesAbstractes/_index.en.md" %}})
         * [Interfícies]({{%relref "7POO/programacioAvancadaPOO/3interficies/_index.en.md" %}})
 
-  + [Estructures compostes]({{%relref "5dadesCompostes/_index.en.md" %}})
-      - [Col·leccions]({{%relref "5dadesCompostes/coleccions/_index.en.md" %}})
-        * [ArrayList]({{%relref "5dadesCompostes/coleccions/1arrayList/_index.en.md" %}})
-        * [HashSet]({{%relref "5dadesCompostes/coleccions/2hashset/_index.en.md" %}})
-        * [HashMap]({{%relref "5dadesCompostes/coleccions/3hashmap/_index.en.md" %}})
+  + [Col·leccions]({{%relref "5dadesCompostes/coleccions/_index.en.md" %}})
+      - [ArrayList]({{%relref "5dadesCompostes/coleccions/1arrayList/_index.en.md" %}})
+      - [HashSet]({{%relref "5dadesCompostes/coleccions/2hashset/_index.en.md" %}})
+      - [HashMap]({{%relref "5dadesCompostes/coleccions/3hashmap/_index.en.md" %}})
 
 **UF3: Fonaments de fitxers**
 
