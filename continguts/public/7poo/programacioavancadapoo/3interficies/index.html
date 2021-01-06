@@ -12,21 +12,21 @@
     <title>Interfícies :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1609869398" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609869398" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1609960687" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1609960687" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609869398" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1609960687" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609869398"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1609960687"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609869398"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609869398"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1609960687"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1609960687"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609869398"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1609960687"></script>
 
     
   </div>
@@ -1045,7 +1045,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1069,7 +1077,161 @@
 
 
 
-	
+	<p>Les interfícies són un pas més cap a l&rsquo;abstracció. <strong>Una interfície té tots els mètodes abstractes. Ens serveix per diferenciar la declaració dels mètodes de la seva implementació.</strong> S&rsquo;acostuma a crear interfícies per definir característiques/funcionalitats que han de tenir les classes concretes i afegir-les en la seva implementació. Desde Java8 és possible tenir mètodes <code>default</code> implementats per defecte dins les interfícies, ho veurem amb l&rsquo;exemple del diamant al final de la lliçó.</p>
+<p>Característiques de les interfícies:</p>
+<ul>
+<li>Els mètodes d&rsquo;una interfície són públics, en canvi, les interfícies poden ser públiques default.</li>
+<li>Les interfícies només poden tenir variables públiques, estàtiques i finals, constants. Si no es posa res, es sobreentén que són públiques, estàtiques i finals.</li>
+</ul>
+<h4 id="implementació">Implementació</h4>
+<p>La declaració d&rsquo;una interfície la faríem de la següent manera:</p>
+<pre><code class="language-java">public interface Movible{
+    int SEGONS_PARTIDA = 200;
+    public void giraDreta();
+    public void giraEsquerra();
+    public int frena();
+    public int anarEndavant();
+}
+</code></pre>
+<p>Un cop tenim definit com volem la interfície ara cal incloure-la en les classes. Fins ara utilitzàvem <code>extends</code> ja que la relació era &ldquo;ÉS UN&rdquo;, amb les interfícies estem afegint característiques a un objecte, usarem la paraula <code>implements</code>.</p>
+<p>De l&rsquo;exemple anterior, si tinguéssim una simulació de vehicles i ens fes falta definir funcions per les funcions físiques de cada vehicle ho podríem fer de la següent manera:</p>
+<pre><code class="language-java">public abstract class Vehicle{
+    protected int velocitat;
+    protected int orientacio;
+    ...
+}
+
+public class Cotxe extends Vehicle implements Movible{
+
+    public void giraDreta(){
+        orientacio = orientacio + 45;
+    }
+    public void giraEsquerra(){
+        orientacio = orientacio - 45;
+    }
+    public int frena(){
+        if(velocitat &lt;=10) velocitat = 0;
+        else velocitat -=10;
+    }
+    public int anarEndavant(){
+        velocitat +=10;
+    }
+}
+
+public class Moto extends Vehicle implements Movible{
+
+    public void giraDreta(){
+        orientacio = orientacio + 60;
+    }
+    public void giraEsquerra(){
+        orientacio = orientacio - 60;
+    }
+    public int frena(){
+        if(velocitat &lt;=5) velocitat = 0;
+        else velocitat -=5;
+    }
+    public int anarEndavant(){
+        velocitat +=5;
+    }
+}
+
+</code></pre>
+<p>Si volgués incloure un nou vehicle a la meva simulació tant sols seria necessari que tingués en compte d&rsquo;implementar aquells mètodes que té definits la interfície i també els mètodes abstractes que tingués la classe abstracta.</p>
+<p>Una de les <strong>avantatges de les interfícies és que permet més d&rsquo;una implementació per classe</strong> a diferència de les herències que en java tenim només herència simple. Podríem tenir com exemple:</p>
+<pre><code class="language-java">public interface Movible{
+    public void A();
+}
+public interface Comercial{
+    public void B();
+}
+public interface Navegable{
+    public void C();
+}
+
+public class Taxi extends Vehicle implements Movible, Comercial{
+    public void A(){
+        ...
+    }
+    public void B(){
+        ...
+    }
+}
+
+public class Veler extends Vehicle implements Movible, Navegable{
+    public void A(){
+        ...
+    }
+    public void C(){
+        ...
+    }
+}
+</code></pre>
+<p>També, al igual que amb les classes abstractes, podria existir <strong>jerarquies de classe</strong> dins una interfície, es podrien estendre. Si això passa, <strong>les classes concretes haurien d&rsquo;implementar tots aquells mètodes de totes les superclasses de la/les interfície/s utilitzades</strong>.</p>
+<pre><code class="language-java">public interface InterficieSuper{
+    public void A();
+}
+public interface InterficieSub extends InterficieSuper{
+    public void B();
+}
+
+public class ClasseConcreta implements InterficieSub{
+    public void A(){
+        ...
+    }
+    public void B(){
+        ...
+    }
+}
+</code></pre>
+<h4 id="agrupar-per-funcionalitat">Agrupar per funcionalitat</h4>
+<p>Totes les classes que implementen una interfície són compatibles amb el tipus introduït per la interfície. Una interfície no es pot instanciar, però sí s&rsquo;hi pot fer referència. Així, si I és una interface i C és una classe que implementa la interfície, es poden declarar referències al tipus I que apuntin objectes de C: I obj = new C (&lt;paràmetres&gt;); Exemple:</p>
+<p>Seguint amb l&rsquo;exemple anterior amb les interfícies movible, comercial i navegable. Podríem agrupar els objectes concrets en ArrayList d&rsquo;una interfície i realitzar-ne el recorregut:</p>
+<pre><code class="language-java">ArrayList&lt;Movible&gt; movibles= new ArrayList();
+mov.add(new Cotxe());
+mov.add(new Taxi());
+mov.add(new Veler());
+for (Movible vehicleMoviment : movibles) {
+    vehicleMoviment.A();
+}
+</code></pre>
+<h4 id="herència-múltiple">Herència múltiple</h4>
+<p>En java existeix el problema que les classes només hereten d&rsquo;un pare, això provoca el conflicte conegut amb el problema del diamant:
+<a href="https://es.wikipedia.org/wiki/Problema_del_diamante">Problema diamant</a></p>
+<p><strong>Exemple</strong></p>
+<p>Si tenim un mètode definit a A i sobreescrit a B i C, D quin hereta? El de B o el de C?</p>
+<p><img src="../images/diamant1.gif" alt="Problema diamant2"></p>
+<p>Per resoldre-ho, el que faríem en Java seria el següent:</p>
+<pre><code class="language-java">interface B{
+   public default void m1() {
+      System.out.println(&quot;display method of m1 for B&quot;);
+   }
+}
+interface B{
+   public default void m1() {
+      System.out.println(&quot;display method of m1 for C&quot;);
+   }
+}
+public class D implements B, C{
+   public void m1() {
+      B.super.m1();
+      //or,
+      C.super.m1();
+   }
+   public static void main(String args[]) {
+      D obj = new D();
+      obj.display();
+   }
+}
+</code></pre>
+<p>Resumint:</p>
+<ul>
+<li>Una interfície pot ser implementada per múltiples classes, de manera similar a com una classe pot ser superclasse de múltiples classes.</li>
+<li>Les classes que implementen una interfície estan obligades a sobreescriure tots els mètodes definits en la interfície. Si la definició d&rsquo;algun dels mètodes a sobreescriure coincideix amb la definició d&rsquo;algun mètode heretat, aquest desapareix de la classe.</li>
+<li>Una classe pot implementar múltiples interfícies, a diferència de l&rsquo;herència, que només es permet d&rsquo;una única classe base.</li>
+<li>Totes les classes que implementen una interfície són compatibles amb el tipus introduït per la interfície.</li>
+<li>L&rsquo;existència de les interfícies possibilita l&rsquo;existència d&rsquo;una jerarquia de tipus (que no s&rsquo;ha de confondre amb la jerarquia de classes) que permet l&rsquo;herència múltiple.</li>
+</ul>
+
 
 
 
@@ -1648,19 +1810,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609869398"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1609960687"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1609869398"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609869398"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1609960687"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1609960687"></script>
 
-    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609869398" rel="stylesheet" />
-    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609869398"></script>
+    <link href="/m03programacio/continguts/public/mermaid/mermaid.css?1609960687" rel="stylesheet" />
+    <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1609960687"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
