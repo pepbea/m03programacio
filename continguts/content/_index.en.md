@@ -6,14 +6,17 @@ title: "M03 Programació DAM"
 
 En aquesta pàgina web trobareu els apunts del **M03. Programació DAM**. La web està realitzada utilitzant un Framework Web(Hugo), hostatjada a Github i es fa ús de Github Pages.
 
-Tot seguit es mostra la calendarització i les hores de les UFs que s'imparteixen en aquest mòdul de 1r de DAM. Fixeu-vos que l'ordre de realització de les UFs és: UF1, UF2, UF4 i UF3. La UF4 segueix a la UF2, ja que pedagògicament té més sentit realitzar-la després d'aquesta UF.
+Tot seguit es mostra la calendarització i les hores de les UFs que s'imparteixen en aquest mòdul de 1r de DAM.
 
 |UF|dates|hores|
 |---|---|---|
-|UF1: Programació estructurada|15/09/20 - 11/12/20|85h|
-|UF2: Disseny modular|14/12/20 - 05/02/21|50h|
-|UF4: Programació orientada a objectes (POO)|06/02/21 - 23/04/21|68h|
-|UF3: Fonaments de fitxers|24/04/21 - 25/05/21|30h|
+|UF1: Programació estructurada|13/09/21 - 25/11/21|74h|
+|UF2: Disseny modular|26/11/21 - 20/01/22|39h|
+|UF4: Programació orientada a objectes (POO)|04/01/22 - 07/03/22|44h|
+|UF5: POO.Llibreries de classes fonamentals |09/03/22 - 31/03/22|24h|
+|UF3: Fonaments de fitxers|04/04/22 - 25/04/22|19h|
+|UF6: POO. Introducció a la persistència en BBDDs|27/04/22 - 20/05/22|31h|
+
 
 L'índex de continguts que veurem és:
 
@@ -50,6 +53,7 @@ L'índex de continguts que veurem és:
         * [Polimorfisme i Classes Abstractes]({{%relref "7POO/programacioAvancadaPOO/2polimorfismeClassesAbstractes/_index.en.md" %}})
         * [Interfícies]({{%relref "7POO/programacioAvancadaPOO/3interficies/_index.en.md" %}})
 
+**UF5: POO. Llibreries de classes fonamentals**
   + [Col·leccions]({{%relref "5dadesCompostes/coleccions/_index.en.md" %}})
       - [ArrayList]({{%relref "5dadesCompostes/coleccions/1arrayList/_index.en.md" %}})
       - [HashSet]({{%relref "5dadesCompostes/coleccions/2hashset/_index.en.md" %}})
