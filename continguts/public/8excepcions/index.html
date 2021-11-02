@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
 
-    <title>Programació avançada de POO :: Documentation for Hugo Learn Theme</title>
+    <title>Excepcions :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/m03programacio/continguts/public/css/nucleus.css?1635852986" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/m03programacio/continguts/public/7poo/programacioavancadapoo/">
+  <body class="" data-url="/m03programacio/continguts/public/8excepcions/">
     <nav id="sidebar" class="">
 
 
@@ -737,7 +737,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/7poo/" title="Programació Orientada a Objectes" class="dd-item
-        parent
+        
         
         
         ">
@@ -844,8 +844,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/7poo/programacioavancadapoo/" title="Programació avançada de POO" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/m03programacio/continguts/public/7poo/programacioavancadapoo/">
@@ -967,8 +967,8 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/8excepcions/" title="Excepcions" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/m03programacio/continguts/public/8excepcions/">
@@ -1029,7 +1029,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/7POO/programacioAvancadaPOO/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/8Excepcions/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1056,13 +1056,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/7poo/'>Programació Orientada a Objectes</a> > Programació avançada de POO
-          
-        
+            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > Excepcions
           
         
           
@@ -1089,7 +1083,7 @@
           
             <h1>
               
-              Programació avançada de POO
+              Excepcions
             </h1>
           
 
@@ -1097,18 +1091,242 @@
 
 
 
-	<p>En aquesta segona part de la UF coneixerem i implementarem característiques de la POO que dónen sentit al desenvolupament d&rsquo;aplicacions:</p>
+	<p>L&rsquo;API de Java s&rsquo;organitza per paquets que agrupen diferents funcionalitats. Entre elles trobem el tractament de les excepcions. En Java es distingeix una excepció d&rsquo;un error, per això també tenen les seves pròpies classes Exception i Error.</p>
+
+<div class="notices note" ><p>Els <strong>Errors</strong> corresponen a situacions irrecuperables que no depenen del programador i que per tant no tenim mecanismes per poder tractar-les. Quan apareix un error provoca la finalització del programa.</p>
+</div>
+
+
+<div class="notices note" ><p>Les <strong>Excepcions</strong> són casuístiques que es produeixen en <strong>temps d&rsquo;execució</strong> i que poden provocar problemes en el desenvolupament normal del nostre programa, aquestes sí que Java pot preveure-les i realitzar-ne un codi per tractar-les.</p>
+</div>
+
+<p>Existeixen dos tipus d&rsquo;excepcions:</p>
 <ul>
-<li>
-<p><a href="/m03programacio/continguts/public/7poo/programacioavancadapoo/1herencia/">Herència</a></p>
-</li>
-<li>
-<p><a href="/m03programacio/continguts/public/7poo/programacioavancadapoo/2polimorfismeclassesabstractes/">Polimorfisme i classes abstractes</a></p>
-</li>
-<li>
-<p><a href="/m03programacio/continguts/public/7poo/programacioavancadapoo/3interficies/">Interfícies</a></p>
-</li>
+<li><strong>Implícites</strong>: són aquelles casuístiques pròpies de la JVM i que estan incloses dins la classe RuntimeError. Normalment tenen a veure amb errors de programació.</li>
+<li><strong>Explícites</strong>: són aquelles que no tenen a veure amb RuntimeError i que el programador les pot tractar allà on tenen lloc.</li>
 </ul>
+<p>Per tal de tractar les excepcions quan es produeixen Java ofereix el mecanisme de try-catch-finally.</p>
+<pre><code class="language-java">try{
+    //bloc de codi que provoca l'excepció
+}catch(nomClasse Excepcio e){
+    //tractament de l'excepció
+}finally{
+    //encara que hi hagi excepció codi que s'executarà sempre
+}
+</code></pre>
+<p>El codi que trobem dins el bloc <code>try</code> és aquell que estem &ldquo;vigilant&rdquo; o és sospitós de llançar una excepció, per exemple quan obrim un fitxer que no existeix, tenim una ruta que està malament o intentem dividir entre 0.</p>
+<p>En casos com els anteriors la JVM genera una Excepció que pot ser tractada dins un bloc <code>catch</code>. Un cop es detecta l&rsquo;existència d&rsquo;una excepció el que fa Java és comprovar si existeix algun bloc catch (poden haver-ne més d&rsquo;un, els escriurem del més específic al més genèric), entra en el primer que coincideixi l&rsquo;Exception i n&rsquo;executa el codi de dins el bloc.</p>
+<p>Si no existeix cap bloc catch que &ldquo;capturi&rdquo; el tipus d&rsquo;excepció, aquesta és llançada al bloc de codi que ha cridat aquest mètode i funció, de forma que serà el responsable de tractar-la.</p>
+<p>Si es dóna el cas que aquesta excepció no es controla, ni tan sols en el main, es produeix una finalització anormal de l&rsquo;execució del programa.</p>
+<p>El codi contingut en el bloc <code>finally</code> s&rsquo;executa sempre, hi hagi o no una excepció. Això ens pot anar molt bé quan hi ha codi que sempre s&rsquo;ha d&rsquo;executar independentment de l&rsquo;existència o no d&rsquo;una excepció, per exemple el tancament d&rsquo;una base de dades o el tancament d&rsquo;un descriptor de fitxer.</p>
+<p>Resumint, quan dins un bloc try es produeix una excepció, la JVM llança (throw) una excepció que serà capturada (catch) per un bloc catch o per un codi superior que hagi cridat aquest mètode/funció.</p>
+<p>Exemples d&rsquo;error:</p>
+<ul>
+<li>Ens quedem sense memòria.</li>
+<li>Falla el canal d&rsquo;E/S.</li>
+<li>Falla el servei d&rsquo;algun proveïdor.</li>
+</ul>
+<p>Exemples d&rsquo;excepcions:</p>
+<ul>
+<li>Fitxer que no té permisos.</li>
+<li>Fitxer inexistent.</li>
+<li>Operació aritmètica errònia (dividir per zero).</li>
+<li>Accés a una posició d&rsquo;una taula inexistent.</li>
+<li>Accés a una referència a un objecte inexistent.</li>
+</ul>
+<p>La Jerarquia de classes establerta de Java pel que fa Error i Exception és la següent.</p>
+<p><img src="../images/jerarquia.jpg?width=500px" alt="Jerarquia"></p>
+<p><strong>Exemples d&rsquo;excepcions</strong></p>
+<p><em>InputMismatchException</em></p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n;
+    do{
+        try{
+            System.out.print(&quot;Introdueix un nombre &gt; 0:&quot;;                                            
+            n = sc.nextInt();
+            System.out.println(&quot;Nombre introduït: &quot; + n);
+        }catch(InputMismatchException e){
+            sc.nextLine();
+            n = 0;
+            System.out.println(&quot;Has d'introduir un nombre enter: &quot; + e.toString());            
+        }
+      }while(n&lt;=0);
+}
+</code></pre>
+<p><em>ArithmeticException</em></p>
+<pre><code class="language-java">public static void main(String[] args) {
+    int numerador = 10;
+    int denominador = 0;
+    try{                                 
+        int n = numerador / denominador;
+    }catch(ArithmeticException e){
+        System.out.println(&quot;Has volgut dividir entre 0 : &quot; + e.toString());  
+        n = 0;          
+    }
+}
+</code></pre>
+<p><em>ArrayIndexOutOfBoundsException</em></p>
+<pre><code class="language-java">public static void main(String[] args) {
+    int arr[]=new int[10];
+    try {
+        int valor=arr[10];
+    }catch (ArrayIndexOutOfBoundsException e){
+        System.out.println(&quot;Índex fora de límit!: &quot;+ e.getMessage());
+
+    }
+}
+</code></pre>
+<p>Tots els casos anteriors haguessis pogut substituir el tipus de l&rsquo;Excepció per <code>Exception</code> ja que tots són de tipus Exception només que estan especialitzats pel tipus d&rsquo;error que capturen.</p>
+<p>Tot seguit anem a veure com capturem una excepció que es produeix en un altre mètode que cridem des del principal, posem per exemple l&rsquo;ArithmeticException anterior.</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    public static int numerador = 10;
+    public static int denominador = 0;
+    try {
+		dividir();
+	} catch (ArithmeticException e) {
+		System.err.println(e);
+	}
+}
+
+public static void dividir() throws ArithmeticException {
+		System.out.println(numerador / denominador);
+}
+</code></pre>
+<p>En el cas anterior si no capturéssim l&rsquo;excepció en el main() hi hauria un error i pararia el programa, però com que &ldquo;capturem&rdquo; l&rsquo;excepció i en fem un tractament específic Java continua amb la seva excecució normal. Fixeu-vos que en aquest cas en el mètode dividir() hem utilitzat <code>throws ArithmeticException</code>, d&rsquo;aquesta manera quan es detecta una excepció d&rsquo;aquest tipus, l&rsquo;excepció és propagada cap a la funció que ha cridat aquest mètode, derivant-ne així la responsabilitat del seu tractament.</p>
+<p>En Java les excepcions que soón subclases de Error o RuntimeException no necessiten ser especificades en la llista de throws, Java ho fa automàticament, la resta d&rsquo;Excepcions sí és necessari, del contrari es produeix un error en temps de compilació.</p>
+<p>Es podrien encadenar uns quants throws Exception com seria:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    public static int numerador = 10;
+    public static int denominador = 0;
+    try {
+		dividir1();
+	} catch (ArithmeticException e) {
+		System.err.println(e);
+	}
+}
+
+public static void dividir1() throws ArithmeticException {
+		dividir2;
+}
+
+public static void dividir2() throws ArithmeticException {
+		System.out.println(numerador / denominador);
+}
+</code></pre>
+<p><em>Jerarquia de les Excepcions</em></p>
+<p>Com us he comentat anteriorment, la captura de l&rsquo;Excepció és jeràrquica, de forma que l&rsquo;excepció serà capturada pel primer Catch que l&rsquo;accepti, per això és tant important ordenar els catch de més específic a més genèric. Continuant amb l&rsquo;exemple anterior:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    int numerador = 10;
+    int denominador = 0;
+    try{                                 
+        int n = numerador / denominador;
+    }catch(ArithmeticException e){
+        System.out.println(&quot;Has volgut dividir entre 0 : &quot; + e.toString());  
+        n = 0;          
+    }catch(Exception e){
+        System.out.println(&quot;Aquí no s'hi accedirà ja que l'Excepció en aquest cas serà capturada per ArithmeticException&quot;);          
+    }
+}
+</code></pre>
+<p><em>Exemples més complerts amb encadenament d&rsquo;excepcions</em></p>
+<p>Un exemple més complert on barregem diferents Exceptions podria ser el següent:</p>
+<pre><code class="language-java">public class TryEncadenat{
+    public static void main(String[] args) {
+        int nums[]={4,8,16,32,64,128,256,512};
+        int denom[]={2,0,4,4,0,8};
+        try {
+            for (int i = 0; i &lt; nums.length; i++) {
+                try { 
+                    System.out.println(nums + &quot; / &quot; + denom + &quot; es &quot; + nums / denom);
+                } catch (ArithmeticException exc) {
+                    System.out.println(&quot;No es pot dividir entre 0!&quot;);
+                }
+            }
+        }
+        catch (ArrayIndexOutOfBoundsException exc) {
+                    System.out.println(&quot;Un dels dos arrays s'ha quedat sense més valors. FINALITZA aquí!&quot;);
+                }
+            }
+        }
+
+</code></pre>
+<p>Un altre exemple podria ser:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int [] array = {4,2,6,7};
+    int n;
+    boolean repetir = false;
+    do{
+         try{
+                repetir = false;
+                System.out.print(&quot;Introdueix un valor &gt; 0 i &lt; &quot; + array.length + &quot; &quot;);                     
+                n = sc.nextInt();
+                System.out.println(&quot;Valor en la posició &quot; + n + &quot;: &quot; + array[n]);
+         }catch(InputMismatchException e){
+                   sc.nextLine();
+                   n = 0;
+                   System.out.println(&quot;Has d'introduir un valor enter &quot;);
+                   repetir = true;
+         }catch(IndexOutOfBoundsException e){
+                  System.out.println(&quot;Has d'introduir un valor enter &gt; 0 i &lt; &quot; + array.length + &quot; &quot;);           
+                  repetir = true;
+         }catch(Exception e){ //Resta d'excepcions
+                   System.out.println(&quot;Error inesperat &quot; + e.toString());
+                   repetir = true;
+         }
+     }while(repetir);
+}
+</code></pre>
+<p>Un altre exemple <strong>multi-exception</strong></p>
+<p>Fins el moment les excepcions han estat generades per la JVM quan s&rsquo;ha detectat una casuística inesperada, però les excepcions es poden generar manualment emprant <code>new throw Exception</code>. Per exemple:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int numerador = sc.nextInt();
+    int denominador = sc.nextInt();
+    int n;
+    try{                                
+        if (denominador == 0) throw new ArithmeticException(); 
+        else n = numerador / denominador;
+    }catch(ArithmeticException e){
+        System.out.println(&quot;Has volgut dividir entre 0 : &quot; + e.toString());  
+        n = 0;          
+    }finally{
+        System.out.println(n);
+    }
+}
+</code></pre>
+<p><strong>Excepcions pròpies</strong></p>
+<p>També és possible generar les nostres pròpies Excepcions. Moltes vegades, degut a l&rsquo;especificació que tenim, és necessari que creem les nostres pròpies excepcions que dónen sentit a certes circumstàncies i que el ventall d&rsquo;Excepcions de Java no cobreix. L&rsquo;únic que haurem de fer és heredar de la classe <code>Exception</code> i adaptar el comportament a la constructora i també al missatge de sortida que volem que es mostri quan es produeixi l&rsquo;excepció.</p>
+<pre><code class="language-java">public class MajoriaEdatExcepcio extends Exception{
+
+    private int edat;
+
+    MajoriaEdatExcepcio (int n){
+        this.edat = n;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Excepcio: Majoria Edat [edat &quot;+this.edat+&quot;]&quot;;
+    }
+}
+</code></pre>
+<p>Aquesta excepció s&rsquo;instancia un cop es genera l&rsquo;Excepció (<em>throw new MajoriaEdatExcepcio(n)</em>). Per tant, la situació podria ser la següent:</p>
+<pre><code class="language-java">public class MajoriaEdat {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        try{
+            int edat = sc.nextInt();
+            if(edat&lt;18) throw new MajoriaEdatExcepcio(edat);
+            System.out.println(&quot;L'edat introduida és major d'edat&quot; + edat);
+        }
+        catch (MajoriaEdatExcepcio e){
+            System.out.println(e);
+        }
+    }
+}
+</code></pre>
 
 
 
@@ -1530,7 +1748,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1545,9 +1762,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1597,7 +1811,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1612,9 +1825,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1669,6 +1879,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1690,10 +1901,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/m03programacio/continguts/public/7poo/desenvolupamentpoo/" title="Desenvolupament de POO"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/7poo/programacioavancadapoo/3interficies/" title="Interfícies"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/m03programacio/continguts/public/7poo/programacioavancadapoo/1herencia/" title="Herència" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/m03programacio/continguts/public/1estructura/" title="Estructura d’un programa" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
