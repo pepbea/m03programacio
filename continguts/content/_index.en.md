@@ -54,10 +54,14 @@ L'índex de continguts que veurem és:
         * [Interfícies]({{%relref "7POO/programacioAvancadaPOO/3interficies/_index.en.md" %}})
 
 **UF5: POO. Llibreries de classes fonamentals**
-  + [Col·leccions]({{%relref "5dadesCompostes/coleccions/_index.en.md" %}})
-      - [ArrayList]({{%relref "5dadesCompostes/coleccions/1arrayList/_index.en.md" %}})
-      - [HashSet]({{%relref "5dadesCompostes/coleccions/2hashset/_index.en.md" %}})
-      - [HashMap]({{%relref "5dadesCompostes/coleccions/3hashmap/_index.en.md" %}})
+  + [Col·leccions]({{%relref "8Collections/_index.en.md" %}})
+      - [ArrayList]({{%relref "8Collections/1arrayList/_index.en.md" %}})
+      - [HashSet]({{%relref "8Collections/2hashset/_index.en.md" %}})
+      - [HashMap]({{%relref "8Collections/3hashmap/_index.en.md" %}})
+  + [Excepcions]({{%relref "9Excepcions/_index.en.md" %}})
 
 **UF3: Fonaments de fitxers**
-
+  + [Gestió File]({{%relref "10fitxersText/_index.en.md" %}})
+  + [Fitxers de text]({{%relref "10fitxersText/fitxersText/_index.en.md" %}})
+  + [Fitxers binaris]({{%relref "10fitxersText/fitxersBinaris/_index.en.md" %}})
+  + [Accés aleatori]({{%relref "10fitxersText/AccesAleatori/_index.en.md" %}})

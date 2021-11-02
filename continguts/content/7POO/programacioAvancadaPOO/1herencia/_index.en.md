@@ -179,7 +179,7 @@ public class Persona{
     }
 }
 
-public class Alumne{
+public class Alumne extends Persona{
     int matricula;
     public Alumne(String dni, int matricula){
         super(dni);
@@ -188,7 +188,7 @@ public class Alumne{
 }
 
 //Error de compilació ja que la constructora Persona() com a tal no existeix
-public class Alumne{
+public class Alumne extends Persona{
     int matricula;
     public Alumne(int matricula){
         super();

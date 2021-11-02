@@ -134,7 +134,7 @@ public static void main (String[] params){
 
 Amb l'exemple anterior, si modelitzem un parking, cada vehicle pagarà una factura diferent en funció al vehicle que tingui. Ens interessa tenir una classe principal Vehicle, la qual no tindrà implementació i que serveix per definir un mètode factura abstracte que hauran d'implementar-se en totes les subclasses. Volem aplicar diferent comportament en funció a cada vehicle per això definim el mètode de pagament `factura(int dies)` dins les subclasses. En aquest exemple Vehicle no tindria sentit com a instància de classe però sí que serveix per establir QUÈ han de tenir els Vehicles del nostre model implementat obligatòriament.
 
-Elun mètode abstracte `factura(int dies)` de Vehicle no té implementació i obligatòriament cal implementar-lo en les classes concretes filles que tingui Vehicle. Això ens permet establir condicionants a la factura EN FUNCIÓ de cada Vehicle, per exemple si és una Moto i aparca menys de 10 dies no paga, si és una Caravana pagarà la meitat, etc.
+El mètode abstracte `factura(int dies)` de Vehicle no té implementació i obligatòriament cal implementar-lo en les classes concretes filles que tingui Vehicle. Això ens permet establir condicionants a la factura EN FUNCIÓ de cada Vehicle, per exemple si és una Moto i aparca menys de 10 dies no paga, si és una Caravana pagarà la meitat, etc.
 
 Una **classe abstracta pot contenir mètodes concrets implementats**, com getPreu o setPreu en l'exemple, ** i mètodes abstractes** com factura. 
 

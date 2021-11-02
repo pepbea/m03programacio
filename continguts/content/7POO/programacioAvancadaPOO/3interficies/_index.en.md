@@ -160,7 +160,7 @@ interface B{
       System.out.println("display method of m1 for B");
    }
 }
-interface B{
+interface C{
    public default void m1() {
       System.out.println("display method of m1 for C");
    }

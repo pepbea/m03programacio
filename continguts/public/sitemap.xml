@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/1arraylist/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/1arraylist/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arrayunidimensional/</loc>
@@ -24,7 +24,7 @@
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arraybidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/2hashset/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/2hashset/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/</loc>
@@ -41,7 +41,7 @@
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/2tipusdades/</loc>
   </url><url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/3hashmap/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/3hashmap/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/3interficies/</loc>
@@ -58,6 +58,8 @@
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/iteratiu/</loc>
   </url><url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/10fitxerstext/fitxerstext/</loc>
+  </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/llibreries/</loc>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/cadenescaracters/</loc>
@@ -65,12 +67,11 @@
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/10fitxerstext/fitxersbinaris/</loc>
+  </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/</loc>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/recursivitat/</loc>
-  </url><url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/coleccions/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
@@ -78,8 +79,17 @@
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url><url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/10fitxerstext/accesaleatori/</loc>
+  </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url><url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url><url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/9excepcions/</loc>
+  </url><url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/10fitxerstext/</loc>
   </url><url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>

@@ -11,7 +11,7 @@ Fins ara hem treballat amb estructures de dades simples. A mesura que tractem pr
 - **Arrays unidimensional**: conjunt de dades del mateix tipus dins una dimensió. 
 - **Arrays bidimensionals**: conjunt de dades del mateix tipus dins de dues dimensions. (Taula)
 - **Cadena de caràcters**: conjunt de caràcters que s'agrupen en una estructura que s'anomena String.
-- **Col·leccions**: Estructures compostes amb les característiques que aporta les interfícies List, Set i Map.
+
 
 {{% /notice %}}
 
