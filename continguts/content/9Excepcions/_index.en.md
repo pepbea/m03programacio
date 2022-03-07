@@ -1,7 +1,7 @@
 ---
 title: Excepcions
 weight: 9
-pre: "<b>8. </b>"
+pre: "<b>9. </b>"
 ---
 
 L'API de Java s'organitza per paquets que agrupen diferents funcionalitats. Entre elles trobem el tractament de les excepcions. En Java es distingeix una excepció d'un error, per això també tenen les seves pròpies classes Exception i Error. 
