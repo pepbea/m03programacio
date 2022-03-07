@@ -12,22 +12,22 @@
     <title>Fitxers de text :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1646679234" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1646681031" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1646679234" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1646681031" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1646681031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1646679234"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1646679234"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1646681031"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1646681031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1646679234"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1646681031"></script>
 
     
   </div>
@@ -964,6 +964,30 @@
  
   
     
+    <li data-nav-id="/m03programacio/continguts/public/8excepcions/" title="Excepcions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/8excepcions/">
+          <b>8. </b>Excepcions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/m03programacio/continguts/public/9excepcions/" title="Excepcions" class="dd-item
         
         
@@ -1223,6 +1247,135 @@
 <h4 id="le-per-caràcters-amb-buffer-més-eficient">L/E per caràcters amb buffer (més eficient)</h4>
 <p>BufferedReader: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html">http://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html</a></p>
 <p>BufferedWriter: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html">http://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html</a></p>
+<h4 id="lectura-dun-fitxer-de-text">Lectura d&rsquo;un fitxer de text</h4>
+<p>Lectura d&rsquo;un fitxer utilitzant FileReader i BufferedReader. Observeu que calculem el temps en realitzat el mateix amb dos fitxers diferents. Com que utilitzant FileReader l&rsquo;accés de Lectura al fitxer és caràcter a caràcter és molt més lent que si podem llegir les dades del buffer amb BufferReader.</p>
+<pre><code class="language-java">package exemples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class LTextPla {
+
+	public static void main(String[] args) {
+		
+
+		long time_start, time_end;
+		time_start = System.currentTimeMillis();
+		System.out.print(llegirFitxerTextPla(&quot;f1.txt&quot;));
+		time_end = System.currentTimeMillis();
+		System.out.println(&quot;the task has taken &quot;+ ( time_end - time_start ) +&quot; milliseconds&quot;);
+		System.out.println();
+		System.out.println();
+
+
+		time_start = System.currentTimeMillis();
+		System.out.print(llegirFitxerTextPlaBuffered(&quot;f1.txt&quot;));
+		time_end = System.currentTimeMillis();
+		System.out.println(&quot;the task has taken &quot;+ ( time_end - time_start ) +&quot; milliseconds&quot;);
+	}
+	
+	/**
+	 * Llegeix el contingut d'un fitxer de text plà caràcter a caràcter.
+	 * @param path Path del fitxer de text plà.
+	 * @return Contingut del fitxer.
+	 */
+	public static String llegirFitxerTextPla(String path) {
+		try {
+			String res = &quot;&quot;;
+
+			FileReader fr = new FileReader(path);
+			int ch = fr.read();
+			while (ch != -1) {
+				res = res + (char)ch;
+				ch = fr.read();
+			}
+			fr.close();
+			return res;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
+	/**
+	 * Llegeix el contingut d'un fitxer de text plà accedint amb buffer.
+	 * @param path Path del fitxer de text plà.
+	 * @return Contingut del fitxer.
+	 */
+	public static String llegirFitxerTextPlaBuffered(String path) {
+		try {
+			String res = &quot;&quot;;
+
+			FileReader fr = new FileReader(path);
+			BufferedReader br = new BufferedReader(fr);
+			String linia = br.readLine();
+
+			while (linia != null) {
+				res = res + linia + &quot;\n&quot;; //readLine() no inclou els salts de línia.
+				linia = br.readLine();
+			}
+
+			br.close();
+			return res;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+}
+</code></pre>
+<h4 id="escriptura-dun-fitxer-de-text">Escriptura d&rsquo;un fitxer de text</h4>
+<p>De nou tenim un exemple amb FileWriter i BufferedFileWriter. A destacar d&rsquo;aquí la creació del FileWriter, observeu que té un segon paràmetre booleà, això ens permet començar l&rsquo;escriptura a l&rsquo;inici del fitxer (truncar el fitxer) amb l&rsquo;opció false, mentre que true ens permet afegir el contingut al final del fitxer.</p>
+<pre><code class="language-java">package exemples;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class ETextPla {
+
+	public static void main(String[] args) {
+		
+		EscriureFitxerTextPla(&quot;f2.txt&quot;, &quot;\nHola&quot;);
+		EscriureFitxerTextPlaBuffered(&quot;f3.txt&quot;, &quot;Hola amb buffer.\n&quot;);
+		System.out.println(&quot;Done.&quot;);
+	}
+	
+	/**
+	 * Escriu un String a un fitxer de text plà.
+	 * @param path Path del fitxer de text plà.
+	 * @param text Text a escriure.
+	 */
+	public static void EscriureFitxerTextPla(String path, String text) {
+		try {
+			FileWriter fw = new FileWriter(path, true); // true = afegir al fitxer
+			fw.write(text);
+			fw.close();
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	/**
+	 * Llegeix el contingut d'un fitxer de text plà accedint amb buffer.
+	 * @param path Path del fitxer de text plà.
+	 * @param text Text a escriure.
+	 */
+	public static void EscriureFitxerTextPlaBuffered(String path, String text) {
+		try {
+			FileWriter fw = new FileWriter(path, false); // false = truncar el fitxer
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(text);
+			bw.close();
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
+</code></pre>
 
 
 
@@ -1792,6 +1945,22 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1880,19 +2049,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1646681031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1646681031"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1646679234"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1646681031"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

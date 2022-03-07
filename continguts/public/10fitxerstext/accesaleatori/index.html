@@ -12,22 +12,22 @@
     <title>Accés aleatori i Altres :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1646679234" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1646681031" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1646679234" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1646681031" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1646681031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1646679234"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1646679234"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1646681031"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1646681031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1646679234"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1646681031"></script>
 
     
   </div>
@@ -964,6 +964,30 @@
  
   
     
+    <li data-nav-id="/m03programacio/continguts/public/8excepcions/" title="Excepcions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/8excepcions/">
+          <b>8. </b>Excepcions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/m03programacio/continguts/public/9excepcions/" title="Excepcions" class="dd-item
         
         
@@ -1224,6 +1248,215 @@
 <p>PrintStream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</a></p>
 <p>DataInputStream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/DataInputStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/DataInputStream.html</a></p>
 <p>DataOutputStream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/DataOutputStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/DataOutputStream.html</a></p>
+<h4 id="exemple-de-randomaccessfile">Exemple de RandomAccessFile</h4>
+<p>Observa diferents circumstàncies d&rsquo;ús d&rsquo;aquesta classe. És molt útil quan guardem informació en un fitxer de text i sabem la posició exacta on hi ha cada peça d&rsquo;informació. Aquesta classe permet moure&rsquo;ns per tot el fitxer, sense haver de fer-ho seqüencialment, sinó que permet posar el punter de L/E en qualsevol posició del fitxer.</p>
+<pre><code class="language-java">package exemples;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class RAF {
+
+	public static void main(String[] args) {
+
+		String path = &quot;f1.txt&quot;;
+		String data = &quot;data&quot;;
+		RandomAccessFile raf;
+
+		try {
+			// RAF L/E fitxer text plà
+			// Lectura
+			System.out.println(&quot;Fitxer &quot; + path + &quot;:&quot;);
+			raf = new RandomAccessFile(path, &quot;rw&quot;);		
+			String line;
+			while ((line = raf.readLine()) != null) {
+				System.out.println(line);
+			}
+			// Escriptura
+			//raf.writeChars(&quot;RAF\n&quot;);
+			raf.close();
+
+			System.out.println(&quot;\nFitxer &quot; + data + &quot;:&quot;);
+
+			// RAF L/E fitxer binari
+			int num = 1000000;
+			raf = new RandomAccessFile(data, &quot;rw&quot;);
+			raf.seek(raf.length()); // Situem el cursor al final del fitxer
+			//raf.seek(12); // Situem el cursos al byte 12, és a dir per sobreescriure el 4art int
+			raf.writeInt(num);
+			raf.seek(0); // Situem el cursor al principi del fitxer
+			// Mentre la posició del cursor sigui més petita que el tamany del fitxer
+			while (raf.getFilePointer() &lt; raf.length()) {
+				num = raf.readInt();
+				System.out.println(num);
+			}
+			raf.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+</code></pre>
+<h4 id="datainputstream-i-dataoutputstream">DataInputStream i DataOutputStream</h4>
+<p>Aquesta classe es treballa àmpliament al M06 Accés a Dades, aquí ens quedem amb la idea que permet lectura i escriptura indicant el tipatge de la dada que estem treballant. L&rsquo;exemple següent és utilitzant un enter (writeInt readInt).</p>
+<pre><code class="language-java">package exemples;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class DataIOStream {
+
+	public static void main(String[] args) {
+
+		String path = &quot;fint.data&quot;;
+		int num = 39568;
+		
+		try {
+			// Escriure a un fitxer un int (4 bytes)
+			// Si el fitxer no existeix es crea
+			// Si el fitxer existeix el true del FileOutputStream fa que el int s'afegeixi al final
+			DataOutputStream dos = new DataOutputStream(new FileOutputStream(path, true));
+			dos.writeInt(num);
+			dos.close();
+
+			// Llegir un int (4 bytes) d'un fitxer.
+			// Es llegeixen el 4 primers bytes del fitxer
+			DataInputStream dis = new DataInputStream(new FileInputStream(path));
+			System.out.println(dis.readInt());
+			dis.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+</code></pre>
+<h4 id="resum-recordatori">Resum Recordatori</h4>
+<p>Aquest és un exemple que permet llegir fitxers de text caràcter a caràcter, llegir línies, llegir fitxers binaris d&rsquo;enters, de reals o de bytes.</p>
+<pre><code class="language-java">package exemples;
+
+import java.io.*;
+
+public class LecturaFitxer
+{
+	public static void main (String[] args)
+	{
+		File f = new File (&quot;Fitxer.txt&quot;);
+		System.out.println(&quot;Tamany del fitxer en bytes: &quot; + f.length());
+		System.out.println(&quot;-----------------------------&quot;);
+		System.out.println(&quot;Lectura com a fitxer de text plà caràcter a caràcter:&quot;);
+		llegirCharAChar(f);
+		System.out.println(&quot;-----------------------------&quot;);
+		System.out.println(&quot;Lectura com a fitxer de text plà línia a línia:&quot;);
+		llegirLiniaALinia(f);
+		System.out.println(&quot;-----------------------------&quot;);
+		System.out.println(&quot;Lectura com a fitxer binari llegint enters (4 bytes):&quot;);
+		llegirBinariInt(f);
+		System.out.println(&quot;-----------------------------&quot;);
+		System.out.println(&quot;Lectura com a fitxer binari llegint reals (8 bytes):&quot;);
+		llegirBinariReal(f);
+		System.out.println(&quot;-----------------------------&quot;);
+		System.out.println(&quot;Lectura com a fitxer binari llegint bytes:&quot;);
+		llegirBinariByte(f);
+	}
+
+	public static void llegirCharAChar(File f)
+	{
+		try
+		{
+			BufferedReader in = new BufferedReader(new FileReader(f));
+			char[] car = new char[1];
+			String text = &quot;&quot;;
+			while((in.read(car, 0, 1)) &gt; -1)
+			{
+				text = text + new String(car, 0, 1);
+
+			}
+			in.close();
+			System.out.println(text);
+		}
+		catch(Exception e)
+		{
+			System.out.println(&quot;Error de fitxer: &quot; + e.getMessage());
+		}
+	}
+	
+	public static void llegirLiniaALinia(File f)
+	{
+		try
+		{
+			BufferedReader in = new BufferedReader(new FileReader(f));
+			String linia, text = &quot;&quot;;
+			while((linia = in.readLine()) != null)
+			{
+				text = text + linia;
+				if (in.ready())
+					text = text + &quot;\n&quot;;
+
+			}
+			in.close();
+			System.out.println(text);
+		}
+		catch(Exception e)
+		{
+			System.out.println(&quot;Error de fitxer: &quot; + e.getMessage());
+		}
+	}
+	
+	public static void llegirBinariInt(File f)
+	{
+		try {
+			RandomAccessFile raf = new RandomAccessFile(f, &quot;r&quot;);
+			long numInts = f.length()/4;
+			for (int i = 0; i &lt; numInts; i++) {
+				System.out.println(raf.readInt());
+			}
+			raf.close();
+		} catch (Exception e) {
+			System.out.println(&quot;Error mostrant fitxer: &quot; + e.getMessage());
+		}
+	}
+
+	public static void llegirBinariReal(File f)
+	{
+		try {
+			RandomAccessFile raf = new RandomAccessFile(f, &quot;r&quot;);
+			long numReals = f.length()/8;
+			for (int i = 0; i &lt; numReals; i++) {
+				System.out.println(raf.readDouble());
+			}
+			raf.close();
+		} catch (Exception e) {
+			System.out.println(&quot;Error mostrant fitxer: &quot; + e.getMessage());
+		}
+	}
+	
+	public static void llegirBinariByte(File f)
+	{
+		try {
+			RandomAccessFile raf = new RandomAccessFile(f, &quot;r&quot;);
+			long numReals = f.length();
+			for (int i = 0; i &lt; numReals; i++) {
+				System.out.println(raf.readByte());
+			}
+			raf.close();
+		} catch (Exception e) {
+			System.out.println(&quot;Error mostrant fitxer: &quot; + e.getMessage());
+		}
+	}
+}
+</code></pre>
 
 
 
@@ -1793,6 +2026,22 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1881,19 +2130,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1646681031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1646681031"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1646679234"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1646681031"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -12,22 +12,22 @@
     <title>Fitxers binaris :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1646679234" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1646679234" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1646681031" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1646681031" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1646679234" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1646681031" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1646681031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1646679234"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1646679234"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1646681031"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1646681031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1646679234"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1646681031"></script>
 
     
   </div>
@@ -964,6 +964,30 @@
  
   
     
+    <li data-nav-id="/m03programacio/continguts/public/8excepcions/" title="Excepcions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/8excepcions/">
+          <b>8. </b>Excepcions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/m03programacio/continguts/public/9excepcions/" title="Excepcions" class="dd-item
         
         
@@ -1223,6 +1247,138 @@
 <h5 id="le-per-bytes-amb-buffer-més-eficient">L/E per bytes amb buffer (més eficient)</h5>
 <p>BufferedInputStream: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/BufferedInputStream.html">http://docs.oracle.com/javase/8/docs/api/java/io/BufferedInputStream.html</a></p>
 <p>BufferedOutputStream: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/BufferedOutputStream.html">http://docs.oracle.com/javase/8/docs/api/java/io/BufferedOutputStream.html</a></p>
+<h4 id="lectura-fitxer-binari">Lectura fitxer binari</h4>
+<p>Com s&rsquo;observa en cada exemple permet llegir d&rsquo;un ArrayList o bé d&rsquo;un Array. Els dos primers exemples fan referència al FileInputStream i els dos últims al BufferInputStream. Proveu la lectura d&rsquo;una imatge per exemple, o un fitxer binari i observeu que passa amb els temps.</p>
+<pre><code class="language-java">package exemples;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class LBinari {
+
+	public static void main(String[] args) {
+		long time_start, time_end;
+		time_start = System.currentTimeMillis();
+		System.out.print(llegirFitxerBinari2AList(&quot;f1.txt&quot;));
+		time_end = System.currentTimeMillis();
+		System.out.println(&quot;the task has taken &quot;+ ( time_end - time_start ) +&quot; milliseconds&quot;);
+		System.out.println();
+
+
+		time_start = System.currentTimeMillis();
+		System.out.print(Arrays.toString(llegirFitxerBinari2Array(&quot;f1.txt&quot;)));
+		time_end = System.currentTimeMillis();
+		System.out.println(&quot;the task has taken &quot;+ ( time_end - time_start ) +&quot; milliseconds&quot;);
+		System.out.println();
+		System.out.println();
+		
+		System.out.println(&quot;\n&quot;);
+		time_start = System.currentTimeMillis();
+		System.out.print(llegirFitxerBinariBuffered(&quot;f1.txt&quot;));
+		time_end = System.currentTimeMillis();
+		System.out.println(&quot;the task has taken &quot;+ ( time_end - time_start ) +&quot; milliseconds&quot;);
+		
+		System.out.println();
+
+
+		time_start = System.currentTimeMillis();
+		System.out.print(Arrays.toString(llegirFitxerBinari2ArrayBuffered(&quot;f1.txt&quot;)));
+		time_end = System.currentTimeMillis();
+		System.out.println(&quot;the task has taken &quot;+ ( time_end - time_start ) +&quot; milliseconds&quot;);
+		System.out.println();
+		System.out.println();
+	}
+	
+	
+	/**
+	 * Llegeix el contingut d'un fitxer byte a byte.
+	 * @param path Path del fitxer de text plà.
+	 * @return ArrayList de bytes amb el contingut del fitxer.
+	 */
+	public static ArrayList&lt;Byte&gt; llegirFitxerBinari2AList(String path) {
+		try {
+			ArrayList&lt;Byte&gt; res = new ArrayList&lt;Byte&gt;();
+
+			FileInputStream fis = new FileInputStream(path);
+			byte b;
+			while ((b = (byte)fis.read()) != -1) {
+				res.add(b);
+			}
+			fis.close();
+			return res;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
+	/**
+	 * Llegeix el contingut d'un fitxer byte a byte.
+	 * @param path Path del fitxer de text plà.
+	 * @return Array de bytes amb el contingut del fitxer.
+	 */
+	public static byte[] llegirFitxerBinari2Array(String path) {
+		try {
+			FileInputStream fis = new FileInputStream(path);
+			int len = fis.available();
+			byte[] res = new byte[len];
+			fis.read(res);
+			fis.close();
+			return res;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
+	/**
+	 * Llegeix el contingut d'un fitxer byte a byte, usant classes buffered.
+	 * @param path Path del fitxer de text plà.
+	 * @return ArrayList de bytes amb el contingut del fitxer.
+	 */
+	public static ArrayList&lt;Byte&gt; llegirFitxerBinariBuffered(String path) {
+		try {
+			ArrayList&lt;Byte&gt; res = new ArrayList&lt;Byte&gt;();
+
+			BufferedInputStream bis = new BufferedInputStream(new FileInputStream(path));
+			byte b;
+			while ((b = (byte)bis.read()) != -1) {
+				res.add(b);
+			}
+			bis.close();
+			return res;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
+	/**
+	 * Llegeix el contingut d'un fitxer byte a byte, usant classes buffered.
+	 * @param path Path del fitxer de text plà.
+	 * @return Array de bytes amb el contingut del fitxer.
+	 */
+	public static byte[] llegirFitxerBinari2ArrayBuffered(String path) {
+		try {
+			BufferedInputStream bis = new BufferedInputStream(new FileInputStream(path));
+			int len = bis.available();
+			byte[] res = new byte[len];
+			bis.read(res);
+			bis.close();
+			return res;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+}
+</code></pre>
 
 
 
@@ -1792,6 +1948,22 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1883,19 +2055,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1646681031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1646679234"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1646679234"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1646681031"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1646681031"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1646679234"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1646681031"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
