@@ -2,7 +2,6 @@
 title: Gestió de fitxers
 weight: 10
 pre: "<b>10. </b>"
-chapter: false
 ---
 
 
