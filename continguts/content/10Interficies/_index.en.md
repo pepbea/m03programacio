@@ -37,7 +37,7 @@ Els components Swing tenen la capacitat d’adaptar-se en aspecte i ús, a la pl
 
 | Linux | Windows | MAC|
 |---|---|---|
-|![imatgeLinux](images/linux.png?width=200px)|![imatgeWindows](images/windows.png?width=200px)|![imatgeMAC](images/mac.png?width=200px)|
+|![imatgeLinux](images/linux.png?width=200px)|![imatgeWindows](images/windows.png?width=300px)|![imatgeMAC](images/mac.png?width=300px)|
 
 El component **JFrame** és una finestra amb títol i cantonades ajustables.
 Exemple de creació d’una finestra:
@@ -59,13 +59,13 @@ public class Exemple1 {
 
 }
 ```
-![imatge](images/jframe.png?width=300px)
+![imatge](images/jframe.png?width=500px)
 
 
 Swing compte amb una gran varietat de components, com **JLabel, JButton, JComboBox, JList, JTextField**, que hereten de **JComponent**.
 
-![imatge](images/finestra.png?width=300px)
-![imatge](images/finestra2.png?width=300px)
+![imatge](images/finestra.png?width=500px)
+![imatge](images/finestra2.png?width=500px)
 
 
 ```java
@@ -153,10 +153,10 @@ Hi ha diversos tipus de Layout, mostrem alguns amb la seva distribució i exempl
 
 Els gestor d’esquema FlowLayout distribueix els components un rere l’altre, d’esquerra a dreta i línia a línia. No modifica la mida dels components. Es pot especificar l'aliniament i espaiat entre components. Si el contenidor associat al FlowLayout és redimensiona, els components es redistribueixen.
 
-![imatge](images/flowlayout.png?width=300px)
+![imatge](images/flowlayout.png?width=500px)
 
 Canviant la mida de la finestra:
-![imatge](images/flowlayout2.png?width=300px)
+![imatge](images/flowlayout2.png?width=500px)
 
 ```java
 import javax.swing.*;
@@ -197,13 +197,13 @@ public class Exemple3 {
 
 Els gestor d’esquema BorderLayout defineix 5 àrees diferents en el panell contenidor, que són _North, South, East, West i Center_. Modifica la mida dels components, fent que ocupin tota l’àrea en la que han sigut afegits. Si el contenidor associat al BorderLayout es redimensiona, els components canvien de mida. Les àrees buides (sense components) no es mostren, a excepció de l’àrea _Center_.
 
-![imatge](images/borderlayout.png?width=300px)
+![imatge](images/borderlayout.png?width=500px)
 
 Canviant la mida de la finestra:
-![imatge](images/borderlayout2.png?width=300px)
+![imatge](images/borderlayout2.png?width=500px)
 
 Amb àrees sense components afegits:
-![imatge](images/borderlayout3.png?width=300px)
+![imatge](images/borderlayout3.png?width=500px)
 
 
 ```java
@@ -249,10 +249,10 @@ public class Exemple4 {
 
 Els gestor d’esquema GridLayout defineix un número de files i columnes i posa un component a cada cel·la. Totes les cel·les comparteixen la mateixa amplada i alçada. L’ordre dels components queda determinat per l’ordre en què s’afegeixen. Les cel·les s’omplen d’esquerra a dreta i de dalt a baix. Modifica la mida dels components, fent que ocupin tota l’àrea en la que han sigut afegits. Si el contenidor associat al GridLayout es redimensiona, els components canvien de mida.
 
-![imatge](images/gridlayout.png?width=300px)
+![imatge](images/gridlayout.png?width=500px)
 
 Canviant la mida de la finestra:
-![imatge](images/gridlayout2.png?width=300px)
+![imatge](images/gridlayout2.png?width=500px)
 
 ```java
 import javax.swing.*;
@@ -298,9 +298,9 @@ public class Exemple5 {
 
 Per a la creació de GUI amb esquemes més complexes, el que hem de fer és **nidar panells que tinguin associats diferents gestors d’esquemes**. Un JPanel pot contenir una altre JPanel com un component més, que a la vegada, conté altres components.
 
-![imatge](images/nidacio.png?width=300px)
-![imatge](images/nidacio2.png?width=300px)
-![imatge](images/nidacio3.png?width=300px)
+![imatge](images/nidacio.png?width=500px)
+![imatge](images/nidacio2.png?width=500px)
+![imatge](images/nidacio3.png?width=500px)
 
 ```java
 import javax.swing.*;
@@ -378,7 +378,7 @@ Així, quan un usuari polsa un botó d’una GUI, si aquest botó té registrat 
 
 Llavors, l’event de la classe ActionEvent arriba al listener que té registrat el botó. <u>Aquest listener és un objecte que ha d’implementar la interface _ActionListener_</u>. L’event arriba al listener com a paràmetre en l’execució del mètode _actionPerformed_, que Java el crida després de la creació de l’event.
 
-![imatge](images/eventy.png?width=300px)
+![imatge](images/eventy.png?width=500px)
 
 ```java
 import javax.swing.*;
@@ -476,17 +476,17 @@ _Exemple més complex:_
 
 Programa que indica si el ratolí és sobre un botó o si surt d’ell, canviant també de color del missatge.Posa en negreta el missatge clicant a sobre d’ell i el deixar sense negreta tornant a clicar. Mostra en el missatge, allò escrit en el camp de text només entrar en el camp i mentre escrivim en ell.
 
-![imatge](images/exemple.png?width=300px)
-![imatge](images/exemple2.png?width=300px)
-![imatge](images/exemple3.png?width=300px)
-![imatge](images/exemple4.png?width=300px)
+![imatge](images/exemple.png?width=500px)
+![imatge](images/exemple2.png?width=500px)
+![imatge](images/exemple3.png?width=500px)
+![imatge](images/exemple4.png?width=500px)
 
 
 Components de la GUI:
-![imatge](images/components.png?width=300px)
+![imatge](images/components.png?width=500px)
 
 Layouts manager de la GUI:
-![imatge](images/layoutmanager.png?width=300px)
+![imatge](images/layoutmanager.png?width=500px)
 
 ```java
 import javax.swing.*;
@@ -620,8 +620,8 @@ ExistingClassOrInterface e = new ExistingClassOrInterface() {
 ##### Exemple:
 
 Programa que mostra un botó i en clicar sobre ell mostra un missatge, que s’esborra si tornem a clicar sobre el botó.
-![imatge](images/exempleanonim1.png?width=300px)
-![imatge](images/exempleanonim2.png?width=300px)
+![imatge](images/exempleanonim1.png?width=500px)
+![imatge](images/exempleanonim2.png?width=500px)
 
 ```java
 import javax.swing.*;
