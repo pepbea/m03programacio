@@ -1,7 +1,7 @@
 ---
 title: Gestió de fitxers
-weight: 10
-pre: "<b>10. </b>"
+weight: 11
+pre: "<b>11. </b>"
 ---
 
 

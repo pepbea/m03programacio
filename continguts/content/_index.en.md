@@ -59,9 +59,10 @@ L'índex de continguts que veurem és:
       - [HashSet]({{%relref "8Collections/2hashset/_index.en.md" %}})
       - [HashMap]({{%relref "8Collections/3hashmap/_index.en.md" %}})
   + [Excepcions]({{%relref "9Excepcions/_index.en.md" %}})
+  + [Interfícies gràfiques d'usuari (GUI)]({{%relref "10Interficies/_index.en.md" %}})
 
 **UF3: Fonaments de fitxers**
-  + [Gestió File]({{%relref "10fitxersText/_index.en.md" %}})
-  + [Fitxers de text]({{%relref "10fitxersText/fitxersText/_index.en.md" %}})
-  + [Fitxers binaris]({{%relref "10fitxersText/fitxersBinaris/_index.en.md" %}})
-  + [Accés aleatori]({{%relref "10fitxersText/AccesAleatori/_index.en.md" %}})
+  + [Gestió File]({{%relref "11fitxersText/_index.en.md" %}})
+  + [Fitxers de text]({{%relref "11fitxersText/fitxersText/_index.en.md" %}})
+  + [Fitxers binaris]({{%relref "11fitxersText/fitxersBinaris/_index.en.md" %}})
+  + [Accés aleatori]({{%relref "11fitxersText/AccesAleatori/_index.en.md" %}})

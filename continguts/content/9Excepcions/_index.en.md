@@ -56,7 +56,7 @@ Exemples d'excepcions:
 
 La Jerarquia de classes establerta de Java pel que fa Error i Exception és la següent.
 
-![Jerarquia](../images/jerarquia.jpg?width=500px)
+![Jerarquia](images/jerarquia.jpg?width=500px)
 
 **Exemples d'excepcions** 
 
