@@ -12,8 +12,7 @@ chapter: false
 
 Els tipus genèrics permeten escriure codi que resulta més segur i més fàcil de llegir. Els tipus genèrics són especialment útils amb les classes heredades de la interfície Collections.
 
-**Els tipus genèrics permeten reutilitzar objectes de diferents tipus. El tipus genèric comporta l'abstracció de les operacions que es poden fer a
-conjunts diferents de dades.**
+**Els tipus genèrics permeten reutilitzar objectes de diferents tipus. El tipus genèric comporta l'abstracció de les operacions que es poden fer a conjunts diferents de dades.**
 
 Quan parlem d'operacions que es poden fer a un determinat conjunt de dades, gairebé sempre hi tindrem:
 + Afegir elements.
@@ -141,7 +140,7 @@ public class Principal {
 Les **Collections** representen grups d'objectes, anomenats elements. Podem trobar diversos tipus de col·leccions, segons si els seus elements estan ordenats, o si permetem repetició d'elements o no. 
 {{% /notice %}}
 
-La informació de Java Oracle corresponen a les Collections la trobareu [aquí](https://docs.oracle.com/javase/8/docs/api/?java/util/Collections.html).
+La informació de Java Oracle corresponen a la Collection la trobareu [aquí](https://docs.oracle.com/javase/8/docs/api/?java/util/Collection.html).
 
 Com observareu de l'enllaç anterior una Collection és una interfície de la qual heradaran totes les estructures de dades que veurem a continuació. En aquesta interfície hi trobareu un conjunt de mètodes que totes les estructures tenen implementades: add(), size(), isEmpty(), etc. Aquests operadors són **polimòrfics** això vol dir que amb la mateixa denominació efectuen la mateixa funcionalitat però per estructures de dades diferents. Ex: el mateix mètode add() ens serveix per afegir un element a un HashSet a un ArrayList o a un LinkedList. 
 
@@ -177,7 +176,7 @@ Aquests mètodes generals són:
 4. Si el requisit és tenir les assignacions de claus i valors a la base de dades, llavors *HashMap* és la vostra millor aposta.
 
 
-Collections i Maps són interfícies molt genèriques i analitzarem de forma pràctica les següents classes heredades d'aquestes amb exemples:
+Collection i Maps són interfícies molt genèriques i analitzarem de forma pràctica les següents classes heredades d'aquestes amb exemples:
 
 - [ArrayList]({{%relref "8Collections/1arrayList/_index.en.md" %}}): Array dinàmic per guardar objectes i elements.
 - [HashSet]({{%relref "8Collections/2hashset/_index.en.md" %}}): Conjunt d'elements únics i que no tenen un ordre establert.

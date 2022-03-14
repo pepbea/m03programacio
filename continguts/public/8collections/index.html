@@ -12,22 +12,22 @@
     <title>Col·leccions :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1647284233" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1647284233" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1647284580" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1647284580" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1647284233" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1647284580" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1647284233"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1647284580"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1647284233"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1647284233"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1647284580"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1647284580"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1647284233"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1647284580"></script>
 
     
   </div>
@@ -1239,8 +1239,7 @@
 	<h3 id="tipus-genèrics">Tipus Genèrics</h3>
 <p><em>Són Tipus Parametritzat</em>. Permet indicar per paràmetre el tipus de dades sobre els que s&rsquo;opera en classes, interfícies o mètodes.</p>
 <p>Els tipus genèrics permeten escriure codi que resulta més segur i més fàcil de llegir. Els tipus genèrics són especialment útils amb les classes heredades de la interfície Collections.</p>
-<p><strong>Els tipus genèrics permeten reutilitzar objectes de diferents tipus. El tipus genèric comporta l&rsquo;abstracció de les operacions que es poden fer a
-conjunts diferents de dades.</strong></p>
+<p><strong>Els tipus genèrics permeten reutilitzar objectes de diferents tipus. El tipus genèric comporta l&rsquo;abstracció de les operacions que es poden fer a conjunts diferents de dades.</strong></p>
 <p>Quan parlem d&rsquo;operacions que es poden fer a un determinat conjunt de dades, gairebé sempre hi tindrem:</p>
 <ul>
 <li>Afegir elements.</li>
@@ -1359,7 +1358,7 @@ public class Principal {
 <div class="notices note" ><p>Les <strong>Collections</strong> representen grups d&rsquo;objectes, anomenats elements. Podem trobar diversos tipus de col·leccions, segons si els seus elements estan ordenats, o si permetem repetició d&rsquo;elements o no.</p>
 </div>
 
-<p>La informació de Java Oracle corresponen a les Collections la trobareu <a href="https://docs.oracle.com/javase/8/docs/api/?java/util/Collections.html">aquí</a>.</p>
+<p>La informació de Java Oracle corresponen a la Collection la trobareu <a href="https://docs.oracle.com/javase/8/docs/api/?java/util/Collection.html">aquí</a>.</p>
 <p>Com observareu de l&rsquo;enllaç anterior una Collection és una interfície de la qual heradaran totes les estructures de dades que veurem a continuació. En aquesta interfície hi trobareu un conjunt de mètodes que totes les estructures tenen implementades: add(), size(), isEmpty(), etc. Aquests operadors són <strong>polimòrfics</strong> això vol dir que amb la mateixa denominació efectuen la mateixa funcionalitat però per estructures de dades diferents. Ex: el mateix mètode add() ens serveix per afegir un element a un HashSet a un ArrayList o a un LinkedList.</p>
 <p>Sempre que tinguem un tipus de dades que contingui una col·lecció implementarà totes les funcions comunes a ella i les podrem utilitzar. En aquesta interfície trobem una sèrie de mètodes que ens serviran per accedir als elements de qualsevol col·lecció de dades, sigui del tipus que sigui.</p>
 <p>Aquests mètodes generals són:</p>
@@ -1440,7 +1439,7 @@ public class Principal {
 <li>Si cal mantenir l’ordre d’inserció, també la <em>llista</em> és la interfície de col·lecció preferida.</li>
 <li>Si el requisit és tenir les assignacions de claus i valors a la base de dades, llavors <em>HashMap</em> és la vostra millor aposta.</li>
 </ol>
-<p>Collections i Maps són interfícies molt genèriques i analitzarem de forma pràctica les següents classes heredades d&rsquo;aquestes amb exemples:</p>
+<p>Collection i Maps són interfícies molt genèriques i analitzarem de forma pràctica les següents classes heredades d&rsquo;aquestes amb exemples:</p>
 <ul>
 <li><a href="/m03programacio/continguts/public/8collections/1arraylist/">ArrayList</a>: Array dinàmic per guardar objectes i elements.</li>
 <li><a href="/m03programacio/continguts/public/8collections/2hashset/">HashSet</a>: Conjunt d&rsquo;elements únics i que no tenen un ordre establert.</li>
@@ -2118,19 +2117,19 @@ public class Principal {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1647284233"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1647284580"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1647284233"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1647284233"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1647284580"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1647284580"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1647284233"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1647284580"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
