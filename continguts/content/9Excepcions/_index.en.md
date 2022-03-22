@@ -131,7 +131,7 @@ public static void dividir() throws ArithmeticException {
 
 En el cas anterior si no capturéssim l'excepció en el main() hi hauria un error i pararia el programa, però com que "capturem" l'excepció i en fem un tractament específic Java continua amb la seva excecució normal. Fixeu-vos que en aquest cas en el mètode dividir() hem utilitzat `throws ArithmeticException`, d'aquesta manera quan es detecta una excepció d'aquest tipus, l'excepció és propagada cap a la funció que ha cridat aquest mètode, derivant-ne així la responsabilitat del seu tractament. 
 
-En Java les excepcions que soón subclases de Error o RuntimeException no necessiten ser especificades en la llista de throws, Java ho fa automàticament, la resta d'Excepcions sí és necessari, del contrari es produeix un error en temps de compilació.
+En Java les excepcions que són subclases de Error o RuntimeException no necessiten ser especificades en la llista de throws, Java ho fa automàticament, la resta d'Excepcions sí és necessari, del contrari es produeix un error en temps de compilació.
 
 Es podrien encadenar uns quants throws Exception com seria:
 
@@ -186,7 +186,7 @@ public class TryEncadenat{
         try {
             for (int i = 0; i < nums.length; i++) {
                 try { 
-                    System.out.println(nums + " / " + denom + " es " + nums / denom);
+                    System.out.println(nums[i] + " / " + denom[i] + " es " + nums[i] / denom[i]);
                 } catch (ArithmeticException exc) {
                     System.out.println("No es pot dividir entre 0!");
                 }
@@ -245,7 +245,7 @@ public static void main(String[] args) {
         if (denominador == 0) throw new ArithmeticException(); 
         else n = numerador / denominador;
     }catch(ArithmeticException e){
-        System.out.println("Has volgut dividir entre 0 : " + e.toString());  
+        System.out.println("Has volgut dividir entre 0 : " + e);  
         n = 0;          
     }finally{
         System.out.println(n);
