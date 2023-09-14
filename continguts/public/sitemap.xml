@@ -1,113 +1,203 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/1arraylist/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arrayunidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/1herencia/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/introducciodissenymodular/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/1propositiblocs/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/introducciopoo/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/12persistenciabd/preparedstatement/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/arraybidimensional/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/2hashset/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/metodologiatopdown/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/2polimorfismeclassesabstractes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/sequencial/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/implementaciopoo/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/12persistenciabd/metadades/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/2metodologiessoftware/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/2tipusdades/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/3hashmap/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/3interficies/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/3tipusllenguatges/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3algor%C3%ADsmia/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/desenvolupamentpoo/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/condicional/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/iteratiu/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/11fitxerstext/fitxerstext/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/llibreries/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/12persistenciabd/crudmapeigor/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/cadenescaracters/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/programacioavancadapoo/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/12persistenciabd/classes-dao/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/11fitxerstext/fitxersbinaris/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4programacioestructurada/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/recursivitat/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5dadescompostes/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6programaciomodular/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/11fitxerstext/accesaleatori/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/7poo/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/8collections/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/9excepcions/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/10interficies/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/11fitxerstext/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/12persistenciabd/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/categories/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/tags/</loc>
   </url>
+  
 </urlset>
