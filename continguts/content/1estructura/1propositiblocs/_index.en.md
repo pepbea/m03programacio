@@ -53,10 +53,10 @@ Tot el codi que hem escrit i que posem a executar l'anomenarem procés (codi en 
 
 Tot seguit veiem què passa amb el programa HolaMon.java escrit en Java. És el primer programa que s'acostuma a mostrar de qualsevol llenguatge de programació. L'únic que fa aquest programa és escriure per pantalla "Hola Mundo". 
 
-Si us fixeu en la següent il·lustració es mostra tot el procés de compilació. Inicialment tenim el codi font del fitxer HolaMundo.java escrit pel programador. El següent pas és transformar aquest fitxer en un codi intermig que és el bytecode que permetrà ser transportat a qualsevol plataforma. Aquest codi intermig és un fitxer .class que ens assegura que el procés de compilació del fitxer .java s'ha executat correctament, en java s'utilitza la comanda javac per poder obtenir-lo.
+Si us fixeu en la següent il·lustració es mostra tot el procés de compilació. Inicialment tenim el codi font del fitxer HolaMundo.java escrit pel programador. El següent pas és transformar aquest fitxer pla en un fitxer binari que entengui la màquina (bytecode), cada plataforma genera el seu propi fitxer ´.class´ diferent. La creació d'aquest fitxer binari ens assegura que el procés de compilació del fitxer .java s'ha executat correctament, en java s'utilitza la comanda javac per poder obtenir-lo.
 `javac HolaMundo.java` Amb aquesta instrucció "es compila" el programa i genera un HolaMundo.class.
 
-Un cop tenim el fitxer .class, executant la comanda `java HolaMundo` obtenim l'execucio del nostre programa sobre la plataforma on estiguem, per això en la imatge següent el codi màquina que s'executa amb Win32 serà diferent que el que interpreta MacOS ja que són SO's diferents i obeeixen a instruccions diferents.
+Un cop tenim el fitxer .class, executant la comanda `java HolaMundo` obtenim l'execucio del nostre programa sobre la plataforma on estiguem, per això en la imatge següent el codi màquina que s'executa amb Win32 serà diferent que el que interpreta MacOS ja que són SO's diferents que obeeixen a instruccions diferents i per tant amb .class diferents.
 
 ![45](../images/4.gif?width=500px)
 
