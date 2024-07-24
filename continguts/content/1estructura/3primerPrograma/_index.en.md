@@ -27,3 +27,10 @@ En aquest cas, una manera senzilla d'escriure per pantalla un text és utilitzan
 Quan executem un programa de Java, el que farà la JVM és buscar una funció que es digui `public static void main(String []args)` i començarà a executar totes les instruccions que estiguin dins.
 
 
+#### Dades d'entrada
+
+
+#### Dades de sortida
+
+
+#### Comentaris
