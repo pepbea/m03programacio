@@ -12,22 +12,22 @@
     <title>Entorn Java :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721819589" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721819589" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721819589"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721811466"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721811466"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721819589"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721819589"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721811466"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721819589"></script>
 
     
   </div>
@@ -2385,12 +2385,33 @@
 
 	<h4 id="cas-particular-de-java">Cas particular de Java</h4>
 <p>Tot seguit veiem què passa amb un programa qualsevol, per exemple <code>HolaMon.java</code> escrit en Java. És el primer programa que s&rsquo;acostuma a mostrar de qualsevol llenguatge de programació. La única funció que té aquest programa és escriure per pantalla un text que digui &ldquo;Hola Món&rdquo;.</p>
-<p>Si us fixeu en la següent il·lustració es mostra tot el procés de compilació. Inicialment tenim el codi font del fitxer HolaMundo.java escrit pel programador. El següent pas és transformar aquest fitxer pla en un fitxer binari que entengui la màquina (bytecode), cada plataforma genera el seu propi fitxer ´.class´ diferent. La creació d&rsquo;aquest fitxer binari ens assegura que el procés de compilació del fitxer .java s&rsquo;ha executat correctament, en java s&rsquo;utilitza la comanda javac per poder obtenir-lo.
+<p>Si us fixeu en la següent il·lustració es mostra tot el procés de compilació. Inicialment tenim el codi font del fitxer HolaMundo.java escrit pel programador. El següent pas és transformar aquest fitxer pla en un fitxer binari que entengui la màquina (bytecode), cada plataforma genera el seu propi fitxer <code>.class</code> diferent. La creació d&rsquo;aquest fitxer binari ens assegura que el procés de compilació del fitxer .java s&rsquo;ha executat correctament, en java s&rsquo;utilitza la comanda javac per poder obtenir-lo.
 <code>javac HolaMundo.java</code> Amb aquesta instrucció &ldquo;es compila&rdquo; el programa i genera un HolaMundo.class.</p>
-<p>Un cop tenim el fitxer .class, executant la comanda <code>java HolaMundo</code> obtenim l&rsquo;execucio del nostre programa sobre la plataforma on estiguem, per això en la imatge següent el codi màquina que s&rsquo;executa amb Win32 serà diferent que el que interpreta MacOS ja que són SO&rsquo;s diferents que obeeixen a instruccions diferents i per tant amb .class diferents.</p>
+<p>Un cop tenim el fitxer .class, executant la comanda <code>java HolaMundo</code> obtenim l&rsquo;execució del nostre programa sobre la plataforma on estiguem, per això en la imatge següent el codi màquina que s&rsquo;executa amb Win32 serà diferent que el que interpreta MacOS ja que són SO&rsquo;s diferents que obeeixen a instruccions diferents i per tant amb .class diferents.</p>
 <p><img src="../images/4.gif?width=500px" alt="45"></p>
 <p>En el següent exemple es pot veure com seria un fitxer .java que es llegeix i s&rsquo;enten amb llenguatge humà. A continuació, en el procés de compilació, es genera el fitxer .class, aquí ja els humans no entenem el contingut del fitxer ja que està en hexadecimal, i finalment quan executem el programa es genera un fitxer en codi màquina amb una tira de 0s i 1s que són les instruccions que necessita la CPU en cada plataforma per ser executat. Aquest últim fitxer serà diferent en cada plataforma d&rsquo;execució (Linux, Windows, MacOS&hellip;)</p>
 <p><img src="../images/5.png?width=500px" alt="5"></p>
+<h4 id="evolució-de-java">Evolució de Java</h4>
+<p>El llenguatge  de programació Java va ser desenvolupat per <a href="https://ca.wikipedia.org/wiki/James_Gosling">James Gosling</a> l&rsquo;any 1991. La primera versió va ser publicada per <a href="https://ca.wikipedia.org/wiki/Sun_Microsystems">Sun Microsystems</a> l&rsquo;any 1995, a partir de la versió JDK 1.0.2 va passar a anomenar-se Java, l&rsquo;any 1996.</p>
+<p>Com observareu en el següent link <a href="https://en.wikipedia.org/wiki/Java_version_history">Versions de Java</a>, les versions de Java estan en constant evolució afegint en cada nova versió noves funcionalitats que modernitzen i actualitzen el llenguatge als nous reptes que van sorgint.</p>
+<p>Si us fixeu en les dates de noves versions, veureu que fins a la versió de Java SE 9 s&rsquo;anaven creant versions cada 2 i cada 3 anys, a partir de Java SE 9 les versions són semestrals. És així ja que des de l&rsquo;any 2017 s&rsquo;ha accelerat el disseny de software i la innovació en el món de la programació ha fet que sorgeixin en períodes curts de temps noves funcionalitats, de manera que l&rsquo;equip de desenvolupadors de Java van creure necessari traure versions de Java cada 6 mesos.</p>
+<p>De les diferents versions cal destacar aquelles que tenen un suport en el manteniment d&rsquo;errades i actualització de sistema d&rsquo;aquelles versions que no tenen aquest suport, així doncs observareu que Java SE 8, Java SE 11, Java SE 17, Java SE 21 tenen d&rsquo;aquest suport que permet una estabilitat alhora d&rsquo;implantar sistemes que utilitzin aquestes versions.</p>
+<p>En el llistat de cada versió també podeu veure quines són les noves <em>&ldquo;features&rdquo;</em> o funcionalitats que incorporen les noves versions respecte a les anteriors.</p>
+<p>Durant el curs utilitzarem la última versió estable i, que per tant gaudeix d&rsquo;aquest manteniment, és la versió de <strong>Java SE 21</strong>.</p>
+<p>En el següent gràfic podeu veure el nombre de noves JEP&rsquo;s (JDK Enhancement Proposals) que s&rsquo;han afegit en cada nova versió de Java. (Font de: <a href="https://dev.java/evolution/">https://dev.java/evolution/</a>)</p>
+<p><img src="../images/evolucioJava.png?width=900px" alt="Evolucio JEPs"></p>
+<h4 id="versió-de-java">Versió de Java</h4>
+<p>Per saber quina versió teniu instal·lada en el vostre sistema heu d&rsquo;anar al terminal i en la línea de comandes podeu escriure <code>java -version</code>. Veureu:<br>
+<img src="../images/versioJava.png" alt="Versió de Java"></p>
+<p>Tot hi així com que treballarem dins un programa per escriure codi, un IDE (Integrated Development Environment), permetrà instal·lar per a cada projecte que volguem la versió que volguem de Java, per defecte tindrem la Java SE 21. El programa per escriure codi que utilitzem és <strong>IntelliJ Idea</strong>.</p>
+<p>A mesura que aneu fent projectes i instal·leu versions diferents de Java, a partir d&rsquo;ara JDK (Java Development Kid), veureu que si aneu a la carpeta <code>home/usuari/.jdks</code> us apareixen totes les versions que teniu disponibles (a part de la del propi sistema), ja que les heu utilitzades en algun projecte anterior.</p>
+<p><img src="../images/versionsJava.png" alt="Versions de Java"></p>
+<h4 id="jdk-i-jre">JDK i JRE</h4>
+<p>Fins ara hem parlat del llenguatge de programació Java però no hem explicat la seva estructura interna, com s&rsquo;organitza per paquets i mòduls. La següent imatge resumeix la seva organització:</p>
+<p><img src="../images/CBNux.png" alt="Jdk Jre"></p>
+<p><strong>JDK és el Java Development Kit.</strong> És el mòdul més genèric que ens podem instal·lar i disposa de les eines per <code>construir programes</code> usant el llenguatge de programació Java. Com veieu en la imatge, entre les eines més importants hi ha el compilador (javac), el desassemblador de binaris (javap), el debugger, jar, javadoc, Web Services,&hellip; ** Una instal·lació de JDK ja conté dins el JRE.**</p>
+<p><strong>JRE és el Java Runtime Environment</strong>. Conté la JVM (Java Virtual Machine) i altres eines que permeten <code>l'execució</code> i de les aplicacions fetes en Java. el JRE no posseeix compiladors ni eines per desenvolupar aplicacions de Java, només conté eines d&rsquo;execució de programes Java.</p>
+<p>En la següent web teniu diferents versions del JDK que us podeu instal·lar a la vostra màquina depenent del sistema operatiu i la versió que tingueu: <a href="https://www.oracle.com/java/technologies/downloads/">Java Oracle JDK</a></p>
 
 
 
@@ -3708,19 +3729,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721819589"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721819589"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721811466"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721819589"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

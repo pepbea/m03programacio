@@ -30,6 +30,26 @@ Les característiques bàsiques d'un algorisme són:
 El **pseudocodi** és un llenguatge informal d’alt nivell que usa les convencions i l’estructura d’un llenguatge de programació, però que està orientat a ser entès pels humans.
 {{% /notice %}}
 
+_Exemple_
+
+``` 
+//El problema consisteix en: Llegir el radi d'un cercle i calcular i imprimir per pantalla l'àrea i el perímetre.
+//Inputs: Radi del cercle (Variable radi).
+//Outputs: Àrea del cercle (Variable area) i Perímetre del cercle (Variable perimetre) 
+//Variables: radi, area i perimetre de tipus Real.    
+
+IniciProces Cercle
+    Definir radi, area i perimetre com a tipus Reals;
+    Escriure "Introdueix el radi de la circumferència";
+    Llegir radi;
+    area <- PI * radi ^ 2;
+    perimetre <- 2 * PI * radi;
+    Escriure "L'àrea és ", area;
+    Escriure "El perímetre és ", perimetre;
+FiProces
+``` 
+
+
 **Diagrama de flux**
 {{% notice note %}}
 Un **diagrama de flux** de control consisteix en una subdivisió de passes seqüencials, d’acord amb les sentències i estructures de control d’un programa, que mostra els diferents camins que pot seguir un programa a l’hora d’executar les seves instruccions. Cada passa s’associa a una figura geomètrica específica.

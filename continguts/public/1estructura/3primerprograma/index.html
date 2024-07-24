@@ -12,22 +12,22 @@
     <title>Primer programa :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1721811466" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1721819589" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721819589" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721819589" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721819589"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721811466"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721811466"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721819589"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721819589"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721811466"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721819589"></script>
 
     
   </div>
@@ -2351,7 +2351,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -2375,7 +2383,24 @@
 
 
 
-	
+	<h4 id="primer-programa">Primer programa</h4>
+<pre><code class="language-java">public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(&quot;Hello world!&quot;);
+        
+    }
+}
+</code></pre>
+<p>En qualsevol llenguatge de programació, el primer programa que es veu és l&rsquo;Hola Mon, aquest programa l&rsquo;únic que fa és imprimir per pantalla un missatge, en aquest cas &ldquo;Hello world!&rdquo;.</p>
+<p>Tot el codi que escrivim estarà encapsulat dins una classe Main <code>public class Main</code>, i dins una funció main <code>public static void main(String []args)</code>. Els blocs de codi estan continguts dins els caràcters <strong>{ }</strong>.</p>
+<p>En aquest cas, una manera senzilla d&rsquo;escriure per pantalla un text és utilitzant la instrucció: <code>System.out.println(&quot;Hello world!&quot;)</code>; Tot el que estigui contingut dins <strong>&quot;&quot;</strong> serà el text que es veurà per pantalla. Java tracta el tipus de text com a cadena de caràcters tot el que vagi contingut entre &ldquo;&rdquo;.</p>
+<p>Quan executem un programa de Java, el que farà la JVM és buscar una funció que es digui <code>public static void main(String []args)</code> i començarà a executar totes les instruccions que estiguin dins.</p>
+<h4 id="dades-dentrada">Dades d&rsquo;entrada</h4>
+<h4 id="dades-de-sortida">Dades de sortida</h4>
+<h4 id="comentaris">Comentaris</h4>
+
 
 
 
@@ -3692,19 +3717,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721819589"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1721811466"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1721819589"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721819589"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721811466"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721819589"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
