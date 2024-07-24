@@ -1,0 +1,4078 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="description" content="M03 Programació DAM">
+<meta name="author" content="Pep Beà">
+
+    <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
+
+    <title>Arrays Unidimensionals :: Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1721811466" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721811466" rel="stylesheet">
+    
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721811466" rel="stylesheet">
+    
+    
+
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721811466"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/m03programacio/continguts/public/3dadescompostes/2arrayunidimensional/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://pepbea.github.io/m03programacio/continguts/public"></a>
+<img src="https://pepbea.github.io/m03programacio/continguts/public/images/logo.png"></img>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721811466"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721811466"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
+    
+</script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721811466"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/" title="AEA1. Programació Estructurada" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/">
+          AEA1. Programació Estructurada
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/1introduccio/" title="Introducció a la programació" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/1introduccio/">
+          1. Introducció a la programació
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/2entornjava/" title="Entorn Java" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/2entornjava/">
+          2. Entorn Java
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/3primerprograma/" title="Primer programa" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/3primerprograma/">
+          3. Primer programa
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/3primerprograma/1algorisme/" title="Algorsime" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/3primerprograma/1algorisme/">
+          3.1. Algorsime
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/4tipusdades/" title="Tipus de dades i variables" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/4tipusdades/">
+          4. Tipus de dades i variables
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/4tipusdades/1variablesliteralsconstants/" title="Variables literals i constants" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/4tipusdades/1variablesliteralsconstants/">
+          4.1. Variables literals i constants
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/4tipusdades/2operadors/" title="Operadors" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/4tipusdades/2operadors/">
+          4.2. Operadors
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/4tipusdades/3conversions/" title="Conversions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/4tipusdades/3conversions/">
+          4.3. Conversions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/5programacioestructurada/" title="Què és la progr. estructurada?" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/5programacioestructurada/">
+          5. Què és la progr. estructurada?
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/6sequencial/" title="Estructura Seqüencial" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/6sequencial/">
+          6. Estructura Seqüencial
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/7condicional/" title="Estructura de selecció" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/7condicional/">
+          7. Estructura de selecció
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/8iteratiu/" title="Estructura repetició i salt" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/8iteratiu/">
+          8. Estructura repetició i salt
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/9excepcions/" title="Excepcions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/9excepcions/">
+          9. Excepcions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/1estructura/10depuracioassercions/" title="Depuració i Assercions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/1estructura/10depuracioassercions/">
+          10. Depuració i Assercions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/" title="AEA2. Introducció a la POO" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/">
+          AEA2. Introducció a la POO
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/0funcionspasparametres/" title="Funcions i pas de paràmetres" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/0funcionspasparametres/">
+          0. Funcions i pas de paràmetres
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/1definicionsexemple/" title="Definicions i exemples" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/1definicionsexemple/">
+          1. Definicions i exemples
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/2instanciacio/" title="Instanciació d&#39;objectes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/2instanciacio/">
+          2. Instanciació d&#39;objectes
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/3classemetodes/" title="Estructura de classe i mètodes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/3classemetodes/">
+          3. Estructura de classe i mètodes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/3classemetodes/1visibilitat/" title="Visibilitat" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/3classemetodes/1visibilitat/">
+          3.1. Visibilitat
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/4utilitzacio/" title="Ús de mètodes i  propietats" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/4utilitzacio/">
+          4. Ús de mètodes i  propietats
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/4utilitzacio/1estatics/" title="Mètodes estàtics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/4utilitzacio/1estatics/">
+          4.1. Mètodes estàtics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/5construccio/" title="Construcció destrucció d&#39;objectes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/5construccio/">
+          5. Construcció destrucció d&#39;objectes
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/6composicio/" title="Composició de classes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/6composicio/">
+          6. Composició de classes
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/7herencia/" title="Concepte d&#39;herència i ús" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/7herencia/">
+          7. Concepte d&#39;herència i ús
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/2poo/8llibreries/" title="Llibreries" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/2poo/8llibreries/">
+          8. Llibreries
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/" title="AEA3. Estructura de dades" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/">
+          AEA3. Estructura de dades
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/1estructuresestatiquesdinamiques/" title="Estructures estàtiques i dinàmiques" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/1estructuresestatiquesdinamiques/">
+          1. Estructures estàtiques i dinàmiques
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/2arrayunidimensional/" title="Arrays Unidimensionals" class="dd-item
+        parent
+        active
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/2arrayunidimensional/">
+          2. Arrays Unidimensionals
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/3arraybidimensional/" title="Arrays Bidimensionals" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/3arraybidimensional/">
+          3. Arrays Bidimensionals
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/" title="Tractament cadena de caràcters" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/">
+          4. Tractament cadena de caràcters
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/1operacionsregulars/" title="Operacions Regulars" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/1operacionsregulars/">
+          4.1. Operacions Regulars
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/2stringbuilder/" title="StringBuilder" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/2stringbuilder/">
+          4.2. StringBuilder
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/5coleccions/" title="Col·leccions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/5coleccions/">
+          5. Col·leccions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/5coleccions/1arraylist/" title="Llista - ArrayList" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/5coleccions/1arraylist/">
+          5.1. Llista - ArrayList
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/5coleccions/2hashset/" title="Conjunt - HashSet" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/5coleccions/2hashset/">
+          5.2. Conjunt - HashSet
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/5coleccions/3hashmap/" title="Diccionari - Hashmap" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/5coleccions/3hashmap/">
+          5.3. Diccionari - Hashmap
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/5coleccions/4genericitat/" title="Genericitat" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/5coleccions/4genericitat/">
+          5.4. Genericitat
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/3dadescompostes/6operacionsagregades/" title="Operacions agregades" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/3dadescompostes/6operacionsagregades/">
+          6. Operacions agregades
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/" title="AEA4. POO Avançada" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/">
+          AEA4. POO Avançada
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/1herencia/" title="Herència i polimorfisme" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/1herencia/">
+          1. Herència i polimorfisme
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/1herencia/1sealed/" title="Sealed Classes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/1herencia/1sealed/">
+          1.1. Sealed Classes
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/1herencia/2coleccions/" title="Exemples polimòrfics" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/1herencia/2coleccions/">
+          1.2. Exemples polimòrfics
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/1herencia/3protected/" title="Ús de Protected" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/1herencia/3protected/">
+          1.3. Ús de Protected
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/2classesabstractes/" title="Classes abstractes i finals" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/2classesabstractes/">
+          2. Classes abstractes i finals
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/3interficies/" title="Interfícies" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/3interficies/">
+          3. Interfícies
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/4bonespractiques/" title="Bones pràctiques en POO" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/4bonespractiques/">
+          4. Bones pràctiques en POO
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/4bonespractiques/1defensivecopy/" title="Defensive copy" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/4bonespractiques/1defensivecopy/">
+          4.1. Defensive copy
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/4bonespractiques/2excepcions/" title="Tractament de les excepcions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/4bonespractiques/2excepcions/">
+          4.2. Tractament de les excepcions
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/4poo/5solid/" title="Principis SOLID" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/4poo/5solid/">
+          5. Principis SOLID
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/" title="AEA5. E/S de dades" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/">
+          AEA5. E/S de dades
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/1fluxos/" title="Fluxos de dades (byte, char)" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/1fluxos/">
+          1. Fluxos de dades (byte, char)
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/2fitxers/" title="Gestió de fitxers" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/2fitxers/">
+          2. Gestió de fitxers
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/" title="Manipulació de fitxers" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/">
+          3. Manipulació de fitxers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/1text/" title="Text" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/1text/">
+          3.1. Text
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/2binari/" title="Binari" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/2binari/">
+          3.2. Binari
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/3accesaleatori/" title="Accés aleatori" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/3manipulaciofitxers/3accesaleatori/">
+          3.3. Accés aleatori
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/5esdades/4interficiesgrafiques/" title="Introducció Interfícies gràfiques" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/5esdades/4interficiesgrafiques/">
+          4. Introducció Interfícies gràfiques
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/" title="AEA6. Gestió de BBDDs" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/">
+          AEA6. Gestió de BBDDs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/1acces/" title="Accés a BBDOO" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/1acces/">
+          1. Accés a BBDOO
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/1acces/1estandard/" title="Estàndards" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/1acces/1estandard/">
+          1.1. Estàndards
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/1acces/2caracteristiques/" title="Característiques" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/1acces/2caracteristiques/">
+          1.2. Característiques
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/1acces/3connexio/" title="Establiment de la connexió" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/1acces/3connexio/">
+          1.3. Establiment de la connexió
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/2accions/" title="Accions a base de dades" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/2accions/">
+          2. Accions a base de dades
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/2accions/1lectura/" title="Lectura" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/2accions/1lectura/">
+          2.1. Lectura
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/2accions/2emmagatzematge/" title="Emmagatzematge" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/2accions/2emmagatzematge/">
+          2.2. Emmagatzematge
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/2accions/3actualitzacio/" title="Actualització" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/2accions/3actualitzacio/">
+          2.3. Actualització
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/2accions/4esborrat/" title="Esborrat" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/2accions/4esborrat/">
+          2.4. Esborrat
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/3tipusdadesobjecte/" title="Tipus de dades Objecte" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/3tipusdadesobjecte/">
+          3. Tipus de dades Objecte
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/6gestiobbdds/4tipusdadescolleccions/" title="Tipus de dades Col·lecció" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/6gestiobbdds/4tipusdadescolleccions/">
+          4. Tipus de dades Col·lecció
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/" title="Introducció a la Persistència en BBDDs" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/">
+          <b>12. </b>Introducció a la Persistència en BBDDs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/1.preparedstatement/" title="PreparedStatement" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/1.preparedstatement/">
+          PreparedStatement
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/2.metadades/" title="Metadades" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/2.metadades/">
+          Metadades
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/3.crudmapeigor/" title="Operacions CRUD i mapeig objecte-relacional" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/3.crudmapeigor/">
+          Operacions CRUD i mapeig objecte-relacional
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/4.classes-dao/" title="Classes DAO" class="dd-item
+        
+        
+        
+        ">
+      <a href="/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/4.classes-dao/">
+          Classes DAO
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://educaciodigital.cat/inspoblenou/moodle/course/view.php?id=459"><i class='fas fa-fw fa-door-open'></i> INS Poblenou M03 Programació</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://docs.oracle.com/en/java/javase/21/docs/api/index.html"><i class='fas fa-fw fa-database'></i> API Java Oracle</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://www.hackerrank.com/"><i class='fas fa-fw fa-desktop'></i> Hackerrank</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/3dadesCompostes/2arrayUnidimensional/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/m03programacio/continguts/public/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/3dadescompostes/'>AEA3. Estructura de dades</a> > Arrays Unidimensionals
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#exemple">Exemple</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Arrays Unidimensionals
+            </h1>
+          
+
+        
+
+
+
+	
+<div class="notices note" ><p><strong>Arrays unidimensional</strong>: és una estructura de dades que conté una col·lecció de dades del mateix tipus.</p>
+</div>
+
+<p>La biblioteca de classes de Java inclou una classe auxiliar que s&rsquo;anomena <strong>java.util.Arrays</strong> i conté funcions molt útils per utilitzar amb arrays:
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html">Java Oracle Classe Arrays</a></p>
+<p><strong>Propietats</strong></p>
+<ul>
+<li>Els arrays s&rsquo;utilitzen com a contenedors per guardar dades relacionades (enlloc de declarar variables per separat per cada un dels elements de l&rsquo;array).</li>
+<li>Totes les dades incluïdes a l&rsquo;array són del mateix tipus. Es poden crear arrays d&rsquo;enters (int, long), de reals(float, double), però en un mateix array no es poden mesclar dades de tipus diferents.</li>
+<li>En els arrays estàtics el tamany s&rsquo;estableix quan es crea l&rsquo;array (amb l&rsquo;operador new, igual que qualsevol altre objecte).</li>
+<li>Als elements de l&rsquo;array si accedirà a través de la posició que ocupa dins el conjunt d&rsquo;elements de l&rsquo;array.</li>
+</ul>
+<h3 id="exemple">Exemple</h3>
+<p>Per exemple podríem necessitar les edats d&rsquo;una classe per efectuar-ne un tractament especial. Fins ara el que podíem fer és declarar tantes variables enteres com alumnes hi hagi per tal de guardar-ne l&rsquo;edat:</p>
+<pre><code class="language-java">int edatAlumne1 = 29;
+int edatAlumne2 = 26;
+int edatAlumne3 = 18;
+...
+int edatAlumne30 = 28;
+
+</code></pre>
+<p>Com podeu observar, si escaléssim el problema anterior i enlloc de 30 necessitéssim les edats dels 700 estudiants de l&rsquo;institut, la declaració de variables seria una feina feixuga i amb un alt índex d&rsquo;equivocar-nos, a més no permetria mantenir i modificar el programa de forma àgil. Per això hi ha les estructures de dades d&rsquo;un mateix tipus. Una manera de guardar 700 edats dins una mateixa estructura seria aquesta:</p>
+<pre><code class="language-java">//Declarem una posició de memòria on hi ha una referència a un array
+int[] edatsAlumnes;
+
+//Aquest array és estàtic, per això abans d'usar-lo ens reservem en memòria el nombre d'enters que necessitem
+edatsAlumnes = new int[700];
+
+//Omplim les edats dels alumnes
+for(int i = 0; i &lt; edatsAlumnes.length; i++)
+  edatsAlumnes[i] = sc.nextInt();
+</code></pre>
+<h4 id="declaració-array">Declaració array</h4>
+<p>En les línies anteriors hem observat que per crear un objecte array, és necessari fer servir la paraula reservada <code>new</code>, amb això el que fem és reservar en memòria l&rsquo;espai necessari per allotjar la informació. En el següent exemple creem un array estàtic que l&rsquo;anomeno <code>arrayEstatic</code> de 12 posicions.</p>
+<pre><code class="language-java">int[] arrayEstatic = new int[12];
+
+//També es podria fer de la següent manera:
+int arrayEstatic[] = new int[12];
+</code></pre>
+<p>Fixeu-vos que en el primer exemple he fet la declaració i la reserva d&rsquo;espais dels enters en instruccions separades, en canvi en aquest últim exemple ho he fet tot junt en una única línia.</p>
+<p>Per accedir a la posició enèssima de l&rsquo;array ho puc fer de la següent manera <code>arrayEstatic[n]</code>.</p>
+
+<div class="notices note" ><p>Els <strong>Indexs</strong> d&rsquo;un array comencen en la <strong>posició 0</strong>, no en la 1. L&rsquo;últim element de l&rsquo;array es troba a la posició <strong>llargària de l&rsquo;array - 1</strong>.
+Així doncs en l&rsquo;exemple anterior el primer enter de l&rsquo;arrayEstatic es troba en la posició <code>arrayEstatic[0]</code> mentre que l&rsquo;últim en la posició <code>arrayEstatic[11]</code>. Hem de tenir en compte que l'<strong>índex</strong> no pot ser un valor negatiu, i que per exemple podria ser un càlcul numèric o fent ús de variables <code>arrayEstatic[i + 1]</code></p>
+</div>
+
+<p><img src="../images/array.gif?width=500px" alt="array"></p>
+<p>És important entendre que un cop declaro un arrayEstatic, es reserva en memòria espai per guardar el <code>tipus de dades * Tamany de l'array</code>. En l&rsquo;exemple anterior es demana al programa que ens reservi espai per a 12 enters consecutius. Aquests enters no tenen un valor definit (al ser enters Java els hi posa un 0, si fossin booleans el valor per defecte seria false), per tant cal que els inicialitzem un valor per utilitzar-los.</p>
+<pre><code class="language-java">int index = 4;
+int array[index + 1]++;
+</code></pre>
+<p>En aquest exemple s&rsquo;observa com inicialitzem un índex a 4, s&rsquo;accedeix a l&rsquo;element amb índex 5 de l&rsquo;array, és la posició 6 (recordeu que el 0 és la primera posició de l&rsquo;array) i en l&rsquo;enter de la posició 6 n&rsquo;augmentem el valor en una unitat.</p>
+<h4 id="longitud">Longitud</h4>
+<p>Al ser una estructura estàtica la <strong>longitud</strong> de l&rsquo;array no es pot variar i es defineix quan es crea (amb el new). Per tal d&rsquo;obtenir el seu valor en Java utilitzarem la funció <code>length</code>:</p>
+<pre><code class="language-java">System.out.println(&quot;La longitud de l'array és &quot; + array.length);
+</code></pre>
+<h4 id="una-altra-inicialització">Una altra inicialització</h4>
+<p>Una altra manera d&rsquo;inicialitzar un array és directament definint els seus elements:</p>
+<pre><code class="language-java">int[] array2 = {10, 20, 54, -2, 76 };
+</code></pre>
+<p>Si a aquest array2 imprimissim el seu valor de array2.length el resultat seria 5. De forma que s&rsquo;hauria declarat i reservat la memòria directament.</p>
+<h4 id="recorregut-i-manipulació-darrays">Recorregut i manipulació d&rsquo;arrays</h4>
+<p>Normalment ens trobarem amb problemes on cal accedir a arrays i efectuar-ne un tractament determinat. Per exemple, ens podríem trobar el següent problema:</p>
+<blockquote>
+<p>Com ho faríem per guardar en un array els 10 primers números parells?</p>
+</blockquote>
+<pre><code class="language-java">//declaració i creació de l'array					
+int[] llista = new int[10];
+
+//modificació el valor dels elements de l'array
+for(int i=0; i&lt;llista.length; i++) {
+    llista[i] = i*2;
+}	
+
+//Imprimim els valors 0 2 4 6 8 10 12 14 16 18
+for(int i=0; i&lt;llista.length; i++) { System.out.print(llista[i] + &quot; &quot;); }
+</code></pre>
+<p>Es pot observar com mitjançant l&rsquo;índex <code>i</code> s&rsquo;accedeix a tots els elements de l&rsquo;array i se&rsquo;n va modificant el seu valor.</p>
+<h4 id="ordenació-arrays">Ordenació arrays</h4>
+<p>Una altra funcionalitat corrent és l&rsquo;ordenació de arrays. En Java existeix una funció que ordena els elements d&rsquo;un array, més endavant l&rsquo;estudiarem amb deteniment.</p>
+<pre><code class="language-java">Arrays.sort(vector);
+</code></pre>
+<p>Existeixen molts algorismes diferents capaços d&rsquo;ordenar els elements d&rsquo;un array, tots ells tenen la seva lògica i obeeixen a casuïstiques diferents, i per tant també tenen costos de còmput diferent. En la següent web podrem observar simulacions de diferents algorismes en un llenguatge de pseudocodi i com evoluciona cada array fins a la seva ordenació:
+<a href="https://visualgo.net/es/sorting?slide=1">Visualgo</a></p>
+<h4 id="cerca-dun-element-dins-larray">Cerca d&rsquo;un element dins l&rsquo;array</h4>
+<p>La cerca d&rsquo;un element dins un array és un problema típic. No és el mateix tenir l&rsquo;array ordenat que l&rsquo;array desordenat:</p>
+<ol>
+<li>Si l&rsquo;array està desordenat farem un recorregut buscant l&rsquo;element, si no el troba s&rsquo;arriba al final de l&rsquo;array, si el troba sortim de l&rsquo;array abans de la seva finalització.</li>
+<li>Si l&rsquo;array està ordenat, a diferència de l&rsquo;anterior, no cal que busquem fins al final de l&rsquo;array, un cop &ldquo;em passi&rdquo; de l&rsquo;element que estic buscant ja no cal que continuï, és una manera d&rsquo;optimitzar la cerca.</li>
+</ol>
+<p>Cerca en array desordenat:</p>
+<pre><code class="language-java">double[] array = {2, 5.5, 9.1, 1, 2.9, 8, 5.5, 55.4, 2.6, 5.45, 7};
+
+//Definim variable booleana per saber si s'ha trobat el valor
+boolean trobat = false;
+
+//Índex
+int i = 0;
+
+//Realitzem el recorregut, mentre no s’arriba al final i no es trobi un 1
+while ((i &lt; array.length) &amp;&amp; (!trobat)) {
+  if (array[i] == 8) {
+    trobat = true;
+  }
+  i = i + 1;
+}
+
+//S’ha trobat?
+String resposta = (trobat)? &quot;S'ha trobat l'element&quot; : &quot;NO s'ha trobat l'element&quot;;
+System.out.println(resposta);  
+</code></pre>
+<p>Cerca en array ordenat:</p>
+<pre><code class="language-java">double[] array = {2, 5.5, 8, 9.1, 10.4, 12.9, 18, 25.5, 55.4};
+
+//Definim variable booleana per saber si s'ha trobat el valor
+boolean trobat = false;
+
+//Definim variable booleana per saber si ens hem passat ja de l'element
+boolean passat=false;
+
+//Índex
+int i = 0;
+
+//Realitzem el recorregut, mentre no s’arriba al final i no es trobi un 1
+while ((i &lt; array.length) &amp;&amp; (!trobat) &amp;&amp; (!passat)) {
+  if (array[i] == 8) {
+    trobat = true;
+  }
+
+  if (array[i] &gt; 8) {
+    passat = true;
+  }
+  i = i + 1;
+}
+
+//S’ha trobat?
+String resposta = (trobat)? &quot;S'ha trobat l'element&quot; : &quot;NO s'ha trobat l'element&quot;;
+System.out.println(resposta);  
+</code></pre>
+<h4 id="bucle-for-millorat-per-arrays">Bucle for millorat per arrays</h4>
+<p>Per tal d&rsquo;efectuar el recorregut en un array java ens permet aquesta expressió reduïda de bucles for. Per exemple, els bucles següents són equivalents:</p>
+<pre><code class="language-java">for(int i=0; i&lt;array.length; i++) {
+    int valor = array[i];
+    System.out.println(valor);
+}
+for(int valor: array) {
+    System.out.println(valor);
+}
+</code></pre>
+<p>La versió adaptada del bucle for es pot fer servir amb qualsevol tipus d&rsquo;array (String, int, boolean, etc.).</p>
+<h4 id="mètodes-més-usats-de-la-classe-javautilarrays">Mètodes més usats de la classe java.util.Arrays</h4>
+<pre><code class="language-java">Arrays.sort(array); // Ordena els elements
+Arrays.equals(array1, array2); // Comprova si els dos arrays són iguals
+Arrays.fill(array, val) //Omple el vector v amb el valor &quot;val&quot;
+Arrays.toString(array)  // Retorna una cadena que representa el contingut del vector
+Arrays.binarySearch(array, k) // Busca el valor k dins del vector array (que prèviament ha estat ordenat) 
+</code></pre>
+<h4 id="exemples">Exemples</h4>
+<ol>
+<li>Exemple de diferents maneres per omplir de valors un array i imprimir-lo per línia de comandes:</li>
+</ol>
+<pre><code class="language-java"> //Crear Array
+int primerArray[] = new int[7];
+
+//Omplir de valors amb for i després amb while
+for(int i=0; i &lt; primerArray.length; i++){
+    primerArray[i] = sc.nextInt();
+}
+
+int i=0;
+while(i &lt; primerArray.length){
+    primerArray[i] = sc.nextInt();
+    i++;
+}
+
+//Mostrar valors amb toString amb bucle for i bucle for millorat
+Arrays.toString(primerArray);
+
+for( i=0; i &lt; primerArray.length; i++){
+    System.out.println(primerArray[i]);
+}
+
+for( int valor : primerArray){
+    System.out.println(valor);
+}
+
+//Ús de la funció fill de la classe Arrays que consisteix en omplir totes les posicions d'un array amb el mateix valor
+Arrays.fill(primerArray,7);
+
+for(i=0; i &lt; primerArray.length; i++){
+    primerArray[i] = 7;
+}
+</code></pre>
+<ol start="2">
+<li>Còpia d&rsquo;arrays</li>
+</ol>
+<pre><code class="language-java">int[] llista = {1,2,3,4};
+//llita i llistaCopia apunten al mateix array ja que són referències
+int[] llistaCopia = llista; 
+
+//Fent ús de clone. En aquest cas llista i llistaCopia SON DOS ARRAYS IGUALS I INDEPENDENTS
+llistaCopia = llista.clone(); 
+
+//còpia manual dels elements		
+for(i=0; i &lt; llista.length; i++){
+    llistaCopia[i] = llista[i];
+}
+
+System.out.println(&quot;Contingut de l'array 'llista'&quot;);
+for(int valor : llista) System.out.println(valor);
+
+System.out.println(&quot;Contingut de l'array 'llistaCopia'&quot;);
+for(int valor : llistaCopia) System.out.println(valor);
+</code></pre>
+<ol start="3">
+<li>Cerca d&rsquo;un element dins un array (exemple del màxim)</li>
+</ol>
+<pre><code class="language-java">primerArray = new int[]{-1, -2, -3, -4};
+int max = 0;
+for(i=0; i &lt; primerArray.length; i++){
+
+    if(max&lt;primerArray[i]) max = primerArray[i];
+}
+</code></pre>
+<ol start="4">
+<li>Sumar els elements d&rsquo;un array valor a valor i guardar-lo en un altre array</li>
+</ol>
+<pre><code class="language-java">int vector1[] = new int[10];
+int vector2[] = new int[10];
+
+//falta introduir els valors en vector1 i vector2
+
+int suma[] = new int[10];
+for( i=0; i&lt;suma.length;i++){
+    suma[i] = vector1[i] + vector2[i];
+}
+</code></pre>
+<ol start="5">
+<li>Cerca dicotòmica</li>
+</ol>
+<pre><code class="language-java">//Tamany vector
+System.out.println(&quot;De quants elements vols el vector?&quot;);
+int llargada = sc.nextInt();
+
+//Creem i posem elements aleatoris entre 0 i 100 dins el vector i l'ordenem
+int [] vector = new int[llargada];
+
+for(int i=0; i&lt;llargada;i++) 
+  vector[i] = (int)(Math.random()*100);
+
+Arrays.sort(vector);
+
+//Imprimim vector
+System.out.println(Arrays.toString(vector));
+
+//Quin element vols buscar?
+System.out.println(&quot;Quin element vols buscar?&quot;);
+int nombreBuscat = sc.nextInt();
+
+//inicialitzem index inferior i superior i declarem element central
+int elementCentral;
+int inferior=0;
+int superior=llargada-1;
+
+//inicialment no s'ha trobat l'element
+boolean trobat = false;
+int iteracions = 0;
+
+//mentre element inferior no rebassi el superior continuem explorant
+while(inferior&lt;=superior &amp;&amp; !trobat){
+
+    //Augmentem nombre iteracions
+    iteracions++;
+
+    //busquem quin és l'element central
+    elementCentral=(superior+inferior)/2;
+
+    //Imprimim l'estat actual
+    System.out.println(&quot;Iteracio: &quot; + iteracions + &quot;  Inferior:&quot; + inferior + &quot;  Superior:&quot; + superior + &quot;  Element Central:&quot; + vector[elementCentral] + &quot;  A buscar:&quot; + nombreBuscat);
+    for(int i=inferior; i &lt;= superior; i++) 
+      System.out.print(vector[i]+&quot; &quot;);
+    
+    System.out.println(&quot;&quot;);
+    System.out.println(&quot;&quot;);
+     
+    //Si el trobem posem trobat a true per sortir del bucle i anunciem que l'hem trobat
+    if(vector[elementCentral]==nombreBuscat){
+        trobat=true;
+        System.out.println(&quot;L'element &quot;+nombreBuscat+&quot; està dins l'array&quot;);
+    }
+    //Sinó actualitzem index, caldrà actualitzar o bé el superior en cas que el nombre buscat sigui inferior a l'actual, o bé l'inferior en cas contrari.
+    else if(nombreBuscat &lt; vector[elementCentral] ){
+        superior=elementCentral-1;
+    }
+    else {
+        inferior=elementCentral+1;
+    }
+}
+
+//Si no el trobem ho anunciem
+if(!trobat)System.out.println(&quot;L'element no es troba en el vector&quot;);
+
+
+
+/**
+*  Comparem amb...
+*  CERCA LINEAL
+*
+**/
+inferior=0;
+superior=llargada-1;
+
+//inicialment no s'ha trobat l'element
+trobat = false;
+iteracions = 0;
+
+//mentre element inferior no rebassi el superior continuem explorant
+while(inferior&lt;=superior &amp;&amp; !trobat) {
+
+  //Augmentem nombre iteracions
+  iteracions++;
+
+  //Imprimim l'estat actual
+  System.out.println(&quot;Iteracio: &quot; + iteracions + &quot;  Inferior:&quot; + inferior + &quot;  Superior:&quot; + superior + &quot;  Element Actual:&quot; + vector[inferior] + &quot;  A buscar:&quot; + nombreBuscat);
+  for (int i = inferior; i &lt;= superior; i++) System.out.print(vector[i] + &quot; &quot;);
+  System.out.println(&quot;&quot;);
+  System.out.println(&quot;&quot;);
+
+  //Si el trobem posem trobat a true per sortir del bucle i anunciem que l'hem trobat
+  if (vector[inferior] == nombreBuscat) {
+      trobat = true;
+      System.out.println(&quot;L'element &quot; + nombreBuscat + &quot; està dins l'array&quot;);
+  }
+
+  //Miro el següent element
+  inferior++;
+
+}
+
+//Si no el trobem ho anunciem
+if(!trobat)System.out.println(&quot;L'element no es troba en el vector&quot;);
+</code></pre>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/3dadescompostes/1estructuresestatiquesdinamiques/" title="Estructures estàtiques i dinàmiques"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/m03programacio/continguts/public/3dadescompostes/3arraybidimensional/" title="Arrays Bidimensionals" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721811466"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1721811466"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721811466"></script>
+    
+        
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721811466"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

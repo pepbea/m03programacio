@@ -10,8 +10,8 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
   overflow-x: auto;
   padding: 0.5em;
   line-height: 1.3em;
-  color: #333;
-  background: #eee;
+  color: #abb2bf;
+  background: #282c34;
   border-radius: 5px;
 }
 .hljs-keyword, .hljs-operator {
@@ -27,7 +27,7 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
   color: #61aeee;
 }
 .hljs-function .hljs-params {
-  color: #84b424;
+  color: #A6E22E;
 }
 .hljs-function .hljs-params .hljs-typing {
   color: #FD971F;
@@ -55,7 +55,7 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
   color: #56b6c2;
 }
 .hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string {
-  color: #88af6c;
+  color: #98c379;
 }
 .hljs-built_in, .hljs-class .hljs-title {
   color: #e6c07b;

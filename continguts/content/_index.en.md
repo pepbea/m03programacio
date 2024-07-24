@@ -4,72 +4,110 @@ title: "M03 Programació DAM"
 
 # **M03 Programació DAM**
 
-En aquesta pàgina web trobareu els apunts del **M03. Programació DAM**. La web està realitzada utilitzant un Framework Web(Hugo), hostatjada a Github i es fa ús de Github Pages.
+En aquesta pàgina web trobareu els apunts del **M03.Programació DAM**. La web està realitzada utilitzant un Framework Web(Hugo), hostatjada a Github i es fa ús de Github Pages.
 
-Tot seguit es mostra la calendarització i les hores de les UFs que s'imparteixen en aquest mòdul de 1r de DAM.
+Tot seguit es mostra la calendarització i l'assignació d'hores per cada RA que s'imparteix en aquest mòdul de 1r de DAM.
 
 |UF|dates|hores|
 |---|---|---|
-|UF1: Programació estructurada|12/09/23 - 257/11/23|74h|
-|UF2: Disseny modular|28/11/23 - 17/01/24|39h|
-|UF4: Programació orientada a objectes (POO)|18/01/24 - 28/02/24|44h|
-|UF5: POO.Llibreries de classes fonamentals |29/02/24 - 03/04/24|24h|
-|UF3: Fonaments de fitxers|04/04/24 - 22/04/24|19h|
-|UF6: POO. Introducció a la persistència en BBDDs|23/04/24 - 20/17/24|31h|
+|**RA1** Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.|12/09/24 - 25/09/24|10h|
+|**RA3** Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.|26/09/24 - 11/11/24|40h|
+|**RA2** Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.|12/11/24 - 27/11/24|10h|
+|**RA4** Desenvolupa programes organitzats en classes analitzant i aplicant els principis de la programació orientada a objectes.|28/11/24 - 16/12/25|20h|
+|**RA6** Escriu programes que manipulin informació seleccionant i utilitzant tipus avançats de dades.|17/12/24 - 17/02/25|40h|
+|**RA7** Desenvolupa programes aplicant característiques avançades dels llenguatges orientats a objectes i de l'entorn de programació.|18/02/25 - 02/04/25|40h|
+|**RA5** Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.|03/04/25 - 02/05/25|20h|
+|**RA9** Gestiona informació emmagatzemada en bases de dades mantenint la integritat i consistència de les dades.|03/05/25 - 14/05/25|10h|
+|**RA8** Utilitza bases de dades orientades a objectes, analitzant-ne les característiques i aplicant tècniques per mantenir la persistència de la informació.|15/05/25 - 23/05/25|8h|
 
 
 L'índex de continguts que veurem és:
 
-**UF1: Programació estructurada**
-  + [Estructura d'un programa]({{%relref "1estructura/_index.en.md" %}})
-    - [Introducció]({{%relref "1estructura/1propositiblocs/_index.en.md" %}})
-    - [Metodologies de Software]({{%relref "1estructura/2metodologiesSoftware/_index.en.md" %}})
-    - [Tipus de Llenguatges]({{%relref "1estructura/3tipusllenguatges/_index.en.md" %}})
-  + [Tipus de dades]({{%relref "2tipusDades/_index.en.md" %}})
-  + [Algorísmia]({{%relref "3Algorísmia/_index.en.md" %}})
-  + [Programació estructurada]({{%relref "4programacioEstructurada/_index.en.md" %}})
-    - [Estructura sequencial]({{%relref "4programacioEstructurada/sequencial/_index.en.md" %}})
-    - [Estructura condicional]({{%relref "4programacioEstructurada/condicional/_index.en.md" %}})
-    - [Estructura iterativa]({{%relref "4programacioEstructurada/iteratiu/_index.en.md" %}})
-  + [Estructures compostes]({{%relref "5dadesCompostes/_index.en.md" %}})
-    - [Arrays Unidimensionals]({{%relref "5dadesCompostes/arrayUnidimensional/_index.en.md" %}})
-    - [Arrays Bidimensionals]({{%relref "5dadesCompostes/arrayBidimensional/_index.en.md" %}})
-    - [Tractament cadena de caràcters]({{%relref "5dadesCompostes/CadenesCaracters/_index.en.md" %}})
 
-**UF2: Disseny modular**
-  + [Programació Modular]({{%relref "6programacioModular/_index.en.md" %}})
-    - [Introducció al Disseny Modular]({{%relref "6programacioModular/introduccioDissenyModular/_index.en.md" %}})
-    - [Metodologia Top-Down]({{%relref "6programacioModular/metodologiaTopDown/_index.en.md" %}})
-    - [Llibreries]({{%relref "6programacioModular/llibreries/_index.en.md" %}})
-    - [Recursivitat]({{%relref "6programacioModular/recursivitat/_index.en.md" %}})
+**AEA1: Programació estructurada**
+  + [Programació estructurada]({{%relref "1estructura/_index.en.md" %}})
+    - [Introducció a la programació]({{%relref "1estructura/1introduccio/_index.en.md" %}})
+    - [Entorn Java]({{%relref "1estructura/2entornJava/_index.en.md" %}})
+    - [Primer programa]({{%relref "1estructura/3primerPrograma/_index.en.md" %}})
+    - [Tipus de dades i variables]({{%relref "1estructura/4tipusDades/_index.en.md" %}})
+        * [Variables literals i constants]({{%relref "1estructura/4tipusDades/1variablesLiteralsConstants/_index.en.md" %}})
+        * [Operadors aritmètics, lògics i relacionals]({{%relref "1estructura/4tipusDades/2operadors/_index.en.md" %}})
+        * [Conversions de tipus]({{%relref "1estructura/4tipusDades/3conversions/_index.en.md" %}})
+    - [Què és la programació estructurada?]({{%relref "1estructura/5programacioEstructurada/_index.en.md" %}})
+    - [Estructura sequencial]({{%relref "1estructura/6sequencial/_index.en.md" %}})
+    - [Estructures de selecció]({{%relref "1estructura/7condicional/_index.en.md" %}})
+    - [Estructures de repetició i de salt]({{%relref "1estructura/8iteratiu/_index.en.md" %}})
+    - [Excepcions]({{%relref "1estructura/9excepcions/_index.en.md" %}})
+    - [Depuració de codi i assercions]({{%relref "1estructura/10depuracioAssercions/_index.en.md" %}})
 
-**UF4: Programació orientada a objectes (POO)**
-  + [Programació Orientada a Objectes]({{%relref "7POO/_index.en.md" %}})
-      - [Introducció a la POO]({{%relref "7POO/introduccioPOO/_index.en.md" %}})
-      - [Implementació bàsica en POO]({{%relref "7POO/implementacioPOO/_index.en.md" %}})
-      - [Desenvolupament de POO]({{%relref "7POO/desenvolupamentPOO/_index.en.md" %}})
-      - [Programació Avançada en POO]({{%relref "7POO/programacioAvancadaPOO/_index.en.md" %}})
-        * [Herència]({{%relref "7POO/programacioAvancadaPOO/1herencia/_index.en.md" %}})
-        * [Polimorfisme i Classes Abstractes]({{%relref "7POO/programacioAvancadaPOO/2polimorfismeClassesAbstractes/_index.en.md" %}})
-        * [Interfícies]({{%relref "7POO/programacioAvancadaPOO/3interficies/_index.en.md" %}})
 
-**UF5: POO. Llibreries de classes fonamentals**
-  + [Col·leccions]({{%relref "8Collections/_index.en.md" %}})
-      - [ArrayList]({{%relref "8Collections/1arrayList/_index.en.md" %}})
-      - [HashSet]({{%relref "8Collections/2hashset/_index.en.md" %}})
-      - [HashMap]({{%relref "8Collections/3hashmap/_index.en.md" %}})
-  + [Excepcions]({{%relref "9Excepcions/_index.en.md" %}})
-  + [Interfícies gràfiques d'usuari (GUI)]({{%relref "10Interficies/_index.en.md" %}})
+**AEA2: Introducció a la Programació Orientada a Objectes (POO)**
+  + [Introducció a la POO]({{%relref "2POO/_index.en.md" %}})
+    - [Funcions i pas de paràmetres]({{%relref "2POO/0funcionsPasParametres/_index.en.md" %}})
+    - [Definicions i exemple]({{%relref "2POO/1definicionsExemple/_index.en.md" %}})
+    - [Instanciació d'objectes]({{%relref "2POO/2instanciacio/_index.en.md" %}})
+    - [Estructura de classe i mètodes]({{%relref "2POO/3classeMetodes/_index.en.md" %}})
+        * [Visibilitat]({{%relref "2POO/3classeMetodes/1visibilitat/_index.en.md" %}})
+    - [Ús de mètodes i propietats]({{%relref "2POO/4utilitzacio/_index.en.md" %}})
+        * [Mètodes estàtics]({{%relref "2POO/4utilitzacio/1estatics/_index.en.md" %}})
+    - [Construcció i destrucció d'objectes]({{%relref "2POO/5construccio/_index.en.md" %}})
+    - [Composició de classes]({{%relref "2POO/6composicio/_index.en.md" %}})
+    - [Concepte d'herència i ús]({{%relref "2POO/7herencia/_index.en.md" %}})
+    - [Llibreries]({{%relref "2POO/8llibreries/_index.en.md" %}})
 
-**UF3: Fonaments de fitxers**
-  + [Gestió File]({{%relref "11fitxersText/_index.en.md" %}})
-  + [Fitxers de text]({{%relref "11fitxersText/fitxersText/_index.en.md" %}})
-  + [Fitxers binaris]({{%relref "11fitxersText/fitxersBinaris/_index.en.md" %}})
-  + [Accés aleatori]({{%relref "11fitxersText/AccesAleatori/_index.en.md" %}})
 
-  **UF6: POO. Introducció a la persistència en BBDDs**
-  + [Introducció a la persistència en BBDDs]({{%relref "12persistenciaBD/_index.en.md" %}})
-  + [Prepared Statement]({{%relref "12persistenciaBD/PreparedStatement/_index.en.md" %}})
-  + [Metadades]({{%relref "12persistenciaBD/Metadades/_index.en.md" %}})
-  + [CRUD mapeig OR]({{%relref "12persistenciaBD/CRUDmapeigOR/_index.en.md" %}})
-   + [Classes DAO]({{%relref "12persistenciaBD/Classes DAO/_index.en.md" %}})
+**AEA3: Estructura de dades**
+  + [Estructures de dades]({{%relref "3dadesCompostes/_index.en.md" %}})
+    - [Estructures estàtiques i dinàmiques]({{%relref "3dadesCompostes/1estructuresEstatiquesDinamiques/_index.en.md" %}})
+    - [Arrays Unidimensionals]({{%relref "3dadesCompostes/2arrayUnidimensional/_index.en.md" %}})
+    - [Arrays Bidimensionals]({{%relref "3dadesCompostes/3arrayBidimensional/_index.en.md" %}})
+    - [Tractament cadena de caràcters]({{%relref "3dadesCompostes/4cadenesCaracters/_index.en.md" %}})
+        * [Operacions Regulars]({{%relref "3dadesCompostes/4cadenesCaracters/1operacionsRegulars/_index.en.md" %}})
+        * [StringBuilder]({{%relref "3dadesCompostes/4cadenesCaracters/2stringBuilder/_index.en.md" %}})
+    - [Col·leccions]({{%relref "3dadesCompostes/5coleccions/_index.en.md" %}})
+        * [Llistes: ArrayList]({{%relref "3dadesCompostes/5coleccions/1arrayList/_index.en.md" %}})
+        * [Conjunts: Hashset]({{%relref "3dadesCompostes/5coleccions/2hashset/_index.en.md" %}})
+        * [Diccionaris: HashMap]({{%relref "3dadesCompostes/5coleccions/3hashmap/_index.en.md" %}})
+        * [Genericitat]({{%relref "3dadesCompostes/5coleccions/4genericitat/_index.en.md" %}})
+    - [Operacions Agregades]({{%relref "3dadesCompostes/6operacionsAgregades/_index.en.md" %}})
+
+**AEA4: POO Avançada**
+  + [POO Avançat]({{%relref "4POO/_index.en.md" %}})
+    - [Herència i polimorfisme]({{%relref "4POO/1herencia/_index.en.md" %}})
+        * [Sealed classes]({{%relref "4POO/1herencia/1sealed/_index.en.md" %}})
+        * [Col·leccions i funcions polimòrfiques]({{%relref "4POO/1herencia/2coleccions/_index.en.md" %}})
+        * [Protected]({{%relref "4POO/1herencia/3protected/_index.en.md" %}})
+    - [Classes abstractes i finals]({{%relref "4POO/2classesAbstractes/_index.en.md" %}})
+    - [Interfícies]({{%relref "4POO/3interficies/_index.en.md" %}})
+    - [Bones pràctiques en POO]({{%relref "4POO/4bonesPractiques/_index.en.md" %}})
+        * [Defensive Copy]({{%relref "4POO/4bonesPractiques/1defensiveCopy/_index.en.md" %}})
+        * [Tractament de les Excepcions]({{%relref "4POO/4bonesPractiques/2excepcions/_index.en.md" %}})
+    - [Principis SOLID]({{%relref "4POO/5solid/_index.en.md" %}})
+
+**AEA5: E/S Dades**
+  + [E/S Dades]({{%relref "5esDades/_index.en.md" %}})
+    - [Fluxos de dades: byte, character]({{%relref "5esDades/1fluxos/_index.en.md" %}})
+    - [Gestió File]({{%relref "5esDades/2fitxers/_index.en.md" %}})
+    - [Manipulació fitxers]({{%relref "5esDades/3manipulacioFitxers/_index.en.md" %}})
+        * [Text]({{%relref "5esDades/3manipulacioFitxers/1text/_index.en.md" %}})   
+        * [Binari]({{%relref "5esDades/3manipulacioFitxers/2binari/_index.en.md" %}})
+        * [Accés aleatori]({{%relref "5esDades/3manipulacioFitxers/3accesAleatori/_index.en.md" %}}) 
+    - [Interfícies gràfiques d'usuari (GUI)]({{%relref "5esDades/4interficiesGrafiques/_index.en.md" %}})
+
+
+
+
+**AEA6: Gestió de BBDDs**
++ [Gestió de BBDDs]({{%relref "6gestioBBDDs/_index.en.md" %}})
+    - [Accés a BBDDOO]({{%relref "6gestioBBDDs/1acces/_index.en.md" %}})
+        * [Estàndards]({{%relref "6gestioBBDDs/1acces/1estandard/_index.en.md" %}})   
+        * [Característiques]({{%relref "6gestioBBDDs/1acces/2caracteristiques/_index.en.md" %}})
+        * [Connexió]({{%relref "6gestioBBDDs/1acces/3connexio/_index.en.md" %}}) 
+    - [Accés a BBDDOO]({{%relref "6gestioBBDDs/2accions/_index.en.md" %}})
+        * [Lectura]({{%relref "6gestioBBDDs/2accions/1lectura/_index.en.md" %}}) 
+        * [Emmagatzematge]({{%relref "6gestioBBDDs/2accions/2emmagatzematge/_index.en.md" %}})   
+        * [Actualització]({{%relref "6gestioBBDDs/2accions/3actualitzacio/_index.en.md" %}})
+        * [Esborrat]({{%relref "6gestioBBDDs/2accions/4esborrat/_index.en.md" %}}) 
+    - [Tipus de dades objecte]({{%relref "6gestioBBDDs/3tipusDadesObjecte/_index.en.md" %}})
+    - [Tipus de dades col·leccions]({{%relref "6gestioBBDDs/4tipusDadesColleccions/_index.en.md" %}})
+
