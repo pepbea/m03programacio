@@ -29,7 +29,7 @@ weight = 1
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-door-open'></i> INS Poblenou M03 Programació"
+name = "<i class='fas fa-fw fa-door-open'></i> INS Poblenou 0485.Programació"
 url = "https://educaciodigital.cat/inspoblenou/moodle/course/view.php?id=459"
 weight = 10
 
@@ -39,9 +39,24 @@ url = "https://docs.oracle.com/en/java/javase/21/docs/api/index.html"
 weight = 20
 
 [[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-graduation-cap'></i> Tutorial de Java Oracle"
+url = "https://docs.oracle.com/javase/tutorial/index.html"
+weight = 30
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-book'></i> Apunts FP Informàtica"
+url = "https://www.apuntesfpinformatica.es/"
+weight = 40
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-laptop'></i>The Algorithms"
+url = "https://the-algorithms.com/"
+weight = 50
+
+[[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-desktop'></i> Hackerrank"
 url = "https://www.hackerrank.com/"
-weight = 30
+weight = 60
 
 
 

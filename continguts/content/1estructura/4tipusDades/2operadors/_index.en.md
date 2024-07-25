@@ -6,6 +6,10 @@ chapter: false
 ---
 
 
+Les **expressions** són una combinació de variables i operadors que retornen un valor determinat. El tipus de dada retornat depèn de l'operació realitzada en l'expressió i dels tipus de dades de les variables implicades.
+
+Els **operadors** són els símbols especials que s'utilitzen per operar en les expressions.
+
 ### Operadors aritmètics
 
 Són les operacions que avaluen una operació i retornen un resultat numèric.
@@ -18,38 +22,51 @@ Són les operacions que avaluen una operació i retornen un resultat numèric.
 | Divisió | / |
 | Mòdul | % |
 
-**Altres operadors**
-
-Existeixen altres formes que simplifiquen l'escriptura alhora de fer operacions senzilles. Seria el cas dels comptadors. D'aquesta manera existeixen expressions com:
-
-```java
-int comptador = 0;
-comptador = comptador + 1;
-
-//es pot fer de forma més simple
-int comptador = 0;
-comtpador++;
-
-//Les dues expressions següents també són equivalents i s'aplica a tots els operadors aritmètics:
-int comptador = 0;
-
-comptador = comptador + 10; 
-comptador =+ 10; 
-
-comptador = comptador - 10; 
-comptador =- 10; 
-
-comptador = comptador * 10; 
-comptador =* 10; 
-
-comptador = comptador / 10; 
-comptador =/ 10; 
-```
+El mòdul és el residu d'una divisió, per exemple  `10 % 2 = 0`, o `16 % 3 = 1`. És una operació molt útil en camp informàtic ja que ens ajuda a saber per exemple si una divisió és entera i per tant a saber si un nombre és divisible per un altre, veurem exemples més endavant.
 
 Recordem l'ordre de prioritat en les operacions aritmètiques:
 - 1r Parèntesi ()
 - 2n Multiplicacions, divisioons i mòdul  * / %
 - 3r Sumes i restes + -
+
+
+### Operadors d'increment/decrement
+
+En Java existeix la possibilitat de realitzar un postincrement o un preincrement a una variable, per exemple: `a++  ++a  a--  --a`.
+
+```java
+//PostIncrement
+a = 2;
+System.out.println(a++);   // a = 2
+System.out.println(a);     // a = 3
+
+//Preincrement
+a = 2;
+System.out.println(++a);   // a = 3
+System.out.println(a);     // a = 3
+
+//PostDecrement
+a = 2;
+System.out.println(a--);   // a = 2
+System.out.println(a);     // a = 1
+
+//PreDecrement
+a = 2;
+System.out.println(--a);   // a = 1
+System.out.println(a);     // a = 1
+```
+
+### Operadors d'assignació
+
+| Operació | Operador| Exemple
+| --- | --- | --- |
+| Assignació |  = | a = b |
+| Suma i assignació |  += | a += b  (a = a + b) | 
+| Resta i assignació| -= | a -= b  (a = a - b)| 
+| Multiplicació i assignació| *= |  a *= b  (a = a * b)| 
+| Divisió i assignació| /= | a /= b  (a = a / b)| 
+| Mòdul i assignació| %= | a %= b  (a = a % b)| 
+
 
 ### Operadors lògics i relacionals
 

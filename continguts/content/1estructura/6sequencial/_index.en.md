@@ -8,7 +8,7 @@ chapter: false
 #### Estructura seqüencial
 
 {{% notice note %}}
-En **l'estructura seqüencial** permet descomposar un problema en instruccions que s'executaran de la primera a la última seguint un ordre de forma incondicional. 
+En **l'estructura seqüencial** permet descomposar un problema en instruccions que s'executaran de la primera a la última seguint un ordre **de forma incondicional**. 
 {{% /notice %}}
 
 {{% notice note %}}
@@ -18,6 +18,7 @@ L' **assignació** consisteix en donar un valor a una variable. "Guardar" una in
 |Codi| Diagrama de flux|
 |---|---|
 |Acció1;<br>Acció2;<br>Acció3;<br>Acció4;|![seq](images/seq.png?width=100px)|
+
 
 ### Estructura bàsica 
 L'estructura bàsica de qualsevol programa en Java anirà dins una "classe" amb un fitxer .java, amb la següent plantilla:
@@ -33,6 +34,54 @@ public class Main {
 
 Java executarà tot el que trobi dins les claus del main anterior. 
 
+
+### Dades d'entrada
+
+Per tal **d'introduir valors** al nostre programa (inputs), inicialment, farem servir la classe Scanner (Scanner ens permet introduir molts tipus de dades en les variables que ja coneixem). Primerament cal que "importem" Scanner just a l'inici del nostre fitxer, `import java.util.Scanner`, tot seguit i ja dins el nostre bloc de main creem un objecte Scanner, per exemple a l'identificador de la variable li direm sc. Aquest objecte ens permetrà introduir informació pel teclat dels tipus de dades ja coneguts. L'exemple és molt il·lustratiu:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int enter32bits = sc.nextInt();
+        long enter64bits = sc.nextLong();
+        float decimal = sc.nextFloat();
+        double decimalGran = sc.nextDouble();
+        boolean boolea = sc.nextBoolean();
+        String cadenaCaracters = sc.next();                //Capta tots els caràcters fins al primer espai.
+        String cadenaCaractersFinalLinia = sc.nextLine();  //Guarda tots els caràcters fins a la finalització de línia (Enter).
+    }
+}
+
+```
+
+Quan s'executa aquest programa, observarem que quan arriba a la línia on hi ha `sc.nextInt()`, el programa es queda parat esperant que l'usuari introdueixi per teclat un valor i pressioni Enter, això passarà amb la resta de valors que s'espera que l'usuari introdueixi per teclat. Tots aquests valors seran assignats a les variables que hem definit: enter32bits, enter64bits...
+
+
+
+### Dades de sortida
+
+Per tal d'observar els valors pel terminal (outputs) el que farem serà usar `System.out.print` i si volem un salt de línia `System.out.println`
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pots escriure el teu nom per línia de comandes?");
+
+        String nom = sc.nextLine();
+
+        System.out.print("Hola! ");
+        System.out.print("El meu nom és " + nom);
+    }
+}
+```
 ### Comentaris
 
 Tot el que es posa entre comentaris serveix per documentar el codi en cas que sigui necessari i Java ho interpreta com a comentaris i no ho executa com si fossin instruccions. Existeixen comentaris per:
@@ -56,48 +105,6 @@ public class Main {
 
 ```
 
-### Inputs
-
-Per tal **d'introduir valors** al nostre programa (inputs), inicialment, farem servir la classe Scanner, cal declarar-la a dalt del programa i crear un objecte Scanner, per exemple li direm sc. Aquest objecte ens permetrà introduir informació pel teclat.
-
-```java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        int enter32bits = sc.nextInt();
-        long enter64bits = sc.nextLong();
-        float decimal = sc.nextFloat();
-        double decimalGran = sc.nextDouble();
-        boolean boolea = sc.nextBoolean();
-        String cadenaCaracters = sc.next();
-        String cadenaCaractersFinalLinia = sc.nextLine();
-    }
-}
-
-```
-
-### Outputs
-Per tal de treure valors per la línia de comandes (outputs) el que farem serà usar *System.out.print* i si volem un salt de línia *System.out.println*
-
-```java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Pots escriure el teu nom per línia de comandes?");
-
-        String nom = sc.nextLine();
-
-        System.out.print("Hola! ");
-        System.out.print("El meu nom és " + nom);
-    }
-}
-```
 
 
 #### Exemples
@@ -113,6 +120,13 @@ public class Main {
     float multiplicacio = operand1 * operand2;
     float divisio = operand1 / operand2;
     float modul = operand1 % operand2;
+
+    System.out.println("Suma:" + suma);
+    System.out.println("Resta:" + resta);
+    System.out.println("Multiplicacio:" + multiplicacio);
+    System.out.println("Divisio:" + divisio);
+    System.out.println("Modul:" + modul);
+
 ```
 
 2. Llegeix el preu d'un producte, l'IVA (en %) i el descompte (en %) a aplicar. Escriu el preu final del producte.

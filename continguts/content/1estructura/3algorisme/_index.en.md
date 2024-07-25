@@ -1,7 +1,7 @@
 ---
-title: Algorsime
-weight: 1
-pre: "3.1. "
+title: Algorisme
+weight: 3
+pre: "3. "
 chapter: false
 ---
 
@@ -23,7 +23,7 @@ Les característiques bàsiques d'un algorisme són:
 + **Finit.** L'algorisme ha d'acabar en algun moment, per tant, tindrà un nombre finit de passos.
 + Un bon disseny algorítmic contindrà tres parts: _Entrada (Input), Procés (Tractament de la informació) i Sortida (Output)_.
 
-![Algorisme](images/algorisme.jpg)
+![Algorisme](../images/algorisme.jpg?width=700px)
 
 **Pseudocodi**
 {{% notice note %}}
@@ -54,6 +54,13 @@ FiProces
 {{% notice note %}}
 Un **diagrama de flux** de control consisteix en una subdivisió de passes seqüencials, d’acord amb les sentències i estructures de control d’un programa, que mostra els diferents camins que pot seguir un programa a l’hora d’executar les seves instruccions. Cada passa s’associa a una figura geomètrica específica.
 {{% /notice %}}
+
+Una eina per dibuixar diagrames de flux és [Code2Flow](https://app.code2flow.com/), a partir d'un pseudocodi és capaç de dibuixar automàticament el diagrama de flux pertinent.
+
+Si agafem el cas anterior i 'l'adaptem' a les regles que ens demanen aconseguim el següent resultat:
+![Code2Flow](../images/code2flow.png?width=1100px)
+
+
 
 **Complexitat ciclomàtica**
 {{% notice note %}}

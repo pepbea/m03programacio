@@ -8,10 +8,9 @@ En aquesta primera part del temari introduirem que és un programa informàtic, 
 
 1. [Introducció]({{%relref "1estructura/1introduccio/_index.en.md" %}})
 2. [Entorn Java]({{%relref "1estructura/2entornJava/_index.en.md" %}})
-3. [Primer programa]({{%relref "1estructura/3primerPrograma/_index.en.md" %}})
-   - [Algorisme]({{%relref "1estructura/3primerPrograma/1algorisme/_index.en.md" %}})
+3. [Algorisme]({{%relref "1estructura/3algorisme/_index.en.md" %}})
 4. [Tipus de dades i variables]({{%relref "1estructura/4tipusDades/_index.en.md" %}})
-   - [Variables literals i constants]({{%relref "1estructura/4tipusDades/1variablesLiteralsConstants/_index.en.md" %}})
+   - [Primer programa]({{%relref "1estructura/4tipusDades/1primerPrograma/_index.en.md" %}})
    - [Operadors aritmètics, lògics i relacionals]({{%relref "1estructura/4tipusDades/2operadors/_index.en.md" %}})
    - [Conversions de tipus]({{%relref "1estructura/4tipusDades/3conversions/_index.en.md" %}})
 5. [Què és la programació estructurada?]({{%relref "1estructura/5programacioEstructurada/_index.en.md" %}})

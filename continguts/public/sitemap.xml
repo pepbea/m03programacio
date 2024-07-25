@@ -21,10 +21,6 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/3primerprograma/1algorisme/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/1estructuresestatiquesdinamiques/</loc>
   </url>
   
@@ -65,15 +61,15 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/4tipusdades/1primerprograma/</loc>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/2stringbuilder/</loc>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5esdades/3manipulaciofitxers/1text/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/4tipusdades/1variablesliteralsconstants/</loc>
   </url>
   
   <url>
@@ -178,6 +174,10 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/3algorisme/</loc>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/4tipusdades/3conversions/</loc>
   </url>
   
@@ -195,10 +195,6 @@
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/3.crudmapeigor/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/3primerprograma/</loc>
   </url>
   
   <url>
