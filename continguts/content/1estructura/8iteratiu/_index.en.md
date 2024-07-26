@@ -15,7 +15,7 @@ chapter: false
 ### Característiques generals:
 > Tots els bucles tenen:
 > - Una *precondició*: Estat abans d'entrar al bucle
-> - Una *postcondició*:Estat al sortir de bucle
+> - Una *postcondició*: Estat al sortir de bucle
 > - Una *expressió booleana*: mentre es compleixi l'expressió booleana s'itera el bucle, un cop l'expressió booleana s'avalua a fals es "surt" del bucle i es continua amb l'execució de les instruccions següents.
 > - *Variable de control*: Ens serveix per controlar el nombre d'iteracions. Aquesta variable pot estar englobada en un dels següents grups:
 >      - *acumulador*: guardem en una variable una operació concreta.
@@ -26,7 +26,7 @@ chapter: false
  Un bucle necessita:<br>
     1. Una **condició de sortida**: cal que l'expressió booleana s'avaluï a fals per sortir del bucle, sinó provocarem un bucle infinit.<br> 
     2. La **variable de control** ens ha d'acostar pas a pas a complir amb la condició de sortida del bucle.<br>
-    3. Dins el bucle acostumen a ver instruccions amb l'objectiu de buscar un **resultat**.
+    3. Dins el bucle a d'haver instruccions amb l'objectiu de buscar el **resultat** que dóna origen al bucle.
  
 {{% /notice %}}
 
@@ -35,6 +35,7 @@ Existeixen diferents estructures iteratives.
 2. For
 3. Do while
 4. Combinació d'estructures
+5. Instruccions de salt
 
 #### 1. While
 L'estructura bàsica d'un bucle while en Java és:
@@ -54,9 +55,16 @@ Consideracions:
 |Codi| Diagrama de flux|
 |---|---|
 |Acció1;<br>while ( cond ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>}<br>Acció4;|![while1](images/while1.png)| 
-
+```java
+    //Exemple. Objectiu: Imprimim de 1 a 10.
+    int i = 1;                      //Acció 1 (variable de control)
+    while(i <=10){                  //cond
+        System.out.println(i);      //Acció 2 (Resultat que estem buscant)
+        i++;                        //Acció 3 (Ens asseegurem que acaba el bucle ja que incrementem i)
+    }
+```
 #### 2. For
-El for és una estructura que permet realitzar **recorreguts** a un conjunt de dades de forma simple. Ens permet condensar la funcionalitat de bucle en una sola línia. Per exemple podem recorre els nombres del 1 al 10 de la següent manera:
+El for és una estructura que permet realitzar **recorreguts** a un conjunt de dades de forma simple. Ens permet condensar la funcionalitat de bucle en una sola línia. Per exemple, si agafem l'exemple anterior, podem recorre els nombres del 1 al 10 de la següent manera:
 
 ```java
     for(int i=1; i <= 10; i++){
@@ -74,20 +82,11 @@ Així doncs
 
 
 {{% notice note %}}
- Qualsevol bucle while es pot transformar en un bucle for i viceversa.
+ Com s'ha observat amb els dos exemples anteriors: **Qualsevol** bucle while es pot transformar en un bucle for i viceversa.
 {{% /notice %}}
- Així doncs, l'exemple anterior si el transformem en un while queda de la següent manera:
-
-```java
-    int i=1;                    //Inicialització variable
-    while( i <= 10 ){           //Expressió booleana
-        System.out.println(i);  // Resultat
-        i++;                    //Modificació instrucció iteradora
-    }
-```
 
 #### 3. Do while
-Aquesta estructura no és gaire utilitzada i és similar a l'estructura while. La diferència és que en el *while* abans de realitzar cap iteració es comprova l'expressió booleana, en canvi amb el *do while* primer es realitzar una iteracio i després es comprova l'expressió booleana. A efectes pràctics si estem segurs que existeix almenys una iteració es pot usar aquesta estructura. 
+Aquesta estructura no és tan utilitzada i és similar a l'estructura while. La diferència és que en el *while* abans de realitzar cap iteració es comprova l'expressió booleana, en canvi amb el *do while* primer es realitzar una iteracio i després es comprova l'expressió booleana. A efectes pràctics si estem segurs que existeix almenys una iteració es pot usar aquesta estructura. 
 
 El cas anterior fet en *do while* seria:
 
@@ -147,7 +146,7 @@ Posició 8 8
 
 En aquest cas estem parlant de dos bucles que són **independents** entre ells. Ja que per cada bucle interior no té afectació en l'exterior.
 
-Però a vegades és necessari que els bucles siguin **dependents**, en aquest cas sí que hi hauria afectació. Modifiquem el programa anterior perquè per exemple enlloc de mostrar tot el tauler de posicions només vull mostrar aquelles que es troben per sobre de la diagonal:
+Però a vegades és necessari que els bucles siguin **dependents**, en aquest cas sí que hi hauria afectació. Modifiquem el programa anterior perquè, per exemple, enlloc de mostrar tot el tauler de posicions només vull mostrar aquelles que es troben per sobre de la diagonal:
 
 ```java
     for(int i=1; i <= 8; i++){
@@ -160,36 +159,75 @@ Però a vegades és necessari que els bucles siguin **dependents**, en aquest ca
 ```
 En aquest cas, si executeu veureu que només mostra la meitat superior de posicions. Això és així perquè en el bucle interior realitzem una operació que DEPÈN de la variable **i** que pertany al primer bucle, per tant el bucle interior depèn de l'exterior.
 
+En el cas anterior, fixeu-vos que es realitzen 8 x 8 iteracions, sempre es realitzen totes 64 iteracions, quan el que volem és mostrar **NOMÉS** la meitat del tauler, una manera d'optimitzar el codi anterior seria la següent:
 
- 
+```java
+    for(int i=1; i <= 8; i++){
+        for(int j=i; j <= 8; j++){
+                System.out.println("Posició " + i + " " + j);
+        }
+    }
+```
+D'aquesta manera, observeu que s'ha eliminat la condició, però ja només es realitzen aquelles iteracions necessàries (la meitat respecte el cas anterior) per obtenir el mateix resultat: mostrar les caselles superiors  de la diagonal del tauler d'escacs.
+
+#### 5. Instruccions de Salt
+
+#### break
+
+La sentencia break té dos usos. El primer ús l'hem vist a l'apartat anterior quan serveix per acabar un case del switch. El segon ús és **forçar l'acabament immediat d'un cicle**, saltantla prova condicional normal del bucle o la sentència de selecció.
+
+Per exemple quan s'arribi a 10 es vol que es surti del bucle
+
+```java
+    for(int i=1; i <= 20; i++){
+        if(i == 10){
+                break;
+        }
+        System.out.println("Posició " + i + " " + j);
+    }
+```
+    
+#### continue
+
+En aquest cas, la sentencia continue, a diferència del break, el que fa **és saltar la iteració actual** però continua iterant dins el bucle sense tenir en compte la iteració on s'executa el *continue;*.
 
 
+Volem imprimir tots els nombres del 1 al 20, a excepció del 10.
+
+```java
+    for(int i=1; i <= 20; i++){
+        if(i == 10){
+            continue;
+        }
+        System.out.println(i);
+    }
+```
 
 #### Exemples
 
-1. Fer un programa que llegeixi dos nombre enters n 1 i n 2 amb n 1 < n 2 i escrigui tots els nombres enters dins l’interval [n 1 , n 2 ] en ordre creixent. Aquest és un exemple de recorregut on la variable n1 fa de **comptador**.
+1. Fer un programa que llegeixi dos nombre enters n1 i n2 amb n1 < n2 i escrigui tots els nombres enters dins l’interval [n1, n2] en ordre creixent. Aquest és un exemple de recorregut on la variable n1 fa de **comptador**.
 
 ```java  
-    int n1 = sc.nextInt();
-    int n2 = sc.nextInt();
-    while(n1<=n2) {
+    var n1 = sc.nextInt();
+    var n2 = sc.nextInt();
+    while(n1 <= n2) {
         System.out.println(n1);
         n1++;
     }
 ```
 
-2. Fer un programa que llegeixi dos nombre enters n 1 i n 2 amb n 1 < n 2 i escrigui els nombres enters parells que hi ha dins l’interval [n 1 , n 2 ] en ordre creixent. El nombre zero es considera parell.
+2. Fer un programa que llegeixi dos nombre enters n1 i n2 amb n1 < n2 i escrigui els nombres enters parells que hi ha dins l’interval [n1, n2] en ordre creixent. El nombre zero es considera parell.
 
 ```java  
     int n1 = sc.nextInt();
     int n2 = sc.nextInt();
 
     for(int i=n1; i <= n2; i++) {
-        if(i%2==0)System.out.println(i);
+        if(i%2 == 0) System.out.println(i);
     }
 
     //2naOpcio (meitat d'iteracions)
-    if(n1%2!=0)n1++;
+    if(n1%2 != 0)n1++;
     while(n1<=n2) {
         System.out.println(n1);
         n1 = n1+2;
@@ -212,11 +250,7 @@ En aquest cas, si executeu veureu que només mostra la meitat superior de posici
 
 4. Fer un programa que llegeixi un nombre enter i escrigui si és un nombre primer o no. Un nombre enter és primer si es més gran que 1 i només és divisible per 1 i per ell mateix. 
 
-
-
-
 ```java  
-
 /*
 Fixeu-vos amb l'expressió booleana del bucle, en aquest cas es fa ús d'una variable booleana per sortir del bucle i no continuar iterant, en cas que ja haguem descobert la solució i no sigui necessari continuar iterant.
 */
@@ -230,7 +264,7 @@ int index = n/2;
 
 //En la condició del bucle,si trobem un divisor ja no cal que continuem buscant i acabem
 while(index > 1 && esPrimer){
-    if(n % index == 0) esPrimer=false;
+    if(n % index == 0) esPrimer = false;
     index--;
 }
 
@@ -238,14 +272,31 @@ while(index > 1 && esPrimer){
 String sol = (!esPrimer)? "NO és primer" : "És primer" ;
 System.out.println(sol);
 ```
+Una altra manera de realitzar el cas anterior utilitzant el **break** seria la següent:
+
+```java
+System.out.println("Llegeix nombre: ");
+var n = sc.nextInt();
+
+var index = n/2;
+while(index > 1){
+    if(n % index == 0) {
+        break;
+    }
+    index--;
+}
+
+//Escrivim solucio
+System.out.println((index == 1)? "És primer" :  "NO és primer");
+```
 
 5. Fer un programa que llegeixi un nombre enter i escrigui si és capicua o no.Considerarem també capicues els nombres enters d'una xifra.
 
 ```java     
     System.out.println("Llegeix nombre: ");
-    int n = sc.nextInt();
-    int valorInicial = n;
-    int capicua = 0;
+    var n = sc.nextInt();
+    var valorInicial = n;
+    var capicua = 0;
     while(n>0){
         capicua = capicua*10;
         capicua = capicua + n%10;

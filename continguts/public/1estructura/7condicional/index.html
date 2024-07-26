@@ -12,22 +12,22 @@
     <title>Estructura de selecció :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721909515" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721980939" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721909515" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721980939" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721909515"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721980939"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721909515"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721909515"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721980939"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721980939"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721909515"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721980939"></script>
 
     
   </div>
@@ -2357,7 +2357,7 @@
 
 
 
-	<h4 id="estructura-condicional">Estructura condicional</h4>
+	<h4 id="estructura-de-selecció">Estructura de selecció</h4>
 
 <div class="notices note" ><p>L&rsquo;estructura de control <strong>condicional o alternativa</strong> permet prendre una decisió en un moment determinat sobre quines instruccions s&rsquo;han d&rsquo;executar. Donada una expressió booleana (una expressió lògica que s&rsquo;avalua a veritat &ldquo;true&rdquo; o fals &ldquo;false&rdquo;) permet decidir entre un o varis camins d&rsquo;execució.</p>
 </div>
@@ -2391,6 +2391,18 @@
 </tr>
 </tbody>
 </table>
+<pre><code class="language-java">//Exemple estructura simple (if)
+int nota = sc.nextInt();                                  //Acció1
+if( nota == 8){                         
+    System.out.println(&quot;Tens un notable, nota: &quot; + nota); //Acció2
+}
+nota = 0;                                                 //Acció3
+
+//Quan es tracta d'una sola instrucció dins el bloc de l'if, com és el cas amb l'Acció2, no ens caldria posar &quot;{ }&quot; Podria quedar de la següent manera:
+int nota = sc.nextInt();                                             //Acció1
+if( nota == 8) System.out.println(&quot;Tens un notable, nota: &quot; + nota); //Acció2
+nota = 0;                                                            //Acció3
+</code></pre>
 <h4 id="2-estructura-composta-ifelse">2. Estructura composta (if/else)</h4>
 <p>La diferència respecte el cas anterior és que ara quan l&rsquo;expressió booleana s&rsquo;avaluï a fals també s&rsquo;executarà un bloc d&rsquo;instruccions.</p>
 <ul>
@@ -2410,11 +2422,57 @@
 </tr>
 </tbody>
 </table>
-<h4 id="3-estructura-encadenada-o-múltiple-ifelse-if-else">3. Estructura encadenada o múltiple (if/else if/ else)</h4>
+<pre><code class="language-java">//Exemple estructura composta (if/else)
+int nota = sc.nextInt();                                //Acció1
+if( nota &gt;= 5){                         
+    System.out.println(&quot;Estàs aprovat&quot;);                //Acció2
+}
+else{
+    System.out.println(&quot;Estàs suspès&quot;);                 //Acció3
+}
+nota = 0;                                               //Acció4
+
+//D'igual manera es podria reescriure com:
+int nota = sc.nextInt();                                //Acció1
+if( nota &gt;= 5) System.out.println(&quot;Estàs aprovat&quot;);     //Acció2
+else System.out.println(&quot;Estàs suspès&quot;);                //Acció3
+nota = 0;                                               //Acció4
+</code></pre>
+<h5 id="estructura-ternària">Estructura ternària</h5>
+<p>Existeix una estructura similar a l&rsquo;estructura composta que seria la següent:</p>
+<pre><code class="language-java">int resultat = (cond)? a : b;
+</code></pre>
+<p>Equivaldria a:</p>
+<pre><code class="language-java">int resultat;
+if (cond){
+    resultat = a;
+}
+else{
+    resultat = b;
+}
+</code></pre>
+<p>Un exemple senzill podria ser:</p>
+<pre><code class="language-java">String missatge;
+int edat = sc.nextInt();
+if (edat &gt;=18){
+    missatge = &quot;És major d'edat&quot;;
+}else{
+    missatge = &quot;Encara no és major d'edat&quot;;
+}
+System.out.println(missatge);
+
+
+
+//Utilitzant l'operador ternari
+int edat = sc.nextInt();
+String missatge = (edat &gt;= 18) ? &quot;És major d'edat&quot; : &quot;Encara no és major d'edat&quot;;
+System.out.println(missatge);
+</code></pre>
+<h4 id="3-estructura-encadenada-o-múltiple-if--else-if--else">3. Estructura encadenada o múltiple (if / else if / else)</h4>
 <p>A vegades es dóna la situació que no volem decidir només entre dos camins d&rsquo;execució, sinó que el problema ens requereix escollir entre diferents camins, així serà necessari introduir la figura del else if(). Comportament:</p>
 <ul>
 <li>En aquest cas el programa avalua la primera expressió booleana que es troba, si és certa executa el bloc d&rsquo;instruccions que hi pertany. Però si l&rsquo;avaluació és falsa anirà a la següent expressió booleana que es trobarà en un bloc else if(). I així consecutivament fins a la última.</li>
-<li>S&rsquo;ha de tenir en compte que és important la prioritat en l&rsquo;avaluació de les diferents expressions booleanes. Si s&rsquo;avalua a cert en alguna expressió booleana <strong>JA NO</strong> avalua els següents casos, entra dins el bloc d&rsquo;instruccions, s&rsquo;executen les instruccions pertinents, i surt de l&rsquo;estructura de control sense avaluar la resta de casos (podrien avaluar-se també a cert, per això és important la prioritat alhora d&rsquo;establir els casos).</li>
+<li>S&rsquo;ha de tenir en compte que la prioritat en l&rsquo;avaluació de les diferents expressions booleanes és important. Si s&rsquo;avalua a cert en alguna expressió booleana <strong>JA NO</strong> avalua els següents casos, entra dins el bloc d&rsquo;instruccions, s&rsquo;executen les instruccions pertinents, i surt de l&rsquo;estructura de control sense avaluar la resta de casos (podrien avaluar-se també a cert, per això és important la prioritat alhora d&rsquo;establir els casos).</li>
 <li>Si s&rsquo;introdueix un bloc else i cap expressió booleana s&rsquo;avalua a cert, s&rsquo;executarà el bloc d&rsquo;instruccions corresponents a l&rsquo;else.</li>
 </ul>
 <table>
@@ -2431,6 +2489,25 @@
 </tr>
 </tbody>
 </table>
+<pre><code class="language-java">//Exemple estructura composta (if/else)
+int nota = sc.nextInt();                         //Acció0
+if (nota &lt; 5) {                         
+    System.out.println(&quot;Suspès&quot;);                //Acció1
+}
+else if (nota &lt; 6) {
+    System.out.println(&quot;Aprovat&quot;);               //Acció2
+}
+else if (nota &lt; 8) {
+    System.out.println(&quot;Bé&quot;);                    //Acció3
+}
+else if (nota &lt; 9) {
+    System.out.println(&quot;Notable&quot;);               //Acció4
+}
+else{
+    System.out.println(&quot;Excel·lent&quot;);            //Acció5
+}
+nota = 0;                                        //Acció6
+</code></pre>
 <h4 id="4-sentència-switch-switch">4. Sentència switch (switch)</h4>
 <p>Aquesta estructura és útil quan en funció del valor d&rsquo;una variable es poden executar camins d&rsquo;instruccions diferents. Per exemple podríem pensar en un menú d&rsquo;una app on tenim diferents opcions o un comandament a distància de la tele. Consideracions:</p>
 <ul>
@@ -3951,19 +4028,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721909515"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721980939"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721909515"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721980939"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721909515"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721980939"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

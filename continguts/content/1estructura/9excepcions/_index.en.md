@@ -33,7 +33,7 @@ try{
 
 El codi que trobem dins el bloc `try` és aquell que estem "vigilant" o és sospitós de llançar una excepció, per exemple quan obrim un fitxer que no existeix, tenim una ruta que està malament o intentem dividir entre 0. 
 
-En casos com els anteriors la JVM genera una Excepció que pot ser tractada dins el bloc `catch`. Un cop es detecta l'existència d'una excepció el que fa Java és comprovar si existeix algun bloc catch (poden haver-ne més d'un, els escriurem del més específic al més genèric), entra en el primer que coincideixi l'Exception i n'executa el codi de dins el bloc. 
+En casos com els anteriors la JVM genera una Excepció que pot ser tractada dins el bloc `catch`. Un cop es detecta l'existència d'una excepció el que fa Java és comprovar si existeix algun bloc catch (poden haver-ne més d'un, **els escriurem del més específic al més genèric**), entra en el primer que coincideixi l'Exception i n'executa el codi de dins el bloc. 
 
 Si no existeix cap bloc catch que "capturi" el tipus d'excepció, aquesta és llançada al bloc de codi que ha cridat aquest mètode i funció, de forma que serà el responsable de tractar-la. 
 
@@ -57,7 +57,17 @@ Exemples d'excepcions:
 
 **Exemples d'excepcions** 
 
+*IllegalArgumentException*
+
+En el cas del switch vist en l'apartat d'estructura de selecció hem vist aquest tipus d'excepció, es produïa quan s'intentava accedir a un element de l'enum (Enumeració) que no existia. En l'exemple veureu com es realitza el `try catch`.
+
+*IllegalStateException*
+
+També en els exemples de l'estructura de selecció, en l'exemple 4, s'observa com es pot tractar l'error inesperat de rebre un valor de l'argument del switch *inesperat*, una opció és que el propi default "llançi" una excepció si s'hi arriba. (**throw new Exception**).
+
 *InputMismatchException*
+
+Introducció d'un valor a una variable que NO és del mateix tipus.
 
 ```java
 public static void main(String[] args) {
@@ -79,6 +89,8 @@ public static void main(String[] args) {
 
 *ArithmeticException*
 
+Operació aritmètica errònia.
+
 ```java
 public static void main(String[] args) {
     int numerador = 10;
@@ -92,11 +104,9 @@ public static void main(String[] args) {
 }
 ```
 
+En tots els casos anteriors haguessis pogut substituir el tipus de l'Excepció per `Exception` ja que tots són de tipus Exception només que estan especialitzats pel tipus d'error que capturen.
 
-
-Tots els casos anteriors haguessis pogut substituir el tipus de l'Excepció per `Exception` ja que tots són de tipus Exception només que estan especialitzats pel tipus d'error que capturen.
-
-Fins el moment les excepcions han estat generades per la JVM quan s'ha detectat una casuística inesperada, però les excepcions es poden generar manualment emprant `new throw Exception`. Per exemple:
+Fins el moment les excepcions han estat generades per la JVM quan s'ha detectat una casuística inesperada, però les excepcions es poden generar manualment emprant `throw new Exception`. Per exemple:
 
 ```java
 public static void main(String[] args) {

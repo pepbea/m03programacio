@@ -84,9 +84,12 @@ public class Main {
 ```
 ### Comentaris
 
-Tot el que es posa entre comentaris serveix per documentar el codi en cas que sigui necessari i Java ho interpreta com a comentaris i no ho executa com si fossin instruccions. Existeixen comentaris per:
+Els comentaris són útils per mostrar informació adicional del codi, quan aquesta sigui necessària, no és bo abusar-ne. Normalment un codi ben escrit hauria de ser autoexplicatiu. Si s'assignen noms de variables i funcions coherents pel que s'utilitzen no caldria escriure molts comentaris.
+
+Java interpreta com a text explicatiu tots els comentaris i per tant **NO ELS EXECUTA** com si fossin instruccions. Existeixen comentaris per:
 - Una fila. En aquest cas utilitzarem  "// Comentari"
 - Més d'una fila, el comentari anirà entre "/* Comentari vàries línies */"
+- Per realitzar documentacions de codi usant, per exemple Javadoc "/** Documentació */"
 
 ```java
 public class Main {
@@ -100,14 +103,27 @@ public class Main {
     més d'una 
     línia
     */
-    }
+
 }
+
+/**
+ * Aquesta funció retorna la suma entera de dos nombres enters passats per paràmetre
+ *
+ * @param  operand1  primer operand de l'operació suma
+ * @param  operand2  segon operand de l'operació suma
+ * @return      retorna un enter que és la suma dels dos
+ * @see         suma
+ */
+ public int suma(int operand1, int operand2) {
+    var resultat = operand1 + operand2;
+    return resultat;
+ }
 
 ```
 
 
 
-#### Exemples
+#### Exemples de problemes seqüencials
 
 1. Llegeix dos nombres reals i escriu la seva suma, resta, producte i quocient.
 
@@ -159,9 +175,11 @@ public class Main {
 ```java     
     int nombre = sc.nextInt();
     int posicio = sc.nextInt();
+
     double potencia = Math.pow(10,posicio-1);
     double nombreRetallat = nombre / potencia;
     int nombreBuscat = (int)nombreRetallat % 10;
+    
     System.out.println("el dígit " +posicio+ " del nombre " + nombre + " és: "+ nombreBuscat);
 ```
 
@@ -169,6 +187,7 @@ public class Main {
 
 ```java     
     int segonsTotals = sc.nextInt();
+
     int hores = segonsTotals / 3600;
     int segonsRestants = segonsTotals % 3600;
     int minuts = segonsRestants / 60;

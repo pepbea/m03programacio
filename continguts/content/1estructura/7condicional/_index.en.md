@@ -6,7 +6,7 @@ chapter: false
 ---
 
 
-#### Estructura condicional
+#### Estructura de selecció
 
 {{% notice note %}}
  L'estructura de control **condicional o alternativa** permet prendre una decisió en un moment determinat sobre quines instruccions s'han d'executar. Donada una expressió booleana (una expressió lògica que s'avalua a veritat "true" o fals "false") permet decidir entre un o varis camins d'execució. 
@@ -29,6 +29,20 @@ Aquesta és la forma bàsica. Consisteix en una estructura en la qual si l' aval
 |---|---|
 |Acció1;<br>if ( cond ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>}<br>Acció3;|![if1](images/if1.png)| 
 
+```java
+//Exemple estructura simple (if)
+int nota = sc.nextInt();                                  //Acció1
+if( nota == 8){                         
+    System.out.println("Tens un notable, nota: " + nota); //Acció2
+}
+nota = 0;                                                 //Acció3
+
+//Quan es tracta d'una sola instrucció dins el bloc de l'if, com és el cas amb l'Acció2, no ens caldria posar "{ }" Podria quedar de la següent manera:
+int nota = sc.nextInt();                                             //Acció1
+if( nota == 8) System.out.println("Tens un notable, nota: " + nota); //Acció2
+nota = 0;                                                            //Acció3
+```
+
 #### 2. Estructura composta (if/else)
 La diferència respecte el cas anterior és que ara quan l'expressió booleana s'avaluï a fals també s'executarà un bloc d'instruccions. 
 - Aquestes instruccions aniran contingudes dins de parèntesis {} i precedides de la paraula else.
@@ -37,56 +51,280 @@ La diferència respecte el cas anterior és que ara quan l'expressió booleana s
 |---|---|
 |Acció1;<br>if ( cond ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció3;<br>}<br>Acció4;|![if2](images/if2.png)| 
 
-#### 3. Estructura encadenada o múltiple (if/else if/ else)
+```java
+//Exemple estructura composta (if/else)
+int nota = sc.nextInt();                                //Acció1
+if( nota >= 5){                         
+    System.out.println("Estàs aprovat");                //Acció2
+}
+else{
+    System.out.println("Estàs suspès");                 //Acció3
+}
+nota = 0;                                               //Acció4
+
+//D'igual manera es podria reescriure com:
+int nota = sc.nextInt();                                //Acció1
+if( nota >= 5) System.out.println("Estàs aprovat");     //Acció2
+else System.out.println("Estàs suspès");                //Acció3
+nota = 0;                                               //Acció4
+```
+
+##### Estructura ternària
+
+Existeix una estructura similar a l'estructura composta que seria la següent:
+
+```java
+int resultat = (cond)? a : b;
+```
+
+Equivaldria a:
+
+```java
+int resultat;
+if (cond){
+    resultat = a;
+}
+else{
+    resultat = b;
+}
+``` 
+
+Un exemple senzill podria ser:
+
+```java
+String missatge;
+int edat = sc.nextInt();
+if (edat >=18){
+    missatge = "És major d'edat";
+}else{
+    missatge = "Encara no és major d'edat";
+}
+System.out.println(missatge);
+
+
+
+//Utilitzant l'operador ternari
+var edat = sc.nextInt();
+var missatge = (edat >= 18) ? "És major d'edat" : "Encara no és major d'edat";
+System.out.println(missatge);
+``` 
+
+#### 3. Estructura encadenada o múltiple (if / else if / else)
 A vegades es dóna la situació que no volem decidir només entre dos camins d'execució, sinó que el problema ens requereix escollir entre diferents camins, així serà necessari introduir la figura del else if(). Comportament:
 - En aquest cas el programa avalua la primera expressió booleana que es troba, si és certa executa el bloc d'instruccions que hi pertany. Però si l'avaluació és falsa anirà a la següent expressió booleana que es trobarà en un bloc else if(). I així consecutivament fins a la última. 
-- S'ha de tenir en compte que és important la prioritat en l'avaluació de les diferents expressions booleanes. Si s'avalua a cert en alguna expressió booleana **JA NO** avalua els següents casos, entra dins el bloc d'instruccions, s'executen les instruccions pertinents, i surt de l'estructura de control sense avaluar la resta de casos (podrien avaluar-se també a cert, per això és important la prioritat alhora d'establir els casos). 
+- S'ha de tenir en compte que la prioritat en l'avaluació de les diferents expressions booleanes és important. Si s'avalua a cert en alguna expressió booleana **JA NO** avalua els següents casos, entra dins el bloc d'instruccions, s'executen les instruccions pertinents, i surt de l'estructura de control sense avaluar la resta de casos (podrien avaluar-se també a cert, per això és important la prioritat alhora d'establir els casos). 
 - Si s'introdueix un bloc else i cap expressió booleana s'avalua a cert, s'executarà el bloc d'instruccions corresponents a l'else.
 
 |Codi| Diagrama de flux|
 |---|---|
 |Acció0;<br>if ( cond1 ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció1;<br>} else if (cond2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>}else if (cond3) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció3;<br>}else if (cond4) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció4;<br>}else {<br>&nbsp;&nbsp;&nbsp;&nbsp;Acció5;<br>}<br>Acció6;|![if3](images/if3.png)| 
 
+```java
+//Exemple estructura composta (if/else)
+var nota = sc.nextInt();                         //Acció0
+if (nota < 5) {                         
+    System.out.println("Suspès");                //Acció1
+}
+else if (nota < 6) {
+    System.out.println("Aprovat");               //Acció2
+}
+else if (nota < 8) {
+    System.out.println("Bé");                    //Acció3
+}
+else if (nota < 9) {
+    System.out.println("Notable");               //Acció4
+}
+else{
+    System.out.println("Excel·lent");            //Acció5
+}
+nota = 0;                                        //Acció6
+```
+
+
 #### 4. Sentència switch (switch)
 
-Aquesta estructura és útil quan en funció del valor d'una variable es poden executar camins d'instruccions diferents. Per exemple podríem pensar en un menú d'una app on tenim diferents opcions o un comandament a distància de la tele. Consideracions:
-- En aquest cas s'avalua  a == **EL VALOR** de la variable en qüestió i definirem les instruccions pertinents en cada cas.
+Aquesta estructura és útil quan en funció del valor d'una variable es poden executar blocs de codi diferents. Per exemple podríem pensar en un menú d'una app on tenim diferents opcions o un comandament a distància de la tele. Consideracions:
 - A l'inici d'aquesta estructura comença amb un __switch__ seguida de la variable que volem avaluar entre parèntesi: switch (variable).
-- Tot seguit, i entre claus {}, definim tots els casos que es volen tractar d'aquesta variable. Per a cada cas existeix un bloc __case valor:__ amb tots els casos possibles.
+- Tot seguit, i entre claus {}, definim tots els casos que es volen tractar d'aquesta variable. Per a cada cas existeix un bloc __case valor:__ amb tots els casos possibles. Per cada **case** el que fa és avaluar si la variable del **switch == valor** definit en el case, si és així executa les instruccions d'aquest case.
 - Si volem executar un bloc d'instruccions en cas que no es trobi cap dels valors desitjats per la variable sempre tenim el bloc __default:__ que ens permet fer la mateixa funció que "l'else" en les estructures anteriors.
-- En cada bloc case és necessari acabar-lo amb un **break;** necessari per a que ens surti de l'estructura switch.
+- En cada bloc case és necessari acabar-lo amb un **break;** si el que volem és sortir de l'estructura per tal que no executi les instruccions del següent case. 
 - És una estructura que podríem simular amb una estructura encadenada o múltiple, la única diferència respecte a l'anterior és que en aquest cas, si no posem el break, sí que permetria executar més d'un case diferent.
+- Els tipus de dades que poden treballar amb un switch són els següents: byte (Byte), shor (Short), int (Integer), char (Character), enum i String.
 
 |Codi| Diagrama de flux|
 |---|---|
 |Acció0;<br>switch ( expressio ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor1:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor3:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció3;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case valor4:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;default:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acció5;<br>} <br>Acció6;|![if4](images/if4.png)| 
 
+```java
+var animal = sc.next();
+var result;                          //Acció 0
+switch (animal) {
+    case "DOFI":
+        result = "animal marí";         //Acció 1
+        break;
+    case "VACA":
+        result = "animal terrestre";    //Acció 2
+        break;
+    case "CORB":
+        result = "animal aeri";         //Acció 3
+        break;
+    case "GOS":
+        result = "animal terrestre";    //Acció 4
+        break;
+    case "TAURO":
+        result = "animal marí";         //Acció 5
+        break;
+    default:
+        result = "animal desconegut";   //Acció 6
+        break;
+}
+System.out.println(animal + " es un " + result);   //Acció 7
+``` 
+
+Podríem entendre aquest codi de la següent manera en l'estructura de if / else if / else:
+```java
+var animal = sc.next();
+var result;  
+if (animal.equals("DOFI")) result = "animal marí";
+else if(animal.equals("VACA")) result = "animal terrestre";
+else if(animal.equals("CORB")) result = "animal aeri";
+else if(animal.equals("GOS")) result = "animal terrestre";
+else if(animal.equals("TAURO")) result = "animal marí";
+else result = "animal desconegut";                     
+System.out.println(animal + " es un " + result);  
+``` 
+
+Observem que existeixen dos casos d'animal marí i dos d'animal terrestre, així que podríem reduir el codi en:
+```java
+var animal = sc.next();
+var result;  
+if (animal.equals("DOFI") OR animal.equals("TAURO")) result = "animal marí";
+else if(animal.equals("VACA") OR animal.equals("GOS")) result = "animal terrestre";
+else if(animal.equals("CORB")) result = "animal aeri";
+else result = "animal desconegut";                     
+System.out.println(animal + " es un " + result);  
+```
+
+De la mateixa manera fent ús del switch quedaria:
+```java
+var animal = sc.next();
+var result;                             //Acció 0
+switch (animal) {
+    case "DOFI":
+    case "TAURO":
+        result = "animal marí";         //Acció 1
+        break;
+    case "VACA":
+    case "GOS":
+        result = "animal terrestre";    //Acció 2
+        break;
+    case "CORB":
+        result = "animal aeri";         //Acció 3
+        break;
+    default:
+        result = "animal desconegut";   //Acció 6
+        break;
+}                   
+System.out.println(animal + " es un " + result);  
+```
+
+Des de JDK12 s'incorpora els **->** en la formulació del switch, aquesta nova versió li dóna un aire mes legible i més elegant. L'exemple anterior usant els "arrow" en el switch quedaria:
+
+```java
+var animal = sc.next();
+var resultat = switch (animal) {
+    case "DOFI"  -> "animal marí";
+    case "VACA"  -> "animal terrestre";
+    case "CORB"  -> "animal aeri";
+    case "GOS"   -> "animal terrestre";
+    case "TAURO" -> "animal marí";
+    default      -> "animal desconegut";
+};    
+System.out.println(animal + " es un " + resultat);  
+```
+
+Optant per l'opció de juntar els CASE quedaria encara més resumit:
+
+```java
+var animal = sc.next();
+var resultat = switch (animal) {
+    case "DOFI", "TAURO"  -> "animal marí";
+    case "VACA", "GOS"    -> "animal terrestre";
+    case "CORB"           -> "animal aeri";
+    default               -> "animal desconegut";
+};   
+System.out.println(animal + " es un " + resultat);  
+```
+
+##### Enum
+
+Finalment incorporem un tipus nou, **enum**, que s'ajusta molt bé en el cas d'estructures switch. Enum és una llista de valors constants que pot prendre una variable. Seguint el cas anterior quedaria de la següent manera:
+
+```java
+Scanner sc = new Scanner(System.in);
+String animalString = sc.next();
+
+enum animals{ DOFI, TAURO, VACA, GOS, CORB};
+Animal animal = animals.valueOf(animalString);
+
+var resultat = switch (animal) {
+    case DOFI, TAURO  -> "animal marí";
+    case VACA, GOS    -> "animal terrestre";
+    case CORB         -> "animal aeri";
+    default           -> "animal desconegut";
+};    
+System.out.println(animal + " es un " + resultat);  
+```
+
+Finalment per acabar l'exemple, s'observa com mai s'accedeix a default, de fet, si introduïm un element que no està dins del llistat animals **es produeix una excepció** (ho veurem properament). Una excepció és un error inesperat i, en aquest cas, causat per la introducció d'un valor no apte per l'enum que tenim definit. En aquest cas per tal de controlar aquest error el que farem és tractar els casos d'animals que no estan dins l'enum de la següent manera:
+
+```java
+Scanner sc = new Scanner(System.in);
+String animalString = sc.next();
+
+enum animals{ DOFI, TAURO, VACA, GOS, CORB};
+
+try {
+    animals animal = animals.valueOf(animalString);
+    var resultat = switch (animal) {
+        case DOFI, TAURO  -> "animal marí";
+        case VACA, GOS    -> "animal terrestre";
+        case CORB         -> "animal aeri";
+    };
+    System.out.println(animal + " es un " + resultat);
+    
+}catch (IllegalArgumentException e){
+    System.out.println(animalString + " es un animal desconegut");
+}
+```
+
+Observem com en el tractament de l'excepció ja contemplem el cas default que ja no tenim definit en el switch.
+
 #### 5. Combinació d'estructures
 Moltes vegades els problemes que ens trobem a la vida real requereix de la composició de diferents estructures de control, així doncs es podria donar el cas que tinguéssim diferents estructures de control unes dins d'altres de forma jerarquitzada. 
 
 Exemple: En l'època actual de Coronavirus, donat els cribatges de PCRs per detectar casos positius ens interessaria detectar quins són els assimptomàtics. Així doncs m'invento un algorisme que permeti filtrar aquelles persones que ens interessa per realitzar les proves. És necessari que donades unes quantes dades ens digui si cal que faci alguna de les proves o no. 
-- Volem analitzar les persones entre 18 i 40 anys, d'aquestes es farà la prova bàsica de PCR, però les noies embarassades no realitzaran aquesta bàsica sinó que faran una prova més avançada. Pel que fa a les persones majors de 40 anys els hi realitzarem una prova avançada de PCR i un test d'esforç físic.
+- Volem analitzar les persones entre 18 i 40 anys, d'aquestes es farà la prova bàsica de PCR, però les noies embarassades no realitzaran aquesta bàsica sinó que faran una prova més avançada. Pel que fa a les persones majors de 40 anys els hi realitzarem una prova avançada de PCR i un test d'esforç físic. Deixem l'exercici perquè el resolgueu vosaltres.
 
 #### Exemples
 
-1. Crea un programa on es mostri el resultat de sumar dos nombres sempre que la suma de tots dos sigui inferior o igual a 15. (exemple estructura simple)
+1. Crea un programa on, un cop introduïts dos nombres per l'usuari, es mostri el resultat de sumar dos nombres sempre que el primer sigui més gran al segon. (exemple estructura simple)
 
 ```java  
-    int num1 = sc.nextInt();
-    int num2 = sc.nextInt();
-    int suma = num1 + num2;
-    if( suma <= 15) {
+    var num1 = sc.nextInt();
+    var num2 = sc.nextInt();
+    if(num1 > num2) {
         System.out.println(num1+num2);
     }
 ```
 
-2. Crea un programa que permeti a dir, donats dos nombres per l'usuari, si són múltiples l'un a l'altre. (exemple estructura composta)
+2. Crea un programa que permeti dir, donats dos nombres per l'usuari, si són múltiples l'un a l'altre. (exemple estructura composta)
 
 ```java  
     System.out.println("Entra el 1r nombre");
-    int num1 = sc.nextInt();
+    var num1 = sc.nextInt();
     System.out.println("Entra el 2n nombre");
-    int num2 = sc.nextInt();
+    var num2 = sc.nextInt();
 
     if(num1%num2 == 0 || num2%num1 == 0){
         System.out.println("Són divisors");
@@ -99,11 +337,11 @@ Exemple: En l'època actual de Coronavirus, donat els cribatges de PCRs per dete
 
 ```java 
     System.out.println("Introdueix el primer operand");
-    int num1 = sc.nextInt();
+    var num1 = sc.nextInt();
     System.out.println("Introdueix el segon operand");
-    int num2 = sc.nextInt();
+    var num2 = sc.nextInt();
     System.out.println("Introdueix el codi: 1.restar, 2.multiplicar, 3.dividir");
-    int opcio = sc.nextInt();
+    var opcio = sc.nextInt();
     if(opcio==1)System.out.println(num1 - num2);
     else if(opcio == 2) System.out.println(num1 * num2);
     else if(opcio == 3) System.out.println(num1 / num2);
@@ -112,12 +350,12 @@ Exemple: En l'època actual de Coronavirus, donat els cribatges de PCRs per dete
 
 ```java
     System.out.println("Introdueix el primer operand");
-    int operand1 = sc.nextInt();
+    var operand1 = sc.nextInt();
     System.out.println("Introdueix el segon operand");
-    int operand2 = sc.nextInt();
+    var operand2 = sc.nextInt();
     System.out.println("Introdueix el codi: 1.restar, 2.multiplicar, 3.dividir");
-    int codi = sc.nextInt();
-    int resultat=0;     
+    var codi = sc.nextInt();
+    var resultat=0;     
     if(codi==1) {
         resultat = operand1 - operand2;
     }else if(codi==2){
@@ -135,36 +373,28 @@ Exemple: En l'època actual de Coronavirus, donat els cribatges de PCRs per dete
 4. El mateix exemple anterior però ara amb un switch.
 
 ```java  
+    Scanner sc = new Scanner(System.in);
     System.out.println("Introdueix el primer operand");
-    int operand1 = sc.nextInt();
+    var operand1 = sc.nextInt();
     System.out.println("Introdueix el segon operand");
-    int operand2 = sc.nextInt();
+    var operand2 = sc.nextInt();
     System.out.println("Introdueix el codi: 1.restar, 2.multiplicar, 3.dividir");
-    int codi = sc.nextInt();   
-    int resultat=0;     
-    switch(codi) {
-        case 1:
-            resultat = operand1 - operand2;
-            break;
-        case 2:
-            resultat = operand1 * operand2;
-            break;
-        case 3:
-            resultat = operand1 / operand2;
-            break;
-        default:
-            System.out.println("Codi erroni");
-    }
+    var codi = sc.nextInt();
+    var resultat=0;
+    resultat = switch(codi) {
+        case 1 ->  operand1 - operand2;
+        case 2 ->  operand1 * operand2;
+        case 3 ->  operand1 / operand2;
+        default -> throw new IllegalStateException("Unexpected value: " + codi);
+    };
 
     if(codi == 1 || codi == 2 || codi == 3)
         System.out.println("El resultat de l'operacio és: "+ resultat);
 
     switch(codi) {
-        case 1:
-        case 2:
-        case 3:
-            System.out.println("El resultat de l'operacio és: " + resultat);
+        case 1, 2, 3 -> System.out.println("El resultat de l'operacio és: " + resultat);
     }
+
 ```
 
 5. Crea un programa que donats 4 números indiqui si els números són iguals i quin d'ells és el menor i major nombre de tots ells. El programa a més haurà de mostrar per pantalla el resultat de restar el major pel menor d'ells i el resultat de multiplicar els altres dos.

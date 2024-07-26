@@ -12,22 +12,22 @@
     <title>Estructura Seqüencial :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1721909515" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721909515" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1721980939" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1721980939" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721909515" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1721980939" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721909515"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1721980939"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721909515"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721909515"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1721980939"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1721980939"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721909515"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1721980939"></script>
 
     
   </div>
@@ -2432,10 +2432,12 @@ public class Main {
 }
 </code></pre>
 <h3 id="comentaris">Comentaris</h3>
-<p>Tot el que es posa entre comentaris serveix per documentar el codi en cas que sigui necessari i Java ho interpreta com a comentaris i no ho executa com si fossin instruccions. Existeixen comentaris per:</p>
+<p>Els comentaris són útils per mostrar informació adicional del codi, quan aquesta sigui necessària, no és bo abusar-ne. Normalment un codi ben escrit hauria de ser autoexplicatiu. Si s&rsquo;assignen noms de variables i funcions coherents pel que s&rsquo;utilitzen no caldria escriure molts comentaris.</p>
+<p>Java interpreta com a text explicatiu tots els comentaris i per tant <strong>NO ELS EXECUTA</strong> com si fossin instruccions. Existeixen comentaris per:</p>
 <ul>
 <li>Una fila. En aquest cas utilitzarem  &ldquo;// Comentari&rdquo;</li>
 <li>Més d&rsquo;una fila, el comentari anirà entre &ldquo;/* Comentari vàries línies */&rdquo;</li>
+<li>Per realitzar documentacions de codi usant, per exemple Javadoc &ldquo;/** Documentació */&rdquo;</li>
 </ul>
 <pre><code class="language-java">public class Main {
     public static void main(String[] args) {
@@ -2448,11 +2450,24 @@ public class Main {
     més d'una 
     línia
     */
-    }
+
 }
 
+/**
+ * Aquesta funció retorna la suma entera de dos nombres enters passats per paràmetre
+ *
+ * @param  operand1  primer operand de l'operació suma
+ * @param  operand2  segon operand de l'operació suma
+ * @return      retorna un enter que és la suma dels dos
+ * @see         suma
+ */
+ public int suma(int operand1, int operand2) {
+    var resultat = operand1 + operand2;
+    return resultat;
+ }
+
 </code></pre>
-<h4 id="exemples">Exemples</h4>
+<h4 id="exemples-de-problemes-seqüencials">Exemples de problemes seqüencials</h4>
 <ol>
 <li>Llegeix dos nombres reals i escriu la seva suma, resta, producte i quocient.</li>
 </ol>
@@ -2500,15 +2515,18 @@ public class Main {
 </ol>
 <pre><code class="language-java">    int nombre = sc.nextInt();
     int posicio = sc.nextInt();
+
     double potencia = Math.pow(10,posicio-1);
     double nombreRetallat = nombre / potencia;
     int nombreBuscat = (int)nombreRetallat % 10;
+    
     System.out.println(&quot;el dígit &quot; +posicio+ &quot; del nombre &quot; + nombre + &quot; és: &quot;+ nombreBuscat);
 </code></pre>
 <ol start="5">
 <li>Llegeix un nombre enter de segons i escriu el nombre d’hores, minuts i segons equivalents en format h:m:s.</li>
 </ol>
 <pre><code class="language-java">    int segonsTotals = sc.nextInt();
+
     int hores = segonsTotals / 3600;
     int segonsRestants = segonsTotals % 3600;
     int minuts = segonsRestants / 60;
@@ -3815,19 +3833,19 @@ public class Main {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721909515"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1721980939"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1721909515"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721909515"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1721980939"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1721980939"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721909515"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1721980939"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
