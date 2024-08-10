@@ -265,7 +265,7 @@ Scanner sc = new Scanner(System.in);
 String animalString = sc.next();
 
 enum animals{ DOFI, TAURO, VACA, GOS, CORB};
-Animal animal = animals.valueOf(animalString);
+animals animal = animals.valueOf(animalString);
 
 var resultat = switch (animal) {
     case DOFI, TAURO  -> "animal marí";

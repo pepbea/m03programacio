@@ -1,5 +1,5 @@
 ---
-title: Estructura Seqüencial
+title: Estructura seqüencial
 weight: 6
 pre: "6. "
 chapter: false

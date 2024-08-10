@@ -49,10 +49,6 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/4utilitzacio/1estatics/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/4cadenescaracters/1operacionsregulars/</loc>
   </url>
   
@@ -70,6 +66,10 @@
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5esdades/3manipulaciofitxers/1text/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/3classemetodes/1visibilitat/</loc>
   </url>
   
   <url>
@@ -133,11 +133,11 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/4tipusdades/2operadors/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/3classemetodes/2estatics/</loc>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/3classemetodes/1visibilitat/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/4tipusdades/2operadors/</loc>
   </url>
   
   <url>
@@ -236,6 +236,10 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/4construccio/</loc>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/2accions/4esborrat/</loc>
   </url>
   
@@ -256,10 +260,6 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/4utilitzacio/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/5coleccions/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -269,11 +269,11 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/5construccio/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/5programacioestructurada/</loc>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/5programacioestructurada/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/5utilitzacio/</loc>
   </url>
   
   <url>
@@ -286,7 +286,7 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/6composicio/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/6herencia/</loc>
   </url>
   
   <url>
@@ -294,19 +294,15 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/7herencia/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/7condicional/</loc>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/8iteratiu/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/7llibreries/</loc>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/8llibreries/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/8iteratiu/</loc>
   </url>
   
   <url>

@@ -1,5 +1,5 @@
 ---
-title: Depuració i Assercions
+title: Depuració i assercions
 weight: 10
 pre: "10. "
 chapter: false
@@ -62,3 +62,42 @@ Per tal d'utilitzar aquesta tècnica cal que:
 
 #### Assercions
 
+Les assercions en Java serveixen per comprovar que els blocs de codi que estem implementant estan donant els resultats esperats a partir d'una sèrie de tests que implementem. Existeixen llibreries molt complertes pel maneig d'assercions en Java: JUnit, Mockito, Selenium, etc. 
+
+No és objecte d'aquesta primera part configurar una d'aquestes llibreries, senzillament ensenyem com configurar en Intellij Idea l'habilitació d'assercions i comprovar com utilitzar-les.
+
+Per fer-ho, cal que:
+1. Aneu al menú superior, en Run->Edit Configurations. 
+2. En Modify Options afegiu VM options com a paràmetre dels elements de configuració de l'execució del programa. 
+3. En aquest camp cal que hi poseu -ea (Enable Assertions), per defecte estan "disabled" i per tant encara que escrivíssim `asserts` no en veuríem el resultat. 
+4. Un cop heu escrit -ea cal que li doneu a Apply.
+
+Ara sí ja podem escriure `asserts` en el nostre codi. 
+
+Els asserts ens són útils per comprovar els valors que prenen les nostres variables i llançar excepcions quan no compleixen amb els nostres requisits o valors esperats.
+
+Per exemple, retornant a l'exemple de les notes que havíem fet durant l'estructura de selecció, aplicarem un assert quan la nota introduïda no estigui continguda entre 0 i 10.
+
+```java
+Scanner sc = new Scanner(System.in);
+var nota = sc.nextInt();                         
+
+assert nota >= 0 && nota <= 10 : "La nota ha d'estar entre 0 i 10";
+
+if (nota < 5) {
+    System.out.println("Suspès");                
+else if (nota < 6) {
+    System.out.println("Aprovat");               
+}
+else if (nota < 8) {
+    System.out.println("Bé");                    
+}
+else if (nota < 9) {
+    System.out.println("Notable");               
+}
+else{
+    System.out.println("Excel·lent");            
+}
+```
+
+Com s'observa, si la nota no està entre 0 i 10 el programa llançarà una excepció on s'indica que s'espera una nota entre 0 i 10.
