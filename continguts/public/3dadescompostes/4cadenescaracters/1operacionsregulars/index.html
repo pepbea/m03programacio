@@ -12,22 +12,22 @@
     <title>Operacions Regulars :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1723330343" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1723332201" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1723332201" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1723332201" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1723332201"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1723330343"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1723330343"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1723332201"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1723332201"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1723330343"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1723332201"></script>
 
     
   </div>
@@ -2332,6 +2332,12 @@
 <p>El patró de cerca pot anar des d&rsquo;un caràcter, un string fixat o una expressió complexa de diferents caràcters especials.</p>
 <p>L&rsquo;avaluació d&rsquo;un patró o d&rsquo;una expressió regex sempre serà d&rsquo;esquerra a dreta. Pot ser que es trobi una ocurrència com a resultat, que no en trobi cap o que en trobi més d&rsquo;una.</p>
 <h4 id="com-aplicar-ho-des-de-java">Com aplicar-ho des de Java</h4>
+<p>Ens podria interessar que:</p>
+<ol>
+<li>Si <strong>un text complert</strong> s&rsquo;identifica amb un patró fixat, en aquest cas usarem <code>Pattern.matches(regex, string);</code> -&gt; Retorna un booleà.</li>
+<li>Si <strong>una part del text</strong> compleix el patró, o si hi ha més d&rsquo;una ocurrència que compleixi amb el patró fixat, en aquest cas usarem <code>Pattern.compile(regex).matcher(string).find()</code></li>
+</ol>
+<p>Un exemple de com podríem trobar quines paraules existeixen dins un text:</p>
 <pre><code class="language-java">import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -2347,10 +2353,54 @@ public class Main {
     }
 }
 </code></pre>
-<p>Com es pot observar en l&rsquo;exemple anterior <code>Pattern.compile(&quot;\\w+&quot;)</code> defineix el patró de cerca en el qual s&rsquo;identifiquen totes aquelles seqüències de caràcters que són <strong>W</strong>ords, això  el que fa és buscar seqüències de text dins el text a buscar que coincideixi amb el patró <code>[a-zA-Z_0-9]+</code>.</p>
-<p>Un cop definit el <em>Pattern</em> el que fem és cridar la funció matcher que s&rsquo;encarrega d&rsquo;enllaçar el patró amb el text on estic buscant i el resultat queda en un objecte Matcher que ja puc iterar si és el cas.</p>
-<p>En la pròpia pàgina de Pattern de l&rsquo;API de Java Oracle observareu quins són els caràcters especials i com es poden conformar diferents tipus de patrons
+<p>Com es pot observar en l&rsquo;exemple anterior <code>Pattern.compile(&quot;\\w+&quot;)</code> defineix el patró de cerca en el qual s&rsquo;identifiquen totes aquelles seqüències de caràcters que són <strong>W</strong>ords, &ldquo;\w+&rdquo; busca seqüències de caràcters dins el text que coincideixi amb el patró <code>[a-zA-Z_0-9]+</code>.</p>
+<p>Un cop definit el <em>Pattern</em> el que fem és cridar la funció matcher que s&rsquo;encarrega d&rsquo;enllaçar el patró amb el text on estic buscant i el resultat queda en un objecte Matcher que ja puc iterar si és el cas (find/group).</p>
+<p>Quan la totalitat del text encaixa amb el patró utilitzaríem la funció <code>matches</code> de Pattern:</p>
+<pre><code class="language-java">Pattern.matches(PATRO_DEFINIT, TEXT_A_BUSCAR); //Retorna True/False
+
+Pattern.matches(&quot;\\d{5}&quot;, &quot;56745&quot;); //TRUE
+Pattern.matches(&quot;\\d{5}&quot;, &quot;56745d&quot;); //FALSE
+</code></pre>
+<p>Per veure la diferència entre Pattern.matches() o Pattern.compile().matcher().find(). En el següent exemple, si busquem amb el mateix patró en el mateix text, observem com el primer cas ens retorna TRUE mentre que el segon ens retorna FALSE, ja que el patró encaixa amb una subcadena del text, no en la seva totalitat.</p>
+<pre><code class="language-java">Pattern.compile(&quot;HOLA&quot;).matcher(&quot;HOLA MON!&quot;).find()  //True
+Pattern.matches(&quot;HOLA&quot;, &quot;HOLA MON!&quot;);  //False
+</code></pre>
+
+<div class="notices note" ><p>En la pròpia pàgina de la classe Pattern de l&rsquo;API de Java Oracle observareu quins són els caràcters especials i com es poden conformar diferents tipus de patrons
 <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html">java.util.regex.Pattern</a>.</p>
+</div>
+
+<h4 id="exemples-dús">Exemples d&rsquo;ús</h4>
+<p>Saber si una data està en el format correcte.</p>
+<pre><code class="language-java">String literalMonthRegexp = &quot;\\d{1,2}/(?i)(gener|febrer|març|abril|maig|juny|juliol|agost|setembre|octubre|novembre|desembre)/\\d{4}&quot;;
+
+//TRUE
+System.out.println(Pattern.matches(literalMonthRegexp, &quot;15/maig/2024&quot;));
+System.out.println(Pattern.matches(literalMonthRegexp, &quot;8/abril/2021&quot;));
+System.out.println(Pattern.matches(literalMonthRegexp, &quot;7/juny/2023&quot;));   
+
+//FALSE
+System.out.println(Pattern.matches(literalMonthRegexp, &quot;11/abc/2024&quot;));
+System.out.println(Pattern.matches(literalMonthRegexp, &quot;11//2024&quot;));
+System.out.println(Pattern.matches(literalMonthRegexp, &quot;7/juny/2023joan&quot;));   
+</code></pre>
+<p>Validar que un dni contingui 8 nombres i una lletra de DNI.</p>
+<pre><code class="language-java">String dniRegexp = &quot;\\d{8}[A-HJ-NP-TV-Z]&quot;;
+
+System.out.println(Pattern.matches(dniRegexp, &quot;56453453C&quot;));  //TRUE
+
+System.out.println(Pattern.matches(dniRegexp, &quot;01234567U&quot;)); // FALSE, U no vàlida
+System.out.println(Pattern.matches(dniRegexp, &quot;0123567X&quot;)); // FALSE no conté 8 dígits
+</code></pre>
+<p>Validar el format d&rsquo;un email</p>
+<pre><code class="language-java">String entrada = &quot;&lt;p&gt;malvarez@iespoblenou.org&lt;/p&gt;&lt;br&gt;\n&quot;;
+
+Pattern limpiar = Pattern
+        .compile(&quot;([a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)&quot;);
+Matcher buscar = limpiar.matcher(entrada);
+while (buscar.find())
+    System.out.println(buscar.group(1));
+</code></pre>
 
 
 
@@ -3636,19 +3686,19 @@ public class Main {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1723332201"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1723330343"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1723332201"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1723332201"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1723330343"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1723332201"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
