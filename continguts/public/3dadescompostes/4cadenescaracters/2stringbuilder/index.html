@@ -12,22 +12,22 @@
     <title>StringBuilder :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1723298663" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1723330343" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1723298663" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1723330343" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1723298663"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1723330343"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1723298663"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1723298663"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1723330343"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1723330343"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1723298663"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1723330343"></script>
 
     
   </div>
@@ -2293,7 +2293,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -2317,7 +2325,90 @@
 
 
 
-	
+	<p>Com s&rsquo;ha comentat anteriorment la classe String és una classe <strong>immutable</strong>, això des del punt de vista de l&rsquo;eficiència a l&rsquo;hora d&rsquo;operar i manipular les cadenes de caràcters es planteja com un gran problema. Cada cop que manipulem una referència de String el que acaba succeïnt és que es crea una nova instància de String en la memòria Heap, no es modifica l&rsquo;anterior, sinó que estem creant objectes nous per a cada modificació que realitzem, la qual cosa és mooolt costós en temps i en memòria.</p>
+<p>Per això existeix les classes <strong>StringBuilder</strong>, i <strong>StringBuffer</strong>. Són classes que sí són <strong>mutables</strong>, per tant Sí permeten la modificació d&rsquo;una cadena de caràcters <strong>sense perdre eficència</strong>, ja que no creen noves instàncies sinó que manipulen l&rsquo;objecte actual.</p>
+<p>La diferència entre StringBuilder i StringBuffer està en que <strong>StringBuffer té els mètodes sincronitzats i, degut a això, és una mica més ineficient</strong>. A mesura que desenvolupeu codi us adonareu que diferents programes (fils d&rsquo;execució, threads) interactuaran de forma síncrona, per tal d&rsquo;evitar problemes de sincronització de recursos compartits us serà necessari usar eines que evitin aquest problema, com per exemple StringBuffer, de moment, i donat que els mètodes són  els mateixos, utilitzarem StringBuilder.</p>
+<p>Com ja vam veure en l&rsquo;AEA anterior, els objectes String es guarden en el <strong>Constant String Pool</strong>, que és un repositori de valors de Strings. La utilitat d&rsquo;aquest Pool és que si creem altres Strings amb el mateix valor, no es crea un objecte nou en el Heap sinó que es &ldquo;reutilitza&rdquo; el valor que ja tenim en el Pool (recordem que String és immutable). Tant StringBuilder com StringBuffer emmagatzemen directament els objectes en el Heap.</p>
+<h4 id="inicialització">Inicialització</h4>
+<p>Per tal d&rsquo;inicialitzar un StringBuilder usarem aquestes tres formes, depenent de cada cas:</p>
+<pre><code class="language-java">//Construeix un StringBuilder buit i amb una capacitat de 16 caràcters
+StringBuilder s = new StringBuilder();
+
+//Construeix un StringBuilder buit i amb una capacitat de 25 caràcters
+StringBuilder s = new StringBuilder(25);
+
+//Construeix un StringBuilder en base a l'String passat com a paràmetre
+StringBuilder s = new StringBuilder(&quot;Hola Món!&quot;);
+</code></pre>
+<h4 id="funcionalitats-més-habituals">Funcionalitats més habituals</h4>
+<p>El conjunt de funcionalitats complert el trobareu a Oracle a l&rsquo;apartat de <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/StringBuilder.html">StringBuilder</a>.</p>
+<p>Passo a detallar aquelles funcionalitats més significatives, moltes funcionalitats són les mateixes que la classe String (charAt, indexOf, substring&hellip;):</p>
+<p><strong>append</strong>. Aquesta serà la funcionalitat més utilitzada, serveix per concatenar al final del StringBuilder una cadena de text determinada</p>
+<pre><code class="language-java">for(int i = 0; i &lt; 1000; i++)
+    stringBuilder.append(i);
+</code></pre>
+<p><strong>length()</strong>. Caràcters amb informació útil en StringBuilder.</p>
+<pre><code class="language-java">    stringBuilder.length();
+</code></pre>
+<p><strong>capacity()</strong>. Inicialment StringBuilder reserva una capacitat (espai per allotjar-hi caràcters). Si la informació que manipulem supera aquesta capacitat el que fa StringBuilder és crear una nova instància amb la capacitat necessària per encabir la informació sol·licitada.</p>
+<pre><code class="language-java">    stringBuilder.capacity();
+</code></pre>
+<p><strong>toString()</strong>. Converteix un StringBuilder a un String. Si volem mostrar el valor d&rsquo;un StringBuilder serà necessari fer aquesta conversió per imprimir-lo per línia de comandes.</p>
+<pre><code class="language-java">    System.out.println(stringBuilder.toString());
+</code></pre>
+<h4 id="criteris-per-utilitzar-string-o-stringbuilderstringbuffer">Criteris per utilitzar String o StringBuilder/StringBuffer</h4>
+<ol>
+<li>Si el valor que assignem a les variables String no ha de variar (o varia poques vegades) utilitzarem la classe String.</li>
+<li>Si el valor que assignem a les variables String varia un gran nombre de vegades i estem en un únic fil d&rsquo;execució s&rsquo;utilitzarà StringBuilder ja que és més eficient.</li>
+<li>Si el valor que assignem a les variables String varia un gran nombre de vegades i estem en multitasca s&rsquo;utilitzarà StringBuffer ja que és thread safe i per tant ens assegura un bon ús compartit de les dades entre els diferents fils d&rsquo;execució.</li>
+</ol>
+<h4 id="exemple-dús-i-comparativa-de-temps">Exemple d&rsquo;ús i comparativa de temps</h4>
+<p>Posem per cas el següent exemple: &ldquo;Donada una cadena, crea una altra cadena igual a la primera sense espais en blanc.&rdquo;
+Es recomana provar el codi amb tamanys de text d&rsquo;entrada MOOOLT diferents, d&rsquo;aquesta forma permet apreciar les diferències alhora de manipular un String o un StringBuilder.</p>
+<pre><code class="language-java">//Opcio1: fent ús de replace()
+System.out.println(&quot;Introdueix una cadena: &quot;);
+String cadena = sc.nextLine();
+
+long startTime = System.currentTimeMillis();
+System.out.println(cadena.replace(&quot; &quot;, &quot;&quot;));
+long finalTime = System.currentTimeMillis();
+
+System.out.println(&quot;AMB REPLACE&quot;);
+System.out.println(&quot;Temps en trobar solucio: &quot;+(finalTime-startTime));
+System.out.println();
+
+//Opcio2 sense fer ús de replace()
+String paraules[] = cadena.split(&quot; &quot;);
+String solucio = &quot;&quot;;
+
+startTime = System.currentTimeMillis();
+for(String paraula : paraules){
+    //solucio = solucio + paraula
+    solucio += paraula;
+}
+finalTime = System.currentTimeMillis();
+
+System.out.println(solucio);
+System.out.println(&quot;STRING&quot;);
+System.out.println(&quot;Temps en trobar solucio: &quot;+(finalTime-startTime));
+System.out.println();
+
+
+//Opcio3 amb StringBuilder
+String paraulesBuilder[] = cadena.split(&quot; &quot;);
+StringBuilder solucioBuilder = new StringBuilder();
+
+startTime = System.currentTimeMillis();
+for(String paraula : paraules){
+    solucioBuilder.append(paraula);
+}
+finalTime = System.currentTimeMillis();
+
+System.out.println(solucioBuilder.toString());
+System.out.println(&quot;STRINGBUILDER&quot;);
+System.out.println(&quot;Temps en trobar solucio: &quot;+(System.currentTimeMillis()-startTime));
+</code></pre>
+
 
 
 
@@ -3605,19 +3696,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1723298663"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1723330343"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1723298663"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1723330343"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1723298663"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1723330343"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

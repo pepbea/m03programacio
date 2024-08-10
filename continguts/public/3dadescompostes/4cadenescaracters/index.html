@@ -12,22 +12,22 @@
     <title>Tractament cadena de caràcters :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1723298663" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1723298663" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1723330343" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1723330343" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1723298663" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1723330343" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1723298663"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1723330343"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1723298663"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1723298663"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1723330343"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1723330343"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1723298663"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1723330343"></script>
 
     
   </div>
@@ -2325,108 +2325,106 @@
 
 <p>La funció sobre la classe String la trobareu a:
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">Java Oracle Classe String</a></p>
-<h5 id="inicialització">Inicialització</h5>
-<p>La manera de declarar i inicialitzar aquest objecte és com en els tipus primitius. Amb la variable String diem que la variable str i strBuit emmagatzemen un String i a continuació s&rsquo;hi assigna un valor. En el cas del valor <code>&quot;&quot;</code> assignem un String buit.</p>
+<h4 id="immutable">Immutable</h4>
+<p>És important destacar que la classe String és <strong>immutable</strong>. Això vol dir que un cop en definim un valor no es pot tornar a modificar. Sembla estrany, ja que si en el codi assignem un nou valor a la mateixa variable observem com es guarda correctament. Bé, el que passa exactament és que String no és una classe primitiva de Java, això vol dir que quan declaro una variable <code>String</code> el que faig realment és crear una referència de memòria (es guarda en la pila del meu programa que s&rsquo;executa), quan a aquesta variable li assigno un valor, aquest és en sí un Objecte String (es guarda en el Heap de la memòria), de forma que si torno a guardar un valor en la mateixa referència de memòria <strong>no li estic modificant el valor a l&rsquo;objecte original, sinó que assigno la variable String a un altre objecte</strong> (Immutabilitat).</p>
+<h4 id="inicialització">Inicialització</h4>
+<p>La manera de declarar i inicialitzar aquest objecte és com en els tipus primitius. Amb la variable String diem que la variable str i strBuit emmagatzemen un String i a continuació s&rsquo;hi assigna un valor. En el cas del valor <code>&quot;&quot;</code> assignem un String buit. Per mostrar-ne el contingut, igual que en les classes primitives, fem ús de System.out.println.</p>
 <pre><code class="language-java">String str = &quot;El primer string&quot;;
 String strBuit = &quot;&quot;;
+System.out.println(str);
 </code></pre>
-<h5 id="funcionalitats-interessants">Funcionalitats interessants</h5>
-<pre><code class="language-java">/*
-longitud del string
-STR.LENGTH()
-*/
-System.out.println(&quot;longitud &quot; + str.length());
-
-/*
-Caràcter en la posició pos de str.
-STR.CHARAT(int)
-*/
-str = &quot;El primer programa&quot;;
+<p>De la mateixa manera que qualsevol altre objecte es podria crear un String de la següent manera utilitzant <code>new</code>.</p>
+<pre><code class="language-java">String str = new String (&quot;El primer string&quot;);
+</code></pre>
+<h4 id="funcionalitats-interessants">Funcionalitats interessants</h4>
+<p><strong>Longitud</strong> d&rsquo;un String</p>
+<pre><code class="language-java">System.out.println(&quot;longitud &quot; + str.length());
+</code></pre>
+<p><strong>Concatenació</strong> de Strings</p>
+<pre><code class="language-java">String primeraPart = &quot;Hola&quot;;
+String segonaPart = &quot; &quot;;
+String terceraPart = &quot;Mon!&quot;;
+String total = primeraPart + segonaPart + terceraPart;
+System.out.println(total);
+</code></pre>
+<p>Conèixer el contingut d&rsquo;una determinada posició dins l&rsquo;String. (<strong>charAt</strong>)</p>
+<pre><code class="language-java">str = &quot;El primer programa&quot;;
 System.out.println(&quot;En la posició 4 hi ha: &quot; + str.charAt(4));
 System.out.println(&quot;En la posició 11 hi ha: &quot; + str.charAt(11));
+</code></pre>
+<p>Creació d&rsquo;una subcadena (<strong>substring</strong>) a partir d&rsquo;una cadena original. La primera opció crea una subcadena nova des de la posició indicada fins al final del String str. La segona opció crea una subcadena des de la posició inicial fins a la posició final.</p>
+<pre><code class="language-java">str.substring(posicioInicial)
+str.substring(posicioInicial, posicioFinal)
 
-/*
-Comença o acaba l'string en...
-STARTSWITH OR ENDSWITH
-*/
 str = &quot;El primer programa&quot;;
+System.out.println(&quot;Substring &quot; + str.substring(12)); //Java
+System.out.println(&quot;Substring &quot; + str.substring(3, 11));  //lenguaje
+</code></pre>
+<p>Saber si l' <strong>inici o final d&rsquo;un String comença o acaba</strong>  amb una determinada subcadena.</p>
+<pre><code class="language-java">str = &quot;El primer programa&quot;;
 System.out.println(&quot;comienza por El      &quot; + str.startsWith(&quot;El&quot;));
 System.out.println(&quot;termina por programa &quot; + str.endsWith(&quot;programa&quot;));
+</code></pre>
+<p>Conèixer la posició d&rsquo;un determinat caràcter o seqüència de caràcters dins una cadena. (<strong>indexOf</strong>). Si la funció porta dos arguments, el segon paràmetre indica a partir de quina posició comença la cerca.</p>
+<pre><code class="language-java">str = &quot;El primer programa&quot;;
 
-/*
-Posició d'un caràcter dins un string
-STR.INDEXOF('x')
+//Comença a buscar 'x' dins str des de la posició 0
+str.indexOf('x')
 
-Ocurrència a partir d'un cert caràcter
-STR.INDEXOF('x', pos)
-*/
+//Comença a buscar 'x' dins str des de la posició pos
+str.indexOf('x', pos)
+
 int pos = str.indexOf('p');
-System.out.println(&quot;posición de la letra p &quot; + pos);
+System.out.println(&quot;posició de la lletra p &quot; + pos);
 
 //segona ocurrencia de p
 pos = str.indexOf('p', pos + 1);
 
+//també permet buscar cadenes de caràcters
+int pos = str.indexOf(&quot;El&quot;);
+System.out.println(&quot;posició de la subcadena \&quot;EL\&quot; &quot; + pos);
 
-/*
-Comparació entre dos strings
-STR.COMPARETO(STRING2)
-*/
-str = &quot;Pep&quot;;
+int pos = str.indexOf(&quot;pr&quot;, 7);
+System.out.println(&quot;posició de la subcadena \&quot;pr\&quot; a partir de la posició 7: &quot; + pos);
 
+
+</code></pre>
+<p>Comparació de dos Strings (<strong>compareTo</strong>). Compara lexicogràficament dos cadenes de caràcters, i extreu com a resultat -1 0 1 depenent de quin String estigui per davant, si el primer, el segon o tenen el mateix valor lexicogràfic, per tant 0.</p>
+<pre><code class="language-java">str = &quot;Pep&quot;;
 System.out.println(&quot;Orden alfabético &quot; + str.compareTo(&quot;Xavi&quot;));
 System.out.println(&quot;Orden alfabético &quot; + str.compareTo(&quot;Gines&quot;));
 System.out.println(&quot;Orden alfabético &quot; + str.compareTo(&quot;Pep&quot;));
-
-/*
-Substring amb UNA variable posicioInicial indica a a partir de quin caràcter volem recollir el substring fins al final.
-STR.SUBSTRING(posicioInicial)
-
-Substring amb Dues variables determinen quin substring obtindrem entre les dues posicions
-STR.SUBSTRING(posicioInicial, posicioFinal)
-*/
-str = &quot;El lenguaje Java&quot;;
-System.out.println(&quot;Substring &quot; + str.substring(12)); //Java
-System.out.println(&quot;Substring &quot; + str.substring(3, 11));  //lenguaje
-
-/*
-Eliminar espais en blanc
-STR.TRIM()
-*/
-str = &quot;                12             &quot;;
+</code></pre>
+<p>Elimina espais (<strong>trim</strong>) a l&rsquo;inici o final de la cadena de caràcters.</p>
+<pre><code class="language-java">str = &quot;                12             &quot;;
 System.out.println(&quot;string original               :&quot; + str);
 System.out.println(&quot;string sin espacios en blanco :&quot; + str.trim());
-
-/*
-Convertir array a String
-ARRAYS.TOSTRING(array)
-*/
-int[] arrayNumeric = {24, 2, 4, -12};
+</code></pre>
+<p>Convertir un Array a String (<strong>toString</strong>).</p>
+<pre><code class="language-java">int[] arrayNumeric = {24, 2, 4, -12};
 System.out.println(&quot;número --&gt; string &quot; + Arrays.toString(arrayNumeric));
-
-/*
-Convertir strings a enters i decimals
-INTEGER.PARSEINT(str.TRIM());
+</code></pre>
+<p>Convertir Strings a enters i decimals</p>
+<pre><code class="language-java">INTEGER.PARSEINT(str.TRIM());
 DOUBLE.VALUEOF(str).DOUBLEVALUE();
-*/
+
 str = &quot;12&quot;;
 int numeroInt = Integer.parseInt(str.trim());
 System.out.println(&quot;string --&gt; número &quot; + numeroInt);
 str = &quot;12.35 &quot;;
 double numeroDouble = Double.valueOf(str).doubleValue();
 System.out.println(&quot;string --&gt; número &quot; + numeroDouble);
+</code></pre>
+<p>Separar String en diferents cadenes (<strong>split</strong>)</p>
+<pre><code class="language-java">//Separar les diferents paraules per espais
+str.SPLIT(&quot; &quot;); 
 
-/*
-Separar String en diferents cadenes
-str.SPLIT(&quot; &quot;); --&gt; Separa les diferents paraules per espais
-*/
 String cadena = &quot;Hola que tal com estas&quot;;
 String[] vectorSeparat = cadena.split(&quot; &quot;);
 for (String a : vectorSeparat) System.out.println(a);
-
-/*
-EXEMPLE D'ÚS: De cada alumne volem obtenir el nom amb el format correcte i el dni.
-*/
-String alumnes = &quot;&quot; +
+</code></pre>
+<p><strong>EXEMPLE D&rsquo;ÚS</strong>: De cada alumne volem obtenir el nom amb el format correcte i el dni.</p>
+<pre><code class="language-java">String alumnes = &quot;&quot; +
         &quot;Nom; Cognoms; DNI\n&quot; +
         &quot;xavi; sanChO; 111111a\n&quot; +
         &quot;pep; beÀ; 222222b\n&quot;;
@@ -3748,19 +3746,19 @@ for (int i = 1; i &lt; rows.length; i++) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1723298663"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1723330343"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1723298663"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1723298663"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1723330343"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1723330343"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1723298663"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1723330343"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
