@@ -10,7 +10,7 @@ pre: "5.3. "
 {{% /notice %}}
 
 La definició de la classe HashMap **java.util.HashMap** i de totes les seves funcionalitats la trobareu a:
-[Java Oracle Classe HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
+[Java Oracle Classe HashMap](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html)
 
 Utilitza una taula de dispersió per a emmagatzemar la informació de mapa. Les operacions bàsiques (get i put) es faran en temps constant sempre que es dispersin adequadament els elements. El cost de la iteració dependrà del nombre d'entrades de la taula i del nombre d'elements del mapa. No es garanteix que es respecti l'ordre de les claus. Tot hi que se l'identifica com una Collection, un HashMap hereta de Map i no de Collection.
 

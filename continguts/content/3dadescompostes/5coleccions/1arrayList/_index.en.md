@@ -9,7 +9,7 @@ pre: "5.1. "
 {{% /notice %}}
 
 La definició de la classe ArrayList **java.util.ArrayList** i de totes les seves funcionalitats la trobareu a:
-[Java Oracle Classe ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
+[Java Oracle Classe ArrayList](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html)
 
 
 **Propietats**
@@ -18,7 +18,7 @@ La definició de la classe ArrayList **java.util.ArrayList** i de totes les seve
 - Es tracta d'una llista d'elements en els que podrem iterar-los, afegir-ne, modificar-los o eliminar-los.
 
 
-Les operacions d'afegir un element al final de l'array (add), i d'establir o obtenir l'element en una determinada posició (get/set) tenen un cost temporal constant. Les insercions i esborrats tenen un cost lineal O(n), on n és el nombre d'elements de l'array.
+Les operacions d'afegir un element al final de l'array (add), i d'establir o obtenir l'element en una determinada posició (get/set) tenen un cost temporal constant. Les insercions i esborrats tenen un cost lineal O(n), on n és el nombre d'elements de l'array, això és així ja que és necessari desplaçar tots els elements des de l'inserció/esborrat una posició fins al final del llistat, en el pitjor dels casos tots els elements i per tant lineal (O(n).
 
 Hem de destacar que la implementació d' ArrayList no està sincronitzada, és a dir, si múltiples fils accedeixen a un mateix ArrayList concurrentment podríem tenir problemes en la consistència de les dades. Per tant, ho haurem de tenir en compte quan fem servir aquest tipus de dades que hem de controlar la concurrència d'accés, una altra opció és utilitzar la classe Vector, similar a ArrayList i que sí permet la sincronització.
 
@@ -162,7 +162,6 @@ public class ExempleArrayList {
 }
 ```
 
-En aquesta pàgina trobareu uns quants exemples més d'ús d'ArrayList: [ArrayList con ejemplos](https://jarroba.com/arraylist-en-java-ejemplos/)
 
 
 

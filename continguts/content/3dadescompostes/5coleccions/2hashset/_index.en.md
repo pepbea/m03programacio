@@ -10,7 +10,7 @@ pre: "5.2. "
 {{% /notice %}}
 
 La definició de la classe ArrayList **java.util.HashSet** i de totes les seves funcionalitats la trobareu a:
-[Java Oracle Classe HashSet](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
+[Java Oracle Classe HashSet](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashSet.html)
 
 Considerem que un element està repetit si tenim dos objectes o1 i o2 iguals, comparant-los mitjançant l'operador o1.equals(o2). D'aquesta manera, si l'objecte a inserir en el conjunt estigués repetit, no ens deixaria inserir-lo i el mètode add retornaria false. Un conjunt pot contenir com a màxim un element null.
 
