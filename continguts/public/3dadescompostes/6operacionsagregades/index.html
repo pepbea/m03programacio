@@ -12,22 +12,22 @@
     <title>Operacions agregades :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1725218609" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1725218609" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1725228209" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1725218609" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1725228209" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1725218609"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1725228209"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1725218609"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1725218609"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1725228209"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1725228209"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1725218609"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1725228209"></script>
 
     
   </div>
@@ -2287,7 +2287,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -2315,7 +2323,7 @@
 <div class="notices note" ><p>Les <strong>operacions agregades</strong> en Java neix de l&rsquo;oportunitat de processar operacions típiques en col·leccions d&rsquo;una manera funcional i concisa.</p>
 </div>
 
-<p>Des de Java 8 amb la introducció de <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html">Streams-API</a>, Java permet el processament de fluxos i expressions lambda que permet l&rsquo;encadenament d&rsquo;operacions en una col·lecció.</p>
+<p>Des de Java 8 amb la introducció de les expressions lambda i de les <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html">Streams-API</a>, Java permet el processament de fluxos que permet l&rsquo;encadenament d&rsquo;operacions en un conjunt de dades.</p>
 <p>Aquesta API permet integrar el paradigma funcional a les funcionalitats típiques que realitzem en les col·leccions, com són:</p>
 <ul>
 <li>Filtrar</li>
@@ -2325,12 +2333,151 @@
 <li>Ordenar</li>
 </ul>
 
-<div class="notices note" ><p><strong>Fluxos - Streams</strong>. Els fluxos d&rsquo;elements permeten el processament en paral·lel o seqüencial dels elements d&rsquo;una col·lecció, en les col·leccions de java per crear un flux en una estructura de dades d&rsquo;una col·lecció tenim la funció <em>.stream()</em>.</p>
+<div class="notices note" ><p><strong>Fluxos - Streams</strong>. Els fluxos d&rsquo;elements permeten el processament en paral·lel o seqüencial dels elements d&rsquo;una col·lecció, en les col·leccions de java per crear un flux en una estructura de dades d&rsquo;una col·lecció tenim la funció <em>.stream()</em>. També podem crear streams a partir d&rsquo;arrays o a partir dels valors de la seqüència.</p>
 </div>
 
 <pre><code class="language-java">List&lt;String&gt; noms = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Susana&quot;, &quot;Maria&quot;);
 Stream&lt;String&gt; flux = noms.stream();
+
+String[] nomsArray = new String[]{&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Susana&quot;, &quot;Maria&quot;};
+Stream&lt;String&gt; flux = Arrays.stream(nomsArray);
+
+Stream&lt;String&gt; flux = Stream.of(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Susana&quot;, &quot;Maria&quot;);
 </code></pre>
+<h4 id="operacions">Operacions</h4>
+<p>En l&rsquo;API de Streams existeixen dos tipus de funcions, <em>les Intermitges i les Terminals</em>. Les operacions que s&rsquo;apliquen als Streams no modifiquen la font de les dades, promouen la immutabilitat respecte les estructures originals.</p>
+<p>L&rsquo;execució de les diferents funcions contingudes en un Stream aplica el que s&rsquo;anomena com a <code>Lazyness</code>: les operacions s&rsquo;executen al final i el més tard possible. <strong>Una funció terminal activa les funcions intermitges del flux de dades.</strong></p>
+<p>Molta de l&rsquo;operativitat de les funcions agregades segueix el que es denomina com a <strong>Filter-Map-Reduce</strong>: Funcionalitat de sel·leccionar dades en base a una condició (filter), transformar les dades (map), combinar aquestes dades per obtenir un resultat (reduce).</p>
+<h4 id="operacions-intermitges">Operacions Intermitges</h4>
+<p>Les operacions intermitges retornen un nou Stream, es poden encadenar diferents funcions intermitges. (Recordeu que per ser activades necessiten una operació terminal). Algunes funcions intermitges són:</p>
+<ul>
+<li>map()</li>
+<li>filter()</li>
+<li>distinct()</li>
+<li>sorted()</li>
+<li>limit()</li>
+<li>peek()</li>
+<li>skip()</li>
+</ul>
+<p><strong>MAP()</strong>
+La funció .map() ens ajuda a transformar totes les dades d&rsquo;una col·lecció, per a fer-ho utilitzarem una funció lambda. Quan tractem de dades numèriques també podem usar mapToInt o mapToDouble.</p>
+<p>Per exemple, suposem la classe Persona amb un atribut que sigui l&rsquo;edat. Ens agradaria sumar les edats d&rsquo;una col·lecció de persones:</p>
+<pre><code class="language-java">int total = lista.stream()
+                 .mapToInt(Persona::getEdat)
+                 .sum();
+
+System.out.println(total);
+</code></pre>
+<p>Un altre exemple podria ser obtenir els quadrats dels 10 primers nombres</p>
+<pre><code class="language-java">List&lt;Integer&gt; nombres = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+List&lt;Integer&gt; quadrats = nombres.stream()
+                                .map(n -&gt; n * n)
+                                .collect(Collectors.toList());
+</code></pre>
+<p><strong>FILTER()</strong>
+L&rsquo;operació .filter() ens serveix per obtenir un nou Stream amb aquells elements que han passat una condició, per definir aquesta condició utilitzarem Predicats que normalment es definiran com expressions lambda. Si el Predicat s&rsquo;avalua a <code>true</code> aquest element formarà part del nou Stream, en cas contrari, serà rebutjat.</p>
+<p>Aquest és un exemple senzill que mostra com filtrar aquells elements parells:</p>
+<pre><code class="language-java">List&lt;Integer&gt; numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+Stream&lt;Integer&gt; streamNumerosPars = numeros.stream()
+                                           .filter(numero -&gt; numero % 2 == 0);
+
+streamNumerosPars.forEach(System.out::println);
+</code></pre>
+<p>Permet combinar diferents filtres en una mateixa seqüència Stream:</p>
+<pre><code class="language-java">List&lt;Integer&gt; numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+Stream&lt;Integer&gt; streamNumerosParsMenorsQue5 = numeros.stream()
+                                           .filter(numero -&gt; numero % 2 == 0);
+                                           .filter(numero -&gt; numero &lt; 5);
+streamNumerosParsMenorsQue5.forEach(System.out::println);
+</code></pre>
+<p>Ens permet també treballar amb objectes, per exemple si volguéssim filtrar aquelles persones majors d&rsquo;edat:</p>
+<pre><code class="language-java">Stream&lt;Persona&gt; streamPersonesMajorsEdat = persones.stream()
+                                        .filter(persona -&gt; persona.getEdad() &gt;= 18);
+streamPersonesMajorsEdat.forEach(System.out::println);
+</code></pre>
+<p>Observarem un exemple de filtrar un String d&rsquo;un array d&rsquo;Strings des de dos visions molt diferents. Comencem fent ús dels Streams.</p>
+<pre><code class="language-java">List&lt;String&gt; colors = Arrays.asList(&quot;blau&quot;, &quot;vermell&quot;, &quot;groc&quot;);
+List&lt;String&gt; colorBlau = colorCars.stream()               
+        .filter(color -&gt; &quot;blau&quot;.equals(color))     
+        .collect(Collectors.toList());             
+</code></pre>
+<p>Aquest mateix exemple si el volguéssim fer utilitzant bucles veuríem:</p>
+<pre><code class="language-java">public class AbansStreams {
+    public static void main(String[] args) {
+        List&lt;String&gt; colors = Arrays.asList(&quot;blau&quot;, &quot;vermell&quot;, &quot;groc&quot;);
+        List&lt;String&gt; colorsFiltre = getColorBlue(colors);
+        for (String color : colorsFiltre) {
+            System.out.println(color);    
+        }
+    }
+    private static List&lt;String&gt; getColorBlue(List&lt;String&gt; colors) {
+        List&lt;String&gt; colorsFiltrats = new ArrayList&lt;&gt;();
+        for (String color : colors) {
+            if (&quot;blue&quot;.equals(color)) { 
+                colorsFiltrats.add(color);
+            }
+        }
+        return colorsFiltrats;
+    }
+}          
+</code></pre>
+<p>Observeu el canvi significatiu en quan a simplicitat i legibilitat de codi. Fixeu-vos també com en el primer exemple s&rsquo;explica <strong>QUÈ FA EL CODI</strong> més propi d&rsquo;un sistema de programació funcional (<code>llenguatge declaratiu</code>), mentre que el segon exemple es descriu <strong>COM HO FA EL CODI</strong>, més propi d&rsquo;un <code>llenguatge imperatiu</code>.</p>
+<h4 id="operacions-terminals">Operacions Terminals</h4>
+<p><strong>Són funcions que NO RETORNEN UN STREAM, sinó que RETORNEN UN VALOR PRIMITIU, COL·LECCIÓ O OBJECTE</strong> Les operacions terminals NO PODEN SER encadenades (les operacions intermitges SÍ). Algunes de les operacions terminals són:</p>
+<ul>
+<li>forEach()</li>
+<li>toArray()</li>
+<li>reduce()</li>
+<li>collect()</li>
+<li>min(), max(), count()</li>
+<li>anyMatch(), allMatch(), noneMatch()</li>
+<li>findFirst(), findAny()</li>
+</ul>
+<p><strong>FOREACH()</strong>
+Ens permet iterar tots els elements d&rsquo;un Stream.</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    List&lt;String&gt; names = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Gines&quot;);
+    names.stream().forEach(System.out::println);
+}
+</code></pre>
+<p><strong>REDUCE()</strong>
+Executa una operació sobre els elements d&rsquo;un Stream per tal de produir un resultat final. Per exemple la concatenació de Strings:</p>
+<pre><code class="language-java">List &lt; String &gt; nombres = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Gines&quot;);
+String reduce = nombres
+    .stream()
+    .reduce(String::concat)
+    .ifPresent(System.out::println);
+</code></pre>
+<p>Un altre exemple on fent ús de reduce extraiem el nom més llarga:</p>
+<pre><code class="language-java">
+List&lt;String&gt; noms = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Gines&quot;, &quot;Carles&quot;, &quot;Ramon Maria&quot;);
+
+Optional&lt;String&gt; nomMesLlarg = words.stream()
+    .reduce((nom1, nom2) -&gt; nom1.length() &gt; nom2.length() ? nom1 : nom2);
+
+nomMesLlarg.ifPresent(System.out::println); 
+</code></pre>
+<p><strong>COLLECT()</strong>
+Són estructures modificables que reben els elements d&rsquo;un Stream i construeix el resultat que necessitem, per exemple es poden dipositar en Sets, Maps, o Lists. Per a tal fet  ja existeixen uns collectors predefinits:</p>
+<ul>
+<li>Collector.toList()</li>
+<li>Collectors.toSet()</li>
+<li>Collectors.toMap()</li>
+</ul>
+<p>Si volem saber quines paraules d&rsquo;una llista contenen la paraula &ldquo;DAM&rdquo;:</p>
+<pre><code class="language-java">public List&lt;String&gt; getDamWords(Stream&lt;String&gt; words) {
+  List&lt;String&gt; damWords = words
+      .filter(word -&gt; word.contains(&quot;DAM&quot;))
+      .collect(Collectors.toList());
+  return damWords;
+}
+</code></pre>
+<h4 id="per-acabar">Per acabar</h4>
+<p>Una de les avantatges dels Streams respecte a l&rsquo;execució seqüencial que ens ofereixen les col·leccions és que en operacions que requereixen d&rsquo;una gran capacitat de còmput permet realitzar l&rsquo;execució del càlcul en paral·lel a diferents parts de la col·lecció al mateix temps (particiona la col·lecció per tal de realitzar les operacions en paral·lel), reduint així el temps de còmput global i fent més eficient l&rsquo;aplicació. S&rsquo;utilitza en aquest cas la classe <code>ParallelStream</code>, a 2n DAM ho veureu més extensament en el mòdul de Serveis i Processos Concurrents.</p>
+<h4 id="alguns-exemples">Alguns exemples</h4>
 
 
 
@@ -3615,19 +3762,19 @@ Stream&lt;String&gt; flux = noms.stream();
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1725218609"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1725228209"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1725218609"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1725218609"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1725228209"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1725218609"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1725228209"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
