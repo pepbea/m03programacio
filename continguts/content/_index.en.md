@@ -84,14 +84,14 @@ L'índex de continguts que veurem és:
     - [Principis SOLID]({{%relref "4POO/5solid/_index.en.md" %}})
 
 **AEA5: E/S Dades**
-  + [E/S Dades]({{%relref "5esDades/_index.en.md" %}})
-    - [Fluxos de dades: byte, character]({{%relref "5esDades/1fluxos/_index.en.md" %}})
-    - [Gestió File]({{%relref "5esDades/2fitxers/_index.en.md" %}})
-    - [Manipulació fitxers]({{%relref "5esDades/3manipulacioFitxers/_index.en.md" %}})
-        * [Text]({{%relref "5esDades/3manipulacioFitxers/1text/_index.en.md" %}})   
-        * [Binari]({{%relref "5esDades/3manipulacioFitxers/2binari/_index.en.md" %}})
-        * [Accés aleatori]({{%relref "5esDades/3manipulacioFitxers/3accesAleatori/_index.en.md" %}}) 
-    - [Interfícies gràfiques d'usuari (GUI)]({{%relref "5esDades/4interficiesGrafiques/_index.en.md" %}})
+  + [E/S Dades]({{%relref "5esdades/_index.en.md" %}})
+    - [Fluxos de dades: byte, character]({{%relref "5esdades/1fluxos/_index.en.md" %}})
+    - [Gestió File]({{%relref "5esdades/2fitxers/_index.en.md" %}})
+    - [Manipulació fitxers]({{%relref "5esdades/3manipulacioFitxers/_index.en.md" %}})
+        * [Text]({{%relref "5esdades/3manipulacioFitxers/1text/_index.en.md" %}})   
+        * [Binari]({{%relref "5esdades/3manipulacioFitxers/2binari/_index.en.md" %}})
+        * [Accés aleatori]({{%relref "5esdades/3manipulacioFitxers/3accesAleatori/_index.en.md" %}}) 
+    - [Interfícies gràfiques d'usuari (GUI)]({{%relref "5esdades/4interficiesgrafiques/_index.en.md" %}})
 
 
 

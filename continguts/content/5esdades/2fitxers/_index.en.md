@@ -5,9 +5,13 @@ pre: "2. "
 ---
 
 
+Els fitxers són un conjunt de bytes guardats en memòria física que ens garanteix la seva persistència, de forma que sempre els tenim accessibles pel tractament de la informació que emmagatzemen.
+
+
+
 #### File
 
-La classe File és útil per portar la gestió sobre fitxers i carpetes en Java, la seva especificació en Java Oracle és: [https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html) 
+La classe File és útil per portar la gestió sobre fitxers i carpetes en Java, proporciona una representació abstracta de fitxers i directoris, la seva especificació en Java Oracle és: [https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html) 
 
 El sistema de fitxers en UNIX separa els directoris usant “/” mentre que en Windows es separen amb “\”.
 

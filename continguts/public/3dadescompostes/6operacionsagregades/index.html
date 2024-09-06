@@ -12,22 +12,22 @@
     <title>Operacions agregades :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1725228209" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1725632399" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1725632399" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1725228209" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1725632399" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1725632399"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1725228209"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1725228209"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1725632399"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1725632399"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1725228209"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1725632399"></script>
 
     
   </div>
@@ -2323,7 +2323,7 @@
 <div class="notices note" ><p>Les <strong>operacions agregades</strong> en Java neix de l&rsquo;oportunitat de processar operacions típiques en col·leccions d&rsquo;una manera funcional i concisa.</p>
 </div>
 
-<p>Des de Java 8 amb la introducció de les expressions lambda i de les <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html">Streams-API</a>, Java permet el processament de fluxos que permet l&rsquo;encadenament d&rsquo;operacions en un conjunt de dades.</p>
+<p>Des de Java 8 amb la introducció de les expressions lambda i de les <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html">API_Streams</a>, Java permet el processament de fluxos que permet l&rsquo;encadenament d&rsquo;operacions en un conjunt de dades.</p>
 <p>Aquesta API permet integrar el paradigma funcional a les funcionalitats típiques que realitzem en les col·leccions, com són:</p>
 <ul>
 <li>Filtrar</li>
@@ -2333,7 +2333,7 @@
 <li>Ordenar</li>
 </ul>
 
-<div class="notices note" ><p><strong>Fluxos - Streams</strong>. Els fluxos d&rsquo;elements permeten el processament en paral·lel o seqüencial dels elements d&rsquo;una col·lecció, en les col·leccions de java per crear un flux en una estructura de dades d&rsquo;una col·lecció tenim la funció <em>.stream()</em>. També podem crear streams a partir d&rsquo;arrays o a partir dels valors de la seqüència.</p>
+<div class="notices note" ><p><strong>Fluxos - Streams</strong>. Els fluxos d&rsquo;elements permeten el processament en paral·lel o seqüencial dels elements d&rsquo;una col·lecció. En les col·leccions de java per crear un flux en una estructura de dades d&rsquo;una col·lecció tenim la funció <em>.stream()</em>, també podem crear streams a partir d&rsquo;arrays o a partir dels valors de la seqüència.</p>
 </div>
 
 <pre><code class="language-java">List&lt;String&gt; noms = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Susana&quot;, &quot;Maria&quot;);
@@ -2346,7 +2346,7 @@ Stream&lt;String&gt; flux = Stream.of(&quot;Pep&quot;, &quot;Alberto&quot;, &quo
 </code></pre>
 <h4 id="operacions">Operacions</h4>
 <p>En l&rsquo;API de Streams existeixen dos tipus de funcions, <em>les Intermitges i les Terminals</em>. Les operacions que s&rsquo;apliquen als Streams no modifiquen la font de les dades, promouen la immutabilitat respecte les estructures originals.</p>
-<p>L&rsquo;execució de les diferents funcions contingudes en un Stream aplica el que s&rsquo;anomena com a <code>Lazyness</code>: les operacions s&rsquo;executen al final i el més tard possible. <strong>Una funció terminal activa les funcions intermitges del flux de dades.</strong></p>
+<p>L&rsquo;execució de les diferents funcions contingudes en un Stream aplica el que s&rsquo;anomena com a <code>Lazyness</code>: les operacions s&rsquo;executen al final i el més tard possible. <strong>Una funció terminal activa les funcions intermitges del flux de dades.</strong> Normalment un Stream es crea, es composa de diferents funcions  intermitges i finalment una funció terminal, no hi poden haver dues funcions terminals.</p>
 <p>Molta de l&rsquo;operativitat de les funcions agregades segueix el que es denomina com a <strong>Filter-Map-Reduce</strong>: Funcionalitat de sel·leccionar dades en base a una condició (filter), transformar les dades (map), combinar aquestes dades per obtenir un resultat (reduce).</p>
 <h4 id="operacions-intermitges">Operacions Intermitges</h4>
 <p>Les operacions intermitges retornen un nou Stream, es poden encadenar diferents funcions intermitges. (Recordeu que per ser activades necessiten una operació terminal). Algunes funcions intermitges són:</p>
@@ -2368,7 +2368,7 @@ La funció .map() ens ajuda a transformar totes les dades d&rsquo;una col·lecci
 
 System.out.println(total);
 </code></pre>
-<p>Un altre exemple podria ser obtenir els quadrats dels 10 primers nombres</p>
+<p>Un altre exemple podria ser obtenir els quadrats dels 10 primers nombres, ho farem usant la funció lambda <code>n -&gt; n*n</code></p>
 <pre><code class="language-java">List&lt;Integer&gt; nombres = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 List&lt;Integer&gt; quadrats = nombres.stream()
@@ -2445,7 +2445,7 @@ Ens permet iterar tots els elements d&rsquo;un Stream.</p>
 </code></pre>
 <p><strong>REDUCE()</strong>
 Executa una operació sobre els elements d&rsquo;un Stream per tal de produir un resultat final. Per exemple la concatenació de Strings:</p>
-<pre><code class="language-java">List &lt; String &gt; nombres = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Gines&quot;);
+<pre><code class="language-java">List &lt;String&gt; nombres = Arrays.asList(&quot;Pep&quot;, &quot;Alberto&quot;, &quot;Gines&quot;);
 String reduce = nombres
     .stream()
     .reduce(String::concat)
@@ -2478,6 +2478,88 @@ Són estructures modificables que reben els elements d&rsquo;un Stream i constru
 <h4 id="per-acabar">Per acabar</h4>
 <p>Una de les avantatges dels Streams respecte a l&rsquo;execució seqüencial que ens ofereixen les col·leccions és que en operacions que requereixen d&rsquo;una gran capacitat de còmput permet realitzar l&rsquo;execució del càlcul en paral·lel a diferents parts de la col·lecció al mateix temps (particiona la col·lecció per tal de realitzar les operacions en paral·lel), reduint així el temps de còmput global i fent més eficient l&rsquo;aplicació. S&rsquo;utilitza en aquest cas la classe <code>ParallelStream</code>, a 2n DAM ho veureu més extensament en el mòdul de Serveis i Processos Concurrents.</p>
 <h4 id="alguns-exemples">Alguns exemples</h4>
+<ol>
+<li>Suma els elements parells d&rsquo;un llistat:</li>
+</ol>
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+int sumOfEvens = numbers.stream()
+    .filter(n -&gt; n % 2 == 0)
+    .mapToInt(Integer::intValue)
+    .sum();
+
+System.out.println(sumOfEvens); 
+
+</code></pre>
+<ol start="2">
+<li>Compta el nombre de paraules del llistat que la longitud sigui superior a 4.</li>
+</ol>
+<pre><code class="language-java">List&lt;String&gt; words = Arrays.asList(&quot;Apple&quot;, &quot;Banana&quot;, &quot;Avocado&quot;, &quot;Kiwi&quot;);
+
+long count = words.stream()
+    .filter(w -&gt; w.length() &gt; 4)
+    .count();
+
+System.out.println(count); 
+</code></pre>
+<ol start="3">
+<li>Busca la mitjana dels nombres superiors a 5.</li>
+</ol>
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 6, 7, 8);
+
+OptionalDouble average = numbers.stream()
+    .filter(n -&gt; n &gt; 5)
+    .mapToInt(Integer::intValue)
+    .average();
+
+average.ifPresent(System.out::println);
+</code></pre>
+<p>Tenint en compte que tenim una classe Person amb els atributs (name, age i country):</p>
+<ol start="4">
+<li>Suma les edats de totes les persones d&rsquo;un determinat país.</li>
+</ol>
+<pre><code class="language-java">List&lt;Person&gt; people = Arrays.asList(
+    new Person(&quot;Alice&quot;, 30, &quot;USA&quot;),
+    new Person(&quot;Bob&quot;, 25, &quot;Canada&quot;),
+    new Person(&quot;Charlie&quot;, 35, &quot;USA&quot;)
+);
+
+int sumOfAgesFromUSA = people.stream()
+    .filter(p -&gt; p.getCountry().equals(&quot;USA&quot;))
+    .mapToInt(Person::getAge)
+    .sum();
+
+System.out.println(sumOfAgesFromUSA);
+</code></pre>
+<ol start="5">
+<li>Troba a la persona més jove d&rsquo;un determinat país.</li>
+</ol>
+<pre><code class="language-java">List&lt;Person&gt; people = Arrays.asList(
+    new Person(&quot;Alice&quot;, 30, &quot;USA&quot;),
+    new Person(&quot;Bob&quot;, 25, &quot;USA&quot;),
+    new Person(&quot;Charlie&quot;, 35, &quot;Canada&quot;)
+);
+
+Person youngestInUSA = people.stream()
+    .filter(p -&gt; p.getCountry().equals(&quot;USA&quot;))
+    .reduce((p1, p2) -&gt; p1.getAge() &lt; p2.getAge() ? p1 : p2)
+    .orElse(null);
+
+System.out.println(youngestInUSA); 
+</code></pre>
+<ol start="6">
+<li>Compta el nombre de persones d&rsquo;un determinat país.</li>
+</ol>
+<pre><code class="language-java">List&lt;Person&gt; people = Arrays.asList(
+    new Person(&quot;Alice&quot;, 30, &quot;USA&quot;),
+    new Person(&quot;Bob&quot;, 25, &quot;USA&quot;),
+    new Person(&quot;Charlie&quot;, 35, &quot;Canada&quot;)
+);
+
+long countFromUSA = people.stream()
+    .filter(p -&gt; p.getCountry().equals(&quot;USA&quot;))
+    .count();
+</code></pre>
 
 
 
@@ -3762,19 +3844,19 @@ Són estructures modificables que reben els elements d&rsquo;un Stream i constru
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1725632399"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1725228209"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1725228209"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1725632399"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1725632399"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1725228209"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1725632399"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
