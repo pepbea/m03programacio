@@ -78,20 +78,19 @@ L'índex de continguts que veurem és:
         * [Protected]({{%relref "4POO/1herencia/3protected/_index.en.md" %}})
     - [Classes abstractes i finals]({{%relref "4POO/2classesAbstractes/_index.en.md" %}})
     - [Interfícies]({{%relref "4POO/3interficies/_index.en.md" %}})
-    - [Bones pràctiques en POO]({{%relref "4POO/4bonesPractiques/_index.en.md" %}})
-        * [Defensive Copy]({{%relref "4POO/4bonesPractiques/1defensiveCopy/_index.en.md" %}})
-        * [Tractament de les Excepcions]({{%relref "4POO/4bonesPractiques/2excepcions/_index.en.md" %}})
+    - [Bones pràctiques en POO]({{%relref "4POO/4bonespractiques/_index.en.md" %}})
+        * [Defensive Copy]({{%relref "4POO/4bonespractiques/1defensiveCopy/_index.en.md" %}})
+        * [Tractament de les Excepcions]({{%relref "4POO/4bonespractiques/2excepcions/_index.en.md" %}})
     - [Principis SOLID]({{%relref "4POO/5solid/_index.en.md" %}})
 
 **AEA5: E/S Dades**
   + [E/S Dades]({{%relref "5esdades/_index.en.md" %}})
-    - [Fluxos de dades: byte, character]({{%relref "5esdades/1fluxos/_index.en.md" %}})
-    - [Gestió File]({{%relref "5esdades/2fitxers/_index.en.md" %}})
-    - [Manipulació fitxers]({{%relref "5esdades/3manipulacioFitxers/_index.en.md" %}})
-        * [Text]({{%relref "5esdades/3manipulacioFitxers/1text/_index.en.md" %}})   
-        * [Binari]({{%relref "5esdades/3manipulacioFitxers/2binari/_index.en.md" %}})
-        * [Accés aleatori]({{%relref "5esdades/3manipulacioFitxers/3accesAleatori/_index.en.md" %}}) 
-    - [Interfícies gràfiques d'usuari (GUI)]({{%relref "5esdades/4interficiesgrafiques/_index.en.md" %}})
+    - [Gestió File]({{%relref "5esdades/1fitxers/_index.en.md" %}})
+    - [Manipulació fitxers]({{%relref "5esdades/2manipulacioFitxers/_index.en.md" %}})<br>
+        * [Text]({{%relref "5esdades/2manipulacioFitxers/1text/_index.en.md" %}})   <br>
+        * [Binari]({{%relref "5esdades/2manipulacioFitxers/2binari/_index.en.md" %}})<br>
+        * [Accés aleatori]({{%relref "5esdades/2manipulacioFitxers/3accesAleatori/_index.en.md" %}}) 
+    -[Interfícies gràfiques d'usuari (GUI)]({{%relref "5esdades/3interficiesgrafiques/_index.en.md" %}})
 
 
 

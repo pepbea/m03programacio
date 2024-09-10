@@ -8,7 +8,7 @@ pre: "1. "
 L'herència permet a una classe nova crear-se a partir d'una classe existent, aquesta característica permet crear una estructura jeràrquica de classes cada vegada més especialitzada. L'herència es basa en la reutilització de classes on es crea una classe nova incorporant atributs i mètodes de la classe pare. Els mètodes heretats poden ser sobreescrits i adoptar un comportament nou o ampliant-ne la seva funcionalitat. Aquesta reutilització permet estalviar molt de temps i adoptar components creats i ja testats.
 
 
-** Atribut final en l'herència**
+**Atribut final en l'herència**
 
 A vegades, pels requisits de la nostra aplicació no ens interessa que hi pugui haver una herència en una classe, en aquests casos indicaríem mitjançant l'atribut final. Per exemple si vull que Persona sigui una classe final i que per tant no es pugui extendre ho marcaria de la següent manera:
 

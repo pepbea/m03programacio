@@ -5,7 +5,6 @@ weight: 2
 pre: "2. "
 ---
 
-
 #### Classes abstractes
 
 {{% notice note %}}
