@@ -12,22 +12,22 @@
     <title>Principis SOLID :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1726012654" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1726012654" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1726098937" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1726098937" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1726012654" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1726098937" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1726012654"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1726098937"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1726012654"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1726012654"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1726098937"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1726098937"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/pepbea.github.io\/m03programacio\/continguts\/public";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1726012654"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1726098937"></script>
 
     
   </div>
@@ -2261,7 +2261,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -2286,6 +2294,229 @@
 
 
 	
+<div class="notices note" ><p>Els principis sòlids són una sèrie de directrius de disseny de classes orientades a objectes que busquen millorar la qualitat del programari i facilitar-ne el manteniment i l&rsquo;extensió. Són un conjunt de regles i millores pràctiques a seguir al dissenyar una estructura de classe. SOLID és un acrònim que representa els cinc principis bàsics.</p>
+</div>
+
+<p>Aquests principis són fonamentals per al disseny de programari orientat a objectes i ajuden a crear sistemes que siguin més robustos, flexibles i fàcils de mantenir.</p>
+<ul>
+<li>S - Single Responsibility Principle (SRP)</li>
+<li>O - Open/Closed Principle (OCP)</li>
+<li>L - Liskov Substitution Principle (LSP)</li>
+<li>I - Interface Segregation Principle (ISP)</li>
+<li>D - Dependency Inversion Principle (DIP)</li>
+</ul>
+<h4 id="s---single-responsibility-principle-srp">S - Single Responsibility Principle (SRP):</h4>
+<p>Principi de Responsabilitat Única: Una classe ha de tenir una, i només una, raó per canviar. Això vol dir que cada classe s&rsquo;ha d&rsquo;encarregar d&rsquo;una sola part de la funcionalitat del sistema i totes les seves responsabilitats han d&rsquo;estar estretament relacionades. En seguir aquest principi, es facilita la comprensió del codi i el manteniment, ja que <strong>cada classe té una responsabilitat clarament definida</strong>.</p>
+<p>Imaginem-nos una classe Report que generi contingut de l&rsquo;informe i que també l&rsquo;enviï per correu electrònic.</p>
+<pre><code class="language-java">public class Report {
+    public void generateReport() {
+        // Codi para generar l'informe
+    }
+
+    public void sendReport(String emailAddress) {
+        // Codi per enviar l'informe
+    }
+}
+</code></pre>
+<p>En aquest cas la classe Report té dues responsabilitats: generar informe i enviar-lo per correu. De forma que no és coherent amb SRP.</p>
+<p>Si seguim el principi SRP, refactoritzem i:</p>
+<pre><code class="language-java">public class ReportGenerator {
+    public void generateReport() {
+        // Codi para generar l'informe
+    }
+}
+
+public class ReportSender {
+    public void sendReport(String emailAddress) {
+        // Codi per enviar l'informe
+    }
+}
+</code></pre>
+<p>D&rsquo;aquesta manera cada classe té la seva pròpia responsabilitat.</p>
+<h4 id="o---openclosed-principle-ocp">O - Open/Closed Principle (OCP):</h4>
+<p>Principi d&rsquo;Obert/Tancat: Les entitats de programari (com ara classes, mòduls, funcions, etc.) han d&rsquo;estar <strong>obertes per a la seva extensió, però tancades per a modificar-les</strong>. Això implica que hauríeu de poder afegir noves funcionalitats sense alterar el codi existent. Això se sol aconseguir mitjançant la utilització d&rsquo;interfícies o classes abstractes, permetent que noves implementacions puguin ser afegides sense canviar el codi que ja funciona.</p>
+<p>Imaginem-nos una classe que calcula l&rsquo;àrea de diferents objectes geomètrics.</p>
+<pre><code class="language-java">public class AreaCalculator {
+    public double calculateArea(Shape shape) {
+        if (shape instanceof Circle) {
+            Circle circle = (Circle) shape;
+            return Math.PI * circle.getRadius() * circle.getRadius();
+        } else if (shape instanceof Square) {
+            Square square = (Square) shape;
+            return square.getSide() * square.getSide();
+        }
+        // Agregar nous tipus de formes aqui
+        return 0;
+    }
+}
+</code></pre>
+<p>En aquest exemple, si vull incloure un triangle fa que hagi de <strong>modificar</strong> el codi, de forma que violem el principi OCP. Si refactoritzem seguint OCP:</p>
+<pre><code class="language-java">public interface Shape {
+    double calculateArea();
+}
+
+public class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Square implements Shape {
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    @Override
+    public double calculateArea() {
+        return side * side;
+    }
+}
+
+public class AreaCalculator {
+    public double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+}
+</code></pre>
+<p>D&rsquo;aquesta manera la classe AreaCalculator no necessita modificar-se per admetre noves formes, però en canvi s&rsquo;ha traslladat la funcionalitat de calcular l&rsquo;àrea a una interfície que totes les formes geomètriques poden implementar i per tant extendre-ho a noves formes geomètriques.</p>
+<h4 id="l---liskov-substitution-principle-lsp">L - Liskov Substitution Principle (LSP):</h4>
+<p>Principi de substitució de Liskov: <strong>Els objectes d&rsquo;una classe derivada han de poder substituir objectes de la classe base sense alterar el funcionament del programa</strong>. En altres paraules, les subclasses han de ser intercanviables amb les superclasses sense causar errors o comportaments inesperats. <strong>Això garanteix que les classes derivades són veritables extensions de les classes base</strong>, mantenint la integritat del comportament del sistema.</p>
+<p>Suposem les classes Bird i Penguin:</p>
+<pre><code class="language-java"> public class Bird {
+    public void fly() {
+        // Codi per volar
+    }
+}
+
+public class Penguin extends Bird {
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException(&quot;Penguins can't fly&quot;);
+    }
+}
+</code></pre>
+<p>En aquest cas es trenca LSP ja que si es vol cridar el mètode fly de Penguin es produiria una excepció, no es poden intercanviar. Refactoritzem:</p>
+<pre><code class="language-java"> public abstract class Bird {
+    public abstract void move();
+}
+
+public class Sparrow extends Bird {
+    @Override
+    public void move() {
+        // Codi per volar
+    }
+}
+
+public class Penguin extends Bird {
+    @Override
+    public void move() {
+        // Codi para caminar
+    }
+}
+</code></pre>
+<p>En aquest cas, &ldquo;generalitzant&rdquo; la funcionalitat a <code>move()</code> i implementant-la de forma concreta en cada classe permet tenir un model coherent amb LSP i per tant amb classes substituïbles.</p>
+<h4 id="i---interface-segregation-principle-isp">I - Interface Segregation Principle (ISP):</h4>
+<p>Principi de Segregació d&rsquo;Interfícies: Els clients no s&rsquo;han de veure obligats a dependre d&rsquo;interfícies que no utilitzen. <strong>Aquest principi suggereix que és millor tenir diverses interfícies específiques en comptes d&rsquo;una interfície general</strong>. D&rsquo;aquesta manera, les classes implementen només les interfícies que necessiten, evitant la dependència de mètodes que no hi són rellevants.</p>
+<p>Tenim una interfície Worker que realitza diferents accions:</p>
+<pre><code class="language-java">
+public interface Worker {
+    void work();
+    void eat();
+}
+</code></pre>
+<p>Podria passar que Chief no implementés el mètode <code>eat()</code> i per tant violaria la ISP. Refactoritzem:</p>
+<pre><code class="language-java">public interface Workable {
+    void work();
+}
+
+public interface Eatable {
+    void eat();
+}
+
+public class Chief implements Workable {
+    @Override
+    public void work() {
+        ...
+    }
+}
+
+public class Employee implements Workable, Eatable {
+    @Override
+    public void work() {
+        ...
+    }
+
+    @Override
+    public void eat() {
+        ...
+    }
+}
+</code></pre>
+<p>Separant cada funcionalitat en diferents interfícies permet adaptar cadascuna a on li pertany i compleix ISP.</p>
+<h4 id="d---dependency-inversion-principle-dip">D - Dependency Inversion Principle (DIP):</h4>
+<p>Principi d&rsquo;inversió de dependències: Les dependències han d&rsquo;estar en abstraccions, no en concrecions. <strong>En lloc de dependre de classes concretes, les classes han de dependre d&rsquo;interfícies o classes abstractes</strong>. A més, les abstraccions no han de dependre de detalls; els detalls han de dependre de les abstraccions. Això facilita la modularitat i el desacoblament, fent que el sistema sigui més flexible i fàcil de mantenir.</p>
+<p>Suposem una classe UserService que depen directament d&rsquo;una classe UserRepository</p>
+<pre><code class="language-java">public class UserRepository {
+    public void save(User user) {
+        // Códi per guardar usuari en BBDDs
+    }
+}
+
+public class UserService {
+    private UserRepository userRepository;
+
+    public UserService() {
+        this.userRepository = new UserRepository();
+    }
+
+    public void registerUser(User user) {
+        userRepository.save(user);
+    }
+}
+</code></pre>
+<p>En aquest cas UserService està fortament acoblat amb UserRepository. UserService depèn de UserRepository la qual cosa no ens permet canviar amb facilitat el codi de UserRepository. Refactoritzem:</p>
+<pre><code class="language-java">public interface UserRepository {
+    void save(User user);
+}
+
+public class SqlUserRepository implements UserRepository {
+    @Override
+    public void save(User user) {
+        // Códi per guardar usuari en BBDDs
+    }
+}
+
+public class UserService {
+    private UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public void registerUser(User user) {
+        userRepository.save(user);
+    }
+}
+</code></pre>
+<p>D&rsquo;aquesta manera UserService ja no depèn d&rsquo;una classe concreta sinó d&rsquo;una interfície. Això permet injectar en UserService diferents implementacions de la interfície UserRepository, permet el canvi d&rsquo;implementació sense tocar la classe UserRepository.</p>
+
 
 
 
@@ -3553,19 +3784,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1726012654"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1726098937"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1726012654"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1726012654"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1726098937"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1726098937"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1726012654"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1726098937"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
