@@ -13,19 +13,11 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/1acces/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/1estructura/</loc>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/1estructuresestatiquesdinamiques/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/1acces/1estandard/</loc>
   </url>
   
   <url>
@@ -41,10 +33,6 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/2accions/1lectura/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/5coleccions/1arraylist/</loc>
   </url>
   
@@ -53,7 +41,7 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/1.preparedstatement/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdd/1preparedstatement/</loc>
   </url>
   
   <url>
@@ -78,22 +66,13 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/2classesabstractes/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/5coleccions/2hashset/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/1herencia/2coleccions/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/2polimorfisme/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/2accions/</loc>
   </url>
   
   <url>
@@ -105,15 +84,7 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/1acces/2caracteristiques/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/1definicionsexemple/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/2accions/2emmagatzematge/</loc>
   </url>
   
   <url>
@@ -129,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/2.metadades/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdd/2metadades/</loc>
   </url>
   
   <url>
@@ -151,26 +122,17 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/3classesabstractes/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/5coleccions/3hashmap/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/3interficies/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/1herencia/3protected/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/5esdades/2manipulaciofitxers/3accesaleatori/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/2accions/3actualitzacio/</loc>
   </url>
   
   <url>
@@ -182,10 +144,6 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/1acces/3connexio/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/3classemetodes/</loc>
   </url>
   
@@ -194,25 +152,11 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/3.crudmapeigor/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/3tipusdadesobjecte/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdd/3crudmapeigor/</loc>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/4bonespractiques/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/4bonespractiques/1defensivecopy/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -222,29 +166,16 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/5solid/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/4interficies/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/4bonespractiques/2excepcions/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/4.classes-dao/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdd/4classesdao/</loc>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/2poo/4construccio/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/2accions/4esborrat/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/4tipusdadescolleccions/</loc>
   </url>
   
   <url>
@@ -256,7 +187,22 @@
   </url>
   
   <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/5bonespractiques/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/3dadescompostes/5coleccions/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/5bonespractiques/1defensivecopy/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/5bonespractiques/2excepcions/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -278,7 +224,8 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdds/</loc>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/4poo/6solid/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
@@ -310,16 +257,16 @@
   </url>
   
   <url>
-    <loc>https://pepbea.github.io/m03programacio/continguts/public/zzz_gesti%C3%B3-bbddor/</loc>
-  </url>
-  
-  <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://pepbea.github.io/m03programacio/continguts/public/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pepbea.github.io/m03programacio/continguts/public/6gestiobbdd/</loc>
   </url>
   
   <url>
