@@ -1,5 +1,5 @@
 baseURL = "https://pepbea.github.io/m03programacio/continguts/public"
-languageCode = "en-US"
+locale = "en-US"
 defaultContentLanguage = "en"
 
 title = "M03 Programació DAM"
@@ -26,7 +26,7 @@ home = [ "HTML", "RSS", "JSON"]
 [Languages.en]
 title = "Documentation for Hugo Learn Theme"
 weight = 1
-languageName = "English"
+label = "English"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-door-open'></i> INS Poblenou 0485.Programació"

@@ -10,15 +10,15 @@ Tot seguit es mostra la calendarització i l'assignació d'hores per cada RA que
 
 | UF                                                                                                                                                            | dates               | hores |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----- |
-| **RA1** Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.               | 12/09/24 - 25/09/24 | 10h   |
-| **RA3** Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.                                                              | 26/09/24 - 11/11/24 | 40h   |
-| **RA2** Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.                                       | 12/11/24 - 27/11/24 | 10h   |
-| **RA4** Desenvolupa programes organitzats en classes analitzant i aplicant els principis de la programació orientada a objectes.                              | 28/11/24 - 16/12/25 | 20h   |
-| **RA6** Escriu programes que manipulin informació seleccionant i utilitzant tipus avançats de dades.                                                          | 17/12/24 - 17/02/25 | 40h   |
-| **RA7** Desenvolupa programes aplicant característiques avançades dels llenguatges orientats a objectes i de l'entorn de programació.                         | 18/02/25 - 02/04/25 | 40h   |
-| **RA5** Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.                      | 03/04/25 - 02/05/25 | 20h   |
-| **RA9** Gestiona informació emmagatzemada en bases de dades mantenint la integritat i consistència de les dades.                                              | 03/05/25 - 14/05/25 | 10h   |
-| **RA8** Utilitza bases de dades orientades a objectes, analitzant-ne les característiques i aplicant tècniques per mantenir la persistència de la informació. | 15/05/25 - 23/05/25 | 8h    |
+| **RA1** Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.               | 14/09/26 - 25/09/26 | 10h   |
+| **RA3** Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.                                                              | 26/09/26 - 30/10/26 | 30h   |
+| **RA6** Escriu programes que manipulin informació seleccionant i utilitzant tipus avançats de dades.                                                          | 02/11/26 - 26/01/27 | 40h   |
+| **RA2** Escriu i prova programes senzills, reconeixent i aplicant els fonaments de la programació orientada a objectes.                                       | 23/11/26 - 11/12/26 | 25h   |
+| **RA4** Desenvolupa programes organitzats en classes analitzant i aplicant els principis de la programació orientada a objectes.                              | 27/01/27 - 11/02/27 | 15h   |
+| **RA7** Desenvolupa programes aplicant característiques avançades dels llenguatges orientats a objectes i de l'entorn de programació.                         | 12/02/27 - 09/04/27 | 40h   |
+| **RA5** Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.                      | 12/04/27 - 29/04/27 | 20h   |
+| **RA9** Gestiona informació emmagatzemada en bases de dades mantenint la integritat i consistència de les dades.                                              | 30/04/27 - 13/05/27 | 10h  
+| **RA8** Utilitza bases de dades orientades a objectes, analitzant-ne les característiques i aplicant tècniques per mantenir la persistència de la informació. | 14/05/27 - 21/05/27 | 8h    |
 
 L'índex de continguts que veurem és:
 
