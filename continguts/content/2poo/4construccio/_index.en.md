@@ -197,7 +197,7 @@ public Persona(String nom, int edat) {
 
 #### Destrucció d'objectes
 
-Un objecte es manté viu sempre que existeixi una variable que l'estigui referenciant. Destruïrem un objecte, per tant, deixarem de tenir-hi accés, quan **no existeixi cap variable que apunti a l'objecte**. Una vegada un objecte deixa de ser-nos útil i per tant ocupa memòria innecessàriament és el moment de desrefenciar aquest objecte de totes les variables que l'apuntin **assignant el valor null a aquestes variables**. Quan posem valor null a una variable *desreferenciem* l'objecte on apuntava aquesta variable.
+Un objecte es manté viu sempre que existeixi una variable que l'estigui referenciant. Deixarà d'existir l'objecte, per tant, deixarem de tenir-hi accés, quan **no existeixi cap variable/referència que apunti a l'objecte**. Una vegada un objecte deixa de ser-nos útil i per tant ocupa memòria innecessàriament és el moment de desrefenciar aquest objecte de totes les variables que l'apuntin **assignant el valor null a aquestes variables**. Quan posem valor null a una variable *desreferenciem* l'objecte on apuntava aquesta variable.
 
 Les variables es guarden a un espai de memòria que s'anomena Stack, mentre que els objectes es guarden a un altre espai que s'anomena Heap. La variable guarda la direcció de memòria d'on es troba aquest objecte dins el heap, quan assignem valor null a una variable fem que aquesta variable deixi de guardar la direcció de memòria de l'objecte dins el heap. Quan això passa, en Java existeix el Garbage Collector, és un aplicatiu que rastreja contínuament la memòria de Java i quan troba objectes que no tenen cap referència en cap variable **alliberen** aquesta memòria i fan que torni a estar disponible per a l'ús de l'aplicatiu.
 

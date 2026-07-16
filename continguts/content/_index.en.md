@@ -17,7 +17,7 @@ Tot seguit es mostra la calendarització i l'assignació d'hores per cada RA que
 | **RA4** Desenvolupa programes organitzats en classes analitzant i aplicant els principis de la programació orientada a objectes.                              | 27/01/27 - 11/02/27 | 15h   |
 | **RA7** Desenvolupa programes aplicant característiques avançades dels llenguatges orientats a objectes i de l'entorn de programació.                         | 12/02/27 - 09/04/27 | 40h   |
 | **RA5** Realitza operacions d'entrada i sortida d'informació, utilitzant procediments específics del llenguatge i llibreries de classes.                      | 12/04/27 - 29/04/27 | 20h   |
-| **RA9** Gestiona informació emmagatzemada en bases de dades mantenint la integritat i consistència de les dades.                                              | 30/04/27 - 13/05/27 | 10h  
+| **RA9** Gestiona informació emmagatzemada en bases de dades mantenint la integritat i consistència de les dades.                                              | 30/04/27 - 13/05/27 | 10h   |
 | **RA8** Utilitza bases de dades orientades a objectes, analitzant-ne les característiques i aplicant tècniques per mantenir la persistència de la informació. | 14/05/27 - 21/05/27 | 8h    |
 
 L'índex de continguts que veurem és:
@@ -78,7 +78,7 @@ L'índex de continguts que veurem és:
   - [Classes abstractes i finals]({{%relref "4poo/3classesAbstractes/_index.en.md" %}})
   - [Interfícies]({{%relref "4poo/4interficies/_index.en.md" %}})
   - [Bones pràctiques en POO]({{%relref "4poo/5bonespractiques/_index.en.md" %}})
-    - [Defensive Copy]({{%relref "4poo/5bonespractiques/1defensiveCopy/_index.en.md" %}})
+    - [Records]({{%relref "4poo/5bonespractiques/1records/_index.en.md" %}})
     - [Tractament de les Excepcions]({{%relref "4poo/5bonespractiques/2excepcions/_index.en.md" %}})
   - [Principis SOLID]({{%relref "4poo/6solid/_index.en.md" %}})
 
