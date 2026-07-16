@@ -86,9 +86,11 @@ L'índex de continguts que veurem és:
 
 - [E/S Dades]({{%relref "5esdades/_index.en.md" %}})
   - [Gestió File]({{%relref "5esdades/1fitxers/_index.en.md" %}})
-  - [Manipulació fitxers]({{%relref "5esdades/2manipulacioFitxers/_index.en.md" %}})<br>
-    _ [Text]({{%relref "5esdades/2manipulacioFitxers/1text/_index.en.md" %}}) <br>
-    _ [Binari]({{%relref "5esdades/2manipulacioFitxers/2binari/_index.en.md" %}})<br> \* [Accés aleatori]({{%relref "5esdades/2manipulacioFitxers/3accesAleatori/_index.en.md" %}}) -[Interfícies gràfiques d'usuari (GUI)]({{%relref "5esdades/3interficiesgrafiques/_index.en.md" %}})
+  - [Manipulació fitxers]({{%relref "5esdades/2manipulacioFitxers/_index.en.md" %}})
+    - [Text]({{%relref "5esdades/2manipulacioFitxers/1text/_index.en.md" %}})
+    - [Binari]({{%relref "5esdades/2manipulacioFitxers/2binari/_index.en.md" %}})
+    - [Accés aleatori]({{%relref "5esdades/2manipulacioFitxers/3accesAleatori/_index.en.md" %}})
+    - [Interfícies gràfiques d'usuari (GUI)]({{%relref "5esdades/3interficiesgrafiques/_index.en.md" %}})
 
 **AEA6: Gestió de BBDDs**
 
