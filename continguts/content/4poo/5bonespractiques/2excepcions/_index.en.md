@@ -185,3 +185,86 @@ public class MajoriaEdat {
     }
 }
 ```
+
+**Try With Resource**
+
+`Try with resource` és una forma introduïda en Java7 que permet treballar amb un objecte i ser controlat utilitzant l'estructura try-catch durant la seva vida útil, monitoritzant en tot moment quan s'utilitza aquest objecte. El fet d'utilitzar el try-with-resource tanca l'objecte una vegada tanquem el try, per tant no cal que efectuem un `close()` de l'objecte esmentat.
+
+És útil perquè moltes vegades obrim recursos com podria ser un socket, un accés a la base de dades, o qualsevol altre objecte, que si no el tanquem ens bloqueja rescuros o es queda en memòria obert i ens consumeix espai de
+memòria innecessàriament.
+
+Un exemple que ja estem familiaritzats podria ser el propi Scanner. Si l'utilitzem sense el try-with-resource podríem tenir el següent codi:
+
+```java
+Scanner sc = new Scanner(System.in);
+
+try {
+    System.out.println("Escriu el teu nom:");
+    String nom = sc.nextLine();
+    System.out.println("Hola " + nom);
+} finally {
+    sc.close();
+}
+```
+
+Mentre que si utilitzem el try-with-resource:
+
+```java
+Scanner sc = new Scanner(System.in);
+
+try (Scanner sc = new Scanner(System.in)) {
+    System.out.println("Escriu el teu nom:");
+    String nom = sc.nextLine();
+    System.out.println("Hola " + nom);
+}
+```
+
+Al sortir del bloc try, Java executa automàticament .close() del "resource".
+
+Un altre exemple que es veurà properament és amb l'ús de Base de Dades:
+
+```java
+try (
+    Connection conn = DriverManager.getConnection(url, usuari, password);
+    PreparedStatement ps = conn.prepareStatement(
+        "SELECT nom FROM alumnes");
+    ResultSet rs = ps.executeQuery()
+) {
+
+    while (rs.next()) {
+        System.out.println(rs.getString("nom"));
+    }
+
+}
+```
+
+{{% notice note %}}
+Try-with-resource permet treballar amb aquelles classes que implementen la interfície **AutoCloseable**. Concretament les classes: Scanner, Connection, PreparedStatement, ResultSet, Socket, ServerSocket, ZipFile.
+{{% /notice %}}
+
+Si volguéssim utilitzar aquesta característica caldria que la nostra classe implementés la interfície AutoCloseable. Per ex:
+
+```java
+class Impressora implements AutoCloseable {
+
+    public void imprimir(String text) {
+        System.out.println(text);
+    }
+
+    @Override
+    public void close() {
+        System.out.println("Impressora apagada.");
+    }
+}
+
+public class Exemple {
+
+    public static void main(String[] args) {
+
+        try (Impressora imp = new Impressora()) {
+            imp.imprimir("Hola!");
+        }
+
+    }
+}
+```

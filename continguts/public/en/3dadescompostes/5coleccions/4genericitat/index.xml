@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Genericitat on Documentation for Hugo Learn Theme</title>
-    <link>http://localhost:34515/m03programacio/continguts/public/en/3dadescompostes/5coleccions/4genericitat/</link>
+    <link>http://localhost:1313/m03programacio/continguts/public/en/3dadescompostes/5coleccions/4genericitat/</link>
     <description>Recent content in Genericitat on Documentation for Hugo Learn Theme</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:34515/m03programacio/continguts/public/en/3dadescompostes/5coleccions/4genericitat/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/m03programacio/continguts/public/en/3dadescompostes/5coleccions/4genericitat/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

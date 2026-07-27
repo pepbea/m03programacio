@@ -26,6 +26,8 @@ home = [ "HTML", "RSS", "JSON"]
 [Languages.en]
 title = "Documentation for Hugo Learn Theme"
 weight = 1
+
+[Languages.en.params]
 label = "English"
 
 [[Languages.en.menu.shortcuts]]

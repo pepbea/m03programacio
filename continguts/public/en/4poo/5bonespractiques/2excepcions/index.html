@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/m03programacio/continguts/public/livereload.js?mindelay=10&amp;v=2&amp;port=34515&amp;path=m03programacio/continguts/public/livereload" data-no-instant defer></script>
+  <head><script src="/m03programacio/continguts/public/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=m03programacio/continguts/public/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.131.0">
@@ -12,22 +12,22 @@
     <title>Tractament de les excepcions :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/m03programacio/continguts/public/css/nucleus.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hybrid.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/auto-complete.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/theme.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/tabs.css?1784243553" rel="stylesheet">
-    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1784243553" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/nucleus.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/fontawesome-all.min.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hybrid.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/featherlight.min.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/perfect-scrollbar.min.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/auto-complete.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/atom-one-dark-reasonable.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/tabs.css?1785152003" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/hugo-theme.css?1785152003" rel="stylesheet">
     
-    <link href="/m03programacio/continguts/public/css/theme-blue.css?1784243553" rel="stylesheet">
+    <link href="/m03programacio/continguts/public/css/theme-blue.css?1785152003" rel="stylesheet">
     
     
 
-    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1784243553"></script>
+    <script src="/m03programacio/continguts/public/js/jquery-3.3.1.min.js?1785152003"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -44,7 +44,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="http://localhost:34515/m03programacio/continguts/public/"></a>
+      <a id="logo" href="http://localhost:1313/m03programacio/continguts/public/"></a>
 <img src="https://pepbea.github.io/m03programacio/continguts/public/images/logo.png"></img>
 </a>
 
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1784243553"></script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1784243553"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/lunr.min.js?1785152003"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/auto-complete.js?1785152003"></script>
 <script type="text/javascript">
     
-        var baseurl = "http:\/\/localhost:34515\/m03programacio\/continguts\/public\/";
+        var baseurl = "http:\/\/localhost:1313\/m03programacio\/continguts\/public\/";
     
 </script>
-<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1784243553"></script>
+<script type="text/javascript" src="/m03programacio/continguts/public/js/search.js?1785152003"></script>
 
     
   </div>
@@ -2066,6 +2066,73 @@ public static void dividir2() throws ArithmeticException {
     }
 }
 </code></pre>
+<p><strong>Try With Resource</strong></p>
+<p><code>Try with resource</code> és una forma introduïda en Java7 que permet treballar amb un objecte i ser controlat utilitzant l&rsquo;estructura try-catch durant la seva vida útil, monitoritzant en tot moment quan s&rsquo;utilitza aquest objecte. El fet d&rsquo;utilitzar el try-with-resource tanca l&rsquo;objecte una vegada tanquem el try, per tant no cal que efectuem un <code>close()</code> de l&rsquo;objecte esmentat.</p>
+<p>És útil perquè moltes vegades obrim recursos com podria ser un socket, un accés a la base de dades, o qualsevol altre objecte, que si no el tanquem ens bloqueja rescuros o es queda en memòria obert i ens consumeix espai de
+memòria innecessàriament.</p>
+<p>Un exemple que ja estem familiaritzats podria ser el propi Scanner. Si l&rsquo;utilitzem sense el try-with-resource podríem tenir el següent codi:</p>
+<pre><code class="language-java">Scanner sc = new Scanner(System.in);
+
+try {
+    System.out.println(&quot;Escriu el teu nom:&quot;);
+    String nom = sc.nextLine();
+    System.out.println(&quot;Hola &quot; + nom);
+} finally {
+    sc.close();
+}
+</code></pre>
+<p>Mentre que si utilitzem el try-with-resource:</p>
+<pre><code class="language-java">Scanner sc = new Scanner(System.in);
+
+try (Scanner sc = new Scanner(System.in)) {
+    System.out.println(&quot;Escriu el teu nom:&quot;);
+    String nom = sc.nextLine();
+    System.out.println(&quot;Hola &quot; + nom);
+}
+</code></pre>
+<p>Al sortir del bloc try, Java executa automàticament .close() del &ldquo;resource&rdquo;.</p>
+<p>Un altre exemple que es veurà properament és amb l&rsquo;ús de Base de Dades:</p>
+<pre><code class="language-java">try (
+    Connection conn = DriverManager.getConnection(url, usuari, password);
+    PreparedStatement ps = conn.prepareStatement(
+        &quot;SELECT nom FROM alumnes&quot;);
+    ResultSet rs = ps.executeQuery()
+) {
+
+    while (rs.next()) {
+        System.out.println(rs.getString(&quot;nom&quot;));
+    }
+
+}
+</code></pre>
+
+<div class="notices note" ><p>Try-with-resource permet treballar amb aquelles classes que implementen la interfície <strong>AutoCloseable</strong>. Concretament les classes: Scanner, Connection, PreparedStatement, ResultSet, Socket, ServerSocket, ZipFile.</p>
+</div>
+
+<p>Si volguéssim utilitzar aquesta característica caldria que la nostra classe implementés la interfície AutoCloseable. Per ex:</p>
+<pre><code class="language-java">class Impressora implements AutoCloseable {
+
+    public void imprimir(String text) {
+        System.out.println(text);
+    }
+
+    @Override
+    public void close() {
+        System.out.println(&quot;Impressora apagada.&quot;);
+    }
+}
+
+public class Exemple {
+
+    public static void main(String[] args) {
+
+        try (Impressora imp = new Impressora()) {
+            imp.imprimir(&quot;Hola!&quot;);
+        }
+
+    }
+}
+</code></pre>
 
 
 
@@ -3124,19 +3191,19 @@ public static void dividir2() throws ArithmeticException {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1784243553"></script>
+    <script src="/m03programacio/continguts/public/js/clipboard.min.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.min.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/perfect-scrollbar.jquery.min.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/jquery.sticky.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/featherlight.min.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/highlight.pack.js?1785152003"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/learn.js?1784243553"></script>
-    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1784243553"></script>
+    <script src="/m03programacio/continguts/public/js/modernizr.custom-3.6.0.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/learn.js?1785152003"></script>
+    <script src="/m03programacio/continguts/public/js/hugo-learn.js?1785152003"></script>
     
         
-            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1784243553"></script>
+            <script src="/m03programacio/continguts/public/mermaid/mermaid.js?1785152003"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
