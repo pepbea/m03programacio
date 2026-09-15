@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concepte d&#39;herència i ús on Documentation for Hugo Learn Theme</title>
-    <link>https://pepbea.github.io/m03programacio/continguts/public/en/2poo/6herencia/</link>
+    <link>http://localhost:1313/m03programacio/continguts/public/en/2poo/6herencia/</link>
     <description>Recent content in Concepte d&#39;herència i ús on Documentation for Hugo Learn Theme</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://pepbea.github.io/m03programacio/continguts/public/en/2poo/6herencia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/m03programacio/continguts/public/en/2poo/6herencia/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

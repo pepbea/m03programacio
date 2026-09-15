@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mètodes estàtics on Documentation for Hugo Learn Theme</title>
-    <link>https://pepbea.github.io/m03programacio/continguts/public/en/2poo/3classemetodes/2estatics/</link>
+    <link>http://localhost:1313/m03programacio/continguts/public/en/2poo/3classemetodes/2estatics/</link>
     <description>Recent content in Mètodes estàtics on Documentation for Hugo Learn Theme</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://pepbea.github.io/m03programacio/continguts/public/en/2poo/3classemetodes/2estatics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/m03programacio/continguts/public/en/2poo/3classemetodes/2estatics/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

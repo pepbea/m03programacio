@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/m03programacio/continguts/public/images/favicon.png" type="image/png">
 
-    <title>Operacions CRUD i mapeig objecte-relacional :: Documentation for Hugo Learn Theme</title>
+    <title>Fitxers JSON :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/m03programacio/continguts/public/css/nucleus.css?1789461860" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/m03programacio/continguts/public/en/6gestiobbdd/3crudmapeigor/">
+  <body class="" data-url="/m03programacio/continguts/public/en/5esdades/2manipulaciofitxers/4jackson/">
     <nav id="sidebar" class="">
 
 
@@ -1451,7 +1451,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/en/5esdades/" title="AEA5. E/S de dades" class="dd-item
-        
+        parent
         
         
         ">
@@ -1506,7 +1506,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/en/5esdades/2manipulaciofitxers/" title="Manipulació de fitxers" class="dd-item
-        
+        parent
         
         
         ">
@@ -1614,7 +1614,7 @@
     
     <li data-nav-id="/m03programacio/continguts/public/en/5esdades/2manipulaciofitxers/4jackson/" title="Fitxers JSON" class="dd-item
         
-        
+        active
         
         ">
       <a href="/m03programacio/continguts/public/en/5esdades/2manipulaciofitxers/4jackson/">
@@ -1681,7 +1681,7 @@
   
     
     <li data-nav-id="/m03programacio/continguts/public/en/6gestiobbdd/" title="Introducció a la Persistència en BBDDs" class="dd-item
-        parent
+        
         
         
         ">
@@ -1763,7 +1763,7 @@
     
     <li data-nav-id="/m03programacio/continguts/public/en/6gestiobbdd/3crudmapeigor/" title="Operacions CRUD i mapeig objecte-relacional" class="dd-item
         
-        active
+        
         
         ">
       <a href="/m03programacio/continguts/public/en/6gestiobbdd/3crudmapeigor/">
@@ -1871,7 +1871,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/6gestiobbdd/3crudmapeigor/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/5esdades/2manipulacioFitxers/4jackson/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1902,7 +1902,13 @@
             
           
           
-            <a href='/m03programacio/continguts/public/en/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/en/6gestiobbdd/'>Introducció a la Persistència en BBDDs</a> > Operacions CRUD i mapeig objecte-relacional
+            
+            
+          
+          
+            <a href='/m03programacio/continguts/public/en/'>M03 Programació DAM</a> > <a href='/m03programacio/continguts/public/en/5esdades/'>AEA5. E/S de dades</a> > <a href='/m03programacio/continguts/public/en/5esdades/2manipulaciofitxers/'>Manipulació de fitxers</a> > Fitxers JSON
+          
+        
           
         
           
@@ -1915,7 +1921,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1931,7 +1945,7 @@
           
             <h1>
               
-              Operacions CRUD i mapeig objecte-relacional
+              Fitxers JSON
             </h1>
           
 
@@ -1939,51 +1953,199 @@
 
 
 
-	<p>Les sigles CRUD fan referència a create, <em>read, update i delete</em>, que són les operacions bàsiques que es realitzen en una base de dades.</p>
-<p>En el nostre paradigma de la Programació Orientada a Objectes, haurem de dotar a les nostres classes de mètodes que gestionin la seva persistència en base de dades. Això ho farem amb la <strong>tècnica de mapeig objecte-relacional</strong>, que consisteix en mapejar cada classe amb una taula de la base de dades, i cada atribut, amb una columna de la taula corresponent. Convertint cada objecte en un registre de la taula i cada registre, en un objecte Java.</p>
-<p>Per tant, cada classe persistent, haurem de dotar-la dels mètodes create(), read(), update() i delete().</p>
-<p>Exemple de read:</p>
-<pre><code class="language-java">public Album llegeixAlbum(int idAlbum)
-{
-   Statement stmt = null;
-   Album album = null;
-   try {
-       String query = &quot;SELECT * FROM Album WHERE AlbumId = ?&quot;;
-       PreparedStatement ps = con.prepareStatement(query);
-       ps.setInt(1,idAlbum);
-       ResultSet rs = ps.executeQuery();
-       while ( rs.next() ) {
-           int albumId = rs.getInt(&quot;AlbumId&quot;);
-           String  title = rs.getString(&quot;Title&quot;);
-           int  artistId = rs.getInt(&quot;ArtistId&quot;);
-           album = new Album(albumId, title, artistId);
-       }
-       rs.close();
-       ps.close();
-   } catch ( Exception e ) {
-       System.err.println( e.getClass().getName() + &quot;: &quot; + e.getMessage() );
-   }
-   System.out.println(&quot;Operation done successfully&quot;);
-   return album;
+	<p>Per finalitzar parlarem d&rsquo;una estructura de fitxers molt comú en el mercat i que és important que sapiguem com manipular per lectura i escriptura, es tracta de fitxers JSON (Javascript Object Notation). Per tal de treballar amb aquesta estructura de fitxers utilitzarem la llibreria <code>Jackson</code> i implementarme un CRUD complert que ens permetrà veure&rsquo;n les seves funcionalitats.</p>
+<h4 id="què-és-jackson">Què és Jackson?</h4>
+<p>Jackson és una llibreria que permet convertir Objectes Java a JSON i viceversa. Això s&rsquo;anomena:</p>
+<ul>
+<li><em>Serialització</em> = Objecte Java → JSON</li>
+<li><em>Desserialització</em> = JSON → Objecte Java</li>
+</ul>
+<p>És la llibreria més utilitzada en Java per treballar amb JSON i plenament integrada dins del framework de Java Spring.</p>
+<h4 id="com-safegeix-la-llibreria-jackson">Com s&rsquo;afegeix la llibreria Jackson</h4>
+<p>Cal que en el fitxer <code>pom.xml</code> del vostre projecte, afegiu després de l&rsquo;etiqueta <code>&lt;properties&gt;</code>, la següent dependència:</p>
+<pre><code>&lt;dependencies&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+		&lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+		&lt;version&gt;2.20.0&lt;/version&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<h4 id="lentitat">L&rsquo;entitat</h4>
+<p>L&rsquo;entitat amb la que treballarem serà la ja coneguda classe Alumne.java. Fixeu-vos que crearem una constructora buida, Jackson necessita aquesta constructora ja que mitjançant els diferents setters anirà modificant la informació en els atributs corresponents.</p>
+<pre><code class="language-java">public class Alumne {
+
+    private int id;
+    private String nom;
+    private int edat;
+
+    public Alumne() {
+    }
+
+    public Alumne(int id, String nom, int edat) {
+        this.id = id;
+        this.nom = nom;
+        this.edat = edat;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getEdat() {
+        return edat;
+    }
+
+    public void setEdat(int edat) {
+        this.edat = edat;
+    }
+
+	@Override
+    public String toString() {
+        return &quot;Alumne{&quot; +
+                &quot;id=&quot; + id +
+                &quot;, nom='&quot; + nom + '\'' +
+                &quot;, edat=&quot; + edat +
+                '}';
+    }
 }
 </code></pre>
-<p>Exemple de delete:</p>
-<pre><code class="language-java">public void eliminaAlbum(int idAlbum)
-{
-   try {
-       con.setAutoCommit(false);
-       String query = &quot;DELETE from Album where AlbumId=?&quot;;
-       PreparedStatement ps = con.prepareStatement(query);
-       ps.setInt(1,idAlbum);
-       ps.executeUpdate();
-       con.commit();
-       ps.close();
-   } catch ( Exception e ) {
-       System.err.println( e.getClass().getName() + &quot;: &quot; + e.getMessage() );
-   }
-   System.out.println(&quot;Operation done successfully&quot;);
+<h4 id="la-clau-objectmapper">La clau: ObjectMapper</h4>
+<p>Aquesta classe de Jackson ens permetrà actuar davant una entitat. Amb ella podem <strong>llegir i escriure JSON i convertir a objectes</strong> :</p>
+<pre><code class="language-java">mapper.readValue(fitxer, new TypeReference&lt;List&lt;Alumne&gt;&gt;() {};  //List&lt;Alumne&gt;
+mapper.writeValue(fitxer, alumnes);
+</code></pre>
+<h4 id="alumnedao">AlumneDAO</h4>
+<pre><code class="language-java">import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AlumneDAO {
+    private ObjectMapper mapper = new ObjectMapper();
+    private File fitxer = new File(&quot;data.json&quot;);
+
+
+    //CREATE
+    public void create(Alumne alumne) throws IOException {
+        List&lt;Alumne&gt; alumnes = findAll();
+        alumnes.add(alumne);
+        save(alumnes);
+    }
+
+    //READ ALL
+    public List&lt;Alumne&gt; findAll() throws IOException {
+        if (!fitxer.exists()) {
+            return new ArrayList&lt;&gt;();
+        }
+        return mapper.readValue(fitxer, new TypeReference&lt;List&lt;Alumne&gt;&gt;() {}
+        );
+    }
+
+	//READ BY ID
+    public Alumne findById(int id) throws IOException {
+        for (Alumne a : findAll()) {
+            if (a.getId() == id)
+                return a;
+        }
+        return null;
+    }
+
+    //UPDATE
+    public void update(Alumne alumne) throws IOException {
+        List&lt;Alumne&gt; alumnes = findAll();
+        for (int i = 0; i &lt; alumnes.size(); i++) {
+            if (alumnes.get(i).getId() == alumne.getId()) {
+                alumnes.set(i, alumne);
+            }
+        }
+        save(alumnes);
+    }
+
+    //DELETE
+    public void delete(int id) throws IOException {
+        List&lt;Alumne&gt; alumnes = findAll();
+        alumnes.removeIf(a -&gt; a.getId() == id);
+        save(alumnes);
+    }
+
+    //SAVE
+    private void save(List&lt;Alumne&gt; alumnes) throws IOException {
+        mapper.writeValue(fitxer, alumnes);
+    }
+}
+
+</code></pre>
+<h4 id="main">Main</h4>
+<p>Amb el següent aplicatiu, observareu com es creen dos objectes Alumne, es guarden en el fitxer data.json, i tot seguit s&rsquo;actualitza el que té id=2 i s&rsquo;elimina el que té id=1. S&rsquo;observen totes les funcionalitats del CRUD que podeu aplicar a qualsevol exemple.</p>
+<p>La dificultat rau en dissenyar bé les entitats que necessiteu pels vostres projectes.</p>
+<pre><code class="language-java">public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        AlumneDAO dao = new AlumneDAO();
+
+        dao.create(new Alumne(1,&quot;Anna&quot;,20));
+        dao.create(new Alumne(2,&quot;Joan&quot;,22));
+
+        System.out.println(dao.findAll());
+
+        dao.update(new Alumne(2,&quot;Joan Garcia&quot;,23));
+
+        dao.delete(1);
+
+    }
 }
 </code></pre>
+<h4 id="resum-i-a-tenir-en-compte">Resum i a tenir en compte</h4>
+
+<div class="notices note" ><p><strong>Objecte buit</strong>: Sense l&rsquo;objecte buit, Jackson no sabrà com crear els objectes. Error: &ldquo;Cannot construct instance&rdquo;<br>
+<strong>Setters</strong>: Cal posar en les entitats els setters necessaris per manipular la informació, sense els setters no apareixeran els atributs en JSON.<br>
+<strong>Mala Formatació del JSON</strong>: vigilar amb la mala formatació del JSON ja que sinó Jackson no podrà llegir el document correctament.<br>
+<strong>FileNotFoundException</strong>: Assegureu-vos que el fitxer existeix.</p>
+</div>
+
+<p><strong>Idea clau</strong>: Jackson no modifica directament un registre dins del fitxer JSON. En una aplicació senzilla basada en fitxers, el patró habitual és llegir tota la col·lecció, modificar-la en memòria i tornar-la a escriure completa.</p>
+<table>
+<thead>
+<tr>
+<th>Operació</th>
+<th>Passos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create</td>
+<td>Llegir → Afegir → Guardar</td>
+</tr>
+<tr>
+<td>Read</td>
+<td>Llegir el fitxer JSON</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Llegir → Modificar → Guardar</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Llegir → Eliminar → Guardar</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2815,6 +2977,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2830,6 +2993,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -2837,6 +3003,115 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -2908,115 +3183,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -3041,10 +3207,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/m03programacio/continguts/public/en/6gestiobbdd/2metadades/" title="Metadades"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/m03programacio/continguts/public/en/5esdades/2manipulaciofitxers/3accesaleatori/" title="Accés aleatori"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/m03programacio/continguts/public/en/6gestiobbdd/4classesdao/" title="Classes DAO" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/m03programacio/continguts/public/en/5esdades/3interficiesgrafiques/" title="Introducció Interfícies gràfiques" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

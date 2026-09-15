@@ -1,5 +1,5 @@
 ---
-title: Construcció destrucció d'objectes
+title: Construcció d'objectes
 weight: 4
 pre: "4. "
 chapter: false
@@ -33,10 +33,9 @@ public class ClasseProvaTest {
 }
 ```
 
-Encara que no l'haguem definit en ClasseProva, per tal de crear objectes de tipus ClasseProva, **SI NO EXISTEIX CAP MÉS CONSTRUCTOR**, Java ens proporciona el constructor per defecte (aquell constructor que no conté cap paràmetre ni cap operació dins el constructor). Ara bé, quan ClasseProva tingui definit almenys un constructor, desapareix ClasseProva per defecte, a no sé que també estigui explícitament definit en la classe ClasseProva. 
+Encara que no l'haguem definit en ClasseProva, per tal de crear objectes de tipus ClasseProva, **SI NO EXISTEIX CAP MÉS CONSTRUCTOR**, Java ens proporciona el constructor per defecte (aquell constructor que no conté cap paràmetre ni cap operació dins el constructor). Ara bé, quan ClasseProva tingui definit almenys un constructor, desapareix ClasseProva per defecte, a no sé que també estigui explícitament definit en la classe ClasseProva.
 
 Els constructors són mètodes especials que sobretot **NO retornen** cap valor. Serveixen per indicar a Java que estem creant un objecte d'aquella classe. Sí que es pot proporcionar paràmetres d'entrada que ens ajudin a instanciar els atributs de classe d'aquell objecte. Si ens fixem en l'exemple anterior de Persona, podríem redefinir-lo de la següent manera:
-
 
 ```java
 public class Persona {
@@ -65,9 +64,9 @@ public class Persona {
       edat = edatNova;
   }
 
-  public void saluda() { 
+  public void saluda() {
         System.out.println("Hola, sóc " + nom + " i tinc " + edat + " anys");
-  }   
+  }
 }
 ```
 
@@ -76,8 +75,8 @@ import java.util.Scanner;
 
 public class PersonaTest {
 
-  public static void main(String[] args) { 
-    
+  public static void main(String[] args) {
+
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Demana el nom de la persona1: ");
@@ -100,15 +99,15 @@ public class PersonaTest {
 
     persona1.saluda();
     persona2.saluda();
-  }   
+  }
 }
 ```
 
 Observacions:
+
 - La constructora de Persona té dos paràmetres d'entrada que corresponen amb les dues propietats de la classe.
 - Per diferenciar dues variables que es diuen igual (atribut de classe i paràmetre d'entrada) utilitzem el this. El this ens ajuda a diferenciar qualsevol atribut/mètode de dins la pròpia classe. Com s'observa en la constructora de Persona hi ha l'atribut de la pròpia instància `this.nom` que prèn per valor el paràmetre passat com argument `nom`.
 - En la classe test observem que ara no fem ús dels setters dels atributs, ja que a l'instanciar l'objecte amb la constructora ja inicialitzem els atributs.
-
 
 **Més d'un constructor**
 
@@ -131,7 +130,7 @@ public Persona(String nomPersona, int edatPersona) {
   nom = nomPersona;
   edat = edatPersona;
 }
-```  
+```
 
 En el programa principal podríem crear ara objectes Persona de tres maneres diferents:
 
@@ -174,6 +173,7 @@ Quan som dins d'un constructor o un mètode, this és una referència a l'object
 ```
 
 Observacions:
+
 - En el mètode setNom és necessari l'ús del this ja que ens diferencia l'atribut de classe del paràmetre de la funció.
 - En el mètode setEdat, no l'hem posat ja que no presta a confusió les dues variables, tot hi així es podria haver posat a `this.edat` per remarcar que estem parlant de l'atribut de classe.
 - En els getters l'hem deixat com a bona praxis, però si no hi hagués el this tampoc hi hauria confusió i java ho interpretaria correctament.
@@ -195,22 +195,23 @@ public Persona(String nom, int edat) {
 }
 ```
 
-#### Destrucció d'objectes
+#### GARBAGE COLLECTOR
 
-Un objecte es manté viu sempre que existeixi una variable que l'estigui referenciant. Deixarà d'existir l'objecte, per tant, deixarem de tenir-hi accés, quan **no existeixi cap variable/referència que apunti a l'objecte**. Una vegada un objecte deixa de ser-nos útil i per tant ocupa memòria innecessàriament és el moment de desrefenciar aquest objecte de totes les variables que l'apuntin **assignant el valor null a aquestes variables**. Quan posem valor null a una variable *desreferenciem* l'objecte on apuntava aquesta variable.
+Un objecte es manté viu sempre que existeixi una variable que l'estigui referenciant. Deixarà d'existir l'objecte, per tant, deixarem de tenir-hi accés, quan **no existeixi cap variable/referència que apunti a l'objecte**. Una vegada un objecte deixa de ser-nos útil i per tant ocupa memòria innecessàriament és el moment de desrefenciar aquest objecte de totes les variables que l'apuntin **assignant el valor null a aquestes variables**. Quan posem valor null a una variable _desreferenciem_ l'objecte on apuntava aquesta variable.
 
-Les variables es guarden a un espai de memòria que s'anomena Stack, mentre que els objectes es guarden a un altre espai que s'anomena Heap. La variable guarda la direcció de memòria d'on es troba aquest objecte dins el heap, quan assignem valor null a una variable fem que aquesta variable deixi de guardar la direcció de memòria de l'objecte dins el heap. Quan això passa, en Java existeix el Garbage Collector, és un aplicatiu que rastreja contínuament la memòria de Java i quan troba objectes que no tenen cap referència en cap variable **alliberen** aquesta memòria i fan que torni a estar disponible per a l'ús de l'aplicatiu.
+Les variables es guarden a un espai de memòria que s'anomena Stack, mentre que els objectes es guarden a un altre espai que s'anomena Heap. La variable guarda la direcció de memòria d'on es troba aquest objecte dins el heap, quan assignem valor null a una variable fem que aquesta variable deixi de guardar la direcció de memòria de l'objecte dins el heap. Quan això passa, en Java existeix el **Garbage Collector**, és un procés automàtic que rastreja contínuament la memòria de Java i quan troba objectes que no tenen cap referència en cap variable **alliberen** aquesta memòria i fan que torni a estar disponible per a l'ús de l'aplicatiu.
 
 Exemple1: alliberem memòria un cop l'objecte ja no ens és útil:
 
-``` java
+```java
 Persona persona = new Persona();
 ...
 persona = null;
 ```
 
 Exemple2: en el següent exemple per tal d'eliminar l'objecte de persona1, és necessari desreferenciar totes aquelles variables que apuntin a l'objecte:
-``` java
+
+```java
 Persona persona1 = new Persona("Pedro", 25);
 Persona persona2 = new Persona();
 Persona persona3 = new Persona("Ramon");
@@ -229,4 +230,3 @@ persona3 = null;
 Quin és l'objecte que es manté actiu en el cas anterior? Persona4! Fixeu-vos que en fer persona2 = persona1; o persona3 = persona1; o persona4 = persona5; tant l'objecte de persona2, com l'objecte de persona3, com l'objecte persona4 han quedat desreferenciats i per tant el Garbage Collector ja els pot eliminar quan en tingui l'ocasió.
 
 Per altra banda, més endavant decidim que persona1 ja no ens és útil, però l'objecte que inicialment hem creat en persona1 també guarda una referència en persona2 i en persona3 (persona2 = persona1; i persona3 = persona1;), de forma que si vull destruir aquest objecte i alliberar-ne la memòria que serà necessari que assigni valor null a les variables persona1 persona2 i persona3. D'aquesta manera elimino totes les referències de variables a aquest objecte i per tant el Garbage Collector ja el pot eliminar de la memòria Heap.
-
